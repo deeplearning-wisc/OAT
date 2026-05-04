@@ -1,0 +1,420 @@
+{
+  "TASK": "68993ef3cf3e953b8ab83fbc",
+  "PROMPT": "In what year was born the guy who wrote the davinci code? How many years apart is this from the year the met acquired the drawing of hercules holding a club from the same guy whose name is in the title of that book?",
+  "TRAJECTORY": [
+    {
+      "content": "I will use the `open-library_get_book_by_title` tool to get information about The Da Vinci Code to find its author.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"title\": \"Da Vinci Code\"\n}",
+            "name": "open-library_get_book_by_title"
+          },
+          "id": "98c318fc-e92b-49cb-86e5-c85a0aedc0e5",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "[\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2003,\n    \"open_library_work_key\": \"/works/OL76837W\",\n    \"edition_count\": 195,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9255229-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code [adaptation]\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL20714242W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12721953-M.jpg\"\n  },\n  {\n    \"title\": \"Da Vinci code decoded\",\n    \"authors\": [\n      \"Martin Lunn\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL5740272W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/739050-M.jpg\"\n  },\n  {\n    \"title\": \"Novels (Angels & Demons / Da Vinci Code)\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL15290520W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12013913-M.jpg\"\n  },\n  {\n    \"title\": \"Da Vinci Code\",\n    \"authors\": [\n      \"Flavio Davito\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL40764815W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Da Vinci Code\",\n    \"authors\": [\n      \"Shirley Bell\"\n    ],\n    \"first_publish_year\": 2008,\n    \"open_library_work_key\": \"/works/OL28971899W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL33021376W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13113121-M.jpg\"\n  },\n  {\n    \"title\": \"Da Vinci Code\",\n    \"authors\": [\n      \"Rachel Wagstaff\",\n      \"Duncan Abel\"\n    ],\n    \"first_publish_year\": 2024,\n    \"open_library_work_key\": \"/works/OL42458066W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci code\",\n    \"authors\": [\n      \"Nicky Gumbel\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL20935556W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10303225-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Josh McDowell\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL17569W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8088427-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code [2/2]\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2003,\n    \"open_library_work_key\": \"/works/OL24210437W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8396605-M.jpg\"\n  },\n  {\n    \"title\": \"Unveiling The Da Vinci code\",\n    \"authors\": [\n      \"Bo Kirkwood\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL9893409W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2948635-M.jpg\"\n  },\n  {\n    \"title\": \"Da Vinci Code\",\n    \"authors\": [\n      \"Hans Zimmer\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL26536470W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"The Da Vinci Code [1/2]\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL24164822W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10578436-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci code\",\n    \"authors\": [\n      \"Regino Cortes\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL23959225W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci code\",\n    \"authors\": [\n      \"Akiva Goldsman\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL5746067W\",\n    \"edition_count\": 4,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/528721-M.jpg\"\n  },\n  {\n    \"title\": \"Cracking Da Vinci's code\",\n    \"authors\": [\n      \"James L. Garlow\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL2111330W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/532917-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL28596976W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"De Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL27742302W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL31982461W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL34879087W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13675832-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL34879088W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13675833-M.jpg\"\n  },\n  {\n    \"title\": \"De Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL34879285W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13676077-M.jpg\"\n  },\n  {\n    \"title\": \"De Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL34879286W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13676076-M.jpg\"\n  },\n  {\n    \"title\": \"the da vinci code\",\n    \"authors\": [\n      \"dan brown\"\n    ],\n    \"first_publish_year\": 2003,\n    \"open_library_work_key\": \"/works/OL43114790W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci code\",\n    \"authors\": [\n      \"Felix M. Podimattam\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL33122835W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci code\",\n    \"authors\": [\n      \"Dennis Fischer\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL24259506W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10746579-M.jpg\"\n  },\n  {\n    \"title\": \"Echte DA VINCI CODE\",\n    \"authors\": [\n      \"Jean Bauer\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL29487608W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Key to the Da Vinci Code\",\n    \"authors\": [\n      \"Stewart Ferris        \"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL8938899W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2112916-M.jpg\"\n  },\n  {\n    \"title\": \"Real Da Vinci Code\",\n    \"authors\": [\n      \"Dick Shegalov\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL29667380W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Cracking the Da Vinci Code\",\n    \"authors\": [\n      \"Jimmy Akin\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL9285900W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/3030217-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Hans Zimmer\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL3580361W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/1819713-M.jpg\"\n  },\n  {\n    \"title\": \"Le Da Vinci code\",\n    \"authors\": [\n      \"Pierre Boglioni\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL24278840W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10777080-M.jpg\"\n  },\n  {\n    \"title\": \"Answers to the Da Vinci Code (pamphlet) (Answers to the Da Vinci Code)\",\n    \"authors\": [\n      \"Dr. Timothy Paul Jones\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL8994706W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Rest of the Da Vinci Code\",\n    \"authors\": [\n      \"Melvin Abercrombie\"\n    ],\n    \"first_publish_year\": 2021,\n    \"open_library_work_key\": \"/works/OL35888344W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Campus Crusade for Christ\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8686045W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Da Vinci Code Killers\",\n    \"authors\": [\n      \"Gavin Sterma\"\n    ],\n    \"first_publish_year\": 2008,\n    \"open_library_work_key\": \"/works/OL39795898W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The rough guide to the Da Vinci code\",\n    \"authors\": [\n      \"Michael Haag\",\n      \"Veronica Haag\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL3689699W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/7261555-M.jpg\"\n  },\n  {\n    \"title\": \"Cracking the Da Vinci Code\",\n    \"authors\": [\n      \"Simon Cox           \"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL8405754W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code Controversy\",\n    \"authors\": [\n      \"Dillon Burroughs\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8399904W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/570352-M.jpg\"\n  },\n  {\n    \"title\": \"Cracking The Da Vinci code\",\n    \"authors\": [],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL27703092W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12692514-M.jpg\"\n  },\n  {\n    \"title\": \"Da Vinci Code Quiz Book\",\n    \"authors\": [\n      \"Wayne Wheelwright\"\n    ],\n    \"first_publish_year\": 2013,\n    \"open_library_work_key\": \"/works/OL39642763W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Da Vinci Code Quiz Book\",\n    \"authors\": [\n      \"Wayne Wheelwright\"\n    ],\n    \"first_publish_year\": 2013,\n    \"open_library_work_key\": \"/works/OL39645774W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Da Vinci Code Quiz Book\",\n    \"authors\": [\n      \"Wayne Wheelwright\"\n    ],\n    \"first_publish_year\": 2013,\n    \"open_library_work_key\": \"/works/OL39636503W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Da Vinci Code on Trial\",\n    \"authors\": [\n      \"Hugh Davies\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL35729960W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Da Vinci Code a Response\",\n    \"authors\": [\n      \"Nicky Gumbel\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL31827648W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Cracking the Da Vinci code\",\n    \"authors\": [\n      \"Edward E. Hindson\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL23936377W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"De Da Vinci code ontcijferd\",\n    \"authors\": [\n      \"Filip Coppens\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL34536648W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13346705-M.jpg\"\n  },\n  {\n    \"title\": \"De Da Vinci code ontcijferd\",\n    \"authors\": [\n      \"Filip Coppens\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL34536649W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13346708-M.jpg\"\n  },\n  {\n    \"title\": \"De Da Vinci code ontcijferd\",\n    \"authors\": [\n      \"Filip Coppens\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL34536650W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13346706-M.jpg\"\n  },\n  {\n    \"title\": \"De Da Vinci code ontcijferd\",\n    \"authors\": [\n      \"Filip Coppens\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL34536651W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13346707-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Garry Williams\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL9031272W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/896545-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci code controversy\",\n    \"authors\": [\n      \"Michael J. Easley\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL13619760W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9600695-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci code : fact or fiction?\",\n    \"authors\": [],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL17813581W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/759045-M.jpg\"\n  },\n  {\n    \"title\": \"Beyond the Da Vinci Code\",\n    \"authors\": [\n      \"Rene Chandelle\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8476738W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/538922-M.jpg\"\n  },\n  {\n    \"title\": \"THE DA VINCI CODE DECEPTION\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL33946461W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Amy Welborn\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL6219443W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/1981595-M.jpg\"\n  },\n  {\n    \"title\": \"Solving the Da Vinci code mystery\",\n    \"authors\": [\n      \"Brandon Gilvin\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL5712582W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/631312-M.jpg\"\n  },\n  {\n    \"title\": \"Love The Real Da Vinci Code\",\n    \"authors\": [\n      \"Leonard G. Horowitz\"\n    ],\n    \"first_publish_year\": 2008,\n    \"open_library_work_key\": \"/works/OL17402946W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/7508743-M.jpg\"\n  },\n  {\n    \"title\": \"Das Geheimnis des Da-Vinci-Code\",\n    \"authors\": [\n      \"Frederic Lenoir Marie France Etchegoin\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL19076829W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8392455-M.jpg\"\n  },\n  {\n    \"title\": \"Breaking The Da Vinci Code\",\n    \"authors\": [\n      \"Darrell L Bock Ph.D.\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL8568437W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/541170-M.jpg\"\n  },\n  {\n    \"title\": \"Breaking the Da Vinci Code\",\n    \"authors\": [\n      \"Darrell L. Bock\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL25363833W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Breaking the Da Vinci Code\",\n    \"authors\": [\n      \"Darrell L. Bock\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL637488W\",\n    \"edition_count\": 4,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/541169-M.jpg\"\n  },\n  {\n    \"title\": \"Revealing the Da Vinci Code-Deception\",\n    \"authors\": [\n      \"DR.JOE VAN KOEVERING\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL9770494W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Da Vinci Code (SparkNotes Literature Guide)\",\n    \"authors\": [\n      \"SparkNotes Staff\"\n    ],\n    \"first_publish_year\": 2014,\n    \"open_library_work_key\": \"/works/OL29413822W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"De Da Vinci Code Luxe editie\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL32299969W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"De Da Vinci code / druk 57\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL28215233W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Le Jésus du Da Vinci code\",\n    \"authors\": [\n      \"Jean-Paul Michaud\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL24019296W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code on Trial\",\n    \"authors\": [\n      \"Stephen Clark\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL7020623W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/898243-M.jpg\"\n  },\n  {\n    \"title\": \"Fact and Fiction in the Da Vinci Code\",\n    \"authors\": [\n      \"Steve Kellmeyer\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL8828874W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/737170-M.jpg\"\n  },\n  {\n    \"title\": \"Cracking Da Vinci's Code\",\n    \"authors\": [\n      \"James L. Garlow\",\n      \"Peter Jones\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL29246920W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Cracking Da Vinci's Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL36511493W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Cracking Da Vinci's code\",\n    \"authors\": [\n      \"James L. Garlow\",\n      \"Peter Jones\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL23990989W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/532952-M.jpg\"\n  },\n  {\n    \"title\": \"Fodor's guide to the Da Vinci Code\",\n    \"authors\": [\n      \"Jennifer Paull\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL17899711W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8214895-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code Travel Journal\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL15290485W\",\n    \"edition_count\": 4,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9189680-M.jpg\"\n  },\n  {\n    \"title\": \"Beyond the Da Vinci Code\",\n    \"authors\": [\n      \"Sangeet Duchane\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL5854740W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/507390-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code in the academy\",\n    \"authors\": [\n      \"Bradley Bowers\"\n    ],\n    \"first_publish_year\": 2007,\n    \"open_library_work_key\": \"/works/OL19416657W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"A propos du Da Vinci Code--\",\n    \"authors\": [\n      \"Jocelyn Gregoire\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL11697989W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"De geheimen van de Da Vinci code\",\n    \"authors\": [\n      \"Simon Cox\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL16859300W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/7284650-M.jpg\"\n  },\n  {\n    \"title\": \"Beyond the Da Vinci code\",\n    \"authors\": [\n      \"Robert K. McIver\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL489101W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13418691-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci code adventure\",\n    \"authors\": [\n      \"Mike Gunn\",\n      \"Greg Wright\",\n      \"Jenn Wright\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL18764431W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/741561-M.jpg\"\n  },\n  {\n    \"title\": \"Real History Behind the Da Vinci Code\",\n    \"authors\": [\n      \"Sharan Newman\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL32447704W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Kod Da Vinchi [The Da Vinci Code]\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL34951674W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13777812-M.jpg\"\n  },\n  {\n    \"title\": \"Exploring the Da Vinci Code MM - Outreach\",\n    \"authors\": [\n      \"Zondervan Publishing Company\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8594347W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2365015-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code 2007 Wall Calendar\",\n    \"authors\": [\n      \"Andrews McMeel Publishing\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8435860W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/1380414-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code and the Bible\",\n    \"authors\": [\n      \"Edward \\\"Ted\\\" Sri\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL9895392W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Fodor's Da Vinci Code Companion Counter Display\",\n    \"authors\": [\n      \"Jennifer Paull\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL29356683W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code/The Lost Symbol\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL28763884W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Fodor's Da Vinci Code Companion Floor Display\",\n    \"authors\": [\n      \"Jennifer Paull\"\n    ],\n    \"first_publish_year\": 2009,\n    \"open_library_work_key\": \"/works/OL38629762W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code [In Japanese Language]\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL37104261W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Who Can Crack the Da Vinci Code?\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL35672571W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code. 2 (Korean edition)\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL41908167W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Les sources secrètes du Da Vinci Code\",\n    \"authors\": [\n      \"Jean-Jacques Bedu\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL19063423W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8376931-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code (Connect Bible Studies)\",\n    \"authors\": [\n      \"Di Archer\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL15290479W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2029790-M.jpg\"\n  },\n  {\n    \"title\": \"Die Wahrheit über den Da Vinci Code\",\n    \"authors\": [\n      \"Dan Burstein\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL33939943W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14816478-M.jpg\"\n  },\n  {\n    \"title\": \"Truth about the Da Vinci Code (The)\",\n    \"authors\": [],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL33704380W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Beyond the Da Vinci Code (History Channel)\",\n    \"authors\": [\n      \"Stephen Wozniak, Claudia Coloma, Danny Burstein, Jean-Luc Chaumeil, Timothy Freke, Deirdre Good, George Gorse, Edward Herrmann, Richard Leigh, John Lo\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL33974292W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Fantasy and truth, \\\"The Da Vinci Code.\\\"\",\n    \"authors\": [\n      \"A. Kuraev\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL26608564W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12500946-M.jpg\"\n  },\n  {\n    \"title\": \"The truth behind the da Vinci code\",\n    \"authors\": [\n      \"Richard Abanes\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL2685671W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/464285-M.jpg\"\n  },\n  {\n    \"title\": \"Fodor's Guide to The Da Vinci Code\",\n    \"authors\": [\n      \"Jennifer Paull\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL15171623W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/6429213-M.jpg\"\n  }\n]",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "98c318fc-e92b-49cb-86e5-c85a0aedc0e5"
+    },
+    {
+      "content": "I will use the `open-library_get_authors_by_name` tool to get information about the author Dan Brown.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"name\": \"Dan Brown\"\n}",
+            "name": "open-library_get_authors_by_name"
+          },
+          "id": "05c27101-8ae6-4f3a-bdc6-cbbb09a7b20a",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "[\n  {\n    \"key\": \"OL39307A\",\n    \"name\": \"Dan Brown\",\n    \"alternate_names\": [\n      \"Dan Brown ( dan bu lang)\",\n      \"Дэн Браун\",\n      \"(mei) Ge, er si man (Brown, Dan)\",\n      \"Danielle Brown\",\n      \"دان براون\",\n      \"Dens Brauns\",\n      \"DAN BROWN\",\n      \"BROWN DAN\",\n      \"Brown,Dan\",\n      \"Дэн Браун / Dan Brown\"\n    ],\n    \"birth_date\": \"22 June 1964\",\n    \"top_work\": \"The Da Vinci Code\",\n    \"work_count\": 46\n  },\n  {\n    \"key\": \"OL7782857A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Principal Opportunity Preparatory School\",\n    \"work_count\": 24\n  },\n  {\n    \"key\": \"OL7828683A\",\n    \"name\": \"Dan Brown (Teacher)\",\n    \"alternate_names\": [\n      \"Dan Brown\"\n    ],\n    \"top_work\": \"The Great Expectations School\",\n    \"work_count\": 5\n  },\n  {\n    \"key\": \"OL8009068A\",\n    \"name\": \"Dan Brown\",\n    \"birth_date\": \"?\",\n    \"top_work\": \"A picture book of George Washington Carver\",\n    \"work_count\": 7\n  },\n  {\n    \"key\": \"OL12575202A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Gigi\",\n    \"work_count\": 5\n  },\n  {\n    \"key\": \"OL11110504A\",\n    \"name\": \"Dan brown\",\n    \"top_work\": \"The Infernal Devices Boxset\",\n    \"work_count\": 3\n  },\n  {\n    \"key\": \"OL13210468A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Race the Pale Horse\",\n    \"work_count\": 2\n  },\n  {\n    \"key\": \"OL13210466A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Prue Larue Is Totally into French!\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL13210467A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Communicating Design\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL13210469A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Six-Day War\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL13210470A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Designing Together\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL13210471A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Study Guide and Selected Readings for the American Experience (1860-1976)\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL6603602A\",\n    \"name\": \"Dan Brown\",\n    \"birth_date\": \"1949\",\n    \"top_work\": \"I've been working on the railroad\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL12334794A\",\n    \"name\": \"dan Brown\",\n    \"top_work\": \"Trout\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL12575216A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"With My Back to Havana\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL15331349A\",\n    \"name\": \"dan brown\",\n    \"work_count\": 0\n  },\n  {\n    \"key\": \"OL14435468A\",\n    \"name\": \"Brown Dan,Brown\",\n    \"top_work\": \"Conspiración\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL13700948A\",\n    \"name\": \"Dan Nathaniel Brown\",\n    \"top_work\": \"Beyond Da Vinci Code\",\n    \"work_count\": 3\n  },\n  {\n    \"key\": \"OL11862809A\",\n    \"name\": \"Brown, Dan (Photographer)\",\n    \"top_work\": \"Oil paintings in public ownership in South Wales\",\n    \"work_count\": 2\n  },\n  {\n    \"key\": \"OL9536328A\",\n    \"name\": \"Dan L. Brown\",\n    \"top_work\": \"Adequate food for all\",\n    \"work_count\": 2\n  },\n  {\n    \"key\": \"OL13715635A\",\n    \"name\": \"Dan N. Brown\",\n    \"top_work\": \"Intentional Global Warming and the Disciples of Anti-Christianity\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL6588229A\",\n    \"name\": \"Dan F. Brown\",\n    \"top_work\": \"Su xue xi Ying yu dan zi ji chu 1000\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL7729549A\",\n    \"name\": \"Dan C. Brown\",\n    \"top_work\": \"A New Way to Talk\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL14384052A\",\n    \"name\": \", P.E., Dan A. Brown,, Dan ABrown\",\n    \"top_work\": \"Geotechnical Engineering Circular  No. 8\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL12419896A\",\n    \"name\": \"Dan. Peter A. Schmidt Trans Brown\",\n    \"top_work\": \"Diabolus\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL15247529A\",\n    \"name\": \"Burt Brown Barker and Dan E. Clark\",\n    \"work_count\": 0\n  },\n  {\n    \"key\": \"OL12738042A\",\n    \"name\": \"Ennis, Garth (1970- ), Parlovz, Goran, Brown, Dan (1964- ); Quesada Gómez, Gonzalo (1966- ), (trad.)\",\n    \"top_work\": \"Max Punisher 07\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL12738043A\",\n    \"name\": \"Ennis, Garth (1970- ), Parlovz, Goran, Brown, Dan (1964- ); Quesada Gómez, Gonzalo (1966- ), (trad.)\",\n    \"top_work\": \"Max Punisher 07\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL12738044A\",\n    \"name\": \"Ennis, Garth (1970- ), Parlovz, Goran, Brown, Dan (1964- ); Quesada Gómez, Gonzalo (1966- ), (trad.)\",\n    \"top_work\": \"Max Punisher 07\",\n    \"work_count\": 1\n  }\n]",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "05c27101-8ae6-4f3a-bdc6-cbbb09a7b20a"
+    },
+    {
+      "content": "I will use the `met-museum_search-museum-objects` tool to retrieve information about the artworks in the Metropolitan Museum of Art related to Hercules and Da Vinci.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"q\": \"Hercules holding a club, Leonardo Da Vinci\"\n}",
+            "name": "met-museum_search-museum-objects"
+          },
+          "id": "840b1d81-d987-4f09-8636-b4990f53da5a",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "Total objects found: 47\nObject IDs: 341703, 360767, 360950, 360986, 437283, 437332, 436896, 198952, 360988, 377123, 437372, 437329, 435992, 626692, 190552, 641257, 459039, 438814, 436658, 626194, 437699, 437698, 436895, 436516, 437273, 436909, 437284, 839045, 437276, 437153, 339223, 436793, 437487, 337497, 436243, 338151, 339519, 339517, 436489, 896598, 435765, 436504, 437824, 203916, 437978, 354279, 436643",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "840b1d81-d987-4f09-8636-b4990f53da5a"
+    },
+    {
+      "content": "I will use the `met-museum_get-museum-object` tool to get information about the particular artwork 341703 and ensure it is the piece I am looking for.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"objectId\": 341703\n}",
+            "name": "met-museum_get-museum-object"
+          },
+          "id": "9178de9c-c1fe-486e-9f43-fd202c7b6b83",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "Title: Studies for Hercules Holding a Club Seen in Frontal View, Male Nude Unsheathing a Sword, and the Movements of Water (recto); Study for Hercules Holding a Club Seen in Rear View (verso)\nArtist: Leonardo da Vinci\nArtist Bio: Italian, Vinci 1452–1519 Amboise\nDepartment: Drawings and Prints\nCredit Line: Purchase, Florence B. Selden Bequest and Rogers Fund, and Promised Gift of Leon D. and Debra R. Black, 2000\nMedium: Pen and brown ink; soft black chalk or charcoal (recto); soft black chalk or charcoal (verso)\nDimensions: 5-3/8 x 5-1/2 in.  (13.7 x 14 cm)\nTags: Male Nudes, Hercules\n",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "9178de9c-c1fe-486e-9f43-fd202c7b6b83"
+    }
+  ],
+  "GTFA_CLAIMS": [
+    "The guy who wrote The Da Vinci Code is called Dan Brown, ",
+    "2 Dan Brown was born in 1964.",
+    "The piece \"Studies for Hercules Holding a Club Seen in Frontal View, Male Nude Unsheathing a Sword, and the Movements of Water (recto); Study for Hercules Holding a Club Seen in Rear View (verso)\" was acquired by the Metropolitan Museum of Art in 2000.",
+    "The gap between 1964 and 2000 is 36 years"
+  ],
+  "ENABLED_TOOLS": [
+    "context7_resolve-library-id",
+    "rijksmuseum-server_search_artwork",
+    "rijksmuseum-server_get_artwork_details",
+    "met-museum_search-museum-objects",
+    "met-museum_list-departments",
+    "met-museum_get-museum-object",
+    "whois_whois_domain",
+    "whois_whois_tld",
+    "weather_find_weather_stations",
+    "weather-data_weather_astronomy",
+    "context7_get-library-docs",
+    "google-workspace_list_events",
+    "google-maps_maps_geocode",
+    "google-maps_maps_reverse_geocode",
+    "open-library_get_author_info",
+    "open-library_get_authors_by_name",
+    "open-library_get_book_by_title"
+  ],
+  "script_model_response": "Dan Brown, the author of *The Da Vinci Code*, was born in **1964**.\n\nThe Metropolitan Museum of Art acquired Leonardo da Vinci's drawing titled *\"Studies for Hercules Holding a Club Seen in Frontal View, Male Nude Unsheathing a Sword, and the Movements of Water (recto); Study for Hercules Holding a Club Seen in Rear View (verso)\"* in **2000** (as indicated by the credit line \"Purchase, Florence B. Selden Bequest and Rogers Fund, and Promised Gift of Leon D. and Debra R. Black, 2000\").\n\nThe difference between these two years is **36 years**.",
+  "raw_conversation_history": [
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"title\": \"The Da Vinci Code\"}",
+              "name": "open-library_get_book_by_title"
+            },
+            "id": "chatcmpl-tool-9311ae390b946844",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "This is an interesting question that requires me to:\n\n1. Find out who wrote \"The Da Vinci Code\"\n2. Find out when that author was born\n3. Find a drawing at the Met Museum of Hercules holding a club\n4. Find out who created that drawing (the person whose name is in the title of \"The Da Vinci Code\")\n5. Find out when the Met acquired that drawing\n6. Calculate the difference in years between the author's birth year and the acquisition year\n\nLet me start by searching for information about \"The Da Vinci Code\" book to find out who wrote it.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-9311ae390b946844",
+          "type": "function",
+          "function": {
+            "name": "open-library_get_book_by_title",
+            "arguments": "{\"title\": \"The Da Vinci Code\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-9311ae390b946844",
+      "content": "[\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2003,\n    \"open_library_work_key\": \"/works/OL76837W\",\n    \"edition_count\": 197,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9255229-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code [adaptation]\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL20714242W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12721953-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci code\",\n    \"authors\": [\n      \"Nicky Gumbel\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL20935556W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10303225-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Josh McDowell\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL17569W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8088427-M.jpg\"\n  },\n  {\n    \"title\": \"Unveiling The Da Vinci code\",\n    \"authors\": [\n      \"Bo Kirkwood\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL9893409W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2948635-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code [2/2]\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2003,\n    \"open_library_work_key\": \"/works/OL24210437W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8396605-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci code\",\n    \"authors\": [\n      \"Regino Cortes\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL23959225W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code [1/2]\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL24164822W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10578436-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci code\",\n    \"authors\": [\n      \"Akiva Goldsman\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL5746067W\",\n    \"edition_count\": 4,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/528721-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL31982461W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL34879087W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13675832-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL34879088W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13675833-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL28596976W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"the da vinci code\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2003,\n    \"open_library_work_key\": \"/works/OL43114790W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci code\",\n    \"authors\": [\n      \"Dennis Fischer\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL24259506W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10746579-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci code\",\n    \"authors\": [\n      \"Felix M. Podimattam\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL33122835W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Key to the Da Vinci Code\",\n    \"authors\": [\n      \"Stewart Ferris        \"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL8938899W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2112916-M.jpg\"\n  },\n  {\n    \"title\": \"Answers to the Da Vinci Code (pamphlet) (Answers to the Da Vinci Code)\",\n    \"authors\": [\n      \"Dr. Timothy Paul Jones\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL8994706W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Cracking the Da Vinci Code\",\n    \"authors\": [\n      \"Jimmy Akin\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL9285900W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/3030217-M.jpg\"\n  },\n  {\n    \"title\": \"Rest of the Da Vinci Code\",\n    \"authors\": [\n      \"Melvin Abercrombie\"\n    ],\n    \"first_publish_year\": 2021,\n    \"open_library_work_key\": \"/works/OL35888344W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Hans Zimmer\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL3580361W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/1819713-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Garry Williams\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL9031272W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/896545-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Campus Crusade for Christ\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8686045W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Cracking the Da Vinci Code\",\n    \"authors\": [\n      \"Simon Cox           \"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL8405754W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code Controversy\",\n    \"authors\": [\n      \"Dillon Burroughs\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8399904W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/570352-M.jpg\"\n  },\n  {\n    \"title\": \"Cracking the Da Vinci code\",\n    \"authors\": [\n      \"Edward E. Hindson\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL23936377W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Cracking The Da Vinci code\",\n    \"authors\": [],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL27703092W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12692514-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code Breaker\",\n    \"authors\": [],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL7917101M\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci code controversy\",\n    \"authors\": [\n      \"Michael J. Easley\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL13619760W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9600695-M.jpg\"\n  },\n  {\n    \"title\": \"Answers to the Da Vinci Code Wall Chart (Answers to the Da Vinci Code)\",\n    \"authors\": [],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL12441890M\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The rough guide to the Da Vinci code\",\n    \"authors\": [\n      \"Michael Haag\",\n      \"Veronica Haag\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL3689699W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/7261555-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci code : fact or fiction?\",\n    \"authors\": [],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL17813581W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/759045-M.jpg\"\n  },\n  {\n    \"title\": \"THE DA VINCI CODE DECEPTION\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL33946461W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Beyond the Da Vinci Code\",\n    \"authors\": [\n      \"Rene Chandelle\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8476738W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/538922-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code\",\n    \"authors\": [\n      \"Amy Welborn\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL6219443W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/1981595-M.jpg\"\n  },\n  {\n    \"title\": \"Answers to the Da Vinci Code Wall Chart-Laminated (Answers to the Da Vinci Code)\",\n    \"authors\": [],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL12441891M\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Love The Real Da Vinci Code\",\n    \"authors\": [\n      \"Leonard G. Horowitz\"\n    ],\n    \"first_publish_year\": 2008,\n    \"open_library_work_key\": \"/works/OL17402946W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/7508743-M.jpg\"\n  },\n  {\n    \"title\": \"Solving the Da Vinci code mystery\",\n    \"authors\": [\n      \"Brandon Gilvin\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL5712582W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/631312-M.jpg\"\n  },\n  {\n    \"title\": \"Breaking the Da Vinci Code\",\n    \"authors\": [\n      \"Darrell L. Bock\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL25363833W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Breaking The Da Vinci Code\",\n    \"authors\": [\n      \"Darrell L Bock Ph.D.\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL8568437W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/541170-M.jpg\"\n  },\n  {\n    \"title\": \"Revealing the Da Vinci Code-Deception\",\n    \"authors\": [\n      \"DR.JOE VAN KOEVERING\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL9770494W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code on Trial\",\n    \"authors\": [\n      \"Stephen Clark\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL7020623W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/898243-M.jpg\"\n  },\n  {\n    \"title\": \"Fact and Fiction in the Da Vinci Code\",\n    \"authors\": [\n      \"Steve Kellmeyer\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL8828874W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/737170-M.jpg\"\n  },\n  {\n    \"title\": \"Breaking the Da Vinci Code\",\n    \"authors\": [\n      \"Darrell L. Bock\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL637488W\",\n    \"edition_count\": 4,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/541169-M.jpg\"\n  },\n  {\n    \"title\": \"Fodor's guide to the Da Vinci Code\",\n    \"authors\": [\n      \"Jennifer Paull\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL17899711W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8214895-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code Travel Journal\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL15290485W\",\n    \"edition_count\": 4,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9189680-M.jpg\"\n  },\n  {\n    \"title\": \"Beyond the Da Vinci Code\",\n    \"authors\": [\n      \"Sangeet Duchane\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL5854740W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/507390-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code in the academy\",\n    \"authors\": [\n      \"Bradley Bowers\"\n    ],\n    \"first_publish_year\": 2007,\n    \"open_library_work_key\": \"/works/OL19416657W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Beyond the Da Vinci code\",\n    \"authors\": [\n      \"Robert K. McIver\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL489101W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13418691-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci code adventure\",\n    \"authors\": [\n      \"Mike Gunn\",\n      \"Greg Wright\",\n      \"Jenn Wright\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL18764431W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/741561-M.jpg\"\n  },\n  {\n    \"title\": \"Real History Behind the Da Vinci Code\",\n    \"authors\": [\n      \"Sharan Newman\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL32447704W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Kod Da Vinchi [The Da Vinci Code]\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL34951674W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13777812-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code and the Bible\",\n    \"authors\": [\n      \"Edward \\\"Ted\\\" Sri\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL9895392W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Truth about the Da Vinci Code (The)\",\n    \"authors\": [],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL33704380W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The truth behind the da Vinci code\",\n    \"authors\": [\n      \"Richard Abanes\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL2685671W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/464285-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code/The Lost Symbol\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL28763884W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Truth About the Da Vinci Code\",\n    \"authors\": [\n      \"Gabriel Carlin\",\n      \"George Mather (Preface)\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL11746117M\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Exploring the Da Vinci Code MM - Outreach\",\n    \"authors\": [\n      \"Zondervan Publishing Company\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8594347W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2365015-M.jpg\"\n  },\n  {\n    \"title\": \"Fodor's Guide to The Da Vinci Code\",\n    \"authors\": [\n      \"Jennifer Paull\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL15171623W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/6429213-M.jpg\"\n  },\n  {\n    \"title\": \"Beyond the Da Vinci Code (History Channel)\",\n    \"authors\": [\n      \"Stephen Wozniak, Claudia Coloma, Danny Burstein, Jean-Luc Chaumeil, Timothy Freke, Deirdre Good, George Gorse, Edward Herrmann, Richard Leigh, John Lo\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL33974292W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Who Can Crack the Da Vinci Code?\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL35672571W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Fantasy and truth, \\\"The Da Vinci Code.\\\"\",\n    \"authors\": [\n      \"A. Kuraev\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL26608564W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12500946-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code. 2 (Korean edition)\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL41908167W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code (Connect Bible Studies)\",\n    \"authors\": [\n      \"Di Archer\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL15290479W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2029790-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code [In Japanese Language]\",\n    \"authors\": [\n      \"Dan Brown\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL37104261W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"THE DEFINITIVE GUIDE TO THE DA VINCI CODE\",\n    \"authors\": [\n      \"PETER CAINE\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8475648W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/1407377-M.jpg\"\n  },\n  {\n    \"title\": \"Exploring the Da Vinci Code\",\n    \"authors\": [\n      \"Lee Strobel\",\n      \"Garry D. Poole\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL25110413W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Cracking the Da Vinci Code\",\n    \"authors\": [\n      \"Simon Cox\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL8713311W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/891704-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci Code Visual favorite book  ISBN\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL37104337W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Beyond the DA Vinci Code\",\n    \"authors\": [\n      \"Rene Chandelle\"\n    ],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL29315229W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Walking the Da Vinci code in Paris\",\n    \"authors\": [\n      \"Peter Caine\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL6036302W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/879554-M.jpg\"\n  },\n  {\n    \"title\": \"The rough guide to the Da Vinci code\",\n    \"authors\": [\n      \"Michael Haag\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL16066468W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/11385050-M.jpg\"\n  },\n  {\n    \"title\": \"Who Can Crack the Leonardo Da Vinci Code?\",\n    \"authors\": [\n      \"Thomas Brezina\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL8451656W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2241257-M.jpg\"\n  },\n  {\n    \"title\": \"Answers to the Da Vinci Code (PowerPoint presentation)\",\n    \"authors\": [\n      \"Dr. Timothy Paul Jones\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8994707W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Answers to the Da Vinci Code - 10 Pack\",\n    \"authors\": [\n      \"Rose Publishing\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL33692092W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code: A Quest for Answers\",\n    \"authors\": [],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL18420880W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8359086-M.jpg\"\n  },\n  {\n    \"title\": \"Cracking the Da Vinci code\",\n    \"authors\": [\n      \"Simon Cox\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL16053861W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/6986425-M.jpg\"\n  },\n  {\n    \"title\": \"The Da Vinci code and the secrets of the Temple\",\n    \"authors\": [\n      \"Robin Griffith-Jones\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL18167842W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/572570-M.jpg\"\n  },\n  {\n    \"title\": \"SUMMARY of the DA VINCI CODE by DAN BROWN\",\n    \"authors\": [\n      \"George Sharon\"\n    ],\n    \"first_publish_year\": 2021,\n    \"open_library_work_key\": \"/works/OL27236935W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Truth and fiction in the Da Vinci code\",\n    \"authors\": [\n      \"Bart D. Ehrman\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL18314W\",\n    \"edition_count\": 6,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/126944-M.jpg\"\n  },\n  {\n    \"title\": \"Rejecting the Da Vinci Code\",\n    \"authors\": [\n      \"TFP Committee on American Issues\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL9245925W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2075900-M.jpg\"\n  },\n  {\n    \"title\": \"Beyond the Da Vinci Code--Australian Edition\",\n    \"authors\": [\n      \"Sangeet Duchane\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL5854741W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Truth & Error in the Da Vinci Code\",\n    \"authors\": [\n      \"Mark L. Strauss\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL1883850W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2729036-M.jpg\"\n  },\n  {\n    \"title\": \"The keys to the Da Vinci code\",\n    \"authors\": [\n      \"Lorenzo Fernandez Bueno\",\n      \"Mariano Fernandez Urresti\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL22058336W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/861827-M.jpg\"\n  },\n  {\n    \"title\": \"Before the Da Vinci Code\",\n    \"authors\": [\n      \"J. S. Tyson\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL9758948W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2719372-M.jpg\"\n  },\n  {\n    \"title\": \"The Art and Mythology of The Da Vinci Code\",\n    \"authors\": [\n      \"David Morris\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL3767933W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/1715520-M.jpg\"\n  },\n  {\n    \"title\": \"Harry Potter and the Da Vinci code\",\n    \"authors\": [\n      \"Mark Patrick Hederman\"\n    ],\n    \"first_publish_year\": 2007,\n    \"open_library_work_key\": \"/works/OL5797409W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"The Da Vinci Code (Illustrator Collector's Edition)(Chinese Edition)\",\n    \"authors\": [],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL36892217W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The Da Vinci Code for Youngsters شيفرة دافنشي للناشئة\",\n    \"authors\": [\n      \"دان براون\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL27965903W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"So You Think You Know the Da Vinci Code\",\n    \"authors\": [\n      \"Clive Gifford\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL17534210W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/7770068-M.jpg\"\n  },\n  {\n    \"title\": \"Cracking the Da Vinci code\",\n    \"authors\": [\n      \"Simon Cox\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL15136856W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/6483146-M.jpg\"\n  },\n  {\n    \"title\": \"Da Vinci Code and the Secrets of the Temple\",\n    \"authors\": [\n      \"Robin Griffith-Jones\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL28979818W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/4869021-M.jpg\"\n  },\n  {\n    \"title\": \"The real history behind the Da Vinci code\",\n    \"authors\": [\n      \"Sharan Newman\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL14871774W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/273029-M.jpg\"\n  },\n  {\n    \"title\": \"After the Da Vinci Code Movie and DVD\",\n    \"authors\": [\n      \"W. Frederick Zimmerman\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL21732112W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"BOOKS THE CHURCH SUPPRESSED: FICTION AND TRUTH IN THE DA VINCI CODE\",\n    \"authors\": [\n      \"Michael Green\"\n    ],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL7919067W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/5529042-M.jpg\"\n  },\n  {\n    \"title\": \"Truth and fiction in The Da Vinci code\",\n    \"authors\": [\n      \"Bart D. Ehrman\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL21182367W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10344286-M.jpg\"\n  },\n  {\n    \"title\": \"Beyond the Da Vinci Code, the True Meeting with God!\",\n    \"authors\": [\n      \"Antoine\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL29708651W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Beyond the Da Vinci Code, the True Meeting with God!\",\n    \"authors\": [\n      \"Walter Lopez\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL29706806W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"The DA Vinci Code - Separating Fact from Fiction (Discovery Series)\",\n    \"authors\": [],\n    \"first_publish_year\": 2005,\n    \"open_library_work_key\": \"/works/OL33920108W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Truth Behind The Da Vinci Code -Chinese Edition (Tradition Chinese)\",\n    \"authors\": [],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL13194244M\",\n    \"edition_count\": 1\n  }\n]"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"name\": \"Dan Brown\"}",
+              "name": "open-library_get_authors_by_name"
+            },
+            "id": "chatcmpl-tool-85655ec7b7ca0caa",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The book \"The Da Vinci Code\" was written by Dan Brown. Now I need to find Dan Brown's birth year. Let me search for author information about Dan Brown.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-85655ec7b7ca0caa",
+          "type": "function",
+          "function": {
+            "name": "open-library_get_authors_by_name",
+            "arguments": "{\"name\": \"Dan Brown\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-85655ec7b7ca0caa",
+      "content": "[\n  {\n    \"key\": \"OL39307A\",\n    \"name\": \"Dan Brown\",\n    \"alternate_names\": [\n      \"Dan Brown ( dan bu lang)\",\n      \"Дэн Браун\",\n      \"(mei) Ge, er si man (Brown, Dan)\",\n      \"Danielle Brown\",\n      \"دان براون\",\n      \"Dens Brauns\",\n      \"DAN BROWN\",\n      \"BROWN DAN\",\n      \"Brown,Dan\",\n      \"Дэн Браун / Dan Brown\",\n      \"dan brown\"\n    ],\n    \"birth_date\": \"22 June 1964\",\n    \"top_work\": \"The Da Vinci Code\",\n    \"work_count\": 65\n  },\n  {\n    \"key\": \"OL7782857A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Principal Opportunity Preparatory School\",\n    \"work_count\": 12\n  },\n  {\n    \"key\": \"OL7828683A\",\n    \"name\": \"Dan Brown (Teacher)\",\n    \"alternate_names\": [\n      \"Dan Brown\"\n    ],\n    \"top_work\": \"The Great Expectations School\",\n    \"work_count\": 5\n  },\n  {\n    \"key\": \"OL13210467A\",\n    \"name\": \"Dan Brown\",\n    \"alternate_names\": [\n      \"Dan M. Brown\",\n      \"Daniel M. Brown\"\n    ],\n    \"top_work\": \"Practical Design Discovery\",\n    \"work_count\": 4\n  },\n  {\n    \"key\": \"OL11110504A\",\n    \"name\": \"Dan brown\",\n    \"top_work\": \"The Infernal Devices Boxset\",\n    \"work_count\": 3\n  },\n  {\n    \"key\": \"OL13210468A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Justifiable Homicide\",\n    \"work_count\": 2\n  },\n  {\n    \"key\": \"OL12575202A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Konzeption und Dokumentation Erfolgreicher Webprojekte\",\n    \"work_count\": 2\n  },\n  {\n    \"key\": \"OL8009068A\",\n    \"name\": \"Dan Brown\",\n    \"birth_date\": \"?\",\n    \"top_work\": \"Demonic\",\n    \"work_count\": 2\n  },\n  {\n    \"key\": \"OL6603602A\",\n    \"name\": \"Dan Brown\",\n    \"birth_date\": \"1949\",\n    \"top_work\": \"I've been working on the railroad\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL13210466A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Prue Larue Is Totally into French!\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL13210469A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Six-Day War\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL13210471A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Study Guide and Selected Readings for the American Experience (1860-1976)\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL12334794A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"Trout: A Fictitious History\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL12575216A\",\n    \"name\": \"Dan Brown\",\n    \"top_work\": \"With My Back to Havana\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL16132911A\",\n    \"name\": \"Dan Brown\",\n    \"work_count\": 0\n  },\n  {\n    \"key\": \"OL16227958A\",\n    \"name\": \"DAN BROWN\",\n    \"work_count\": 0\n  },\n  {\n    \"key\": \"OL13700948A\",\n    \"name\": \"Dan Nathaniel Brown\",\n    \"top_work\": \"Beyond Da Vinci Code\",\n    \"work_count\": 3\n  },\n  {\n    \"key\": \"OL11862809A\",\n    \"name\": \"Brown, Dan (Photographer)\",\n    \"top_work\": \"Oil paintings in public ownership in South Wales\",\n    \"work_count\": 2\n  },\n  {\n    \"key\": \"OL9536328A\",\n    \"name\": \"Dan L. Brown\",\n    \"top_work\": \"Adequate food for all\",\n    \"work_count\": 2\n  },\n  {\n    \"key\": \"OL13715635A\",\n    \"name\": \"Dan N. Brown\",\n    \"top_work\": \"Intentional Global Warming and the Disciples of Anti-Christianity\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL7729549A\",\n    \"name\": \"Dan C. Brown\",\n    \"top_work\": \"A New Way to Talk\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL6588229A\",\n    \"name\": \"Dan F. Brown\",\n    \"top_work\": \"Su xue xi Ying yu dan zi ji chu 1000\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL14384052A\",\n    \"name\": \"Dan A. Brown, P.E.\",\n    \"top_work\": \"Geotechnical Engineering Circular  No. 8\",\n    \"work_count\": 1\n  }\n]"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"q\": \"Hercules holding a club Leonardo da Vinci\", \"title\": true}",
+              "name": "met-museum_search-museum-objects"
+            },
+            "id": "chatcmpl-tool-adce44149f42882d",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "I found that Dan Brown (the author of The Da Vinci Code) was born on June 22, 1964. So he was born in 1964.\n\nNow I need to find information about a drawing of Hercules holding a club from the Metropolitan Museum of Art. The question mentions \"from the same guy whose name is in the title of that book\" - so I need to find a drawing of Hercules holding a club by Leonardo da Vinci (since \"Da Vinci\" is in the title of \"The Da Vinci Code\").\n\nLet me search for this in the Met Museum collection.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-adce44149f42882d",
+          "type": "function",
+          "function": {
+            "name": "met-museum_search-museum-objects",
+            "arguments": "{\"q\": \"Hercules holding a club Leonardo da Vinci\", \"title\": true}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-adce44149f42882d",
+      "content": "Total objects found: 18\nObject IDs: 341703, 437283, 436896, 360767, 360986, 360950, 437372, 436658, 626194, 435992, 436516, 839045, 437284, 437487, 337497, 436489, 436243, 437824"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"objectId\": 341703, \"returnImage\": false}",
+              "name": "met-museum_get-museum-object"
+            },
+            "id": "chatcmpl-tool-879b7a511649e6c6",
+            "type": "function"
+          },
+          {
+            "function": {
+              "arguments": "{\"objectId\": 437283, \"returnImage\": false}",
+              "name": "met-museum_get-museum-object"
+            },
+            "id": "chatcmpl-tool-b604ace22ff623d2",
+            "type": "function"
+          },
+          {
+            "function": {
+              "arguments": "{\"objectId\": 436896, \"returnImage\": false}",
+              "name": "met-museum_get-museum-object"
+            },
+            "id": "chatcmpl-tool-a7f208f492cf5946",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The search returned 18 objects, but I need to find the specific drawing of Hercules holding a club by Leonardo da Vinci. Let me get the details of a few of these objects to find the correct one. I'll start with the first few IDs.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-879b7a511649e6c6",
+          "type": "function",
+          "function": {
+            "name": "met-museum_get-museum-object",
+            "arguments": "{\"objectId\": 341703, \"returnImage\": false}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-b604ace22ff623d2",
+          "type": "function",
+          "function": {
+            "name": "met-museum_get-museum-object",
+            "arguments": "{\"objectId\": 437283, \"returnImage\": false}"
+          }
+        },
+        {
+          "id": "chatcmpl-tool-a7f208f492cf5946",
+          "type": "function",
+          "function": {
+            "name": "met-museum_get-museum-object",
+            "arguments": "{\"objectId\": 436896, \"returnImage\": false}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-879b7a511649e6c6",
+      "content": "Title: Studies for Hercules Holding a Club Seen in Frontal View, Male Nude Unsheathing a Sword, and the Movements of Water (recto); Study for Hercules Holding a Club Seen in Rear View (verso)\nArtist: Leonardo da Vinci\nArtist Bio: Italian, Vinci 1452–1519 Amboise\nDepartment: Drawings and Prints\nCredit Line: Purchase, Florence B. Selden Bequest and Rogers Fund, and Promised Gift of Leon D. and Debra R. Black, 2000\nMedium: Pen and brown ink; soft black chalk or charcoal (recto); soft black chalk or charcoal (verso)\nDimensions: 5-3/8 x 5-1/2 in.  (13.7 x 14 cm)\nTags: Male Nudes, Hercules\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-b604ace22ff623d2",
+      "content": "Title: A Hunting Scene\nArtist: Piero di Cosimo (Piero di Lorenzo di Piero d'Antonio)\nArtist Bio: Italian, Florence 1462–1522 Florence\nDepartment: European Paintings\nCredit Line: Gift of Robert Gordon, 1875\nMedium: Tempera and oil transferred to Masonite\nDimensions: 27 3/4 x 66 3/4 in. (70.5 x 169.5 cm)\nPrimary Image URL: https://images.metmuseum.org/CRDImages/ep/original/DP-19296-001.jpg\nTags: Bears, Men, Hunting, Centaurs, Satyrs, Deer, Dogs, Lions, Forests\n"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a7f208f492cf5946",
+      "content": "Title: Portrait of a Woman with a Man at a Casement\nArtist: Fra Filippo Lippi\nArtist Bio: Italian, Florence ca. 1406–1469 Spoleto\nDepartment: European Paintings\nCredit Line: Marquand Collection, Gift of Henry G. Marquand, 1889\nMedium: Tempera on wood\nDimensions: 25 1/4 x 16 1/2 in. (64.1 x 41.9 cm)\nPrimary Image URL: https://images.metmuseum.org/CRDImages/ep/original/DP159891.jpg\nTags: Men, Portraits, Profiles, Women\n"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": "\n\nDan Brown, the author of *The Da Vinci Code*, was born in **1964**.\n\nThe Metropolitan Museum of Art acquired Leonardo da Vinci's drawing titled *\"Studies for Hercules Holding a Club Seen in Frontal View, Male Nude Unsheathing a Sword, and the Movements of Water (recto); Study for Hercules Holding a Club Seen in Rear View (verso)\"* in **2000** (as indicated by the credit line \"Purchase, Florence B. Selden Bequest and Rogers Fund, and Promised Gift of Leon D. and Debra R. Black, 2000\").\n\nThe difference between these two years is **36 years**.",
+        "role": "assistant",
+        "tool_calls": null,
+        "function_call": null,
+        "reasoning_content": "The first object (ID 341703) is the correct one: \"Studies for Hercules Holding a Club Seen in Frontal View...\" by Leonardo da Vinci. The credit line says \"Purchase, Florence B. Selden Bequest and Rogers Fund, and Promised Gift of Leon D. and Debra R. Black, 2000\". This indicates it was acquired in 2000.\n\nNow I have:\n- Dan Brown was born in 1964\n- The Met acquired the Leonardo da Vinci drawing in 2000\n\nThe difference is 2000 - 1964 = 36 years.\n\nLet me double-check the acquisition date. The credit line says \"Purchase... 2000\". This is the year it was acquired by the Met.\n\nSo the answer is:\n- Dan Brown was born in 1964\n- The Met acquired the drawing in 2000\n- The difference is 36 years\n"
+      },
+      "content": "\n\nDan Brown, the author of *The Da Vinci Code*, was born in **1964**.\n\nThe Metropolitan Museum of Art acquired Leonardo da Vinci's drawing titled *\"Studies for Hercules Holding a Club Seen in Frontal View, Male Nude Unsheathing a Sword, and the Movements of Water (recto); Study for Hercules Holding a Club Seen in Rear View (verso)\"* in **2000** (as indicated by the credit line \"Purchase, Florence B. Selden Bequest and Rogers Fund, and Promised Gift of Leon D. and Debra R. Black, 2000\").\n\nThe difference between these two years is **36 years**.",
+      "tool_calls": null
+    }
+  ],
+  "trajectory": [
+    {
+      "tool_name": "open-library_get_book_by_title",
+      "parameters": {
+        "title": "The Da Vinci Code"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "open-library_get_authors_by_name",
+      "parameters": {
+        "name": "Dan Brown"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "met-museum_search-museum-objects",
+      "parameters": {
+        "q": "Hercules holding a club Leonardo da Vinci",
+        "title": true
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "met-museum_get-museum-object",
+      "parameters": {
+        "objectId": 341703,
+        "returnImage": false
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "met-museum_get-museum-object",
+      "parameters": {
+        "objectId": 437283,
+        "returnImage": false
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "met-museum_get-museum-object",
+      "parameters": {
+        "objectId": 436896,
+        "returnImage": false
+      },
+      "response": null,
+      "error": null
+    }
+  ],
+  "errors": [],
+  "trajectory_time": 25.168827772140503,
+  "num_retry": 1,
+  "coverage_score": 1.0,
+  "fully_covered_claims": 4,
+  "partially_covered_claims": 0,
+  "total_claims": 4,
+  "coverage_details_json": {
+    "per_claim": [
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly confirms the claim in its opening sentence: 'Dan Brown, the author of *The Da Vinci Code*...'. This directly addresses all key components of the claim: the book title (*The Da Vinci Code*), the author's name (Dan Brown), and the relationship (author/wrote). The additional information regarding the Metropolitan Museum of Art and the year calculation is extraneous to the specific claim but does not detract from the accurate fulfillment of the core assertion."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly states that 'Dan Brown... was born in 1964', which directly and accurately matches the core claim. The numerical value (1964) is an exact match. While the response includes additional irrelevant information regarding the Metropolitan Museum of Art, this does not detract from the fact that the specific claim regarding Dan Brown's birth year is completely and accurately addressed."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly confirms all key components of the claim: the specific artwork title ('Studies for Hercules Holding a Club Seen in Frontal View...'), the acquiring institution ('Metropolitan Museum of Art'), and the acquisition year ('2000'). The numerical value matches exactly. While the response includes extraneous information regarding Dan Brown and a year difference calculation, these do not negate the accurate and complete coverage of the claim's core requirements."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly addresses the claim by identifying the years 1964 and 2000 and stating that the difference between them is 36 years. The mathematical calculation (2000 - 1964 = 36) is accurate and matches the claim exactly. All key numerical components (1964, 2000, 36) are present and correctly related."
+      }
+    ],
+    "coverage_score": 1.0,
+    "total_claims": 4,
+    "fully_covered_claims": 4,
+    "partially_covered_claims": 0,
+    "explanation": "Evaluation complete",
+    "confidence": 0.5
+  },
+  "evaluation_confidence": 0.5
+}

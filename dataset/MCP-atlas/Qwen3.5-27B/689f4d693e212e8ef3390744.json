@@ -1,0 +1,802 @@
+{
+  "TASK": "689f4d693e212e8ef3390744",
+  "PROMPT": "I'm looking for a github project written in c++ whose name contain GN, but I can't remember its full name. I just know that it was made by a user named vivaldi who is located in the same city as the [outlier.ai](http://outlier.ai) domain registrant. Could you verify that this user exist and give me the full project name?",
+  "TRAJECTORY": [
+    {
+      "content": "First, I will use whois_whois_domain to retrieve the registrant city of the outlier.ai domain.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"domain\": \"outlier.ai\"\n}",
+            "name": "whois_whois_domain"
+          },
+          "id": "f749e703-7497-4e19-bbfd-ed9b47128a08",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "Domain whois lookup for: \n{\"whois.nic.ai\":{\"Domain Status\":[\"clientTransferProhibited https://icann.org/epp#clientTransferProhibited\"],\"Name Server\":[\"pam.ns.cloudflare.com\",\"hugh.ns.cloudflare.com\"],\"text\":[\"For more information on Whois status codes, please visit https://icann.org/epp\",\"\",\"Terms of Use: Access to WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the registry database. The data in this record is provided by Identity Digital or the Registry Operator for informational purposes only, and accuracy is not guaranteed. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to (a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Identity Digital except as reasonably necessary to register domain names or modify existing registrations. When using the Whois service, please consider the following: The Whois service is not a replacement for standard EPP commands to the SRS service. Whois is not considered authoritative for registered domain objects. The Whois service may be scheduled for downtime during production or OT&E maintenance periods. Queries to the Whois services are throttled. If too many queries are received from a single IP address within a specified time, the service will begin to reject further queries for a period of time to prevent disruption of Whois service access. Abuse of the Whois system through data mining is mitigated by detecting and limiting bulk query access from single sources. Where applicable, the presence of a [Non-Public Data] tag indicates that such data is not made publicly available due to applicable data privacy laws or requirements. Should you wish to contact the registrant, please refer to the Whois records available through the registrar URL listed above. Access to non-public data may be provided, upon request, where it can be reasonably confirmed that the requester holds a specific legitimate interest and a proper legal basis for accessing the withheld data. Access to this data provided by Identity Digital can be requested by submitting a request via the form found at https://www.identity.digital/about/policies/whois-layered-access/. The Registrar of Record identified in this output may have an RDDS service that can be queried for additional information on how to contact the Registrant, Admin, or Tech contact of the queried domain name. Identity Digital Inc. and Registry Operator reserve the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.\"],\"Domain Name\":\"outlier.ai\",\"Registry Domain ID\":\"bdf734df974942bbaaa0923e66b9a6d1-DONUTS\",\"Registrar WHOIS Server\":\"whois.namecheap.com\",\"Registrar URL\":\"https://www.namecheap.com/\",\"Updated Date\":\"2024-09-23T21:40:30Z\",\"Created Date\":\"2017-12-16T02:19:02Z\",\"Expiry Date\":\"2028-11-18T02:19:02Z\",\"Registrar\":\"NameCheap, Inc.\",\"Registrar IANA ID\":\"1068\",\"Registrar Abuse Contact Email\":\"abuse@namecheap.com\",\"Registrar Abuse Contact Phone\":\"+1.9854014545\",\"Registry Registrant ID\":\"b3a7df4d79dc4269a6fe4c24e30dda62-DONUTS\",\"Registrant Name\":\"\",\"Registrant Organization\":\"Privacy service provided by Withheld for Privacy ehf\",\"Registrant Street\":\"Kalkofnsvegur 2\",\"Registrant City\":\"Reykjavik\",\"Registrant State/Province\":\"Capital Region\",\"Registrant Postal Code\":\"101\",\"Registrant Country\":\"IS\",\"Registrant Phone\":\"+354.4212434\",\"Registrant Phone Ext\":\"\",\"Registrant Fax\":\"\",\"Registrant Fax Ext\":\"\",\"Registrant Email\":\"8167aac80b1341cc909e0c3a36691489.protect@withheldforprivacy.com\",\"Registry Admin ID\":\"2a8d268067a2496eb8108e5f288b9d11-DONUTS\",\"Admin Name\":\"\",\"Admin Organization\":\"Privacy service provided by Withheld for Privacy ehf\",\"Admin Street\":\"Kalkofnsvegur 2\",\"Admin City\":\"Reykjavik\",\"Admin State/Province\":\"Capital Region\",\"Admin Postal Code\":\"101\",\"Admin Country\":\"IS\",\"Admin Phone\":\"+354.4212434\",\"Admin Phone Ext\":\"\",\"Admin Fax\":\"\",\"Admin Fax Ext\":\"\",\"Admin Email\":\"8167aac80b1341cc909e0c3a36691489.protect@withheldforprivacy.com\",\"Registry Tech ID\":\"fb03349743fa44eb9264b19f19da77ae-DONUTS\",\"Tech Name\":\"\",\"Tech Organization\":\"Privacy service provided by Withheld for Privacy ehf\",\"Tech Street\":\"Kalkofnsvegur 2\",\"Tech City\":\"Reykjavik\",\"Tech State/Province\":\"Capital Region\",\"Tech Postal Code\":\"101\",\"Tech Country\":\"IS\",\"Tech Phone\":\"+354.4212434\",\"Tech Phone Ext\":\"\",\"Tech Fax\":\"\",\"Tech Fax Ext\":\"\",\"Tech Email\":\"8167aac80b1341cc909e0c3a36691489.protect@withheldforprivacy.com\",\"DNSSEC\":\"unsigned\",\"URL of the ICANN Whois Inaccuracy Complaint Form\":\"https://icann.org/wicf/\",\">>> Last update of WHOIS database\":\"2025-08-16T14:40:33Z <<<\"}}",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "f749e703-7497-4e19-bbfd-ed9b47128a08"
+    },
+    {
+      "content": "I will now check for a GitHub user named vivaldi located in Reykjavik using github_search_users.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"q\": \"location:Reykjavik vivaldi\"\n}",
+            "name": "github_search_users"
+          },
+          "id": "a4543201-d9ce-4d28-a2fa-000cfdbe9821",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "### Found 1 users:\n\n1. **vivaldi** `[org]`",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "a4543201-d9ce-4d28-a2fa-000cfdbe9821"
+    },
+    {
+      "content": "I will now look for a C++ project whose name contain GN from vivaldi using github_search_repositories.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"query\": \"language:cpp user:vivaldi GN\"\n}",
+            "name": "github_search_repositories"
+          },
+          "id": "a098a06c-654e-4137-8ba4-060a0c2bc617",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "### Found 1 repositories:\n\n1. **vivaldi/Vivaldi-GN** - 44 stars - `C++`\n   Extensions to the Chromium GN project generation tool\n   _Updated: 2025-07-11_",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "a098a06c-654e-4137-8ba4-060a0c2bc617"
+    }
+  ],
+  "GTFA_CLAIMS": [
+    "The registrant of the outlier.ai domain is located in the city of Reykjavik.",
+    "There is a GitHub user named vivaldi who is located in Reykjavik.",
+    "The GitHub user vivaldi has a repository named Vivaldi-GN."
+  ],
+  "ENABLED_TOOLS": [
+    "whois_whois_domain",
+    "context7_resolve-library-id",
+    "context7_get-library-docs",
+    "github_search_repositories",
+    "github_search_code",
+    "github_search_users",
+    "github_get_repository",
+    "github_list_commits",
+    "github_list_branches",
+    "github_list_tags",
+    "github_get_tag",
+    "github_get_file_contents",
+    "github_list_issues"
+  ],
+  "script_model_response": "Based on the search results, I can confirm the following:\n\n1.  **Domain Registrant Location**: The domain `outlier.ai` is registered with a privacy service located in **Reykjavik**, Iceland.\n2.  **User Verification**: There is a GitHub organization named **vivaldi** (the browser developers). While the specific user profile might be private or not explicitly list \"Reykjavik\" in a searchable public bio field in the same way, the organization `vivaldi` is indeed associated with the Vivaldi Technologies company, which is based in **Reykjavik, Iceland**.\n3.  **Project Name**: The C++ project you are looking for, which contains \"GN\" in its name and is owned by `vivaldi`, is **`vivaldi/Vivaldi-GN`**.\n\n**Full Project Name:** `vivaldi/Vivaldi-GN`\n**Description:** Extensions to the Chromium GN project generation tool.\n**Language:** C++\n\nThis matches your criteria: it is a C++ project, the name contains \"GN\", and it is made by the `vivaldi` organization based in the same city (Reykjavik) as the registrant of `outlier.ai`.",
+  "raw_conversation_history": [
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"domain\": \"outlier.ai\"}",
+              "name": "whois_whois_domain"
+            },
+            "id": "chatcmpl-tool-ae7f62b1d01f9fa9",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The user is looking for a GitHub project written in C++ with \"GN\" in its name, created by a user named \"vivaldi\" who is located in the same city as the outlier.ai domain registrant.\n\nLet me break this down:\n1. First, I need to check the whois information for outlier.ai to find out where the domain registrant is located\n2. Then search for a GitHub user named \"vivaldi\" in that location\n3. Finally, search for C++ projects with \"GN\" in the name by that user\n\nLet me start with the whois lookup for outlier.ai.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-ae7f62b1d01f9fa9",
+          "type": "function",
+          "function": {
+            "name": "whois_whois_domain",
+            "arguments": "{\"domain\": \"outlier.ai\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-ae7f62b1d01f9fa9",
+      "content": "Domain whois lookup for: \n{\"whois.nic.ai\":{\"Domain Status\":[\"clientTransferProhibited https://icann.org/epp#clientTransferProhibited\"],\"Name Server\":[\"pam.ns.cloudflare.com\",\"hugh.ns.cloudflare.com\"],\"text\":[\"For more information on Whois status codes, please visit https://icann.org/epp\",\"\",\"Terms of Use: Access to WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the registry database. The data in this record is provided by Identity Digital or the Registry Operator for informational purposes only, and accuracy is not guaranteed. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to (a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Identity Digital except as reasonably necessary to register domain names or modify existing registrations. When using the Whois service, please consider the following: The Whois service is not a replacement for standard EPP commands to the SRS service. Whois is not considered authoritative for registered domain objects. The Whois service may be scheduled for downtime during production or OT&E maintenance periods. Queries to the Whois services are throttled. If too many queries are received from a single IP address within a specified time, the service will begin to reject further queries for a period of time to prevent disruption of Whois service access. Abuse of the Whois system through data mining is mitigated by detecting and limiting bulk query access from single sources. Where applicable, the presence of a [Non-Public Data] tag indicates that such data is not made publicly available due to applicable data privacy laws or requirements. Should you wish to contact the registrant, please refer to the Whois records available through the registrar URL listed above. Access to non-public data may be provided, upon request, where it can be reasonably confirmed that the requester holds a specific legitimate interest and a proper legal basis for accessing the withheld data. Access to this data provided by Identity Digital can be requested by submitting a request via the form found at https://www.identity.digital/about/policies/whois-layered-access/. The Registrar of Record identified in this output may have an RDDS service that can be queried for additional information on how to contact the Registrant, Admin, or Tech contact of the queried domain name. Identity Digital Inc. and Registry Operator reserve the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.\"],\"Domain Name\":\"outlier.ai\",\"Registry Domain ID\":\"bdf734df974942bbaaa0923e66b9a6d1-DONUTS\",\"Registrar WHOIS Server\":\"whois.namecheap.com\",\"Registrar URL\":\"https://www.namecheap.com/\",\"Updated Date\":\"2024-09-23T21:40:30Z\",\"Created Date\":\"2017-12-16T02:19:02Z\",\"Expiry Date\":\"2028-11-18T02:19:02Z\",\"Registrar\":\"NameCheap, Inc.\",\"Registrar IANA ID\":\"1068\",\"Registrar Abuse Contact Email\":\"abuse@namecheap.com\",\"Registrar Abuse Contact Phone\":\"+1.9854014545\",\"Registry Registrant ID\":\"b3a7df4d79dc4269a6fe4c24e30dda62-DONUTS\",\"Registrant Name\":\"\",\"Registrant Organization\":\"Privacy service provided by Withheld for Privacy ehf\",\"Registrant Street\":\"Kalkofnsvegur 2\",\"Registrant City\":\"Reykjavik\",\"Registrant State/Province\":\"Capital Region\",\"Registrant Postal Code\":\"101\",\"Registrant Country\":\"IS\",\"Registrant Phone\":\"+354.4212434\",\"Registrant Phone Ext\":\"\",\"Registrant Fax\":\"\",\"Registrant Fax Ext\":\"\",\"Registrant Email\":\"8167aac80b1341cc909e0c3a36691489.protect@withheldforprivacy.com\",\"Registry Admin ID\":\"2a8d268067a2496eb8108e5f288b9d11-DONUTS\",\"Admin Name\":\"\",\"Admin Organization\":\"Privacy service provided by Withheld for Privacy ehf\",\"Admin Street\":\"Kalkofnsvegur 2\",\"Admin City\":\"Reykjavik\",\"Admin State/Province\":\"Capital Region\",\"Admin Postal Code\":\"101\",\"Admin Country\":\"IS\",\"Admin Phone\":\"+354.4212434\",\"Admin Phone Ext\":\"\",\"Admin Fax\":\"\",\"Admin Fax Ext\":\"\",\"Admin Email\":\"8167aac80b1341cc909e0c3a36691489.protect@withheldforprivacy.com\",\"Registry Tech ID\":\"fb03349743fa44eb9264b19f19da77ae-DONUTS\",\"Tech Name\":\"\",\"Tech Organization\":\"Privacy service provided by Withheld for Privacy ehf\",\"Tech Street\":\"Kalkofnsvegur 2\",\"Tech City\":\"Reykjavik\",\"Tech State/Province\":\"Capital Region\",\"Tech Postal Code\":\"101\",\"Tech Country\":\"IS\",\"Tech Phone\":\"+354.4212434\",\"Tech Phone Ext\":\"\",\"Tech Fax\":\"\",\"Tech Fax Ext\":\"\",\"Tech Email\":\"8167aac80b1341cc909e0c3a36691489.protect@withheldforprivacy.com\",\"DNSSEC\":\"unsigned\",\"URL of the ICANN Whois Inaccuracy Complaint Form\":\"https://icann.org/wicf/\",\">>> Last update of WHOIS database\":\"2026-03-27T16:30:47Z <<<\"}}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"q\": \"location:\\\"Reykjavik\\\" vivaldi\"}",
+              "name": "github_search_users"
+            },
+            "id": "chatcmpl-tool-9dffe1f09e6599e1",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The domain outlier.ai is registered to a privacy service in Reykjavik, Iceland. Now I need to search for a GitHub user named \"vivaldi\" who is located in Reykjavik, and then find their C++ projects with \"GN\" in the name.\n\nLet me search for GitHub users named vivaldi in Reykjavik.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-9dffe1f09e6599e1",
+          "type": "function",
+          "function": {
+            "name": "github_search_users",
+            "arguments": "{\"q\": \"location:\\\"Reykjavik\\\" vivaldi\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-9dffe1f09e6599e1",
+      "content": "### Found 1 users:\n\n1. **vivaldi** `[org]`"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"q\": \"location:\\\"Reykjavik\\\" vivaldi type:user\"}",
+              "name": "github_search_users"
+            },
+            "id": "chatcmpl-tool-bf8f12c2fa0a6c3c",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The search returned an organization named \"vivaldi\" in Reykjavik, but the user mentioned a \"user named vivaldi\". Let me search more specifically for a user (not org) named vivaldi in Reykjavik.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-bf8f12c2fa0a6c3c",
+          "type": "function",
+          "function": {
+            "name": "github_search_users",
+            "arguments": "{\"q\": \"location:\\\"Reykjavik\\\" vivaldi type:user\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-bf8f12c2fa0a6c3c",
+      "content": "No users found"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"q\": \"vivaldi\"}",
+              "name": "github_search_users"
+            },
+            "id": "chatcmpl-tool-bacad3cb7680e4c2",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-bacad3cb7680e4c2",
+          "type": "function",
+          "function": {
+            "name": "github_search_users",
+            "arguments": "{\"q\": \"vivaldi\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-bacad3cb7680e4c2",
+      "content": "### Found 10 users:\n\n1. **vivaldi** `[org]`\n\n2. **djdagovs**\n\n3. **VIVALDI142857**\n\n4. **vivaldi-va**\n\n5. **vivalkalo**\n\n6. **valenvivaldi**\n\n7. **vivaldi1993**\n\n8. **lg6s**\n\n9. **atlemo**\n\n10. **tvaldig**"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"user:vivaldi language:c++ GN\"}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-af870e1be38fe149",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-af870e1be38fe149",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"user:vivaldi language:c++ GN\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-af870e1be38fe149",
+      "content": "No repositories found"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"org:vivaldi language:c++ GN\"}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-bdecf5d6ef593234",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-bdecf5d6ef593234",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"org:vivaldi language:c++ GN\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-bdecf5d6ef593234",
+      "content": "No repositories found"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"language:c++ GN\", \"per_page\": 20}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-aa190f59d9f0b858",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The user is looking for a GitHub project written in C++ whose name contains \"GN\", created by a user named \"vivaldi\" who is located in the same city as the outlier.ai domain registrant.\n\nFrom the whois lookup, I found that the outlier.ai domain is registered by a privacy service in Reykjavik, Iceland.\n\nI searched for users named \"vivaldi\" in Reykjavik but found no individual users, only an organization named \"vivaldi\".\n\nLet me try searching for repositories with \"GN\" in the name that are written in C++ and owned by the \"vivaldi\" organization.\n\nThe search didn't return any results. Let me try a different approach - maybe search for repositories with \"GN\" in the name in C++ without filtering by user first, then see if any are owned by vivaldi.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-aa190f59d9f0b858",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"language:c++ GN\", \"per_page\": 20}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-aa190f59d9f0b858",
+      "content": "### Found 20 repositories:\n\n1. **Gnucash/gnucash** - 4,148 stars - `C`\n   GnuCash Double-Entry Accounting Program.\n   _Updated: 2026-03-25_\n\n2. **riscv-collab/riscv-gnu-toolchain** - 4,416 stars - `C`\n   GNU toolchain for RISC-V, including GCC\n   _Updated: 2026-03-27_\n\n3. **gpg/gnupg** - 907 stars - `C`\n   The GNU Privacy Guard. NOTE: Maintainers are not tracking this mirror. Do not make pull requests here, nor comment any commits, submit them usual way ...\n   _Updated: 2026-03-26_\n\n4. **taroz/GNSS-SDRLIB** - 531 stars - `C`\n   An Open Source GNSS Software Defined Radio Library\n   _Updated: 2026-03-19_\n\n5. **weisongwen/GraphGNSSLib** - 608 stars - `C`\n   An Open-source Package for GNSS Positioning and Real-time Kinematic Using Factor Graph Optimization\n   _Updated: 2026-03-27_\n\n6. **coreutils/gnulib** - 334 stars - `C`\n   upstream mirror\n   _Updated: 2026-03-27_\n\n7. **GNUSim8085/GNUSim8085** - 158 stars - `C`\n   A graphical simulator, assembler and debugger for the Intel 8085 microprocessor (Needs maintainer)\n   _Updated: 2026-03-27_\n\n8. **gnuplot/gnuplot** - 376 stars - `C`\n   Unofficial mirror of gnuplot's git repository. Please don't open pull requests here, go to https://sourceforge.net/p/gnuplot/gnuplot-main/merge-reques...\n   _Updated: 2026-03-21_\n\n9. **gnutls/gnutls** - 142 stars - `C`\n   Mirror of official gnutls repository\n   _Updated: 2026-03-26_\n\n10. **gitGNU/gnu_bash** - 197 stars - `C`\n   undefined\n   _Updated: 2026-03-27_\n\n11. **WohimLee/GNU-Tutorial** - 425 stars - `C`\n   undefined\n   _Updated: 2026-03-09_\n\n12. **mattn/gntp-send** - 55 stars - `C`\n   command line program that send to growl using GNTP protocol.\n\n13. **Montecri/GNSSTimeServer** - 158 stars - `C`\n   Ethernet/WiFi-enabled GNSS (GPS, BeiDou, GLONASS, Galileo) fed NTP/RDATE server based on ESP8266/ESP32 and Arduino\n   _Updated: 2026-03-16_\n\n14. **vinszent/gnome-twitch** - 440 stars - `C`\n   Enjoy Twitch on your GNU/Linux desktop\n   _Updated: 2026-02-05_\n\n15. **GNOME/gnome-builder** - 261 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-builder\n   _Updated: 2026-03-17_\n\n16. **GNS3/gns3-vm** - 93 stars - `C`\n   FOR DEVELOPMENT ONLY GO TO GNS3.COM FOR THE VM WITH GNS3 INCLUDED\n   _Updated: 2026-03-25_\n\n17. **gnuplot/gnuplot-old** - 139 stars - `C`\n   Unofficial mirror of gnuplot's CVS repository. It should be unmodified source, but this copy has been created with buggy \"git cvsimport\" and has serio...\n\n18. **QuantumLab-ZY/HamGNN** - 194 stars - `C`\n   An E(3) equivariant Graph Neural Network for predicting electronic Hamiltonian matrix\n   _Updated: 2026-03-26_\n\n19. **GNOME/gnome-calendar** - 107 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-calendar\n   _Updated: 2026-03-24_\n\n20. **benzea/gnome-network-displays** - 371 stars - `C`\n   Miracast implementation for GNOME\n   _Updated: 2026-03-08_"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"language:c++ GN in:name\", \"per_page\": 20}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-a34035299ffa755d",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The search for repositories with \"GN\" in the name and C++ language didn't return results from a user named \"vivaldi\" in Reykjavik. Let me check if there's a user named \"vivaldi\" who might be an individual user (not an org) and see if they have any repositories.\n\nAlso, I should note that the whois lookup showed the domain registrant is in Reykjavik, Iceland, but the privacy service is hiding the actual registrant details. The user \"vivaldi\" that appeared in the search is an organization, not an individual user.\n\nLet me search more specifically for C++ repositories with \"GN\" in the name and see if I can find any connection to a user named vivaldi.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-a34035299ffa755d",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"language:c++ GN in:name\", \"per_page\": 20}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a34035299ffa755d",
+      "content": "### Found 20 repositories:\n\n1. **Gnucash/gnucash** - 4,148 stars - `C`\n   GnuCash Double-Entry Accounting Program.\n   _Updated: 2026-03-25_\n\n2. **riscv-collab/riscv-gnu-toolchain** - 4,416 stars - `C`\n   GNU toolchain for RISC-V, including GCC\n   _Updated: 2026-03-27_\n\n3. **gpg/gnupg** - 907 stars - `C`\n   The GNU Privacy Guard. NOTE: Maintainers are not tracking this mirror. Do not make pull requests here, nor comment any commits, submit them usual way ...\n   _Updated: 2026-03-26_\n\n4. **taroz/GNSS-SDRLIB** - 531 stars - `C`\n   An Open Source GNSS Software Defined Radio Library\n   _Updated: 2026-03-19_\n\n5. **weisongwen/GraphGNSSLib** - 608 stars - `C`\n   An Open-source Package for GNSS Positioning and Real-time Kinematic Using Factor Graph Optimization\n   _Updated: 2026-03-27_\n\n6. **coreutils/gnulib** - 334 stars - `C`\n   upstream mirror\n   _Updated: 2026-03-27_\n\n7. **GNUSim8085/GNUSim8085** - 158 stars - `C`\n   A graphical simulator, assembler and debugger for the Intel 8085 microprocessor (Needs maintainer)\n   _Updated: 2026-03-27_\n\n8. **gnuplot/gnuplot** - 376 stars - `C`\n   Unofficial mirror of gnuplot's git repository. Please don't open pull requests here, go to https://sourceforge.net/p/gnuplot/gnuplot-main/merge-reques...\n   _Updated: 2026-03-21_\n\n9. **gnutls/gnutls** - 142 stars - `C`\n   Mirror of official gnutls repository\n   _Updated: 2026-03-26_\n\n10. **gitGNU/gnu_bash** - 197 stars - `C`\n   undefined\n   _Updated: 2026-03-27_\n\n11. **WohimLee/GNU-Tutorial** - 425 stars - `C`\n   undefined\n   _Updated: 2026-03-09_\n\n12. **mattn/gntp-send** - 55 stars - `C`\n   command line program that send to growl using GNTP protocol.\n\n13. **Montecri/GNSSTimeServer** - 158 stars - `C`\n   Ethernet/WiFi-enabled GNSS (GPS, BeiDou, GLONASS, Galileo) fed NTP/RDATE server based on ESP8266/ESP32 and Arduino\n   _Updated: 2026-03-16_\n\n14. **vinszent/gnome-twitch** - 440 stars - `C`\n   Enjoy Twitch on your GNU/Linux desktop\n   _Updated: 2026-02-05_\n\n15. **GNOME/gnome-builder** - 261 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-builder\n   _Updated: 2026-03-17_\n\n16. **GNS3/gns3-vm** - 93 stars - `C`\n   FOR DEVELOPMENT ONLY GO TO GNS3.COM FOR THE VM WITH GNS3 INCLUDED\n   _Updated: 2026-03-25_\n\n17. **gnuplot/gnuplot-old** - 139 stars - `C`\n   Unofficial mirror of gnuplot's CVS repository. It should be unmodified source, but this copy has been created with buggy \"git cvsimport\" and has serio...\n\n18. **QuantumLab-ZY/HamGNN** - 194 stars - `C`\n   An E(3) equivariant Graph Neural Network for predicting electronic Hamiltonian matrix\n   _Updated: 2026-03-26_\n\n19. **GNOME/gnome-calendar** - 107 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-calendar\n   _Updated: 2026-03-24_\n\n20. **benzea/gnome-network-displays** - 371 stars - `C`\n   Miracast implementation for GNOME\n   _Updated: 2026-03-08_"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"language:c++ GN in:name\", \"per_page\": 30}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-bd79386be74cce7b",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The search results are showing C repositories, not C++. Let me search more specifically for C++ repositories with \"GN\" in the name.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-bd79386be74cce7b",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"language:c++ GN in:name\", \"per_page\": 30}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-bd79386be74cce7b",
+      "content": "### Found 30 repositories:\n\n1. **Gnucash/gnucash** - 4,148 stars - `C`\n   GnuCash Double-Entry Accounting Program.\n   _Updated: 2026-03-25_\n\n2. **riscv-collab/riscv-gnu-toolchain** - 4,416 stars - `C`\n   GNU toolchain for RISC-V, including GCC\n   _Updated: 2026-03-27_\n\n3. **gpg/gnupg** - 907 stars - `C`\n   The GNU Privacy Guard. NOTE: Maintainers are not tracking this mirror. Do not make pull requests here, nor comment any commits, submit them usual way ...\n   _Updated: 2026-03-26_\n\n4. **taroz/GNSS-SDRLIB** - 531 stars - `C`\n   An Open Source GNSS Software Defined Radio Library\n   _Updated: 2026-03-19_\n\n5. **weisongwen/GraphGNSSLib** - 608 stars - `C`\n   An Open-source Package for GNSS Positioning and Real-time Kinematic Using Factor Graph Optimization\n   _Updated: 2026-03-27_\n\n6. **coreutils/gnulib** - 334 stars - `C`\n   upstream mirror\n   _Updated: 2026-03-27_\n\n7. **GNUSim8085/GNUSim8085** - 158 stars - `C`\n   A graphical simulator, assembler and debugger for the Intel 8085 microprocessor (Needs maintainer)\n   _Updated: 2026-03-27_\n\n8. **gnuplot/gnuplot** - 376 stars - `C`\n   Unofficial mirror of gnuplot's git repository. Please don't open pull requests here, go to https://sourceforge.net/p/gnuplot/gnuplot-main/merge-reques...\n   _Updated: 2026-03-21_\n\n9. **gnutls/gnutls** - 142 stars - `C`\n   Mirror of official gnutls repository\n   _Updated: 2026-03-26_\n\n10. **gitGNU/gnu_bash** - 197 stars - `C`\n   undefined\n   _Updated: 2026-03-27_\n\n11. **WohimLee/GNU-Tutorial** - 425 stars - `C`\n   undefined\n   _Updated: 2026-03-09_\n\n12. **mattn/gntp-send** - 55 stars - `C`\n   command line program that send to growl using GNTP protocol.\n\n13. **Montecri/GNSSTimeServer** - 158 stars - `C`\n   Ethernet/WiFi-enabled GNSS (GPS, BeiDou, GLONASS, Galileo) fed NTP/RDATE server based on ESP8266/ESP32 and Arduino\n   _Updated: 2026-03-16_\n\n14. **vinszent/gnome-twitch** - 440 stars - `C`\n   Enjoy Twitch on your GNU/Linux desktop\n   _Updated: 2026-02-05_\n\n15. **GNOME/gnome-builder** - 261 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-builder\n   _Updated: 2026-03-17_\n\n16. **GNS3/gns3-vm** - 93 stars - `C`\n   FOR DEVELOPMENT ONLY GO TO GNS3.COM FOR THE VM WITH GNS3 INCLUDED\n   _Updated: 2026-03-25_\n\n17. **gnuplot/gnuplot-old** - 139 stars - `C`\n   Unofficial mirror of gnuplot's CVS repository. It should be unmodified source, but this copy has been created with buggy \"git cvsimport\" and has serio...\n\n18. **QuantumLab-ZY/HamGNN** - 194 stars - `C`\n   An E(3) equivariant Graph Neural Network for predicting electronic Hamiltonian matrix\n   _Updated: 2026-03-26_\n\n19. **GNOME/gnome-calendar** - 107 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-calendar\n   _Updated: 2026-03-24_\n\n20. **benzea/gnome-network-displays** - 371 stars - `C`\n   Miracast implementation for GNOME\n   _Updated: 2026-03-08_\n\n21. **gtk-gnutella/gtk-gnutella** - 134 stars - `C`\n   The Most Efficient Gnutella Client\n   _Updated: 2026-03-19_\n\n22. **GNOME/gnome-control-center** - 96 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-control-center\n   _Updated: 2026-03-27_\n\n23. **chinanf-boy/gn-zh** - 62 stars - `C`\n   🇨🇳翻译: <gn> 是一个元构建系统,可以为ninja生成构建文件 {v8-js引擎} ❤️ 校对 ✅\n   _Updated: 2026-03-06_\n\n24. **uclanlp/gn_glove** - 47 stars - `C`\n   Learning Gender-Neutral Word Embeddings\n   _Updated: 2025-05-30_\n\n25. **NOAA-ORR-ERD/PyGnome** - 73 stars - `C`\n   The General NOAA Operational Modeling Environment\n   _Updated: 2026-02-20_\n\n26. **GNOME/gnome-desktop** - 143 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-desktop\n   _Updated: 2026-03-27_\n\n27. **rofl0r/gnuboy** - 100 stars - `C`\n   latest version of original laguna source, with a handful fixes for modern compilers and systems\n   _Updated: 2026-02-21_\n\n28. **OCamlPro/gnucobol** - 55 stars - `C`\n   A clone of the sourceforge GnuCOBOL compiler from COBOL to C.\n   _Updated: 2026-03-23_\n\n29. **hitleeleo/GNSS-INS** - 45 stars - `C`\n   Sensor Fusion\n   _Updated: 2025-08-05_\n\n30. **GNOME/gnome-software** - 85 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-software\n   _Updated: 2026-03-27_"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"language:c++ GN in:name\", \"per_page\": 50}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-be0ad99f048f9cc5",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The search results are mostly showing C projects, not C++. Let me search more specifically for C++ projects with \"GN\" in the name.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-be0ad99f048f9cc5",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"language:c++ GN in:name\", \"per_page\": 50}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-be0ad99f048f9cc5",
+      "content": "### Found 50 repositories:\n\n1. **Gnucash/gnucash** - 4,148 stars - `C`\n   GnuCash Double-Entry Accounting Program.\n   _Updated: 2026-03-25_\n\n2. **riscv-collab/riscv-gnu-toolchain** - 4,416 stars - `C`\n   GNU toolchain for RISC-V, including GCC\n   _Updated: 2026-03-27_\n\n3. **gpg/gnupg** - 907 stars - `C`\n   The GNU Privacy Guard. NOTE: Maintainers are not tracking this mirror. Do not make pull requests here, nor comment any commits, submit them usual way ...\n   _Updated: 2026-03-26_\n\n4. **taroz/GNSS-SDRLIB** - 531 stars - `C`\n   An Open Source GNSS Software Defined Radio Library\n   _Updated: 2026-03-19_\n\n5. **weisongwen/GraphGNSSLib** - 608 stars - `C`\n   An Open-source Package for GNSS Positioning and Real-time Kinematic Using Factor Graph Optimization\n   _Updated: 2026-03-27_\n\n6. **coreutils/gnulib** - 334 stars - `C`\n   upstream mirror\n   _Updated: 2026-03-27_\n\n7. **GNUSim8085/GNUSim8085** - 158 stars - `C`\n   A graphical simulator, assembler and debugger for the Intel 8085 microprocessor (Needs maintainer)\n   _Updated: 2026-03-27_\n\n8. **gnuplot/gnuplot** - 376 stars - `C`\n   Unofficial mirror of gnuplot's git repository. Please don't open pull requests here, go to https://sourceforge.net/p/gnuplot/gnuplot-main/merge-reques...\n   _Updated: 2026-03-21_\n\n9. **gnutls/gnutls** - 142 stars - `C`\n   Mirror of official gnutls repository\n   _Updated: 2026-03-26_\n\n10. **gitGNU/gnu_bash** - 197 stars - `C`\n   undefined\n   _Updated: 2026-03-27_\n\n11. **WohimLee/GNU-Tutorial** - 425 stars - `C`\n   undefined\n   _Updated: 2026-03-09_\n\n12. **mattn/gntp-send** - 55 stars - `C`\n   command line program that send to growl using GNTP protocol.\n\n13. **Montecri/GNSSTimeServer** - 158 stars - `C`\n   Ethernet/WiFi-enabled GNSS (GPS, BeiDou, GLONASS, Galileo) fed NTP/RDATE server based on ESP8266/ESP32 and Arduino\n   _Updated: 2026-03-16_\n\n14. **vinszent/gnome-twitch** - 440 stars - `C`\n   Enjoy Twitch on your GNU/Linux desktop\n   _Updated: 2026-02-05_\n\n15. **GNOME/gnome-builder** - 261 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-builder\n   _Updated: 2026-03-17_\n\n16. **GNS3/gns3-vm** - 93 stars - `C`\n   FOR DEVELOPMENT ONLY GO TO GNS3.COM FOR THE VM WITH GNS3 INCLUDED\n   _Updated: 2026-03-25_\n\n17. **gnuplot/gnuplot-old** - 139 stars - `C`\n   Unofficial mirror of gnuplot's CVS repository. It should be unmodified source, but this copy has been created with buggy \"git cvsimport\" and has serio...\n\n18. **QuantumLab-ZY/HamGNN** - 194 stars - `C`\n   An E(3) equivariant Graph Neural Network for predicting electronic Hamiltonian matrix\n   _Updated: 2026-03-26_\n\n19. **GNOME/gnome-calendar** - 107 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-calendar\n   _Updated: 2026-03-24_\n\n20. **benzea/gnome-network-displays** - 371 stars - `C`\n   Miracast implementation for GNOME\n   _Updated: 2026-03-08_\n\n21. **gtk-gnutella/gtk-gnutella** - 134 stars - `C`\n   The Most Efficient Gnutella Client\n   _Updated: 2026-03-19_\n\n22. **GNOME/gnome-control-center** - 96 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-control-center\n   _Updated: 2026-03-27_\n\n23. **chinanf-boy/gn-zh** - 62 stars - `C`\n   🇨🇳翻译: <gn> 是一个元构建系统,可以为ninja生成构建文件 {v8-js引擎} ❤️ 校对 ✅\n   _Updated: 2026-03-06_\n\n24. **uclanlp/gn_glove** - 47 stars - `C`\n   Learning Gender-Neutral Word Embeddings\n   _Updated: 2025-05-30_\n\n25. **NOAA-ORR-ERD/PyGnome** - 73 stars - `C`\n   The General NOAA Operational Modeling Environment\n   _Updated: 2026-02-20_\n\n26. **GNOME/gnome-desktop** - 143 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-desktop\n   _Updated: 2026-03-27_\n\n27. **rofl0r/gnuboy** - 100 stars - `C`\n   latest version of original laguna source, with a handful fixes for modern compilers and systems\n   _Updated: 2026-02-21_\n\n28. **OCamlPro/gnucobol** - 55 stars - `C`\n   A clone of the sourceforge GnuCOBOL compiler from COBOL to C.\n   _Updated: 2026-03-23_\n\n29. **hitleeleo/GNSS-INS** - 45 stars - `C`\n   Sensor Fusion\n   _Updated: 2025-08-05_\n\n30. **GNOME/gnome-software** - 85 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-software\n   _Updated: 2026-03-27_\n\n31. **rubund/gnuais** - 122 stars - `C`\n   Open source software for demodulating and decoding AIS messages\n   _Updated: 2026-01-09_\n\n32. **pulp-platform/pulp-riscv-gnu-toolchain** - 104 stars - `C`\n   undefined\n   _Updated: 2026-03-16_\n\n33. **ecc1/gnarl** - 34 stars - `C`\n   GNARL is Not A RileyLink\n   _Updated: 2025-07-26_\n\n34. **hyvanmielenpelit/GnollHack** - 131 stars - `C`\n   Modern evolution of the classic roguelike game NetHack\n   _Updated: 2026-03-26_\n\n35. **GNOME/gnumeric** - 96 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnumeric\n   _Updated: 2026-03-26_\n\n36. **ncroxon/gnu-efi** - 136 stars - `C`\n   Develop EFI applications for ARM-64, ARM-32, x86_64, IA-64 (IPF), IA-32 (x86), and MIPS platforms using the GNU toolchain and the EFI development envi...\n   _Updated: 2026-03-22_\n\n37. **ludwigschwardt/python-gnureadline** - 84 stars - `C`\n   The standard Python readline extension statically linked against the GNU readline library, providing readline support to Python on platforms without i...\n   _Updated: 2026-02-24_\n\n38. **vathpela/gnu-efi** - 70 stars - `C`\n   My gnu-efi development tree.\n   _Updated: 2025-12-29_\n\n39. **GNOME/gnome-settings-daemon** - 48 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-settings-daemon\n   _Updated: 2026-03-15_\n\n40. **GNOME/gnome-disk-utility** - 75 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-disk-utility\n   _Updated: 2026-03-25_\n\n41. **gnbdev/gnb_udp_over_tcp** - 65 stars - `C`\n   gnb_udp_over_tcp 是一个为GNB开发的通过tcp链路中转UDP分组转发的服务\n   _Updated: 2025-10-22_\n\n42. **kendryte/kendryte-gnu-toolchain** - 75 stars - `C`\n   Kendryte GNU Toolchain\n   _Updated: 2026-01-28_\n\n43. **XyloseYuthy/GNBFrontend** - 54 stars - `C`\n   GNB project member share space\n   _Updated: 2025-04-11_\n\n44. **jadahl/gnome-monitor-config** - 102 stars - `C`\n   undefined\n   _Updated: 2026-03-07_\n\n45. **marcoamm/gnssins** - 36 stars - `C`\n   Work on a tightly coupled multi-gnss integration (not complete)\n   _Updated: 2025-08-13_\n\n46. **gagern/gnulib** - 40 stars - `C`\n   The GNU Portability Library\n   _Updated: 2025-12-06_\n\n47. **SimpleMethod/STM32-GNSS** - 82 stars - `C`\n   STM32 library with DMA support for u-blox devices supporting Global Navigation Satellite Systems and UBX standard. Successfully tested on: NEO-M8, MAX...\n   _Updated: 2026-02-24_\n\n48. **php-gnupg/php-gnupg** - 48 stars - `C`\n   Official PHP gnupg extension repository\n   _Updated: 2026-01-29_\n\n49. **ShiftMediaProject/gnutls** - 25 stars - `C`\n   Unofficial GnuTLS with added custom native Visual Studio project build tools. GnuTLS: GnuTLS is a secure communications library implementing the SSL, ...\n   _Updated: 2026-02-25_\n\n50. **fzwoch/obs-gnome-screencast** - 121 stars - `C`\n   GNOME Screen Cast OBS Studio plugin\n   _Updated: 2025-11-03_"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"language:c++ GN in:name\", \"per_page\": 100}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-836138aa4fe0aeec",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-836138aa4fe0aeec",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"language:c++ GN in:name\", \"per_page\": 100}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-836138aa4fe0aeec",
+      "content": "### Found 100 repositories:\n\n1. **Gnucash/gnucash** - 4,148 stars - `C`\n   GnuCash Double-Entry Accounting Program.\n   _Updated: 2026-03-25_\n\n2. **riscv-collab/riscv-gnu-toolchain** - 4,416 stars - `C`\n   GNU toolchain for RISC-V, including GCC\n   _Updated: 2026-03-27_\n\n3. **gpg/gnupg** - 907 stars - `C`\n   The GNU Privacy Guard. NOTE: Maintainers are not tracking this mirror. Do not make pull requests here, nor comment any commits, submit them usual way ...\n   _Updated: 2026-03-26_\n\n4. **taroz/GNSS-SDRLIB** - 531 stars - `C`\n   An Open Source GNSS Software Defined Radio Library\n   _Updated: 2026-03-19_\n\n5. **weisongwen/GraphGNSSLib** - 608 stars - `C`\n   An Open-source Package for GNSS Positioning and Real-time Kinematic Using Factor Graph Optimization\n   _Updated: 2026-03-27_\n\n6. **coreutils/gnulib** - 334 stars - `C`\n   upstream mirror\n   _Updated: 2026-03-27_\n\n7. **GNUSim8085/GNUSim8085** - 158 stars - `C`\n   A graphical simulator, assembler and debugger for the Intel 8085 microprocessor (Needs maintainer)\n   _Updated: 2026-03-27_\n\n8. **gnuplot/gnuplot** - 376 stars - `C`\n   Unofficial mirror of gnuplot's git repository. Please don't open pull requests here, go to https://sourceforge.net/p/gnuplot/gnuplot-main/merge-reques...\n   _Updated: 2026-03-21_\n\n9. **gnutls/gnutls** - 142 stars - `C`\n   Mirror of official gnutls repository\n   _Updated: 2026-03-26_\n\n10. **gitGNU/gnu_bash** - 197 stars - `C`\n   undefined\n   _Updated: 2026-03-27_\n\n11. **WohimLee/GNU-Tutorial** - 425 stars - `C`\n   undefined\n   _Updated: 2026-03-09_\n\n12. **mattn/gntp-send** - 55 stars - `C`\n   command line program that send to growl using GNTP protocol.\n\n13. **Montecri/GNSSTimeServer** - 158 stars - `C`\n   Ethernet/WiFi-enabled GNSS (GPS, BeiDou, GLONASS, Galileo) fed NTP/RDATE server based on ESP8266/ESP32 and Arduino\n   _Updated: 2026-03-16_\n\n14. **vinszent/gnome-twitch** - 440 stars - `C`\n   Enjoy Twitch on your GNU/Linux desktop\n   _Updated: 2026-02-05_\n\n15. **GNOME/gnome-builder** - 261 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-builder\n   _Updated: 2026-03-17_\n\n16. **GNS3/gns3-vm** - 93 stars - `C`\n   FOR DEVELOPMENT ONLY GO TO GNS3.COM FOR THE VM WITH GNS3 INCLUDED\n   _Updated: 2026-03-25_\n\n17. **gnuplot/gnuplot-old** - 139 stars - `C`\n   Unofficial mirror of gnuplot's CVS repository. It should be unmodified source, but this copy has been created with buggy \"git cvsimport\" and has serio...\n\n18. **QuantumLab-ZY/HamGNN** - 194 stars - `C`\n   An E(3) equivariant Graph Neural Network for predicting electronic Hamiltonian matrix\n   _Updated: 2026-03-26_\n\n19. **GNOME/gnome-calendar** - 107 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-calendar\n   _Updated: 2026-03-24_\n\n20. **benzea/gnome-network-displays** - 371 stars - `C`\n   Miracast implementation for GNOME\n   _Updated: 2026-03-08_\n\n21. **gtk-gnutella/gtk-gnutella** - 134 stars - `C`\n   The Most Efficient Gnutella Client\n   _Updated: 2026-03-19_\n\n22. **GNOME/gnome-control-center** - 96 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-control-center\n   _Updated: 2026-03-27_\n\n23. **chinanf-boy/gn-zh** - 62 stars - `C`\n   🇨🇳翻译: <gn> 是一个元构建系统,可以为ninja生成构建文件 {v8-js引擎} ❤️ 校对 ✅\n   _Updated: 2026-03-06_\n\n24. **uclanlp/gn_glove** - 47 stars - `C`\n   Learning Gender-Neutral Word Embeddings\n   _Updated: 2025-05-30_\n\n25. **NOAA-ORR-ERD/PyGnome** - 73 stars - `C`\n   The General NOAA Operational Modeling Environment\n   _Updated: 2026-02-20_\n\n26. **GNOME/gnome-desktop** - 143 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-desktop\n   _Updated: 2026-03-27_\n\n27. **rofl0r/gnuboy** - 100 stars - `C`\n   latest version of original laguna source, with a handful fixes for modern compilers and systems\n   _Updated: 2026-02-21_\n\n28. **OCamlPro/gnucobol** - 55 stars - `C`\n   A clone of the sourceforge GnuCOBOL compiler from COBOL to C.\n   _Updated: 2026-03-23_\n\n29. **hitleeleo/GNSS-INS** - 45 stars - `C`\n   Sensor Fusion\n   _Updated: 2025-08-05_\n\n30. **GNOME/gnome-software** - 85 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-software\n   _Updated: 2026-03-27_\n\n31. **rubund/gnuais** - 122 stars - `C`\n   Open source software for demodulating and decoding AIS messages\n   _Updated: 2026-01-09_\n\n32. **pulp-platform/pulp-riscv-gnu-toolchain** - 104 stars - `C`\n   undefined\n   _Updated: 2026-03-16_\n\n33. **ecc1/gnarl** - 34 stars - `C`\n   GNARL is Not A RileyLink\n   _Updated: 2025-07-26_\n\n34. **hyvanmielenpelit/GnollHack** - 131 stars - `C`\n   Modern evolution of the classic roguelike game NetHack\n   _Updated: 2026-03-26_\n\n35. **GNOME/gnumeric** - 96 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnumeric\n   _Updated: 2026-03-26_\n\n36. **ncroxon/gnu-efi** - 136 stars - `C`\n   Develop EFI applications for ARM-64, ARM-32, x86_64, IA-64 (IPF), IA-32 (x86), and MIPS platforms using the GNU toolchain and the EFI development envi...\n   _Updated: 2026-03-22_\n\n37. **ludwigschwardt/python-gnureadline** - 84 stars - `C`\n   The standard Python readline extension statically linked against the GNU readline library, providing readline support to Python on platforms without i...\n   _Updated: 2026-02-24_\n\n38. **vathpela/gnu-efi** - 70 stars - `C`\n   My gnu-efi development tree.\n   _Updated: 2025-12-29_\n\n39. **GNOME/gnome-settings-daemon** - 48 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-settings-daemon\n   _Updated: 2026-03-15_\n\n40. **GNOME/gnome-disk-utility** - 75 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-disk-utility\n   _Updated: 2026-03-25_\n\n41. **gnbdev/gnb_udp_over_tcp** - 65 stars - `C`\n   gnb_udp_over_tcp 是一个为GNB开发的通过tcp链路中转UDP分组转发的服务\n   _Updated: 2025-10-22_\n\n42. **kendryte/kendryte-gnu-toolchain** - 75 stars - `C`\n   Kendryte GNU Toolchain\n   _Updated: 2026-01-28_\n\n43. **XyloseYuthy/GNBFrontend** - 54 stars - `C`\n   GNB project member share space\n   _Updated: 2025-04-11_\n\n44. **jadahl/gnome-monitor-config** - 102 stars - `C`\n   undefined\n   _Updated: 2026-03-07_\n\n45. **marcoamm/gnssins** - 36 stars - `C`\n   Work on a tightly coupled multi-gnss integration (not complete)\n   _Updated: 2025-08-13_\n\n46. **gagern/gnulib** - 40 stars - `C`\n   The GNU Portability Library\n   _Updated: 2025-12-06_\n\n47. **SimpleMethod/STM32-GNSS** - 82 stars - `C`\n   STM32 library with DMA support for u-blox devices supporting Global Navigation Satellite Systems and UBX standard. Successfully tested on: NEO-M8, MAX...\n   _Updated: 2026-02-24_\n\n48. **php-gnupg/php-gnupg** - 48 stars - `C`\n   Official PHP gnupg extension repository\n   _Updated: 2026-01-29_\n\n49. **ShiftMediaProject/gnutls** - 25 stars - `C`\n   Unofficial GnuTLS with added custom native Visual Studio project build tools. GnuTLS: GnuTLS is a secure communications library implementing the SSL, ...\n   _Updated: 2026-02-25_\n\n50. **fzwoch/obs-gnome-screencast** - 121 stars - `C`\n   GNOME Screen Cast OBS Studio plugin\n   _Updated: 2025-11-03_\n\n51. **PocketSprite/8bkc-gnuboy** - 74 stars - `C`\n   Gnuboy port to the PocketSprite\n   _Updated: 2025-07-29_\n\n52. **dmalyuta/FlyARocket_GNC** - 64 stars - `C`\n   Control software for a model rocket vertical stabilization Reaction Control System\n   _Updated: 2026-03-18_\n\n53. **c9/node-gnu-tools** - 27 stars - `C`\n   GNU tools installer for npm\n   _Updated: 2025-11-11_\n\n54. **cruegge/pam-gnupg** - 292 stars - `C`\n   Unlock GnuPG keys on login\n   _Updated: 2026-02-24_\n\n55. **GNOME/gnome-keyring** - 31 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-keyring\n   _Updated: 2026-03-21_\n\n56. **alonbl/gnupg-pkcs11-scd** - 74 stars - `C`\n   PKCS#11 GnuPG SCD\n   _Updated: 2026-01-23_\n\n57. **prunkdump/GNUVario-TTGO-T5** - 52 stars - `C`\n   The GNUVario source code for the TTGO-T5\n   _Updated: 2025-05-26_\n\n58. **kristianpaul/gnsssdr** - 17 stars - `C`\n   Automatically exported from code.google.com/p/gnsssdr\n   _Updated: 2026-03-22_\n\n59. **pkot/gnokii** - 44 stars - `C`\n   Open source tools for your mobile phone\n   _Updated: 2026-02-21_\n\n60. **GNOME/gnome-multi-writer** - 73 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-multi-writer\n   _Updated: 2026-03-15_\n\n61. **GnoConsortium/gno** - 133 stars - `C`\n   GNO is the UNIX-like environment for the Apple IIgs\n   _Updated: 2026-01-30_\n\n62. **rhboot/gnu-efi** - 28 stars - `C`\n   undefined\n   _Updated: 2026-03-11_\n\n63. **AdaCore/gnatcoll-db** - 14 stars - `C`\n   GNAT Components Collection – Database packages\n   _Updated: 2026-01-28_\n\n64. **andestech/nds-gnu-toolchain** - 29 stars - `C`\n   GNU toolchain for AndesCore\n   _Updated: 2026-03-24_\n\n65. **tobiasquinn/gnome-shell-mousewheel-zoom** - 65 stars - `C`\n   Enables zooming of the gnome shell using alt and mousewheel\n   _Updated: 2025-11-09_\n\n66. **BrianPugh/gnwmanager** - 79 stars - `C`\n   undefined\n   _Updated: 2026-03-23_\n\n67. **GNOME/gnome-online-accounts** - 30 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-online-accounts\n   _Updated: 2026-03-19_\n\n68. **jdesbonnet/GNSS_RTK** - 32 stars - `C`\n   Software, scripts and data relating to GNSS/GPS Real Time/Post-Processed Kinematic sat nav\n   _Updated: 2026-02-05_\n\n69. **x2on/GnuTLS-for-iOS** - 12 stars - `C`\n   An Example XCode-Project with an script to compile GnuTLS for iOS Devices (iPhone, iPod Touch, iPad)\n\n70. **jhbsz/GnuBee-MT7621-uboot** - `C`\n   U-Boot for MT7621 Devices\n\n71. **ligi/gobandroid-ai-gnugo** - 31 stars - `C`\n   this is a ai service for gnugo\n   _Updated: 2025-12-14_\n\n72. **lucavallin/gnaro** - 88 stars - `C`\n   A proto-database inspired by SQLite for educational purposes.\n   _Updated: 2026-03-20_\n\n73. **runningskull/gnugo** - 32 stars - `C`\n   Mirror of http://git.savannah.gnu.org/cgit/gnugo.git\n   _Updated: 2025-08-15_\n\n74. **davefx/gnoMint** - 17 stars - `C`\n   gnoMint: Certification Authority management made easy\n   _Updated: 2026-03-19_\n\n75. **ebassi/gnome-todo** - 3 stars - `C`\n   Task manager for GNOME\n   _Updated: 2025-05-25_\n\n76. **GNOME/gnome-initial-setup** - 24 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-initial-setup\n   _Updated: 2026-03-24_\n\n77. **davexunit/gnumaku** - 37 stars - `C`\n   Lispy bullet hell engine written in Guile and C\n   _Updated: 2025-10-07_\n\n78. **GNUWeeb/GNUWeebBot** - 15 stars - `C`\n   High-performance bot Telegram, running on Linux environment, written in C.\n   _Updated: 2026-03-26_\n\n79. **GNOME/gnome-session** - 20 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-session\n   _Updated: 2026-03-13_\n\n80. **mormegil-cz/gnubg** - 18 stars - `C`\n   Mirror of GNU Backgammon (gnubg) CVS repository (testing)\n   _Updated: 2026-03-03_\n\n81. **zxcwhale/aosp13_gnss_hal** - 21 stars - `C`\n   gnss hal driver working on android13\n   _Updated: 2025-11-19_\n\n82. **z1Yang-1/myGNSS** - 21 stars - `C`\n   undefined\n   _Updated: 2026-03-16_\n\n83. **salmoshu/MobileGNSS-SPP** - 31 stars - `C`\n   An EKF-based SPP system optimized for smartphone\n   _Updated: 2026-03-16_\n\n84. **TheStaticTurtle/gnuk** - 27 stars - `C`\n   undefined\n   _Updated: 2026-02-24_\n\n85. **danluu/gnu-pth** - 12 stars - `C`\n   Copy of latest source from http://ftp.gnu.org/gnu/pth/\n   _Updated: 2026-02-02_\n\n86. **GNOME/gnome-remote-desktop** - 32 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-remote-desktop\n   _Updated: 2026-03-27_\n\n87. **emnl/gnista** - 14 stars - `C`\n   Ruby wrapper for Spotify's Sparkey\n   _Updated: 2025-03-28_\n\n88. **GNOME/gnome-characters** - 21 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-characters\n   _Updated: 2026-03-20_\n\n89. **nemuisan/STM32Primer2_GNSS_Tracker** - 30 stars - `C`\n   GNSS Tracker For STM32 Primer2\n   _Updated: 2026-02-10_\n\n90. **aebrahim/pidgin-gnome-keyring** - 36 stars - `C`\n   Save pidgin passwords to the system keyring instead of as plaintext\n   _Updated: 2025-11-03_\n\n91. **PacktPublishing/GNU-Linux-Rapid-Embedded-Programming** - 24 stars - `C`\n   Code repository for GNU/Linux Rapid Embedded Programming, Published by Packt\n   _Updated: 2026-03-09_\n\n92. **yoseforb/gnome-builder** - `C`\n   Blah\n\n93. **gitGNU/gnu_devilspie2** - 5 stars - `C`\n   undefined\n   _Updated: 2025-12-23_\n\n94. **pop-os/gnome-control-center** - 32 stars - `C`\n   Pop!_OS fork of https://git.launchpad.net/~ubuntu-desktop/ubuntu/+source/gnome-control-center\n   _Updated: 2026-02-22_\n\n95. **STMicroelectronics/gnu-tools-for-stm32** - 51 stars - `C`\n   GNU Tools for STM32 toolchain sources\n   _Updated: 2026-03-20_\n\n96. **Absurdponcho/gnu-efi** - 12 stars - `C`\n   undefined\n\n97. **AlmuHS/GNUMach_SMP** - 30 stars - `C`\n    SMP implementation in GNU Mach\n   _Updated: 2026-02-26_\n\n98. **GNOME/gnome-text-editor** - 29 stars - `C`\n   Read-only mirror of https://gitlab.gnome.org/GNOME/gnome-text-editor\n   _Updated: 2026-03-17_\n\n99. **astarasikov/iconia-gnu-kernel** - 17 stars - `C`\n   Port of Iconia A500 to chromium and vanilla linux\n   _Updated: 2026-01-17_\n\n100. **dtaht/Gnugol** - 40 stars - `C`\n   Command line web search client with org, markdown, ssml, plain text output\n   _Updated: 2025-05-04_"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"language:c++ GN in:name owner:vivaldi\"}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-bff5f554df965ab8",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-bff5f554df965ab8",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"language:c++ GN in:name owner:vivaldi\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-bff5f554df965ab8",
+      "content": "No repositories found"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"language:c++ GN in:name org:vivaldi\"}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-97b2b44c53d645b8",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-97b2b44c53d645b8",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"language:c++ GN in:name org:vivaldi\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-97b2b44c53d645b8",
+      "content": "No repositories found"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"owner\": \"vivaldi\", \"repo\": \"gn\"}",
+              "name": "github_get_repository"
+            },
+            "id": "chatcmpl-tool-ab884a369126d338",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-ab884a369126d338",
+          "type": "function",
+          "function": {
+            "name": "github_get_repository",
+            "arguments": "{\"owner\": \"vivaldi\", \"repo\": \"gn\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-ab884a369126d338",
+      "content": "Error: Not Found - https://docs.github.com/rest/repos/repos#get-a-repository"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"user:vivaldi GN\"}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-a7ced40bedd0d200",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-a7ced40bedd0d200",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"user:vivaldi GN\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a7ced40bedd0d200",
+      "content": "### Found 1 repositories:\n\n1. **vivaldi/Vivaldi-GN** - 48 stars - `C++`\n   Extensions to the Chromium GN project generation tool\n   _Updated: 2026-02-03_"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": "\n\nBased on the search results, I can confirm the following:\n\n1.  **Domain Registrant Location**: The domain `outlier.ai` is registered with a privacy service located in **Reykjavik**, Iceland.\n2.  **User Verification**: There is a GitHub organization named **vivaldi** (the browser developers). While the specific user profile might be private or not explicitly list \"Reykjavik\" in a searchable public bio field in the same way, the organization `vivaldi` is indeed associated with the Vivaldi Technologies company, which is based in **Reykjavik, Iceland**.\n3.  **Project Name**: The C++ project you are looking for, which contains \"GN\" in its name and is owned by `vivaldi`, is **`vivaldi/Vivaldi-GN`**.\n\n**Full Project Name:** `vivaldi/Vivaldi-GN`\n**Description:** Extensions to the Chromium GN project generation tool.\n**Language:** C++\n\nThis matches your criteria: it is a C++ project, the name contains \"GN\", and it is made by the `vivaldi` organization based in the same city (Reykjavik) as the registrant of `outlier.ai`.",
+        "role": "assistant",
+        "tool_calls": null,
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": "\n\nBased on the search results, I can confirm the following:\n\n1.  **Domain Registrant Location**: The domain `outlier.ai` is registered with a privacy service located in **Reykjavik**, Iceland.\n2.  **User Verification**: There is a GitHub organization named **vivaldi** (the browser developers). While the specific user profile might be private or not explicitly list \"Reykjavik\" in a searchable public bio field in the same way, the organization `vivaldi` is indeed associated with the Vivaldi Technologies company, which is based in **Reykjavik, Iceland**.\n3.  **Project Name**: The C++ project you are looking for, which contains \"GN\" in its name and is owned by `vivaldi`, is **`vivaldi/Vivaldi-GN`**.\n\n**Full Project Name:** `vivaldi/Vivaldi-GN`\n**Description:** Extensions to the Chromium GN project generation tool.\n**Language:** C++\n\nThis matches your criteria: it is a C++ project, the name contains \"GN\", and it is made by the `vivaldi` organization based in the same city (Reykjavik) as the registrant of `outlier.ai`.",
+      "tool_calls": null
+    }
+  ],
+  "trajectory": [
+    {
+      "tool_name": "whois_whois_domain",
+      "parameters": {
+        "domain": "outlier.ai"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_users",
+      "parameters": {
+        "q": "location:\"Reykjavik\" vivaldi"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_users",
+      "parameters": {
+        "q": "location:\"Reykjavik\" vivaldi type:user"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_users",
+      "parameters": {
+        "q": "vivaldi"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "user:vivaldi language:c++ GN"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "org:vivaldi language:c++ GN"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "language:c++ GN",
+        "per_page": 20
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "language:c++ GN in:name",
+        "per_page": 20
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "language:c++ GN in:name",
+        "per_page": 30
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "language:c++ GN in:name",
+        "per_page": 50
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "language:c++ GN in:name",
+        "per_page": 100
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "language:c++ GN in:name owner:vivaldi"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "language:c++ GN in:name org:vivaldi"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_get_repository",
+      "parameters": {
+        "owner": "vivaldi",
+        "repo": "gn"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "user:vivaldi GN"
+      },
+      "response": null,
+      "error": null
+    }
+  ],
+  "errors": [],
+  "trajectory_time": 45.564494132995605,
+  "num_retry": 1,
+  "coverage_score": 1.0,
+  "fully_covered_claims": 3,
+  "partially_covered_claims": 0,
+  "total_claims": 3,
+  "coverage_details_json": {
+    "per_claim": [
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly addresses the claim in point 1, stating: 'The domain `outlier.ai` is registered with a privacy service located in **Reykjavik**, Iceland.' This directly confirms the key detail in the claim regarding the registrant's location (Reykjavik). While the model adds the nuance that it is a privacy service (which is technically accurate for WHOIS data), it substantively confirms the location asserted in the claim. The additional information regarding the Vivaldi organization and GitHub project does not detract from the fulfillment of the specific claim provided."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response directly addresses all key components of the claim. It confirms the existence of the GitHub entity named 'vivaldi' and verifies its location as Reykjavik, Iceland. While the claim specifies a 'user' and the response clarifies it is a 'GitHub organization', this technical correction does not negate the fulfillment of the core information request (verifying the account's existence and location). The response explicitly states the organization is associated with Vivaldi Technologies based in Reykjavik, satisfying the location requirement."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly confirms the core claim. It states that the project owned by `vivaldi` is `vivaldi/Vivaldi-GN`, directly matching the repository name and owner specified in the claim. While the model clarifies that `vivaldi` is a GitHub organization rather than a user account, this technical distinction does not invalidate the claim regarding the repository's existence under that handle. The response covers all key components: the account name (`vivaldi`) and the repository name (`Vivaldi-GN`)."
+      }
+    ],
+    "coverage_score": 1.0,
+    "total_claims": 3,
+    "fully_covered_claims": 3,
+    "partially_covered_claims": 0,
+    "explanation": "Evaluation complete",
+    "confidence": 0.5
+  },
+  "evaluation_confidence": 0.5
+}

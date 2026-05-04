@@ -1,0 +1,1117 @@
+{
+  "TASK": "68a398aa2f58036e8d45ee00",
+  "PROMPT": "I remember I watched a drama from this list [editorial.rottentomatoes.com/guide/best-movies-2000](http://editorial.rottentomatoes.com/guide/best-movies-2000) that I also noted in my personal local movie data. What struck me is a review I read by following the movie link in that same site, by a paramedic, posted before August 18, 2025. Can you tell me the name of the person who wrote the review?",
+  "TRAJECTORY": [
+    {
+      "content": "First I want to see the films that are listed in the website provided in the prompt.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"url\": \"https://editorial.rottentomatoes.com/guide/best-movies-2000/\",\n  \"max_length\": 70000\n}",
+            "name": "fetch_fetch"
+          },
+          "id": "44cd0527-4438-4385-9cb5-f3ebdca357a6",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "Contents of https://editorial.rottentomatoes.com/guide/best-movies-2000/:\n![](https://editorial.rottentomatoes.com/wp-content/uploads/2025/04/700TitanAE.jpg)\n\n(Photo by Buena Vista/ Courtesy Everett Collection. DICK TRACY.)\n\n---\n\n***[Titan A.E.](https://www.rottentomatoes.com/m/titan_ae)* celebrates its 20th anniversary!**\n\n\n---\n\n“In the Year 2000…” sang *Late Night with Conan O’Brien* band member Richie “LaBamba” Rosenberg in a falsetto during one of the better-known skits of the 1990s. Conan and sidekick Andy Richter would then humorously imagine what the year 2000 would be like, including that “magic markers will smell worse” and presidential campaigns running ads “accusing their opponent of coming up with the idea for Jar Jar Binks.”\n\nTurns out that the actual year 2000, being the last year before the world irrevocably changed after 9/11, and a year when [hardly any computer systems crashed](https://americanhistory.si.edu/collections/object-groups/y2k) due to a whole lot of hard work, was a year in which there were a metric ton of good movies.\n\nKnowing what we know now, this list of the 100 Best Movies of 2000 is a starting point for numerous huge franchises, and a coming-out year for many of our favorite actors, actresses, and directors. Most especially, it’s the year when the world transitioned from VHS video tape into DVD, greatly enhancing resolution, sound, and the uncanny ability to find any scene you wanted.\n\nMovies moved from something you *bought* or *rented* into something you *collected*. Built-in commentaries provided the layperson with crucial insight into the filmmaking process. Deleted scenes gave the fans glimpses into what got left on the cutting-room floor. For the first time, people started to understand that “widescreen” meant black bars on the top and bottom of your picture tube until TV dimensions caught up with the size and shape of movie theater screens.\n\nOur criteria for this Top 100 of 2000 is threefold. First, Certified Fresh movies sorted by Tomatometer (***[Crouching Tiger, Hidden Dragon](https://www.rottentomatoes.com/m/crouching_tiger_hidden_dragon)***, ***[Memento](https://www.rottentomatoes.com/m/memento)***, ***[Gladiator](https://www.rottentomatoes.com/m/gladiator)***). That’s followed by Fresh movies on with 40 or more critic reviews and 60% or higher on the Popcornmeter (***[Snatch](https://www.rottentomatoes.com/m/snatch)***, ***[Remember the Titans](https://www.rottentomatoes.com/m/remember_the_titans)***, ***[Unbreakable](https://www.rottentomatoes.com/m/unbreakable)***). And, finally, there’s Rotten movies with those same stats, with this last group considered cult classics and audience favorites (***[Miss Congeniality](https://www.rottentomatoes.com/m/miss_congeniality)***, ***[The Way of the Gun](https://www.rottentomatoes.com/m/way_of_the_gun)***, ***[Pitch Black](https://www.rottentomatoes.com/m/pitch_black)***).\n\n#1\n\n[![](https://resizing.flixster.com/rwqdrO3MpZqUiqADL4nLW8mywa8=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25570_p_v10_av.jpg)](https://www.rottentomatoes.com/m/crouching_tiger_hidden_dragon)\n\n#1\n\nCritics Consensus: The movie that catapulted Ang Lee into the ranks of upper echelon Hollywood filmmakers, *Crouching Tiger, Hidden Dragon* features a deft mix of amazing martial arts battles, beautiful scenery, and tasteful drama.\n\nSynopsis: In 19th century Qing Dynasty China, a warrior (Chow Yun-Fat) gives his sword, Green Destiny, to his lover (Michelle Yeoh)  [[More]](https://www.rottentomatoes.com/m/crouching_tiger_hidden_dragon)\n\n  \n\n#2\n\n[![](https://resizing.flixster.com/Fm2EbvdvVsZCg_bBWsYry9N6CD0=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26231_v_v9_ai.jpg)](https://www.rottentomatoes.com/m/the_taste_of_others)\n\n#2\n\nCritics Consensus: *The Taste of Others* is a fresh, witty comedy about the attraction of opposites. The characters are well-drawn and engaging and their social interactions believable.\n\nSynopsis: Castella (Jean-Pierre Bacri) is a successful businessman caught behind the fast-changing times. More out of boredom than out of interest,  [[More]](https://www.rottentomatoes.com/m/the_taste_of_others)\n\n  \n\n#3\n\n[![](https://resizing.flixster.com/0H2yrehBIlo8OlDjaLYDYQRvB5M=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24668_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/chicken_run)\n\n#3\n\nCritics Consensus: *Chicken Run* has all the charm of Nick Park's *Wallace & Gromit*, and something for everybody. The voice acting is fabulous, the slapstick is brilliant, and the action sequences are spectacular.\n\nSynopsis: This engaging stop-motion, claymation adventure tells the story of an American rooster who falls in love with a gorgeous hen  [[More]](https://www.rottentomatoes.com/m/chicken_run)\n\n  \n\n#4\n\n[![](https://resizing.flixster.com/X5mxPVvaNB97ncu6udAJvi34jlk=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26375_v_v8_aa.jpg)](https://www.rottentomatoes.com/m/yi_yi)\n\n#4\n\nCritics Consensus: In its depiction of one family, Yi Yi accurately and expertly captures the themes and details, as well as the beauty, of everyday life.\n\nSynopsis: Set in Taiwan, the film follows the lives of the Jian family from the alternating perspectives of the three main  [[More]](https://www.rottentomatoes.com/m/yi_yi)\n\n  \n\n#5\n\n[![](https://resizing.flixster.com/C0fM6XZBVwtyGyBwp1Ffv8cSi6U=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27285_p_v10_ab.jpg)](https://www.rottentomatoes.com/m/dish)\n\n#5\n\nCritics Consensus: A feel good movie without an abundance of mush.\n\nSynopsis: The true story of a group of eccentric scientists who are responsible for manning a satellite dish inauspiciously located on  [[More]](https://www.rottentomatoes.com/m/dish)\n\n  \n\n#6\n\n[![](https://resizing.flixster.com/UeNrJKV6jRqFiNyOdSpkkJNJxX4=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26226_p_v8_ad.jpg)](https://www.rottentomatoes.com/m/with_a_friend_like_harry)\n\n#6\n\nCritics Consensus: A darkly funny thriller that's reminiscent of Hitchcock.\n\nSynopsis: During a heat wave Michel (Laurent Lucas) and Claire (Mathilde Seigner) take their three small daughters on vacation to get  [[More]](https://www.rottentomatoes.com/m/with_a_friend_like_harry)\n\n  \n\n#7\n\n[![](https://resizing.flixster.com/bPk_TWXgmgf7eM-or5ECtqWwW-k=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24923_p_v8_aq.jpg)](https://www.rottentomatoes.com/m/you_can_count_on_me)\n\n#7\n\nCritics Consensus: You Can Count On Me may look like it belongs on the small screen, but the movie surprises with its simple yet affecting story. Beautifully acted and crafted, the movie will simply draw you in.\n\nSynopsis: Sammy is a single mother who is extremely protective of her 8-year old son. She is satisfied with living in  [[More]](https://www.rottentomatoes.com/m/you_can_count_on_me)\n\n  \n\n#8\n\n[![](https://resizing.flixster.com/CLvsF4Na1ByoTus-gdw0y1U7dBU=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28578_p_v10_ac.jpg)](https://www.rottentomatoes.com/m/memento)\n\n#8\n\nCritics Consensus: Christopher Nolan skillfully guides the audience through *Memento*'s fractured narrative, seeping his film in existential dread.\n\nSynopsis: Leonard (Guy Pearce) is tracking down the man who raped and murdered his wife. The difficulty, however, of locating his  [[More]](https://www.rottentomatoes.com/m/memento)\n\n  \n\n#9\n\n[![](https://resizing.flixster.com/tcR5gvrW0AMFSKpZv8C4-antDlU=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p72085_p_v8_ab.jpg)](https://www.rottentomatoes.com/m/last_resort_2001)\n\n#9\n\nCritics Consensus: Critics are raving about *Last Resort*, saying it's a convincing, touching tale. Particularly impressive is the lack of script during the film's shoot.\n\nSynopsis: Tanya (Dina Korzun), young and naive, leaves Moscow with her street-wise 10-year-old son to meet her English fiancé. But after  [[More]](https://www.rottentomatoes.com/m/last_resort_2001)\n\n  \n\n#10\n\n[![](https://resizing.flixster.com/BcBN2KggeAt830BNOaj0X2sDpmw=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27284_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/the_circle_2001)\n\n#10\n\nCritics Consensus: Bleak, yet powerful, The Circle offers a searing indictment of the oppressive conditions experienced by women in Iran.\n\nSynopsis: Two women in Iran are given temporary leave from prison and attempt to flee to one of the women's hometown,  [[More]](https://www.rottentomatoes.com/m/the_circle_2001)\n\n  \n\n#11\n\n[![](https://resizing.flixster.com/_cEXFgOeAB-I4QxT7UWcUHrdUtQ=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27383_p_v8_ah.jpg)](https://www.rottentomatoes.com/m/amores_perros)\n\n#11\n\nCritics Consensus: The brutality of *Amores Perros* may be difficult to watch at times, but this intense, gritty film packs a hard wallop.\n\nSynopsis: \"Amores Perros\" is a bold, intensely emotional, and ambitious story of lives that collide in a Mexico City car crash.  [[More]](https://www.rottentomatoes.com/m/amores_perros)\n\n  \n\n#12\n\n[![](https://resizing.flixster.com/GxGSJKDVPT8b2nwSZk7TbKlZ6sA=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26760_p_v8_ae.jpg)](https://www.rottentomatoes.com/m/1103281-traffic)\n\n#12\n\nCritics Consensus: Soderbergh successfully pulls off the highly ambitious Traffic, a movie with three different stories and a very large cast. The issues of ethics are gray rather than black-and-white, with no clear-cut good guys. Terrific acting all around.\n\nSynopsis: A contemporary thriller set in the world of drug trafficking. Traffic evokes the high stakes and high risks of the  [[More]](https://www.rottentomatoes.com/m/1103281-traffic)\n\n  \n\n#13\n\n[![](https://resizing.flixster.com/zd4bXXCqhWo_jrDCavawon0UWtE=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26264_p_v7_av.jpg)](https://www.rottentomatoes.com/m/best_in_show)\n\n#13\n\nCritics Consensus: A fine example of writer-director-star Christopher Guest's gift for improv comedy, *Best in Show* boasts an appealingly quirky premise and a brilliantly talented cast.\n\nSynopsis: The tension is palpable, the excitement is mounting and the heady scent of competition is in the air as hundreds  [[More]](https://www.rottentomatoes.com/m/best_in_show)\n\n  \n\n#14\n\n[![](https://resizing.flixster.com/MGTN5GyBl6yvkAYXEBklkMmO9pM=/fit-in/180x240/v2/https://resizing.flixster.com/JiKhYY6ezF5gebJkR2gPLMBq3lI=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzQ5MGE5YWJlLTAzMzgtNGRmOC1iMWQ1LTlhZjFjYjg3MmY3ZS5qcGc=)](https://www.rottentomatoes.com/m/in_the_mood_for_love_2001)\n\n#14\n\nCritics Consensus: An exquisitely shot showcase for Maggie Cheung and Tony Leung that marks a somber evolution of Wong Kar-wai's chic style, *In the Mood for Love* is a tantric tease that's liable to break your heart.\n\nSynopsis: In 1962, journalist Chow Mo-wan (Tony Leung Chiu Wai) and his wife move into a Hong Kong apartment, but Chow's  [[More]](https://www.rottentomatoes.com/m/in_the_mood_for_love_2001)\n\n  \n\n#15\n\n[![](https://resizing.flixster.com/z3ERxjthAeiFR3V2bjhn2cukOl0=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27611_v_v13_af.jpg)](https://www.rottentomatoes.com/m/under_the_sand)\n\n#15\n\nCritics Consensus: Rampling carries the film with her finely nuanced performance of a woman coping with her husband's death.\n\nSynopsis: For many years, Marie and Jean have happily spent their vacation together in the Landes region of western France. But  [[More]](https://www.rottentomatoes.com/m/under_the_sand)\n\n  \n\n#16\n\n[![](https://resizing.flixster.com/V_CICkOchfP3Fb-ADbVKHtwbnn0=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26172_p_v10_ag.jpg)](https://www.rottentomatoes.com/m/almost_famous)\n\n#16\n\nCritics Consensus: Almost Famous, with its great ensemble performances and story, is a well-crafted, warm-hearted movie that successfully draws you into its era.\n\nSynopsis: Set in 1973, it chronicles the funny and often poignant coming of age of 15-year-old William, an unabashed music fan  [[More]](https://www.rottentomatoes.com/m/almost_famous)\n\n  \n\n#17\n\n[![](https://resizing.flixster.com/6lAJzFWUiKkpI60UkdQXnshjVWw=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25039_p_v10_at.jpg)](https://www.rottentomatoes.com/m/1095420-high_fidelity)\n\n#17\n\nCritics Consensus: The deft hand of director Stephen Frears and strong performances by the ensemble cast combine to tell an entertaining story with a rock-solid soundtrack.\n\nSynopsis: Rob Gordon (John Cusack) is the owner of a failing record store in Chicago, where he sells music the old-fashioned  [[More]](https://www.rottentomatoes.com/m/1095420-high_fidelity)\n\n  \n\n#18\n\n[![](https://resizing.flixster.com/GOU5f1KOFElLQdB0ySLuukeC52M=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28597_p_v8_ad.jpg)](https://www.rottentomatoes.com/m/widow_of_st_pierre)\n\n#18\n\nCritics Consensus: Critics are impressed with The Widow of St. Pierre's intriguing story and beautiful cinematography.\n\nSynopsis: An emotionally-charged romantic epic about an extraordinary woman poised between two extraordinary men at a pivotal moment in time. Set  [[More]](https://www.rottentomatoes.com/m/widow_of_st_pierre)\n\n  \n\n#19\n\n[![](https://resizing.flixster.com/ui0L39BS9uZrZ0-ny4Nl6OC3noA=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25698_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/1104207-panic)\n\n#19\n\nCritics Consensus: This quirky little film about a gangster in therapy feels fresh and well-crafted.\n\nSynopsis: Alex (William H. Macy) is going through a midlife crisis and it has become a very difficult time for him.  [[More]](https://www.rottentomatoes.com/m/1104207-panic)\n\n  \n\n#20\n\n[![](https://resizing.flixster.com/nx1Y6OSoDywfGu5TCmTXCrk1n6c=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27466_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/dinner_rush)\n\n#20\n\nCritics Consensus: With the aid of a witty script and a well-acted ensemble, Dinner Rush is a tasty dish.\n\nSynopsis: One unlucky evening, Louis Cropa (Danny Aiello), a part-time bookmaker, discovers that his restaurant has become a hotbed of conflicting  [[More]](https://www.rottentomatoes.com/m/dinner_rush)\n\n  \n\n#21\n\n[![](https://resizing.flixster.com/8ZTdbiZh7qG-jhTzl4pfDHsCaFw=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27727_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/ginger_snaps)\n\n#21\n\nCritics Consensus: The strong female cast and biting satire of teenage life makes Ginger Snaps far more memorable than your average werewolf movie -- or teen flick.\n\nSynopsis: The story of two outcast sisters, Ginger (Katharine Isabelle) and Brigitte (Emily Perkins), in the mindless suburban town of Bailey  [[More]](https://www.rottentomatoes.com/m/ginger_snaps)\n\n  \n\n#22\n\n[![](https://resizing.flixster.com/QrhIVQsmZtY-LA99lKO7paorjxQ=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p71812_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/battle_royale)\n\n#22\n\nCritics Consensus: Battle Royale is a controversial and violent parable of adolescence, heightening teenage melodrama with life-or-death stakes.\n\nSynopsis: 42 9th graders are sent to a deserted island. They are given a map, food, and various weapons. An explosive  [[More]](https://www.rottentomatoes.com/m/battle_royale)\n\n  \n\n#23\n\n[![](https://resizing.flixster.com/zqbQPRqOYhwLFI_mD1EqkTr4DlY=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26553_p_v8_ay.jpg)](https://www.rottentomatoes.com/m/cast_away)\n\n#23\n\nCritics Consensus: Flawed but fascinating, Cast Away offers an intelligent script, some of Robert Zemeckis' most mature directing, and a showcase performance from Tom Hanks.\n\nSynopsis: Obsessively punctual FedEx executive Chuck Noland (Tom Hanks) is en route to an assignment in Malaysia when his plane crashes  [[More]](https://www.rottentomatoes.com/m/cast_away)\n\n  \n\n#24\n\n[![](https://resizing.flixster.com/YD-m8iH4pD9gN_atemnZdMaEX90=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29718_p_v8_ab.jpg)](https://www.rottentomatoes.com/m/sexy_beast)\n\n#24\n\nCritics Consensus: Sexy Beast rises above other movies in the British gangster genre due to its performances -- particularly an electrifying one by Ben Kingsley -- and the script's attention to character development.\n\nSynopsis: Ex-villain Gal Dove (Ray Winstone) has served his time behind bars and is blissfully retired to a Spanish villa paradise  [[More]](https://www.rottentomatoes.com/m/sexy_beast)\n\n  \n\n#25\n\n[![](https://resizing.flixster.com/-G-6rDcxvwU1JizW7rTOubKNFUI=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24882_p_v7_aa.jpg)](https://www.rottentomatoes.com/m/girlfight)\n\n#25\n\nCritics Consensus: Michelle Rodriguez gives a compelling performance, despite lack of a boxing background; Karyn Kusama packs a punch with this directorial debut.\n\nSynopsis: Newcomer Michelle Rodriguez in an astounding performance alongside Jaime Tirelli, Paul Calderon and Santiago Douglas. Nothing comes easy for Diana  [[More]](https://www.rottentomatoes.com/m/girlfight)\n\n![](https://editorial.rottentomatoes.com/wp-content/uploads/2025/04/700Requieum.jpg)\n\n(Photo by Artisan/ Courtesy Everett Collection. REQUIEM FOR A DREAM.)\n\nThe 73rd Academy Awards, broadcast March 25, 2001, honored movies released in theaters during the 2000 calendar year. Unlike the hesitant and hand-wringing 2002 broadcast, just a few months after 9/11 and featuring Tom Cruise giving a speech about how it’s still OK to like movies, this early 2001 event was full of optimism and verve. Steve Martin hosted for the first of three times.\n\nIn an extraordinary and unusual event, [Steven Sodberbergh](https://editorial.rottentomatoes.com/guide/steven-soderbergh-movies-shows/) competed against himself for Best Picture, clearly at the top of his game and nominated for two very different films: drug-trade thriller [***Traffic***](https://www.rottentomatoes.com/m/1103281-traffic) and earnest real-life legal drama [***Erin Brockovich***](https://www.rottentomatoes.com/m/erin_brockovich). The other Best Picture nominees were ***[Chocolat](https://www.rottentomatoes.com/m/chocolat)***, a film that combined sweets and sensuality to a delicious degree; Hong Kong martial-arts wuxia blockbuster *Crouching Tiger, Hidden Dragon* (and many viewers’ first experience with Chow-Yun Fat, Michelle Yeoh and director Ang Lee), and Best Picture winner *Gladiator*, one of five statues that Ridley Scott’s epic historical film would take home that night.\n\nSnubbed from Best Picture were movies like the love letter to 1970s rock-n-roll and Rolling Stone ***[Almost Famous](https://www.rottentomatoes.com/m/almost_famous)***, [Christopher Nolan](https://editorial.rottentomatoes.com/guide/all-christopher-nolan-movies-ranked-by-tomatometer/)’s mind-bending *Memento*, the crowd-pleasing Tom Hanks desert island film [***Cast Away***](https://www.rottentomatoes.com/m/cast_away), and the downbeat psychological trip ***[Requiem for a Dream](https://www.rottentomatoes.com/m/requiem_for_a_dream)*.**\n\n#26\n\n[![](https://resizing.flixster.com/8hlzhHHw3yNOkXdlKtGvIhnw1M8=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26687_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/emperors_new_groove)\n\n#26\n\nCritics Consensus: The Emperor's New Groove isn't the most ambitious animated film, but its brisk pace, fresh characters, and big laughs make for a great time for the whole family.\n\nSynopsis: Arrogant young Emperor Kuzco is transformed into a llama by his power-hungry advisor -- the devious diva Yzma. Stranded in  [[More]](https://www.rottentomatoes.com/m/emperors_new_groove)\n\n  \n\n#27\n\n[![](https://resizing.flixster.com/XX9REclgWQmG44Z-GvfWsHFyTWE=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p71756_v_v8_aa.jpg)](https://www.rottentomatoes.com/m/chunhyangdyun_2000)\n\n#27\n\nCritics Consensus: *Chunhyang* brings a classic love story to life with a period romance whose savory visuals are enhanced by a sincerity that transcends folktale formula.\n\nSynopsis: In 13th-century Korea, Noble-born Mongryong (Cho Seung-woo) and commoner Chunhyang (Lee Hyojeong) fall in love when they first meet, but  [[More]](https://www.rottentomatoes.com/m/chunhyangdyun_2000)\n\n  \n\n#28\n\n[![](https://resizing.flixster.com/EzQ1qw6YjF4IArueK78nFydNUrc=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24917_p_v10_aj.jpg)](https://www.rottentomatoes.com/m/erin_brockovich)\n\n#28\n\nCritics Consensus: Taking full advantage of Julia Roberts's considerable talent and appeal, *Erin Brockovich* overcomes a few character and plot issues to deliver a smart, thoughtful, and funny legal drama.\n\nSynopsis: Erin Brockovich (Julia Roberts) is a woman in a tight spot. Following a car accident in which Erin is not  [[More]](https://www.rottentomatoes.com/m/erin_brockovich)\n\n  \n\n#29\n\n[![](https://resizing.flixster.com/W-VQptTWwuwFHbi30om8C-T7VmM=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26230_p_v8_av.jpg)](https://www.rottentomatoes.com/m/meet_the_parents)\n\n#29\n\nCritics Consensus: Despite sometimes sitcom-like execution, *Meet the Parents* is a hilarious look at familial relationships that works mostly because the chemistry between its two leads is so effective.\n\nSynopsis: Everything that can possibly go wrong for groom-to-be Greg Focker (Ben Stiller) does. The problems begin with Greg's disastrous first  [[More]](https://www.rottentomatoes.com/m/meet_the_parents)\n\n  \n\n#30\n\n[![](https://resizing.flixster.com/d326COnkGzr4Zmagh-HCX9anFJ4=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26224_p_v8_ac.jpg)](https://www.rottentomatoes.com/m/billy_elliot)\n\n#30\n\nCritics Consensus: Billy Elliot is a charming movie that can evoke both laughter and tears.\n\nSynopsis: The life of 11-year-old Billy Elliot, a coal miner's son in Northern England, is forever changed one day when he  [[More]](https://www.rottentomatoes.com/m/billy_elliot)\n\n  \n\n#31\n\n[![](https://resizing.flixster.com/I_21fR1HFkeSf8B_jb1vsEcXmro=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26178_p_v10_ac.jpg)](https://www.rottentomatoes.com/m/state_and_main)\n\n#31\n\nCritics Consensus: State and Main offers plenty of wit and laughs in its lampoons of the movie industry.\n\nSynopsis: A big-budget movie crew descends upon a quaint New England village, sowing a bumper crop of corruption, vanity and greed  [[More]](https://www.rottentomatoes.com/m/state_and_main)\n\n  \n\n#32\n\n[![](https://resizing.flixster.com/UyeBeUxCN80y7OgAozbGV7ZJQ-k=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25568_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/faithless_2001)\n\n#32\n\nCritics Consensus: This brooding, measured look at adultery is ultimately emotionally riveting, thanks to its script and performances.\n\nSynopsis: Marianne Vogler is a successful actress, happily married to Markus, an orchestra conductor much in demand for overseas concerts, and  [[More]](https://www.rottentomatoes.com/m/faithless_2001)\n\n  \n\n#33\n\n[![](https://resizing.flixster.com/T45ZdL12RhiDE9s3-l8piawDx-A=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24925_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/love_and_basketball)\n\n#33\n\nCritics Consensus: Confident directing and acting deliver an insightful look at young athletes.\n\nSynopsis: Monica (Sanaa Lathan) and Quincy (Omar Epps) are two childhood friends who both aspire to be professional basketball players. Quincy,  [[More]](https://www.rottentomatoes.com/m/love_and_basketball)\n\n  \n\n#34\n\n[![](https://resizing.flixster.com/jZJ7tXrKr4wMK1HpnoxeKXXGOnY=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24926_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/chuck_and_buck)\n\n#34\n\nCritics Consensus: As poignant as it is unsettling, *Chuck & Buck* uses the complex dynamic between two men as fuel for untangling a rich assortment of thought-provoking themes.\n\nSynopsis: \"Chuck & Buck\" is the story of a childlike young man who becomes fixated on his onetime best friend, now  [[More]](https://www.rottentomatoes.com/m/chuck_and_buck)\n\n  \n\n#35\n\n[![](https://resizing.flixster.com/uL7OI0UvypZIhSEAy1_4pXPBI3k=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p71276_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/1097991-george_washington)\n\n#35\n\nCritics Consensus: Languid and melancholy, *George Washington* is a carefully observed rumination on adolescence and rural life.\n\nSynopsis: Set in the landscape of a rural southern town, George Washington is a stunning portrait of how a group of  [[More]](https://www.rottentomatoes.com/m/1097991-george_washington)\n\n  \n\n#36\n\n[![](https://resizing.flixster.com/4opY6aAOLtCLuLdhq1AXnZ7ktHg=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27068_p_v8_ac.jpg)](https://www.rottentomatoes.com/m/merci_pour_le_chocolat)\n\n#36\n\nCritics Consensus: Boasting a masterful performance by Huppert, Merci Pour Le Chocolat is a suspenseful psychological thriller.\n\nSynopsis: Starring Isabelle Huppert and Jacques Dutronc as the epitome of marital bliss, living a beautiful lavish life in Lausanne, Switzerland.  [[More]](https://www.rottentomatoes.com/m/merci_pour_le_chocolat)\n\n  \n\n#37\n\n[![](https://resizing.flixster.com/dd_f40SJrq61Wv6JZAbBXJXdCd0=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26063_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/nurse_betty)\n\n#37\n\nCritics Consensus: Quirky in the best sense of the word, *Nurse Betty* finds director Neil LaBute corralling a talented cast in service of a sharp, imaginative script.\n\nSynopsis: What happens when a person decides that life is merely a state of mind? If you're Betty, a small-town waitress  [[More]](https://www.rottentomatoes.com/m/nurse_betty)\n\n  \n\n#38\n\n[![](https://resizing.flixster.com/IaC6KJHNmxYwM36vITD8yjjTG_o=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26431_p_v13_ad.jpg)](https://www.rottentomatoes.com/m/thirteen_days)\n\n#38\n\nCritics Consensus: Thirteen Days offers a compelling look at the Cuban Missile Crisis, and its talented cast deftly portrays the real-life people who were involved.\n\nSynopsis: For thirteen extraordinary days in October of 1962, the world stood on the brink of an unthinkable catastrophe. Across the  [[More]](https://www.rottentomatoes.com/m/thirteen_days)\n\n  \n\n#39\n\n[![](https://resizing.flixster.com/KVRSm8MdNAaPK9t2oR-O0n0Ah_4=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25859_p_v13_ak.jpg)](https://www.rottentomatoes.com/m/original_kings_of_comedy)\n\n#39\n\nCritics Consensus: If you want lots of laughs and don't mind some profanity, The Original Kings of Comedy can deliver.\n\nSynopsis: A cultural phenomenon for our time: Spike Lee captures the comic geniuses behind the successful \"Kings of Comedy\" tour. In  [[More]](https://www.rottentomatoes.com/m/original_kings_of_comedy)\n\n  \n\n#40\n\n[![](https://resizing.flixster.com/Kw2O9FIV-QdcfQictLXuHkmZnfk=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25583_p_v8_aq.jpg)](https://www.rottentomatoes.com/m/shadow_of_the_vampire)\n\n#40\n\nCritics Consensus: Shadow of the Vampire is frightening, compelling, and funny, and features an excellent performance by Willem Dafoe.\n\nSynopsis: F. W. Murnau (John Malkovich) is struggling to create his silent classic \"Nosferatu\" on location in Eastern Europe. The director  [[More]](https://www.rottentomatoes.com/m/shadow_of_the_vampire)\n\n  \n\n#41\n\n[![](https://resizing.flixster.com/AS1Vmh_dDf4KO2N8t6JFa4nTbUg=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25028_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/xmen)\n\n#41\n\nCritics Consensus: Faithful to the comics and filled with action, *X-Men* brings a crowded slate of classic Marvel characters to the screen with a talented ensemble cast and surprisingly sharp narrative focus.\n\nSynopsis: They are children of the atom, homo superior, the next link in the chain of evolution. Each was born with  [[More]](https://www.rottentomatoes.com/m/xmen)\n\n  \n\n#42\n\n[![](https://resizing.flixster.com/axxx9pX--n3YY73AUExHa3ihH7c=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26093_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/house_of_mirth)\n\n#42\n\nCritics Consensus: Despite being a period piece, The House of Mirth's depiction of social cruelty still feels chilling and relevant for today.\n\nSynopsis: Lily (Gillian Anderson) is a ravishing socialite who quickly discovers the precariousness of her position when her beauty and charm  [[More]](https://www.rottentomatoes.com/m/house_of_mirth)\n\n  \n\n#43\n\n[![](https://resizing.flixster.com/q2iLpYQRizexnvGghtIPJh8rrxY=/fit-in/180x240/v2/https://resizing.flixster.com/R8Vk837aprYtCjICLoZa05RcYpk=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2Y3YmViMWRjLWMyODMtNDhlOS04YzI4LTNiYzFhOGNhZTM5Yy5qcGc=)](https://www.rottentomatoes.com/m/tully)\n\n#43\n\nCritics Consensus: A beautifully acted, quietly moving little film.\n\nSynopsis: A womanizer (Anson Mount) falls for the best friend (Julianne Nicholson) of his shy brother (Glenn Fitzgerald) after she returns  [[More]](https://www.rottentomatoes.com/m/tully)\n\n  \n\n#44\n\n[![](https://resizing.flixster.com/IdCWaHwZ1JkS4bsfsSgpA3_aj0I=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24840_p_v10_ar.jpg)](https://www.rottentomatoes.com/m/wonder_boys)\n\n#44\n\nCritics Consensus: Michael Douglas and Tobey Maguire do wonders in this clever dark comedy.\n\nSynopsis: Grady (Michael Douglas) is a 50-ish English professor who hasn't had a thing published in years -- not since he  [[More]](https://www.rottentomatoes.com/m/wonder_boys)\n\n  \n\n#45\n\n[![](https://resizing.flixster.com/MvuMsdxr_3zxEGiJDBqbfJzyWqc=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24674_p_v13_bc.jpg)](https://www.rottentomatoes.com/m/gladiator)\n\n#45\n\nCritics Consensus: While not everyone will be entertained by *Gladiator*'s glum revenge story, Russell Crowe thunderously wins the crowd with a star-making turn that provides Ridley Scott's opulent resurrection of Rome its bruised heart.\n\nSynopsis: Commodus (Joaquin Phoenix) takes power and strips rank from Maximus (Russell Crowe), one of the favored generals of his predecessor  [[More]](https://www.rottentomatoes.com/m/gladiator)\n\n  \n\n#46\n\n[![](https://resizing.flixster.com/LWgbukGhBniWsUkA1N0151m1aw4=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25486_v_v10_ao.jpg)](https://www.rottentomatoes.com/m/shanghai_noon)\n\n#46\n\nCritics Consensus: Although the plot is really nothing to brag about, Jackie Chan and Owen Wilson work well together. The cinematography looks great, and Jackie delivers a hilarious performance. This is an old-fashioned crowd-pleaser.\n\nSynopsis: Bumbling Chon Wang (Jackie Chan) works as an Imperial guard in the Forbidden City of China. When Princess Pei Pei  [[More]](https://www.rottentomatoes.com/m/shanghai_noon)\n\n  \n\n#47\n\n[![](https://resizing.flixster.com/tPMTcTld0wjQZ8Ws8brHlJGGbi0=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25977_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/tao_of_steve)\n\n#47\n\nCritics Consensus: *The Tao of Steve* puts a fresh spin on the rom-com formula with its rousingly offbeat energy, charming ensemble, and unique insights into the battle of the sexes.\n\nSynopsis: In college, Dex was the big man on campus. We meet Dex ten years after graduation as he endures one  [[More]](https://www.rottentomatoes.com/m/tao_of_steve)\n\n  \n\n#48\n\n[![](https://resizing.flixster.com/9l1QqKd7GQcsEezW_fq37vsEhhY=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26333_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/pollock)\n\n#48\n\nCritics Consensus: Though Pollock does not really allow audiences a glimpse of the painter as a person, it does powerfully depict the creative process. Harris throws himself into the role and turns in a compelling performance.\n\nSynopsis: In August of 1949, Life Magazine ran a banner headline that begged the question: Jackson Pollock: Is he the greatest  [[More]](https://www.rottentomatoes.com/m/pollock)\n\n  \n\n#49\n\n[![](https://resizing.flixster.com/nMCeX-V6fdOUaTIAZ4cCPqB9xFo=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25569_p_v12_ay.jpg)](https://www.rottentomatoes.com/m/o_brother_where_art_thou)\n\n#49\n\nCritics Consensus: Though not as good as Coen brothers' classics, the delightfully loopy *O Brother, Where Art Thou?* is still a lot of fun.\n\nSynopsis: Ulysses Everett McGill (George Clooney) is having difficulty adjusting to his hard-labor sentence in Mississippi. He scams his way off  [[More]](https://www.rottentomatoes.com/m/o_brother_where_art_thou)\n\n  \n\n#50\n\n[![](https://resizing.flixster.com/TqdxGOae_RtRb46V5NQSsreHUAA=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25574_p_v12_ab.jpg)](https://www.rottentomatoes.com/m/requiem_for_a_dream)\n\n#50\n\nCritics Consensus: Though the movie may be too intense for some to stomach, the wonderful performances and the bleak imagery are hard to forget.\n\nSynopsis: Imaginatively evoking the inner landscape of human beings longing to connect, to love and feel loved, the film is a  [[More]](https://www.rottentomatoes.com/m/requiem_for_a_dream)\n\n![](https://editorial.rottentomatoes.com/wp-content/uploads/2025/04/700Xmen.jpg)\n\n(Photo by Fox / Courtesy Everett Collection. X-MEN.)\n\nAside from critical acclaim, the year 2000 is notable that almost all the highest-grossing films that year were not sequels, but rather the start of franchises that would continue for many years afterward.\n\nThe lone exception is also the worldwide box office leader in 2000: ***[Mission: Impossible 2](https://www.rottentomatoes.com/m/mission_impossible_2)***, known by fans as “the weird one” in the [impossibly long-running franchise](https://editorial.rottentomatoes.com/guide/all-mission-impossible-movies-ranked/) and the only one directed by slow-mo and doves fan John Woo. This one’s an honorable mention, falling just outside this top 100.\n\nOther franchise starters include ***[X-Men](https://www.rottentomatoes.com/m/xmen)***, 20th Century Fox’s ambitious kick-in-the-pants to the Marvel movie revolution. Many *X*-sequels and spinoffs followed before Disney’s acquisition of Fox slowly integrated the mutants into the [Marvel Cinematic Universe](https://editorial.rottentomatoes.com/guide/marvel-movies-in-order/), beginning with 2024’s *[Deadpool vs. Wolverine](https://www.rottentomatoes.com/m/deadpool_and_wolverine)* and continuing with 2026’s *[Avengers: Doomsday](https://www.rottentomatoes.com/m/avengers_doomsday)*, which includes dozens of Marvel characters from every universe.\n\nBox office titans ***[Meet the Parents](https://www.rottentomatoes.com/m/meet_the_parents)***, *Unbreakable*, *Chicken Run*, ***[Final Destination](https://www.rottentomatoes.com/m/final_destination)***, and honorable mentions ***[Charlie’s Angels](https://www.rottentomatoes.com/m/charlies_angels)*** and *Scary Movie* would kick off one or more sequels in succeeding years. Even *Pitch Black*, which only made $53 million worldwide, became a cult classic, introduced the world to Vin Diesel, and launched a series of Diesel pet projects and video games set in the same universe.\n\n#51\n\n[![](https://resizing.flixster.com/XCsrEBnQQVIiDXi-tVEJvRo78Kg=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25964_p_v8_av.jpg)](https://www.rottentomatoes.com/m/space_cowboys)\n\n#51\n\nCritics Consensus: While the plot is overly cliched, the suberb acting by the stars (especially the tense interactions between Clint Eastwood and Tommy Lee Jones) and the spectacular special effects make this a movie worth seeing.\n\nSynopsis: Clint Eastwood, Tommy Lee Jones, Donald Sutherland and James Garner star as a group of pilots whose time has come  [[More]](https://www.rottentomatoes.com/m/space_cowboys)\n\n  \n\n#52\n\n[![](https://resizing.flixster.com/tSlFEtluZdcTtXOfD_r9S_UidI0=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26331_p_v12_aj.jpg)](https://www.rottentomatoes.com/m/1100998-contender)\n\n#52\n\nCritics Consensus: *The Contender* wears its political heart on its sleeve, but strong performances and a solid screenplay help the end result add up to a gripping drama from either side of the aisle.\n\nSynopsis: When the sitting Vice President dies, Senator Laine Hanson is chosen by the President to be the first woman to  [[More]](https://www.rottentomatoes.com/m/1100998-contender)\n\n  \n\n#53\n\n[![](https://resizing.flixster.com/Y8LfAXlh2jGyIt91zty1IAYL9uA=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27450_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/chopper)\n\n#53\n\nCritics Consensus: Eric Bana's performance as the charming but twisted Chopper is the highlight of this disturbing portrait about Australia's notorious author/criminal.\n\nSynopsis: America had Al Capone; England, the Kray brothers and Australia - proving once and for all its antipodean sense of  [[More]](https://www.rottentomatoes.com/m/chopper)\n\n  \n\n#54\n\n[![](https://resizing.flixster.com/mSaGvVhLd7T0L6ElTiVhTZQjP9k=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26084_p_v8_ab.jpg)](https://www.rottentomatoes.com/m/rugrats_in_paris)\n\n#54\n\nCritics Consensus: When the Rugrats go to Paris, the result is Nickelodeon-style fun. The plot is effectively character-driven, and features catchy songs and great celebrity voice-acting.\n\nSynopsis: In the long-running animated series' second feature film, the focus is on the show's perennial second banana, Chuckie (Christine Cavanaugh).  [[More]](https://www.rottentomatoes.com/m/rugrats_in_paris)\n\n  \n\n#55\n\n[![](https://resizing.flixster.com/I7rFIscUiyhjd6K-bXrAn18JRjk=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26067_p_v13_ag.jpg)](https://www.rottentomatoes.com/m/quills)\n\n#55\n\nCritics Consensus: Though hard to watch, this film's disturbing exploration of freedom of expression is both seductive and thought-provoking.\n\nSynopsis: A fictional work that reconstructs the unknown fate of the Marquis de Sade, the writer and sexual deviant who was  [[More]](https://www.rottentomatoes.com/m/quills)\n\n  \n\n#56\n\n[![](https://resizing.flixster.com/w_Wg66wSvMNun5aIXhQK_KHRvVo=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26267_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/before_night_falls)\n\n#56\n\nCritics Consensus: An impressionistic, fragmented look at Reinaldo Arenas, Before Night Falls' imagery manages to evoke a sense of the writer's artistry, and Bardem's strong performance holds the film together. Finally, a biopic done well.\n\nSynopsis: A richly imagined journey into the life and writings of brilliant Cuban author and exile Reinaldo Arenas. It spans the  [[More]](https://www.rottentomatoes.com/m/before_night_falls)\n\n  \n\n#57\n\n[![](https://resizing.flixster.com/_yN2LlVl-2HdQcrAjA6W5FlUEn8=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26771_p_v10_ah.jpg)](https://www.rottentomatoes.com/m/finding_forrester)\n\n#57\n\nCritics Consensus: Despite the predictability of its plot and its similarity to Good Will Hunting, Finding Forrester has an honest, solid feel to it and good rapport between Connery and Brown.\n\nSynopsis: A unique relationship develops between an eccentric, reclusive novelist and a young, amazingly gifted scholar-athlete. After the novelist discovers that  [[More]](https://www.rottentomatoes.com/m/finding_forrester)\n\n  \n\n#58\n\n[![](https://resizing.flixster.com/uWmnt9yfRgnsOG0IYSamXkFTfDc=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25233_p_v8_al.jpg)](https://www.rottentomatoes.com/m/frequency)\n\n#58\n\nCritics Consensus: A tight blend of surprises and suspense keeps audiences spellbound.\n\nSynopsis: What if you had the chance to travel back in time and change just one event in your life? What  [[More]](https://www.rottentomatoes.com/m/frequency)\n\n  \n\n#59\n\n[![](https://resizing.flixster.com/2bnGULUq8WDYwLstcYh1P2PE1CQ=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26335_p_v13_ao.jpg)](https://www.rottentomatoes.com/m/snatch)\n\n#59\n\nCritics Consensus: Though perhaps a case of style over substance, Guy Ritchie's second crime caper is full of snappy dialogue, dark comedy, and interesting characters.\n\nSynopsis: Illegal boxing promoter Turkish (Jason Statham) convinces gangster Brick Top (Alan Ford) to offer bets on bare-knuckle boxer Mickey (Brad  [[More]](https://www.rottentomatoes.com/m/snatch)\n\n  \n\n#60\n\n[![](https://resizing.flixster.com/3AE9u4oUcovtI5UwtOfNICDWhDo=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24659_p_v8_am.jpg)](https://www.rottentomatoes.com/m/my_dog_skip)\n\n#60\n\nCritics Consensus: Critics say My Dog Skip is cute, wholesome entertainment for the family. It's especially designed to appeal to your sentiment, but you might find yourself choking up just the same.\n\nSynopsis: Who says best friends have to be human? Not Willie Morris (Frankie Muniz), who receives a talented terrier named Skip  [[More]](https://www.rottentomatoes.com/m/my_dog_skip)\n\n  \n\n#61\n\n[![](https://resizing.flixster.com/rYWE7LiUjeXtnBiTAiIkGhhmvDM=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25848_p_v8_az.jpg)](https://www.rottentomatoes.com/m/remember_the_titans)\n\n#61\n\nCritics Consensus: An inspirational crowd-pleaser with a healthy dose of social commentary, Remember the Titans may be predictable, but it's also well-crafted and features terrific performances.\n\nSynopsis: In Virginia, high school football is a way of life, an institution revered, each game celebrated more lavishly than Christmas,  [[More]](https://www.rottentomatoes.com/m/remember_the_titans)\n\n  \n\n#62\n\n[![](https://resizing.flixster.com/VmkiXC1-fZM4fKZAuzcB4lC2B6s=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24992_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/gangster-no-1)\n\n#62\n\nCritics Consensus: Gangster No. 1 is brutally violent, yet also compelling.\n\nSynopsis: The time is now. The scene is a ringside table at a boxing match, held at a deluxe London hotel.  [[More]](https://www.rottentomatoes.com/m/gangster-no-1)\n\n  \n\n#63\n\n[![](https://resizing.flixster.com/i-Y0mtUHAnLpMrwnSGyh5HpnucM=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26586_p_v12_ao.jpg)](https://www.rottentomatoes.com/m/unbreakable)\n\n#63\n\nCritics Consensus: With a weaker ending, Unbreakable is not as a good as The Sixth Sense. However, it is a quietly suspenseful film that intrigues and engages, taking the audience through unpredictable twists and turns along the way.\n\nSynopsis: David Dunn (Bruce Willis) is the sole survivor of a devastating train wreck. Elijah Price (Samuel L. Jackson) is a  [[More]](https://www.rottentomatoes.com/m/unbreakable)\n\n  \n\n#64\n\n[![](https://resizing.flixster.com/2DDvSojjOXliramqLC0lb2tab9Y=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25571_p_v10_ba.jpg)](https://www.rottentomatoes.com/m/dancer_in_the_dark)\n\n#64\n\nCritics Consensus: Dancer in Dark can be grim, dull, and difficult to watch, but even so, it has a powerful and moving performance from Bjork and is something quite new and visionary.\n\nSynopsis: Selma is a Czech immigrant, a single mother working in a factory in rural America. Her salvation is passion for  [[More]](https://www.rottentomatoes.com/m/dancer_in_the_dark)\n\n  \n\n#65\n\n[![](https://resizing.flixster.com/HEKeaTaFGgATvNhWPPD__NPOwhM=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25238_p_v8_ae.jpg)](https://www.rottentomatoes.com/m/u571)\n\n#65\n\nCritics Consensus: Excellent cinematography and an interesting plot accompanied by a talented cast and crew make U-571 a tense thriller.\n\nSynopsis: When a German U-571 submarine with a sophisticated encryption machine onboard is sunk during a World War II battle at  [[More]](https://www.rottentomatoes.com/m/u571)\n\n  \n\n#66\n\n[![](https://resizing.flixster.com/_wrFq057F0ybRgpDxy0pqyQW74I=/fit-in/180x240/v2/https://resizing.flixster.com/tanuJiNPZ3uPZKXbqIapZJ7nLQg=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2RiMGQ2MDJlLWQxMDYtNDE4Ni1hMWIyLTNiNjFkZGE5ZDI5My5qcGc=)](https://www.rottentomatoes.com/m/american_psycho)\n\n#66\n\nCritics Consensus: If it falls short of the deadly satire of Bret Easton Ellis's novel, *American Psycho* still finds its own blend of horror and humor, thanks in part to a fittingly creepy performance by Christian Bale.\n\nSynopsis: In New York City in 1987, a handsome, young urban professional, Patrick Bateman (Christian Bale), lives a second life as  [[More]](https://www.rottentomatoes.com/m/american_psycho)\n\n  \n\n#67\n\n[![](https://resizing.flixster.com/DnFZf3Zw1-8rV8X0E15FR9zBkds=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27020_p_v8_ag.jpg)](https://www.rottentomatoes.com/m/the_crimson_rivers)\n\n#67\n\nCritics Consensus: No consensus yet.\n\nSynopsis: Two criminal investigations. The same day. Two detectives are assigned two very peculiar cases. An action thriller set in against  [[More]](https://www.rottentomatoes.com/m/the_crimson_rivers)\n\n  \n\n#68\n\n[![](https://resizing.flixster.com/buD5vC0grod5H0UCcPXsgqM95Uw=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p30202_p_v8_ae.jpg)](https://www.rottentomatoes.com/m/bread_and_roses)\n\n#68\n\nCritics Consensus: Bread and Roses has powerful moments, but it also sometimes descends into preachiness.\n\nSynopsis: In Los Angeles, illegal Mexican immigrant Maya (Pilar Padilla) finds work as a janitor through her sister, Rosa (Elpidia Carrillo).  [[More]](https://www.rottentomatoes.com/m/bread_and_roses)\n\n  \n\n#69\n\n[![](https://resizing.flixster.com/uYS7Mu-5aO-9TvEhUy3rF4OmlW8=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24891_p_v12_ah.jpg)](https://www.rottentomatoes.com/m/1095081-boiler_room)\n\n#69\n\nCritics Consensus: Its ending is disappointingly tidy, but *Boiler Room* boasts just enough sharp writing and brisk pacing to make getting there worthwhile.\n\nSynopsis: Welcome to the infamous \"boiler room\" -- where twenty something millionaires are made overnight. Here, in the inner sanctum of  [[More]](https://www.rottentomatoes.com/m/1095081-boiler_room)\n\n  \n\n#70\n\n[![](https://resizing.flixster.com/6-8SaHO4YcMkdvDeirPC-uDbNNs=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26127_p_v10_ab.jpg)](https://www.rottentomatoes.com/m/bring_it_on)\n\n#70\n\nCritics Consensus: Despite the formulaic, fluffy storyline, this movie is surprisingly fun to watch, mostly due to its high energy and how it humorously spoofs cheerleading instead of taking itself too seriously.\n\nSynopsis: The Toro cheerleading squad from Rancho Carne High School in San Diego has got spirit, spunk, sass and a killer  [[More]](https://www.rottentomatoes.com/m/bring_it_on)\n\n  \n\n#71\n\n[![](https://resizing.flixster.com/d5a4POsvOsM5n7ISyIDQ4LBqrW4=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27596_p_v8_ae.jpg)](https://www.rottentomatoes.com/m/1108520-1108520-time_and_tide)\n\n#71\n\nCritics Consensus: No consensus yet.\n\nSynopsis: Hong Kong, present day. A streetwise young man becomes a bodyguard to score quick cash. He soon befriends a once  [[More]](https://www.rottentomatoes.com/m/1108520-1108520-time_and_tide)\n\n  \n\n#72\n\n[![](https://resizing.flixster.com/uLjDmBdyBbXkz0c_5fRqP_LH4bI=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25370_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/big_eden)\n\n#72\n\nCritics Consensus: Though unrealistic, Big Eden has all the charm and sweetness of a fairy tale.\n\nSynopsis: Henry Hart (Arye Gross) is a young gay artist living in New York City. When his grandfather has a stroke,  [[More]](https://www.rottentomatoes.com/m/big_eden)\n\n  \n\n#73\n\n[![](https://resizing.flixster.com/cByEdcDQPMp4Y8PslHjsViyJCEg=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26689_p_v10_az.jpg)](https://www.rottentomatoes.com/m/chocolat)\n\n#73\n\nCritics Consensus: Chocolat is a charmingly light-hearted fable with a lovely performance by Binoche.\n\nSynopsis: When mysterious Vianne and her child arrive in a tranquil French town in the winter of 1959, no one could  [[More]](https://www.rottentomatoes.com/m/chocolat)\n\n  \n\n#74\n\n[![](https://resizing.flixster.com/0LeNUOLdrPfxODjOaQFQcDYU-tU=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24806_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/the-tigger-movie)\n\n#74\n\nCritics Consensus: Tigger Movie may lack the technological flash and underlying adult sophistication of other recent animated movies, but it's fun and charming.\n\nSynopsis: Winnie the Pooh, Piglet, Owl, Kanga, Roo, and Rabbit are preparing a suitable winter home for Eeyore, the perennially dejected  [[More]](https://www.rottentomatoes.com/m/the-tigger-movie)\n\n  \n\n#75\n\n[![](https://resizing.flixster.com/jpc-eSO39SRmmcWiw10WeGoDIbU=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p30239_p_v10_ae.jpg)](https://www.rottentomatoes.com/m/1099492-saving_grace)\n\n#75\n\nCritics Consensus: The plot and basis for jokes are slight, but Saving Grace is indeed saved by some charming performances, most notably Brenda Blethyn's.\n\nSynopsis: Brenda Blethyn stars as Grace Trevethen, whose late husband jumped out of a plane without a parachute. Grace has been  [[More]](https://www.rottentomatoes.com/m/1099492-saving_grace)\n\n![](https://editorial.rottentomatoes.com/wp-content/uploads/2025/04/700Emperors.jpg)\n\n(Photo by Buena Vista/ Courtesy Everett Collection. THE EMPEROR'S NEW GROOVE.)\n\nAmong great animated films released in 2000 are ***[Chicken Run](https://www.rottentomatoes.com/m/chicken_run)***, the hysterical stop-motion spectacular from masters of the form Aardman, Disney’s ***[The Emperor’s New Groove](https://www.rottentomatoes.com/m/emperors_new_groove)***, the slapstick classic that began as a dramatic musical before being overhauled, and the superlative sequels ***[Rugrats in Paris: The Movie](https://www.rottentomatoes.com/m/rugrats_in_paris)*** and ***[The Tigger Movie](https://www.rottentomatoes.com/m/the-tigger-movie)***.\n\nGeneral audiences were not yet ready for more mature animated features, so Don Bluth’s space opera ***[Titan A.E.](https://www.rottentomatoes.com/m/titan_ae)*** landed with a thud initially, but became a cult classic later in life. Similarly, ***[The Road to El Dorado](https://www.rottentomatoes.com/m/road_to_el_dorado)***, the love triangle ode to Bob Hope’s road pictures that tried very hard to emulate a Disney movie, complete with Elton John soundtrack, may not have resonated with audiences at first, but found its way on home video.\n\nOne surprise misstep from Disney did not make this list, despite doing well at the box office: ***[Dinosaur](https://www.rottentomatoes.com/m/1097046-dinosaur)***,  an early CGI talking dinosaur picture not to be confused with [Pixar](https://editorial.rottentomatoes.com/guide/all-pixar-movies-ranked/)’s *[The Good Dinosaur](https://www.rottentomatoes.com/m/the_good_dinosaur)*.\n\n#76\n\n[![](https://resizing.flixster.com/D2ZmPbcDC0FOtFUpnPTNypBymhk=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24696_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/return_to_me)\n\n#76\n\nCritics Consensus: David Duchovny and Minnie Driver provide heart-warming romance and comedy in this solid debut by Director Bonnie Hunt.\n\nSynopsis: Heartbroken and struggling emotionally after his wife's death in a car accident, Bob Rueland (David Duchovny) agrees to go on  [[More]](https://www.rottentomatoes.com/m/return_to_me)\n\n  \n\n#77\n\n[![](https://resizing.flixster.com/XcLmBox2Tf70bJ127OyH7OMTqfk=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25745_p_v8_al.jpg)](https://www.rottentomatoes.com/m/1098149-patriot)\n\n#77\n\nCritics Consensus: The Patriot can be entertaining to watch, but it relies too much on formula and melodrama.\n\nSynopsis: Mel Gibson portrays Benjamin Martin, an unassuming man who is forced to join the American Revolution when the British threaten  [[More]](https://www.rottentomatoes.com/m/1098149-patriot)\n\n  \n\n#78\n\n[![](https://resizing.flixster.com/RteXfW8-l59LCIbcNATKzg0PjkE=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24739_p_v13_av.jpg)](https://www.rottentomatoes.com/m/pitch_black)\n\n#78\n\nCritics Consensus: Despite an interesting premise (and a starmaking turn from Vin Diesel), *Pitch Black* is too derivative and formulaic to fully recommend to sci-fi or action fans.\n\nSynopsis: When their ship crashes on an unexplored planet, the survivors of the crash soon discover that this planet that is  [[More]](https://www.rottentomatoes.com/m/pitch_black)\n\n  \n\n#79\n\n[![](https://resizing.flixster.com/rpVfvUE0dxNcQnIi3FtqxDsN3ks=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24671_p_v13_ag.jpg)](https://www.rottentomatoes.com/m/1097259-road_trip)\n\n#79\n\nCritics Consensus: Some humor is hit or miss, depending on the audience tastes, but the movie is funny overall. Mixed reviews for the cast, especially for MTV's Tom Green.\n\nSynopsis: Josh (Breckin Meyer) videotapes his affair with another girl and accidentally mails it to his girlfriend. Discovering the mistake, he  [[More]](https://www.rottentomatoes.com/m/1097259-road_trip)\n\n  \n\n#80\n\n[![](https://resizing.flixster.com/4EJbgObj6UTXYSnNt1EQA2fyqYA=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25624_v_v10_ad.jpg)](https://www.rottentomatoes.com/m/groove)\n\n#80\n\nCritics Consensus: Though high on energy and great techno tunes, Groove's characters and plotlines are too cliched to be engaging.\n\nSynopsis: On Friday, a single e-mail blips through the Internet. The word spreads quickly through the city: the party is on.  [[More]](https://www.rottentomatoes.com/m/groove)\n\n  \n\n#81\n\n[![](https://resizing.flixster.com/tae0RP-TO2fP1lVvuDwXPBSrc0s=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26711_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/family_man)\n\n#81\n\nCritics Consensus: *The Family Man*'s earnest attempt to remind audiences that it's a wonderful life too often steers into schmaltz, although Nicolas Cage and Téa Leoni's romantic rapport adds a dash of sincere sweetness.\n\nSynopsis: Jack's lavish, fast-paced lifestyle changes one Christmas night when he stumbles into a grocery store holdup and disarms the gunman.  [[More]](https://www.rottentomatoes.com/m/family_man)\n\n  \n\n#82\n\n[![](https://resizing.flixster.com/bY6PySX9yWxN8v8EJd_8PgGYsqk=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26353_p_v8_ac.jpg)](https://www.rottentomatoes.com/m/bamboozled)\n\n#82\n\nCritics Consensus: *Bamboozled* is too heavy-handed in its satire and comes across as more messy and overwrought than biting.\n\nSynopsis: A blistering satire of network television's pitfalls and prejudices, a humorous look at how race, ratings and the pursuit of  [[More]](https://www.rottentomatoes.com/m/bamboozled)\n\n  \n\n#83\n\n[![](https://resizing.flixster.com/YhJS93ey_ulPp63s8_PxnzyEmEU=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26848_p_v8_at.jpg)](https://www.rottentomatoes.com/m/1101561-1101561-malena)\n\n#83\n\nCritics Consensus: Malena ends up objectifying the character of the movie's title. Also, the young boy's emotional investment with Malena is never convincing, as she doesn't feel like a three-dimensional person.\n\nSynopsis: In 1941, Renato was 13 years old and although the world was at war, nothing ever happened in this sleepy  [[More]](https://www.rottentomatoes.com/m/1101561-1101561-malena)\n\n  \n\n#84\n\n[![](https://resizing.flixster.com/fbXc9EiymsMnh9n7ahTQSsK91hs=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25572_p_v10_ac.jpg)](https://www.rottentomatoes.com/m/cecil_b_demented)\n\n#84\n\nCritics Consensus: The idea behind John Waters' latest has much potential, but the movie ends up being too sloppy and underdeveloped in terms of script and direction. Also, by today's standards, it fails to shock.\n\nSynopsis: An insane action-comedy about a young lunatic director and his devoted cult of cinema terrorists who kidnap a movie goddess  [[More]](https://www.rottentomatoes.com/m/cecil_b_demented)\n\n  \n\n#85\n\n[![](https://resizing.flixster.com/uG5L3fflG_RxTxg3xVEQhXVCHS0=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24766_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/whats_cooking)\n\n#85\n\nCritics Consensus: What's Cooking? is well-acted, but the scenes sometimes sink into melodrama as characters scream at each other, and the movie as a whole is too lightweight and forgettable.\n\nSynopsis: You are invited to a tasty Thanksgiving dinner that will all at once transport you to four different worlds and  [[More]](https://www.rottentomatoes.com/m/whats_cooking)\n\n  \n\n#86\n\n[![](https://resizing.flixster.com/v5krZgOdjwGvb641jcOLGjg2ZTk=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25145_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/steal_this_movie)\n\n#86\n\nCritics Consensus: D'Onofrio's performance fails to do justice to Hoffman, and the depiction of the 60s also rings false.\n\nSynopsis: \"Steal This Movie\" charts the rise and fall of Abbie Hoffman -- activist, radical, fugitive, lover -- and leads us  [[More]](https://www.rottentomatoes.com/m/steal_this_movie)\n\n  \n\n#87\n\n[![](https://resizing.flixster.com/3bu53Nz1LO3U0zLYQ2K8FkACIrE=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25075_p_v8_ad.jpg)](https://www.rottentomatoes.com/m/titan_ae)\n\n#87\n\nCritics Consensus: Great visuals, but the story feels like a cut-and-paste job of other sci-fi movies.\n\nSynopsis: A science-fiction film that combines traditional animation with computer generated images, \"Titan A.E.\" takes place in the distant future, after  [[More]](https://www.rottentomatoes.com/m/titan_ae)\n\n  \n\n#88\n\n[![](https://resizing.flixster.com/v8Nh85e4CxjYDrqKrokDm_mQ5hk=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24673_p_v8_ar.jpg)](https://www.rottentomatoes.com/m/road_to_el_dorado)\n\n#88\n\nCritics Consensus: Predictable story and thin characters made the movie flat.\n\nSynopsis: Two con-men (Kevin Kline, Kenneth Branagh) get hold of a map to the lost City of Gold, El Dorado. After  [[More]](https://www.rottentomatoes.com/m/road_to_el_dorado)\n\n  \n\n#89\n\n[![](https://resizing.flixster.com/RTu7ulT68uI3lXDL8Rz6JtEx8-8=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24929_p_v10_ae.jpg)](https://www.rottentomatoes.com/m/waking_the_dead)\n\n#89\n\nCritics Consensus: No consensus yet.\n\nSynopsis: Fielding Pierce (Billy Crudup) has long been on the road to political candidacy. After the Coast Guard, he enrolls in  [[More]](https://www.rottentomatoes.com/m/waking_the_dead)\n\n  \n\n#90\n\n[![](https://resizing.flixster.com/5r2vT_qvztcUgI6xbUgLmqGqGU8=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26118_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/way_of_the_gun)\n\n#90\n\nCritics Consensus: Christopher McQuarrie may exhibit a way behind the camera in the stylish *The Way of the Gun*, but his script falters with dull characterization and a plot so needlessly twisty that most viewers will be ready to tune out before the final reveal.\n\nSynopsis: They make no excuses. They don't ask forgiveness. Their story is without compromise, brutal and simple. For contemporary desperados Parker  [[More]](https://www.rottentomatoes.com/m/way_of_the_gun)\n\n  \n\n#91\n\n[![](https://resizing.flixster.com/YHubFto904fhDzfiaanERc6XeCQ=/fit-in/180x240/v2/https://resizing.flixster.com/qcFytfeeL0z37KmjRUdYdE2PKiY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzg2MTI3OGZlLTg2NjgtNDEyOS1hNDk0LTAwMzMxNTJkNDhlMC5qcGc=)](https://www.rottentomatoes.com/m/perfect_storm)\n\n#91\n\nCritics Consensus: While the special effects are well done and quite impressive, this film suffers from any actual drama or characterization. The end result is a film that offers nifty eye-candy and nothing else.\n\nSynopsis: Based on a true story, the film tells of the courageous men and women who risk their lives every working  [[More]](https://www.rottentomatoes.com/m/perfect_storm)\n\n  \n\n#92\n\n[![](https://resizing.flixster.com/1uaEA_k0JLMhK_03oKt70PkADpU=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24667_p_v13_ad.jpg)](https://www.rottentomatoes.com/m/legend_of_bagger_vance)\n\n#92\n\nCritics Consensus: Despite the talent involved in The Legend of Bagger Vance, performances are hindered by an inadequate screenplay full of flat characters and bad dialogue. Also, not much happens, and some critics are offended by how the film glosses over issues of racism.\n\nSynopsis: During the Great Depression, Georgia socialite Adele Invergordon (Charlize Theron) announces a publicity-garnering high-stakes match at her struggling family golf  [[More]](https://www.rottentomatoes.com/m/legend_of_bagger_vance)\n\n  \n\n#93\n\n[![](https://resizing.flixster.com/8WgMcCbCjStxYkUBuY8rAcPPaBU=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24839_p_v13_bg.jpg)](https://www.rottentomatoes.com/m/whole_nine_yards)\n\n#93\n\nCritics Consensus: Despite a charming cast, *The Whole Nine Yards* can't tickle funny bones consistently enough to distract from its sitcom-like story.\n\nSynopsis: Jimmy \"The Tulip\" Tudeski (Bruce Willis), a mob hitman-turned-informant, ratted on the mob and put his life in jeopardy. Now  [[More]](https://www.rottentomatoes.com/m/whole_nine_yards)\n\n  \n\n#94\n\n[![](https://resizing.flixster.com/kTytdUkJF752f5ZXtB-p3r4waKY=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26313_p_v8_an.jpg)](https://www.rottentomatoes.com/m/men_of_honor)\n\n#94\n\nCritics Consensus: De Niro and Goodings Jr. manage to turn in performances that make this by-the-numbers inspirational movie watchable.\n\nSynopsis: Carl Brashear (Cuba Gooding Jr.) is an ambitious sharecropper who joins the U.S. Navy to become the world's first black  [[More]](https://www.rottentomatoes.com/m/men_of_honor)\n\n  \n\n#95\n\n[![](https://resizing.flixster.com/W2KZ2iskiGobkwqpzTcgDm0qcr8=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26773_p_v8_aw.jpg)](https://www.rottentomatoes.com/m/miss_congeniality)\n\n#95\n\nCritics Consensus: Though critics say Bullock is funny and charming, she can't overcome a bad script that makes the movie feel too much like a fluffy, unoriginal sitcom.\n\nSynopsis: When a terrorist threatens to bomb the Miss United States pageant, the FBI rushes to find a female agent to  [[More]](https://www.rottentomatoes.com/m/miss_congeniality)\n\n  \n\n#96\n\n[![](https://resizing.flixster.com/VCu0K36OeQxbEU9WKMLDKK65dEQ=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25965_p_v8_ah.jpg)](https://www.rottentomatoes.com/m/replacements)\n\n#96\n\nCritics Consensus: The cliched characters and obvious outcome make all the fun and excitement amount to nothing.\n\nSynopsis: It's late in the season; the playoffs are fast approaching; and the Washington Sentinels have just gone on strike. Scrambling  [[More]](https://www.rottentomatoes.com/m/replacements)\n\n  \n\n#97\n\n[![](https://resizing.flixster.com/XiiC1X5Qj7GQrq9TB4_W6rHG44U=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25022_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/final_destination)\n\n#97\n\nCritics Consensus: Despite a panel of X-Files' alums at the helm and a promising premise, flighty performances and poor execution keep *Final Destination* from ever taking off.\n\nSynopsis: Alex Browning (Devon Sawa), is embarking on a trip to Paris. Alex experiences a premonition -- he sees the plane  [[More]](https://www.rottentomatoes.com/m/final_destination)\n\n  \n\n#98\n\n[![](https://resizing.flixster.com/oUU4rdiZnpIL66NmRMwNeWD8JVQ=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26368_p_v10_ae.jpg)](https://www.rottentomatoes.com/m/pay_it_forward)\n\n#98\n\nCritics Consensus: *Pay It Forward* has strong performances from Spacey, Hunt, and Osment, but the movie itself is too emotionally manipulative and the ending is bad.\n\nSynopsis: The story of a social studies teacher who gives an assignment to his junior high school class to think of  [[More]](https://www.rottentomatoes.com/m/pay_it_forward)\n\n  \n\n#99\n\n[![](https://resizing.flixster.com/18dAYkkaTIsU6ujIW137ezpkzCs=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25129_p_v8_ak.jpg)](https://www.rottentomatoes.com/m/1096832-where_the_heart_is)\n\n#99\n\nCritics Consensus: Poor script and messy plot undermines the decent cast.\n\nSynopsis: After Tennessee teen Novalee Nation (Natalie Portman) is left literally barefoot and pregnant in a Wal-Mart parking lot by her  [[More]](https://www.rottentomatoes.com/m/1096832-where_the_heart_is)\n\n  \n\n#100\n\n[![](https://resizing.flixster.com/NXnkngFOGc9Vz9qMI_6R5Cw9QUw=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25099_p_v10_at.jpg)](https://www.rottentomatoes.com/m/romeo_must_die)\n\n#100\n\nCritics Consensus: In his second Hollywood movie, Jet Li impresses. Unfortunately, when he's not on screen, the movie slows to a crawl. Though there's some spark between Jet and Aaliyah, there isn't any threat of a fire. And as impressive as the action sequences are, some critics feel they are over-edited.\n\nSynopsis: Two families, bound by tradition, are locked in a brutal war. Asian and African American gangs are vying for control  [[More]](https://www.rottentomatoes.com/m/romeo_must_die)\n\n![](https://editorial.rottentomatoes.com/wp-content/uploads/2025/04/700BatmanBeyond.jpg)\n\n(Photo by WB/ Courtesy Everett Collection. BATMAN BEYOND: RETURN OF THE JOKER.)\n\nWe mentioned *Mission: Impossible 2* and *Scary Movie* as honorable mentions because of their critic-proof box office and their part in long-running franchises. Here are other films that bubbled under our top 100.\n\nChildren of many generations love Jim Carrey’s heavily made-up performance in the live action remake ***[How the Grinch Stole Christmas](https://www.rottentomatoes.com/m/how_the_grinch_stole_christmas)***, though it’s best watched with adults firmly out of the room. ***[Me, Myself & Irene](https://www.rottentomatoes.com/m/me_myself_and_irene)***, the Farrelly Brothers’ attempt to recreate the success of *[Dumb & Dumber](https://www.rottentomatoes.com/m/dumb_and_dumber)*, may have failed in that attempt, but it’s still full of quotable Carrey lines. And who could forget the stoner comedy ***[Dude, Where’s My Car?](https://www.rottentomatoes.com/m/dude_wheres_my_car)*** and its pronounced effect on pop culture for many months afterward?\n\nAnime was still new to the average public, and most anime feature films in the early 2000s only saw limited theatrical releases, if at all, forcing hardcore *otaku* to hunt down the DVDs at places like Suncoast and Sam Goody. Not enough mainstream critics saw a pair of compelling and bloody vampire movies to make this list: ***[Vampire Hunter D: Bloodlust](https://www.rottentomatoes.com/m/vampire_hunter_d_bloodlust)*** and [***Blood: The Last Vampire***.](https://www.rottentomatoes.com/m/blood_the_last_vampire)\n\nAnd we couldn’t end this discussion without mentioning the ineligible straight-to-video ***[Batman Beyond: Return of the Joker](https://www.rottentomatoes.com/m/batman_beyond_return_of_the_joker)***. The first-ever PG-13 DC Comics animated feature, this film was heavily cut for violence in the wake of the 1999 Columbine shootings. It took until 2002 before the uncut version appeared officially, finally restoring the filmmakers’ original intent. ([Steve Horton](https://www.clippings.me/stevehorton))",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "44cd0527-4438-4385-9cb5-f3ebdca357a6"
+    },
+    {
+      "content": "Now that I know which films are mentioned in the website, I want to look up which commands I can use to browse the local files, so that I can find the database the prompt is talking about.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{}",
+            "name": "cli-mcp-server_show_security_rules"
+          },
+          "id": "fe5bdb4d-fed7-4e6c-a5c2-9152b8c0cf54",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "Security Configuration:\n==================\nWorking Directory: /data\n\nAllowed Commands:\n----------------\ncat, find, ls\n\nAllowed Flags:\n-------------\n\n\nSecurity Limits:\n---------------\nMax Command Length: 1024 characters\nCommand Timeout: 30 seconds\n",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "fe5bdb4d-fed7-4e6c-a5c2-9152b8c0cf54"
+    },
+    {
+      "content": "I can use the ls command to list the local files.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"command\": \"ls\"\n}",
+            "name": "cli-mcp-server_run_command"
+          },
+          "id": "a9c8e204-d130-4b17-a825-6bb2a4e50601",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "Barber Shop.csv\nCoinbaseTradeHistory.csv\nCovid 19 impacts on hospitals.csv\nCrime_records.csv\nPet Care 2023 Weekly Financials.csv\nTop Movies.csv\nfantasy sports.csv\nfood and beverage consumption.csv\nrepos\n",
+          "type": "text"
+        },
+        {
+          "text": "\nCommand completed with return code: 0",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "a9c8e204-d130-4b17-a825-6bb2a4e50601"
+    },
+    {
+      "content": "I found a file called \"Top Movies.csv\", I can use the cat command to view the films logged here.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"command\": \"cat \\\"Top Movies.csv\\\"\"\n}",
+            "name": "cli-mcp-server_run_command"
+          },
+          "id": "f69091ce-5e27-4b75-8e7e-553db2a1739f",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "Title,IMDb Rating,Runtime,Genre,Votes,Metascore,Gross,Watched,My Rating\nThe Shawshank Redemption,9.3,142 min,Drama,\"2,135,421\",80,$28.34M,No,\nThe Godfather,9.2,175 min,Crime,\"1,466,135\",100,$134.97M,No,\nThe Dark Knight,9,152 min,Action,\"2,099,976\",84,$534.86M,Yes,9.6\nPulp Fiction,8.9,154 min,Crime,\"1,675,942\",94,$107.93M,No,\nThe Lord of the Rings: The Return of the King,8.9,201 min,Adventure,\"1,518,668\",94,$377.85M,Yes,9.4\nSchindler's List,8.9,195 min,Biography,\"1,108,341\",94,$96.90M,No,\n12 Angry Men,8.9,96 min,Drama,\"609,087\",96,$4.36M,No,\nInception,8.8,148 min,,\"1,872,843\",74,$292.58M,Yes,8.9\nFight Club,8.8,139 min,Drama,\"1,707,140\",66,$37.03M,No,\nForrest Gump,8.8,142 min,Drama,\"1,643,438\",82,$330.25M,Yes,8.5\nThe Lord of the Rings: The Fellowship of the Ring,8.8,178 min,Adventure,\"1,534,306\",92,$315.54M,Yes,8.6\nThe Matrix,8.7,136 min,Action,\"1,537,873\",73,$171.48M,Yes,8.2\nThe Lord of the Rings: The Two Towers,8.7,179 min,Adventure,\"1,373,648\",87,$342.55M,Yes,8.8\nGoodfellas,8.7,146 min,Biography,\"922,793\",89,$46.84M,No,\nInterstellar,8.6,169 min,Adventure,\"1,329,313\",74,$188.02M,Yes,9\nThe Silence of the Lambs,8.6,118 min,Crime,\"1,156,552\",85,$130.74M,Yes,7.9\nSaving Private Ryan,8.6,169 min,Drama,\"1,131,574\",91,$216.54M,Yes,8\nThe Green Mile,8.6,189 min,Crime,\"1,037,261\",61,$136.80M,Yes,7\nAvengers: Endgame,8.6,181 min,Action,\"558,276\",78,$858.37M,Yes,9.2\nGladiator,8.5,155 min,Action,\"1,232,713\",67,$187.71M,Yes,8.9\nThe Departed,8.5,151 min,Crime,\"1,093,453\",85,$132.38M,No,\nBack to the Future,8.5,116 min,Adventure,\"955,052\",87,$210.61M,Yes,8.2\nLÃ©on,8.5,110 min,Action,\"944,260\",64,$19.50M,No,\nThe Lion King,8.5,88 min,Animation,\"861,071\",88,$422.78M,Yes,8.4\nAvengers: Infinity War,8.5,149 min,Action,\"707,711\",68,$678.82M,Yes,9.7\nGisaengchung,8.5,132 min,Comedy,\"29,523\",92,$858.37M,No,\nThe Dark Knight Rises,8.4,164 min,Action,\"1,407,078\",78,$448.14M,Yes,8.9\nDjango Unchained,8.4,165 min,Drama,\"1,236,038\",81,$162.81M,Yes,8.1\nThe Shining,8.4,146 min,Drama,\"798,352\",66,$44.02M,No,\nAlien,8.4,117 min,Horror,\"726,277\",89,$78.90M,No,\nApocalypse Now,8.4,147 min,Drama,\"558,155\",94,$83.47M,No,\nSpider-Man: Into the Spider-Verse,8.4,117 min,Animation,\"258,181\",87,$190.24M,Yes,7.3\nInglourious Basterds,8.3,153 min,Adventure,\"1,148,946\",69,$120.54M,Yes,8.3\nAmerican Beauty,8.3,122 min,Drama,\"1,002,017\",86,$130.10M,Yes,7.8\nReservoir Dogs,8.3,99 min,Crime,\"844,322\",79,$2.83M,No,\nRequiem for a Dream,8.3,102 min,Drama,\"710,505\",68,$3.64M,Yes,8.1\nTaxi Driver,8.3,114 min,Crime,\"649,667\",94,$28.26M,Yes,7.6\nThe Wolf of Wall Street,8.2,180 min,Biography,\"1,057,083\",75,$116.90M,Yes,8.7\nGreen Book,8.2,130 min,Biography,\"240,442\",69,$85.08M,No,\nShutter Island,8.1,138 min,Mystery,\"1,024,994\",63,$128.01M,No,\nGuardians of the Galaxy,8.1,121 min,Action,\"970,629\",76,$333.18M,Yes,8.8\nKill Bill: Vol. 1,8.1,111 min,Action,\"923,628\",69,$70.10M,No,\nJurassic Park,8.1,127 min,Action,\"795,552\",68,$402.45M,Yes,7.8\nMad Max: Fury Road,8.1,120 min,Action,\"795,431\",90,$154.06M,No,\nGone Girl,8.1,149 min,Drama,\"776,043\",79,$167.77M,No,\nHarry Potter and the Deathly Hallows: Part 2,8.1,130 min,Adventure,\"702,376\",87,$381.01M,Yes,8.8\nBlade Runner,8.1,117 min,Action,\"638,751\",89,$32.87M,Yes,7.1\nHacksaw Ridge,8.1,139 min,Biography,\"377,397\",71,$67.21M,No,\nStand by Me,8.1,89 min,Adventure,\"338,549\",75,$52.29M,No,\nToy Story 4,8.1,100 min,Animation,\"93,227\",84,$431.96M,Yes,7.9",
+          "type": "text"
+        },
+        {
+          "text": "\nCommand completed with return code: 0",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "f69091ce-5e27-4b75-8e7e-553db2a1739f"
+    },
+    {
+      "content": "I have found that there's only two movies that are present in this local database that's also present in the website provided in the prompt: Gladiator, and Requiem for a Dream. Both are logged as watched, but Gladiator is logged under the \"action\" genre, while Requiem for a Dream is logged as \"drama\", which is something that's specified in the prompt.\n\nIn the previous tool output there was a direct link to this movies' page, which I want to look at in search of any reviews made by a paramedic, before Aug 18, 2025.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream\",\n  \"max_length\": 50000\n}",
+            "name": "fetch_fetch"
+          },
+          "id": "78ac8935-5a0a-4960-9ef4-105d2d2a1fb7",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream:\n[Where to Watch](#where-to-watch)\n[What to Know](#what-to-know)\n[Reviews](#critics-reviews)\n[Cast & Crew](#cast-and-crew)\n[Movie Clips](#movie-clips)\n[More Like This](#more-like-this)\n[Related News](#news-and-guides)\n[Videos](#videos)\n[Photos](#photos)\n[Media Info](#media-info)\n\nCritics Consensus\n\nThough the movie may be too intense for some to stomach, the wonderful performances and the bleak imagery are hard to forget.\n\n[Read Critics Reviews](/m/requiem_for_a_dream/reviews)\n\nCandice Frederick\n\n\nReel Talk Online\n\n\nAt times disturbing and always intense, this flick offers its own acid trip for viewers and is a first-hand look at four people who become trapped by their own hell.\n\n\n\nRated: A\n\n Sep 12, 2017 \nFull Review\n\n\n\nLisa Alspector\n\n\nChicago Reader\n\n\nA staccato narrative parallels the experiences and hallucinations of a woman on drugs with those of her son and his friends.\n\n\n\n\n\n\n Sep 20, 2011 \nFull Review\n\n\n\nMatt Noller\n\n\nSlant Magazine\n\n\nA gut-wrenching, formally adventurous masterpiece or an ugly, flashy piece of empty-headed propaganda?\n\n\n\nRated: 2/4\n\n Sep 8, 2009 \nFull Review\n\n\n\nKristy Strouse\n\n\nCinematic Lovelies\n\n\nI think it’s a masterpiece; gut-wrenching and soaked in a hellscape of realistic proportions. Requiem for a Dream is a tough watch, but an essential one.\n\n\n\n\n\n\n Mar 12, 2023 \nFull Review\n\n\n\nRob Gonsalves\n\n\nRob's Movie Vault\n\n\nIf anything, Aronofsky’s doomy, freaky, humorless style defeats his own purpose: It re-animates the dark romance of dissolution.\n\n\n\nRated: C-\n\n Sep 3, 2022 \nFull Review\n\n\n\nCarey-Ann Pawsey\n\n\nOrca Sound\n\n\nThough all aspects of the film are excellent from story to cinematography to directing it is the acting which holds the whole thing together. The three leads are amazing.\n\n\n\nRated: 4/5\n\n Sep 14, 2020 \nFull Review\n\n\nRead all reviews\n\nJay C.\n\n\nDisturbing. The best review I can give is I have been a paramedic for 20 years and I have seen it all. This movie is and un-diluted look at what drug addiction does to a group of characters it follows.\nThat’s it. I won’t ruin it. People give reviews for it but that takes away from the shock. So, it makes me get misty eyed after everything I’ve done and seen. That’s a review in itself.\n\nRated 5 out of 5 stars\n\n08/17/25\n\nFull Review\n\n\nGareth v\n\n\nIt’s not an easy watch, nor should it be, but Requiem for a Dream is essential cinema. Bold, nightmarish, and deeply tragic, it’s a film that dares to confront the darkness with stunning artistry. A masterpiece.\n\nRated 5 out of 5 stars\n\n08/07/25\n\nFull Review\n\n\nMiles B\n\n\nAbsolute masterpiece, and now I just feel sad\n\nRated 5 out of 5 stars\n\n07/27/25\n\nFull Review\n\n\nFilm Critic F\n\n\nI don't understand what's so gut-wrenching about it, but I do think it's a must-see for movie-goers.\n\nRated 4 out of 5 stars\n\n07/22/25\n\nFull Review\n\n\nGabrielle H.\n\n\nBeautiful. Such a fantastic film showcasing the dangers of addiction and drugs as well as the corruption in our hospitals and prisons. The main characters are all struggling with a different form of addiction; Sara has an addiction to diet pills and struggles with being an outcast with her neighbors and son. Harry struggles with needles and pushes himself to the brink to help his girlfriend and his mother. Ty struggles with an addiction to powder and the struggles with being a young black man living in a poor financial situation. Marion gets addicted to the same powder and ends up not being able to live without it and turns to affairs after her parents neglect her needs and replace it with monetary love. It really plays with your heart and the difficulties of drugs and money— this movie will drive you to tears.\n\nRated 4.5 out of 5 stars\n\n07/18/25\n\nFull Review\n\n\nNick B.\n\n\nIt’s a beautifully tragic film. Very hard to watch but hard to look away from.\n\nRated 4 out of 5 stars\n\n07/17/25\n\nFull Review\n\n\nRead all reviews\n\nRead More\nRead Less\n POST RATING \n WRITE A REVIEW \n EDIT REVIEW\n\nRequiem for a Dream: Official Clip - Wait for Me\n\nRequiem for a Dream: Official Clip - Wait for Me\n\n1:46\n\n\n\nRequiem for a Dream: Official Clip - Fetal Position\n\nRequiem for a Dream: Official Clip - Fetal Position\n\n3:05\n\n\n\nRequiem for a Dream: Official Clip - Meaningless\n\nRequiem for a Dream: Official Clip - Meaningless\n\n1:36\n\n\n\nRequiem for a Dream: Official Clip - I Know It's Pretty\n\nRequiem for a Dream: Official Clip - I Know It's Pretty\n\n1:56\n\n\n\nRequiem for a Dream: Official Clip - Smart, Loyal and Not a Junkie\n\nRequiem for a Dream: Official Clip - Smart, Loyal and Not a Junkie\n\n1:09\n\n\n\nRequiem for a Dream: Official Clip - Feed Me, Sara\n\nRequiem for a Dream: Official Clip - Feed Me, Sara\n\n2:13\n\n\n\nRequiem for a Dream: Official Clip - I Have a Favor to Ask\n\nRequiem for a Dream: Official Clip - I Have a Favor to Ask\n\n2:46\n\n\n\nRequiem for a Dream: Official Clip - There's My Three Meals, Mr. Smartypants\n\nRequiem for a Dream: Official Clip - There's My Three Meals, Mr. Smartypants\n\n1:16\n\n\n\nRequiem for a Dream: Official Clip - We're on Our Way\n\nRequiem for a Dream: Official Clip - We're on Our Way\n\n1:42\n\n\n\nRequiem for a Dream: Official Clip - The Red Dress\n\nRequiem for a Dream: Official Clip - The Red Dress\n\n2:10\n\n\nView more videos\n\nDancer in the Dark\n\n\n\n70%\n\n\n91%\n\nDancer in the Dark\n\nWatchlist\n\n\nThe Invisible Circus\n\n\n\n22%\n\n\n44%\n\nThe Invisible Circus\n\nWatchlist\n\n\nThe Virgin Suicides\n\n\n\n80%\n\n\n81%\n\nThe Virgin Suicides\n\nWatchlist\n\n\nTRAILER\n for The Virgin Suicides\n\n\nThe Million Dollar Hotel\n\n\n\n25%\n\n\n67%\n\nThe Million Dollar Hotel\n\nWatchlist\n\n\n\nDiscover more movies and TV shows.\n\nView More\n\nRequiem for a Dream: Trailer 1\n\nRequiem for a Dream: Trailer 1\n\n1:19\n\n\nView more videos\n\nRequiem for a Dream (2000)\n\n\nRequiem for a Dream (2000)\n\n\nRequiem for a Dream (2000)\n\n\nRequiem for a Dream (2000)\n\n\nRequiem for a Dream (2000)\n\n\nRequiem for a Dream (2000)\n\n\n\nView more photos\n\nSynopsis\nImaginatively evoking the inner landscape of human beings longing to connect, to love and feel loved, the film is a parable of happiness gloriously found and tragically lost. \"Requiem for a Dream\" tells parallel stories that are linked by the relationship between the lonely, widowed Sara Goldfarb and her sweet but aimless son, Harry. The plump Sara, galvanized by the prospect of appearing on a TV game show, has started on a dangerous diet regimen to beautify herself for a national audience.\n\nDirector\n:   Darren Aronofsky\n\nProducer\n:   Eric Watson, \n    Palmer West\n\nScreenwriter\n:   Darren Aronofsky, \n    Darren Aronofsky\n\nDistributor\n:   Artisan Entertainment\n\nProduction Co\n:   Industry Entertainment, \n    Protozoa Pictures, \n    Requiem for a Dream LLC, \n    Thousand Words, \n    Truth and Soul Pictures, \n    Artisan Entertainment, \n    Sibling Productions, \n    Bandera Entertainment\n\nRating\n:   R\n\nGenre\n:   Drama\n\nOriginal Language\n:   English\n\nRelease Date (Theaters)\n:   Oct 27, 2000, Wide\n\nRelease Date (Streaming)\n:   Dec 6, 2015\n\nBox Office (Gross USA)\n:   $3.6M\n\nRuntime\n:   1h 41m\n\nSound Mix\n:   Dolby SR, \n    Dolby Digital, \n    Surround\n\nAspect Ratio\n:   Flat (1.85:1)\n\n Most Popular at Home Now",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "78ac8935-5a0a-4960-9ef4-105d2d2a1fb7"
+    }
+  ],
+  "GTFA_CLAIMS": [
+    "The only drama movie from the list in editorial.rottentomatoes.com/guide/best-movies-2000 that is also in your local data is Requiem for a Dream",
+    "Jay C. was the paramedic who left a review about Requiem for a Dream."
+  ],
+  "ENABLED_TOOLS": [
+    "cli-mcp-server_show_security_rules",
+    "cli-mcp-server_run_command",
+    "wikipedia_search_wikipedia",
+    "wikipedia_get_article",
+    "open-library_get_book_by_title",
+    "open-library_get_authors_by_name",
+    "open-library_get_author_info",
+    "fetch_fetch",
+    "google-workspace_list_events",
+    "weather_find_weather_stations",
+    "github_search_repositories",
+    "github_search_code",
+    "github_search_users",
+    "github_search_issues",
+    "github_get_issue",
+    "github_list_issues"
+  ],
+  "script_model_response": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest:\n<error>No more content available.</error>",
+  "raw_conversation_history": [
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"url\": \"http://editorial.rottentomatoes.com/guide/best-movies-2000\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-ae32ae765ec86413",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The user is asking about a movie review they read on Rotten Tomatoes. They mention:\n1. A drama from a list at editorial.rottentomatoes.com/guide/best-movies-2000\n2. They also noted it in their personal local movie data\n3. The review was written by a paramedic\n4. The review was posted before August 18, 2025\n5. They want to know the name of the person who wrote the review\n\nLet me start by fetching the Rotten Tomatoes page to see what movies are on that list.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-ae32ae765ec86413",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"url\": \"http://editorial.rottentomatoes.com/guide/best-movies-2000\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-ae32ae765ec86413",
+      "content": "Contents of http://editorial.rottentomatoes.com/guide/best-movies-2000:\n---\n\n![](https://editorial.rottentomatoes.com/wp-content/uploads/2025/06/700_RemembertheTitans.jpg?w=840)\n\nEverett Collection\n\n***[Remember the Titans](https://www.rottentomatoes.com/m/remember_the_titans)*** celebrates its 20th anniversary!\n\n“In the Year 2000…” sang *Late Night with Conan O’Brien* band member Richie “LaBamba” Rosenberg in a falsetto during one of the better-known skits of the 1990s. Conan and sidekick Andy Richter would then humorously imagine what the year 2000 would be like, including that “magic markers will smell worse” and presidential campaigns running ads “accusing their opponent of coming up with the idea for Jar Jar Binks.”\n\nTurns out that the actual year 2000, being the last year before the world irrevocably changed after 9/11, and a year when [hardly any computer systems crashed](https://americanhistory.si.edu/collections/object-groups/y2k) due to a whole lot of hard work, was a year in which there were a metric ton of good movies.\n\nKnowing what we know now, this list of the 100 Best Movies of 2000 is a starting point for numerous huge franchises, and a coming-out year for many of our favorite actors, actresses, and directors. Most especially, it’s the year when the world transitioned from VHS video tape into DVD, greatly enhancing resolution, sound, and the uncanny ability to find any scene you wanted.\n\nMovies moved from something you *bought* or *rented* into something you *collected*. Built-in commentaries provided the layperson with crucial insight into the filmmaking process. Deleted scenes gave the fans glimpses into what got left on the cutting-room floor. For the first time, people started to understand that “widescreen” meant black bars on the top and bottom of your picture tube until TV dimensions caught up with the size and shape of movie theater screens.\n\nOur criteria for this Top 100 of 2000 is threefold. First, Certified Fresh movies sorted by Tomatometer (***[Crouching Tiger, Hidden Dragon](https://www.rottentomatoes.com/m/crouching_tiger_hidden_dragon)***, ***[Memento](https://www.rottentomatoes.com/m/memento)***, ***[Gladiator](https://www.rottentomatoes.com/m/gladiator)***). That’s followed by Fresh movies on with 40 or more critic reviews and 60% or higher on the Popcornmeter (***[Snatch](https://www.rottentomatoes.com/m/snatch)***, ***[Remember the Titans](https://www.rottentomatoes.com/m/remember_the_titans)***, ***[Unbreakable](https://www.rottentomatoes.com/m/unbreakable)***). And, finally, there’s Rotten movies with those same stats, with this last group considered cult classics and audience favorites (***[Miss Congeniality](https://www.rottentomatoes.com/m/miss_congeniality)***, ***[The Way of the Gun](https://www.rottentomatoes.com/m/way_of_the_gun)***, ***[Pitch Black](https://www.rottentomatoes.com/m/pitch_black)***).\n\n#1\n[![](https://resizing.flixster.com/ToCEMJ3OCdhKpeIjThAOxecpR38=/fit-in/180x240/v2/https://resizing.flixster.com/huyAd6be-6f54RY3NcfaCS00pgo=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzBjOWM4MTRlLWRjZWUtNDM4NS1hYzEwLWZhOGMxMmMzODg5NS5qcGc=)](https://www.rottentomatoes.com/m/crouching_tiger_hidden_dragon)\n\n  \n\n#2\n[![](https://resizing.flixster.com/XyTjuFjIAEeuXPIfcWn8Ja5DnPc=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26231_v_v8_ai.jpg)](https://www.rottentomatoes.com/m/the_taste_of_others)\n\n  \n\n#3\n[![](https://resizing.flixster.com/0H2yrehBIlo8OlDjaLYDYQRvB5M=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24668_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/chicken_run)\n\n  \n\n#4\n[![](https://resizing.flixster.com/X5mxPVvaNB97ncu6udAJvi34jlk=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26375_v_v8_aa.jpg)](https://www.rottentomatoes.com/m/yi_yi)\n\n  \n\n#5\n[![](https://resizing.flixster.com/C0fM6XZBVwtyGyBwp1Ffv8cSi6U=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27285_p_v10_ab.jpg)](https://www.rottentomatoes.com/m/dish)\n\n  \n\n#6\n[![](https://resizing.flixster.com/UeNrJKV6jRqFiNyOdSpkkJNJxX4=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26226_p_v8_ad.jpg)](https://www.rottentomatoes.com/m/with_a_friend_like_harry)\n\n  \n\n#7\n[![](https://resizing.flixster.com/db-Kkitc0IvxhIb4M_yVK68B4rs=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24923_p_v11_aq.jpg)](https://www.rottentomatoes.com/m/you_can_count_on_me)\n\n  \n\n#8\n[![](https://resizing.flixster.com/CLvsF4Na1ByoTus-gdw0y1U7dBU=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28578_p_v10_ac.jpg)](https://www.rottentomatoes.com/m/memento)\n\n  \n\n#9\n[![](https://resizing.flixster.com/EUb8IF5gJsbnTNBoj9afjxEr35A=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p72085_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/last_resort_2001)\n\n  \n\n#10\n[![](https://resizing\n\n<error>Content truncated. Call the fetch tool with a start_index of 5000 to get more content.</error>"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"start_index\": 5000, \"url\": \"http://editorial.rottentomatoes.com/guide/best-movies-2000\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-87303212d491deab",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The user is asking about a drama from the Rotten Tomatoes best movies of 2000 list that they also noted in their personal local movie data. They mention a review by a paramedic posted before August 18, 2025, and want to know the name of the person who wrote that review.\n\nHowever, I need to clarify a few things:\n1. I cannot access the user's personal local movie data - this would be on their computer/system, not something I can access\n2. I need to find which drama from the list has a review by a paramedic\n\nLet me first get more of the list content to see all the movies, then I'll need to check individual movie pages for reviews by paramedics.\n\nLet me fetch more of the list first.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-87303212d491deab",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"start_index\": 5000, \"url\": \"http://editorial.rottentomatoes.com/guide/best-movies-2000\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-87303212d491deab",
+      "content": "Contents of http://editorial.rottentomatoes.com/guide/best-movies-2000:\n.flixster.com/BcBN2KggeAt830BNOaj0X2sDpmw=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27284_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/the_circle_2001)\n\n  \n\n#11\n[![](https://resizing.flixster.com/_cEXFgOeAB-I4QxT7UWcUHrdUtQ=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27383_p_v8_ah.jpg)](https://www.rottentomatoes.com/m/amores_perros)\n\n  \n\n#12\n[![](https://resizing.flixster.com/GxGSJKDVPT8b2nwSZk7TbKlZ6sA=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26760_p_v8_ae.jpg)](https://www.rottentomatoes.com/m/1103281-traffic)\n\n  \n\n#13\n[![](https://resizing.flixster.com/zd4bXXCqhWo_jrDCavawon0UWtE=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26264_p_v7_av.jpg)](https://www.rottentomatoes.com/m/best_in_show)\n\n  \n\n#14\n[![](https://resizing.flixster.com/MGTN5GyBl6yvkAYXEBklkMmO9pM=/fit-in/180x240/v2/https://resizing.flixster.com/JiKhYY6ezF5gebJkR2gPLMBq3lI=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzQ5MGE5YWJlLTAzMzgtNGRmOC1iMWQ1LTlhZjFjYjg3MmY3ZS5qcGc=)](https://www.rottentomatoes.com/m/in_the_mood_for_love_2001)\n\n  \n\n#15\n[![](https://resizing.flixster.com/zXmvay4oEzsdRDitaVCdWhdWAow=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27611_v_v12_af.jpg)](https://www.rottentomatoes.com/m/under_the_sand)\n\n  \n\n#16\n[![](https://resizing.flixster.com/ouzn7VV-COP-05dZ8rDlnnD_594=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26172_p_v8_ak.jpg)](https://www.rottentomatoes.com/m/almost_famous)\n\n  \n\n#17\n[![](https://resizing.flixster.com/6lAJzFWUiKkpI60UkdQXnshjVWw=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25039_p_v10_at.jpg)](https://www.rottentomatoes.com/m/1095420-high_fidelity)\n\n  \n\n#18\n[![](https://resizing.flixster.com/GOU5f1KOFElLQdB0ySLuukeC52M=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28597_p_v8_ad.jpg)](https://www.rottentomatoes.com/m/widow_of_st_pierre)\n\n  \n\n#19\n[![](https://resizing.flixster.com/ui0L39BS9uZrZ0-ny4Nl6OC3noA=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25698_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/1104207-panic)\n\n  \n\n#20\n[![](https://resizing.flixster.com/YCksmhG8JyZmPZzw4kf1w9txvAI=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27466_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/dinner_rush)\n\n  \n\n#21\n[![](https://resizing.flixster.com/8ZTdbiZh7qG-jhTzl4pfDHsCaFw=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27727_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/ginger_snaps)\n\n  \n\n#22\n[![](https://resizing.flixster.com/qlzmJaX5xAanMTrztubSQhhW6Ho=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p71812_v_v8_ab.jpg)](https://www.rottentomatoes.com/m/battle_royale)\n\n  \n\n#23\n[![](https://resizing.flixster.com/zqbQPRqOYhwLFI_mD1EqkTr4DlY=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26553_p_v8_ay.jpg)](https://www.rottentomatoes.com/m/cast_away)\n\n  \n\n#24\n[![](https://resizing.flixster.com/YD-m8iH4pD9gN_atemnZdMaEX90=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29718_p_v8_ab.jpg)](https://www.rottentomatoes.com/m/sexy_beast)\n\n  \n\n#25\n[![](https://resizing.flixster.com/-G-6rDcxvwU1JizW7rTOubKNFUI=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24882_p_v7_aa.jpg)](https://www.rottentomatoes.com/m/girlfight)\n\n![](https://editorial.rottentomatoes.com/wp-content/uploads/2025/04/700Requieum.jpg)\n\n(Photo by Artisan/ Courtesy Everett Collection. REQUIEM FOR A DREAM.)\n\nThe 73rd Academy Awards, broadcast March 25, 2001, honored movies released in theaters during the 2000 calendar year. Unlike the hesitant and hand-wringing 2002 broadcast, just a few months after 9/11 and featuring Tom Cruise giving a speech about how it’s still OK to like movies, this early 2001 event was full of optimism and verve. Steve Martin hosted for the first of three times.\n\nIn an extraordinary and unusual event, [Steven Sodberbergh](https://editorial.rottentomatoes.com/guide/steven-soderbergh-movies-shows/) competed against himself for Best Picture, clearly at the top of his game and nominated for two very different films: drug-trade thriller [***Traffic***](https://www.rottentomatoes.com/m/1103281-traffic) and earnest real-life legal drama [***Erin Brockovich***](https://www.rottentomatoes.com/m/erin_brockovich). The other Best Picture nominees were ***[Chocolat](https://www.rottentomatoes.com/m/chocolat)***, a film that combined sweets and sensuality to a delicious degree; Hong Kong martial-arts wuxia blockbuster *Crouching Tiger, Hidden Dragon* (and many viewers’ first ex\n\n<error>Content truncated. Call the fetch tool with a start_index of 10000 to get more content.</error>"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"command\": \"ls -la /data\"}",
+              "name": "cli-mcp-server_run_command"
+            },
+            "id": "chatcmpl-tool-a45da9ac5061a6aa",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The user is asking about a specific drama from the Rotten Tomatoes list of best movies from 2000 that they also noted in their personal local movie data. They mention reading a review by a paramedic posted before August 18, 2025, and they want to know the name of the person who wrote the review.\n\nThis is a very specific request that requires me to:\n1. Find the list of movies from the Rotten Tomatoes 2000 best movies page\n2. Identify which drama the user might be referring to\n3. Find the specific review by a paramedic posted before August 18, 2025\n\nHowever, I need to be careful here. The user mentions they have \"personal local movie data\" - this suggests they may have a file on their local system that I should check. Let me first check what files are available in the /data directory.\n\nAlso, I notice the current date is 2025, and the user is asking about a review posted \"before August 18, 2025\". This is in the future from the perspective of when I was trained, but since the current date is 2025, this makes sense.\n\nLet me first check the local files to see if there's any personal movie data the user mentioned.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-a45da9ac5061a6aa",
+          "type": "function",
+          "function": {
+            "name": "cli-mcp-server_run_command",
+            "arguments": "{\"command\": \"ls -la /data\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a45da9ac5061a6aa",
+      "content": "Security violation: Flag '-la' is not allowed"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"command\": \"ls /data\"}",
+              "name": "cli-mcp-server_run_command"
+            },
+            "id": "chatcmpl-tool-b477937762027a49",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-b477937762027a49",
+          "type": "function",
+          "function": {
+            "name": "cli-mcp-server_run_command",
+            "arguments": "{\"command\": \"ls /data\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-b477937762027a49",
+      "content": "Barber Shop.csv\nCoinbaseTradeHistory.csv\nCovid 19 impacts on hospitals.csv\nCrime_records.csv\nPet Care 2023 Weekly Financials.csv\nTop Movies.csv\nfantasy sports.csv\nfood and beverage consumption.csv\nrepos\n\n\n\nCommand completed with return code: 0"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"command\": \"cat /data/Top Movies.csv\"}",
+              "name": "cli-mcp-server_run_command"
+            },
+            "id": "chatcmpl-tool-8999eda8c65b0968",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-8999eda8c65b0968",
+          "type": "function",
+          "function": {
+            "name": "cli-mcp-server_run_command",
+            "arguments": "{\"command\": \"cat /data/Top Movies.csv\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-8999eda8c65b0968",
+      "content": "cat: /data/Top: No such file or directory\ncat: Movies.csv: No such file or directory\n\n\n\nCommand completed with return code: 1"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"command\": \"cat \\\"/data/Top Movies.csv\\\"\"}",
+              "name": "cli-mcp-server_run_command"
+            },
+            "id": "chatcmpl-tool-94bd59af41cc2df8",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-94bd59af41cc2df8",
+          "type": "function",
+          "function": {
+            "name": "cli-mcp-server_run_command",
+            "arguments": "{\"command\": \"cat \\\"/data/Top Movies.csv\\\"\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-94bd59af41cc2df8",
+      "content": "Title,IMDb Rating,Runtime,Genre,Votes,Metascore,Gross,Watched,My Rating\nThe Shawshank Redemption,9.3,142 min,Drama,\"2,135,421\",80,$28.34M,No,\nThe Godfather,9.2,175 min,Crime,\"1,466,135\",100,$134.97M,No,\nThe Dark Knight,9,152 min,Action,\"2,099,976\",84,$534.86M,Yes,9.6\nPulp Fiction,8.9,154 min,Crime,\"1,675,942\",94,$107.93M,No,\nThe Lord of the Rings: The Return of the King,8.9,201 min,Adventure,\"1,518,668\",94,$377.85M,Yes,9.4\nSchindler's List,8.9,195 min,Biography,\"1,108,341\",94,$96.90M,No,\n12 Angry Men,8.9,96 min,Drama,\"609,087\",96,$4.36M,No,\nInception,8.8,148 min,,\"1,872,843\",74,$292.58M,Yes,8.9\nFight Club,8.8,139 min,Drama,\"1,707,140\",66,$37.03M,No,\nForrest Gump,8.8,142 min,Drama,\"1,643,438\",82,$330.25M,Yes,8.5\nThe Lord of the Rings: The Fellowship of the Ring,8.8,178 min,Adventure,\"1,534,306\",92,$315.54M,Yes,8.6\nThe Matrix,8.7,136 min,Action,\"1,537,873\",73,$171.48M,Yes,8.2\nThe Lord of the Rings: The Two Towers,8.7,179 min,Adventure,\"1,373,648\",87,$342.55M,Yes,8.8\nGoodfellas,8.7,146 min,Biography,\"922,793\",89,$46.84M,No,\nInterstellar,8.6,169 min,Adventure,\"1,329,313\",74,$188.02M,Yes,9\nThe Silence of the Lambs,8.6,118 min,Crime,\"1,156,552\",85,$130.74M,Yes,7.9\nSaving Private Ryan,8.6,169 min,Drama,\"1,131,574\",91,$216.54M,Yes,8\nThe Green Mile,8.6,189 min,Crime,\"1,037,261\",61,$136.80M,Yes,7\nAvengers: Endgame,8.6,181 min,Action,\"558,276\",78,$858.37M,Yes,9.2\nGladiator,8.5,155 min,Action,\"1,232,713\",67,$187.71M,Yes,8.9\nThe Departed,8.5,151 min,Crime,\"1,093,453\",85,$132.38M,No,\nBack to the Future,8.5,116 min,Adventure,\"955,052\",87,$210.61M,Yes,8.2\nLÃ©on,8.5,110 min,Action,\"944,260\",64,$19.50M,No,\nThe Lion King,8.5,88 min,Animation,\"861,071\",88,$422.78M,Yes,8.4\nAvengers: Infinity War,8.5,149 min,Action,\"707,711\",68,$678.82M,Yes,9.7\nGisaengchung,8.5,132 min,Comedy,\"29,523\",92,$858.37M,No,\nThe Dark Knight Rises,8.4,164 min,Action,\"1,407,078\",78,$448.14M,Yes,8.9\nDjango Unchained,8.4,165 min,Drama,\"1,236,038\",81,$162.81M,Yes,8.1\nThe Shining,8.4,146 min,Drama,\"798,352\",66,$44.02M,No,\nAlien,8.4,117 min,Horror,\"726,277\",89,$78.90M,No,\nApocalypse Now,8.4,147 min,Drama,\"558,155\",94,$83.47M,No,\nSpider-Man: Into the Spider-Verse,8.4,117 min,Animation,\"258,181\",87,$190.24M,Yes,7.3\nInglourious Basterds,8.3,153 min,Adventure,\"1,148,946\",69,$120.54M,Yes,8.3\nAmerican Beauty,8.3,122 min,Drama,\"1,002,017\",86,$130.10M,Yes,7.8\nReservoir Dogs,8.3,99 min,Crime,\"844,322\",79,$2.83M,No,\nRequiem for a Dream,8.3,102 min,Drama,\"710,505\",68,$3.64M,Yes,8.1\nTaxi Driver,8.3,114 min,Crime,\"649,667\",94,$28.26M,Yes,7.6\nThe Wolf of Wall Street,8.2,180 min,Biography,\"1,057,083\",75,$116.90M,Yes,8.7\nGreen Book,8.2,130 min,Biography,\"240,442\",69,$85.08M,No,\nShutter Island,8.1,138 min,Mystery,\"1,024,994\",63,$128.01M,No,\nGuardians of the Galaxy,8.1,121 min,Action,\"970,629\",76,$333.18M,Yes,8.8\nKill Bill: Vol. 1,8.1,111 min,Action,\"923,628\",69,$70.10M,No,\nJurassic Park,8.1,127 min,Action,\"795,552\",68,$402.45M,Yes,7.8\nMad Max: Fury Road,8.1,120 min,Action,\"795,431\",90,$154.06M,No,\nGone Girl,8.1,149 min,Drama,\"776,043\",79,$167.77M,No,\nHarry Potter and the Deathly Hallows: Part 2,8.1,130 min,Adventure,\"702,376\",87,$381.01M,Yes,8.8\nBlade Runner,8.1,117 min,Action,\"638,751\",89,$32.87M,Yes,7.1\nHacksaw Ridge,8.1,139 min,Biography,\"377,397\",71,$67.21M,No,\nStand by Me,8.1,89 min,Adventure,\"338,549\",75,$52.29M,No,\nToy Story 4,8.1,100 min,Animation,\"93,227\",84,$431.96M,Yes,7.9\n\n\nCommand completed with return code: 0"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": "\n\nI have the list of movies from your local file `Top Movies.csv`. Now I need to cross-reference this with the list of \"Best Movies of 2000\" from Rotten Tomatoes to find the drama you watched.\n\nFrom the Rotten Tomatoes list (which I started fetching), I can see movies like:\n- Crouching Tiger, Hidden Dragon\n- The Taste of Others\n- Chicken Run\n- Yi Yi\n- Dish\n- With a Friend Like Harry\n- You Can Count on Me\n- Memento\n- Last Resort (2001) - wait, this is 2001, not 2000\n- The Circle (2001) - also 2001\n- Amores Perros\n- Traffic\n- Best in Show\n- In the Mood for Love (2001) - also 2001\n- Under the Sand\n- Almost Famous\n- High Fidelity\n- Widow of St. Pierre\n- Panic\n- Dinner Rush\n- Ginger Snaps\n- Battle Royale\n- Cast Away\n- Sexy Beast\n- Girlfight\n- Requiem for a Dream\n\nLet me check which of these movies from 2000 are also in your `Top Movies.csv` file and are dramas.\n\nLooking at your `Top Movies.csv`, I see these dramas:\n- The Shawshank Redemption (1994)\n- 12 Angry Men (1957)\n- Fight Club (1999)\n- Forrest Gump (1994)\n- The Green Mile (1999)\n- The Shining (1980)\n- Apocalypse Now (1979)\n- American Beauty (1999)\n- Requiem for a Dream (2000)\n- Taxi Driver (1976)\n- Gone Girl (2014)\n\nFrom the Rotten Tomatoes 2000 list, the dramas that might be in your list include:\n- Requiem for a Dream (2000) - This is in your list!\n\nLet me verify that \"Requiem for a Dream\" is indeed in the Rotten Tomatoes 2000 list. From the fetch result, I can see \"#25\" is \"Girlfight\" and there's a mention of \"REQUIEM FOR A DREAM\" in the text with a photo. Let me fetch more of the list to confirm the ranking and then check the movie page for reviews.\n\n",
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"start_index\": 10000, \"url\": \"http://editorial.rottentomatoes.com/guide/best-movies-2000\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-b268cb452ebf66d9",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": "\n\nI have the list of movies from your local file `Top Movies.csv`. Now I need to cross-reference this with the list of \"Best Movies of 2000\" from Rotten Tomatoes to find the drama you watched.\n\nFrom the Rotten Tomatoes list (which I started fetching), I can see movies like:\n- Crouching Tiger, Hidden Dragon\n- The Taste of Others\n- Chicken Run\n- Yi Yi\n- Dish\n- With a Friend Like Harry\n- You Can Count on Me\n- Memento\n- Last Resort (2001) - wait, this is 2001, not 2000\n- The Circle (2001) - also 2001\n- Amores Perros\n- Traffic\n- Best in Show\n- In the Mood for Love (2001) - also 2001\n- Under the Sand\n- Almost Famous\n- High Fidelity\n- Widow of St. Pierre\n- Panic\n- Dinner Rush\n- Ginger Snaps\n- Battle Royale\n- Cast Away\n- Sexy Beast\n- Girlfight\n- Requiem for a Dream\n\nLet me check which of these movies from 2000 are also in your `Top Movies.csv` file and are dramas.\n\nLooking at your `Top Movies.csv`, I see these dramas:\n- The Shawshank Redemption (1994)\n- 12 Angry Men (1957)\n- Fight Club (1999)\n- Forrest Gump (1994)\n- The Green Mile (1999)\n- The Shining (1980)\n- Apocalypse Now (1979)\n- American Beauty (1999)\n- Requiem for a Dream (2000)\n- Taxi Driver (1976)\n- Gone Girl (2014)\n\nFrom the Rotten Tomatoes 2000 list, the dramas that might be in your list include:\n- Requiem for a Dream (2000) - This is in your list!\n\nLet me verify that \"Requiem for a Dream\" is indeed in the Rotten Tomatoes 2000 list. From the fetch result, I can see \"#25\" is \"Girlfight\" and there's a mention of \"REQUIEM FOR A DREAM\" in the text with a photo. Let me fetch more of the list to confirm the ranking and then check the movie page for reviews.\n\n",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-b268cb452ebf66d9",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"start_index\": 10000, \"url\": \"http://editorial.rottentomatoes.com/guide/best-movies-2000\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-b268cb452ebf66d9",
+      "content": "Contents of http://editorial.rottentomatoes.com/guide/best-movies-2000:\nperience with Chow-Yun Fat, Michelle Yeoh and director Ang Lee), and Best Picture winner *Gladiator*, one of five statues that Ridley Scott’s epic historical film would take home that night.\n\nSnubbed from Best Picture were movies like the love letter to 1970s rock-n-roll and Rolling Stone ***[Almost Famous](https://www.rottentomatoes.com/m/almost_famous)***, [Christopher Nolan](https://editorial.rottentomatoes.com/guide/all-christopher-nolan-movies-ranked-by-tomatometer/)’s mind-bending *Memento*, the crowd-pleasing Tom Hanks desert island film [***Cast Away***](https://www.rottentomatoes.com/m/cast_away), and the downbeat psychological trip ***[Requiem for a Dream](https://www.rottentomatoes.com/m/requiem_for_a_dream)*.**\n\n#26\n[![](https://resizing.flixster.com/8hlzhHHw3yNOkXdlKtGvIhnw1M8=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26687_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/emperors_new_groove)\n\n  \n\n#27\n[![](https://resizing.flixster.com/XX9REclgWQmG44Z-GvfWsHFyTWE=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p71756_v_v8_aa.jpg)](https://www.rottentomatoes.com/m/chunhyangdyun_2000)\n\n  \n\n#28\n[![](https://resizing.flixster.com/zZCW-06ui0HAgUYxHCkuAvPwPV8=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24917_p_v11_aa.jpg)](https://www.rottentomatoes.com/m/erin_brockovich)\n\n  \n\n#29\n[![](https://resizing.flixster.com/NWyrUXIiA2w9FDpGIKJKI-pWCZA=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26230_p_v10_am.jpg)](https://www.rottentomatoes.com/m/meet_the_parents)\n\n  \n\n#30\n[![](https://resizing.flixster.com/d326COnkGzr4Zmagh-HCX9anFJ4=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26224_p_v8_ac.jpg)](https://www.rottentomatoes.com/m/billy_elliot)\n\n  \n\n#31\n[![](https://resizing.flixster.com/Jzz7JnwZ2zrwSSIFQx4wO7j2uzk=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26178_p_v11_aa.jpg)](https://www.rottentomatoes.com/m/state_and_main)\n\n  \n\n#32\n[![](https://resizing.flixster.com/UyeBeUxCN80y7OgAozbGV7ZJQ-k=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25568_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/faithless_2001)\n\n  \n\n#33\n[![](https://resizing.flixster.com/T45ZdL12RhiDE9s3-l8piawDx-A=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24925_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/love_and_basketball)\n\n  \n\n#34\n[![](https://resizing.flixster.com/jZJ7tXrKr4wMK1HpnoxeKXXGOnY=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24926_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/chuck_and_buck)\n\n  \n\n#35\n[![](https://resizing.flixster.com/uL7OI0UvypZIhSEAy1_4pXPBI3k=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p71276_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/1097991-george_washington)\n\n  \n\n#36\n[![](https://resizing.flixster.com/4opY6aAOLtCLuLdhq1AXnZ7ktHg=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p27068_p_v8_ac.jpg)](https://www.rottentomatoes.com/m/merci_pour_le_chocolat)\n\n  \n\n#37\n[![](https://resizing.flixster.com/dd_f40SJrq61Wv6JZAbBXJXdCd0=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26063_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/nurse_betty)\n\n  \n\n#38\n[![](https://resizing.flixster.com/IaC6KJHNmxYwM36vITD8yjjTG_o=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26431_p_v13_ad.jpg)](https://www.rottentomatoes.com/m/thirteen_days)\n\n  \n\n#39\n[![](https://resizing.flixster.com/P-0ugKVDnP95u_WrrXOMd2wNRgI=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25859_p_v12_ac.jpg)](https://www.rottentomatoes.com/m/original_kings_of_comedy)\n\n  \n\n#40\n[![](https://resizing.flixster.com/Kw2O9FIV-QdcfQictLXuHkmZnfk=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25583_p_v8_aq.jpg)](https://www.rottentomatoes.com/m/shadow_of_the_vampire)\n\n  \n\n#41\n[![](https://resizing.flixster.com/AS1Vmh_dDf4KO2N8t6JFa4nTbUg=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p25028_p_v10_aa.jpg)](https://www.rottentomatoes.com/m/xmen)\n\n  \n\n#42\n[![](https://resizing.flixster.com/axxx9pX--n3YY73AUExHa3ihH7c=/fit-in/180x240/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26093_p_v8_aa.jpg)](https://www.rottentomatoes.com/m/house_of_mirth)\n\n  \n\n#43\n[![](https://resizing.flixster.com/q2iLpYQRizexnvGghtIPJh8rrxY=/fit-in/180x240/v2/https://resizing.flixster.com/R8Vk837aprYtCjICLoZa05RcYpk=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2Y3YmViMWRjLWMyODMtNDhlOS04YzI4LTNiYzFhOGNhZTM5Yy5qcGc=)](https://www.rottentomatoes.com/m/tully)\n\n\n\n<error>Content truncated. Call the fetch tool with a start_index of 15000 to get more content.</error>"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": "\n\nI can see that \"Requiem for a Dream\" is mentioned in the Rotten Tomatoes 2000 list (in the text about snubbed Best Picture nominees). It's also in your `Top Movies.csv` file as a drama with an IMDb rating of 8.3.\n\nNow I need to find the review by a paramedic posted before August 18, 2025. Let me fetch the Rotten Tomatoes page for \"Requiem for a Dream\" to look for user reviews.\n\n",
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-a462b45cc5b65c71",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": "\n\nI can see that \"Requiem for a Dream\" is mentioned in the Rotten Tomatoes 2000 list (in the text about snubbed Best Picture nominees). It's also in your `Top Movies.csv` file as a drama with an IMDb rating of 8.3.\n\nNow I need to find the review by a paramedic posted before August 18, 2025. Let me fetch the Rotten Tomatoes page for \"Requiem for a Dream\" to look for user reviews.\n\n",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-a462b45cc5b65c71",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a462b45cc5b65c71",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream:\n[Where to Watch](#where-to-watch)\n[What to Know](#what-to-know)\n[Reviews](#critics-reviews)\n[Cast & Crew](#cast-and-crew)\n[Movie Clips](#movie-clips)\n[More Like This](#more-like-this)\n[Related News](#news-and-guides)\n[Videos](#videos)\n[Photos](#photos)\n[Media Info](#media-info)\n\nCritics Consensus\n\nThough the movie may be too intense for some to stomach, the wonderful performances and the bleak imagery are hard to forget.\n\n[Read Critics Reviews](/m/requiem_for_a_dream/reviews)\n\nGeoff Pevere\n\nToronto Star\nAug 23\n\n4/5\n\nClearly influenced by the cut-and-paste of hip-hop, Requiem stokes and builds its tragic momentum like an expertly mixed dance cut, the kind that catches you so seductively in its rhythms you'll follow it anywhere...\n\nGo to Full Review\n\n\n\n\n\nMike Clark\n\nUSA Today\nAug 23\n\n2/4\n\nThe fidgety style that can energize a fairly lively debut cheapie doesn't work very well with a cast of familiar faces. It detracts from a movie whose historically capable and seemingly well-cast actors might have carried the show by themselves...\n\nGo to Full Review\n\n\n\n\n\nTodd McCarthy\n\nVariety\nAug 23\n\nCraftwork is aces across the board, with a sound mix that’s particularly dense.\n\nGo to Full Review\n\n\n\n\n\nGayle Sequeira\n\nBFI\nAug 27\n\nGhostly dissolves capture them turning into mere echoes of themselves. Aronofsky speeds up time and draws it out agonisingly, evoking the rush of the high and then its crushing absence.\n\nGo to Full Review\n\n\n\n\n\nMatthew Toomey\n\nABC Radio Brisbane\nAug 25\n\nA+\n\nWhen you see as many films as I do, you often have preconceptions...Then out of nowhere, something comes along that reinvigorates your passion as both a viewer and a critic. This is my drug...This is Requiem For A Dream.\n\nGo to Full Review\n\n\n\n\n\nMichael Gingold\n\nFangoria\nAug 25\n\nIt may be too much for some viewers to take, but no one ever said addiction is pretty. And Aronofsky earns every right to his excesses by making sure audiences feel the loss of humanity instead of treating them like spectators at a freak show.\n\nGo to Full Review\n\n\nRead all reviews\n\nJason Y.\n@yargbull\n\n\n\nFeb 26\n\n\nOver-hyped and somewhat boring; the characters were not all that interesting, and I never felt it was as “intense and disturbing” as it has always been advertised, appearing on quite a few “most disturbing movies ever”-lists. Not terrible, just not sure I’d recommend it unless you’re a little bored and just need something different to watch (or like captive on an airplane, where I saw it).\n\nSee more\n\n\n\n\n\nKevin P\n@RT55971421\n\n\n\nFeb 26\n\n\nEasily one of the most visually mesmerizing and heartbreakingly disturbing movies I've ever seen. It's a brutal movie about drug addiction. Yet the hypnotic cinematography and unorthodox editing of onscreen bodily sensations are very ethereal and suck you into its world. It's fun in the first half and slowly spirals into chaos and despair in the second half. Disturbing, yet fascinating. All thanks to the fantastic direction from Darren Aronofsky. The soundtrack is captivating, especially the titular music track Requiem for a Dream/Lux Aeterna. The cast is fantastic. The standout performance is from Ellen Burstyn, who acts her heart out into such a believable and heartbreaking character. The movie has great editing and stylized cinematography. You just want everyone to be happy, despite knowing the inevitability. The final half hour is incredibly tense and disorienting. It's an incredibly powerful cautionary tale about drug addiction AND how we as a society treat drug addicts. \n\nSee more\n\n\n\n\n\nIbraheem Aleem K\n@iby124\n\n\n\nFeb 26\n\n\namazing best thing ever the fridge was very scary\n\nSee more\n\n\n\n\n\nBoo E.\n@Boo.Eastland\n\n\n\nFeb 24\n\n\nI have watched this film 12 times. It is the best portrayal of the internal chaos of substance addiction and mental health I have seen to date. It's a psychoanalytic psychedelic dive into the many dangers of consumption, loss of meaning, and inhumanity that befalls people who lose themselves to substances. It's an art house film - so know now that it's not \"realism\". \n\nSee more\n\n\n\n\n\npower E\n@torturecide\n\n\n\nFeb 17\n\n\n达伦·阿罗诺夫斯基用令人眩晕的交叉剪辑与扭曲的视觉隐喻，将药物成瘾如何系统性地碾碎四个灵魂的尊严与希望，呈现为一幅触目惊心的精神解剖图。\n影片的残酷在于其毫无廉价的救赎。当角色在幻觉中拥抱虚幻幸福时，现实的冰冷才更显锋利。它揭示的不仅是个人意志的崩塌，更是家庭、社会与医疗体系共同织就的无形牢笼。这是一部需要用勇气直视的悲剧，它迫使观众反思：我们轻易归咎于\"堕落\"的苦难背后，究竟隐藏着多少被忽视的结构性暴力？\n\nSee more\n\n\n\n\n\nSteven F.\n@SteveGotScored\n\n\n\nFeb 13\n\n\nOne of the most powerful movies I’ve ever seen!\n\nSee more\n\n\nRead all reviews\n\nRead More\nRead Less\n WRITE A REVIEW \n EDIT REVIEW \n POST RATING\n\nRequiem for a Dream: Official Clip - Wait for Me\n\nRequiem for a Dream: Official Clip - Wait for Me\n\n1:46\n\n\n\nRequiem for a Dream: Official Clip - Fetal Position\n\nRequiem for a Dream: Official Clip - Fetal Position\n\n3:05\n\n\n\nRequiem for a Dream: Official Clip - Meaningless\n\nRequiem for a Dream: Official Clip - Meaningless\n\n1:36\n\n\n\nRequiem for a Dream: Official Clip - I Know It's Pretty\n\nRequiem for a Dream: Official Clip - I Know It's Pretty\n\n1:56\n\n\n\nRequiem for a Dream: Official Clip - Smart, Loyal and Not a Ju\n\n<error>Content truncated. Call the fetch tool with a start_index of 5000 to get more content.</error>"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"start_index\": 5000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-a7970c11b6fee85d",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-a7970c11b6fee85d",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"start_index\": 5000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a7970c11b6fee85d",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream:\nnkie\n\nRequiem for a Dream: Official Clip - Smart, Loyal and Not a Junkie\n\n1:09\n\n\n\nRequiem for a Dream: Official Clip - Feed Me, Sara\n\nRequiem for a Dream: Official Clip - Feed Me, Sara\n\n2:13\n\n\n\nRequiem for a Dream: Official Clip - I Have a Favor to Ask\n\nRequiem for a Dream: Official Clip - I Have a Favor to Ask\n\n2:46\n\n\n\nRequiem for a Dream: Official Clip - There's My Three Meals, Mr. Smartypants\n\nRequiem for a Dream: Official Clip - There's My Three Meals, Mr. Smartypants\n\n1:16\n\n\n\nRequiem for a Dream: Official Clip - We're on Our Way\n\nRequiem for a Dream: Official Clip - We're on Our Way\n\n1:42\n\n\n\nRequiem for a Dream: Official Clip - The Red Dress\n\nRequiem for a Dream: Official Clip - The Red Dress\n\n2:10\n\n\nView more videos\n\nDancer in the Dark\n\n\n\n69%\n\n\n91%\n\nDancer in the Dark\n\nWatchlist\n\n\nThe Invisible Circus\n\n\n\n22%\n\n\n44%\n\nThe Invisible Circus\n\nWatchlist\n\n\nThe Virgin Suicides\n\n\n\n80%\n\n\n81%\n\nThe Virgin Suicides\n\nWatchlist\n\n\nTRAILER\n for The Virgin Suicides\n\n\nThe Million Dollar Hotel\n\n\n\n25%\n\n\n67%\n\nThe Million Dollar Hotel\n\nWatchlist\n\n\n\nDiscover more movies and TV shows.\n\nView More\n\nRequiem for a Dream: Trailer 1\n\nRequiem for a Dream: Trailer 1\n\n1:19\n\n\nView more videos\n\nRequiem for a Dream (2000)\n\n\nRequiem for a Dream (2000)\n\n\nRequiem for a Dream (2000)\n\n\nRequiem for a Dream (2000)\n\n\nJennifer Connelly is Marion.\n\n\nMarlon Wayans is Tyrone.\n\n\nBest friends Tyrone (Marlon Wayans) and Harry (Jared Leto).\n\n\nHarry (Jared Leto) and his girlfriend Marion (Jennifer Connelly).\n\n\nJared Leto is Harry.\n\n\nEllen Burstyn is Sara, a lonely widowed mother who is galvanized by the prospect of appearing on television.\n\n\n\nView more photos\n\nSynopsis\nImaginatively evoking the inner landscape of human beings longing to connect, to love and feel loved, the film is a parable of happiness gloriously found and tragically lost. \"Requiem for a Dream\" tells parallel stories that are linked by the relationship between the lonely, widowed Sara Goldfarb and her sweet but aimless son, Harry. The plump Sara, galvanized by the prospect of appearing on a TV game show, has started on a dangerous diet regimen to beautify herself for a national audience.\n\nDirector\n:   Darren Aronofsky\n\nProducer\n:   Eric Watson, \n    Palmer West\n\nScreenwriter\n:   Darren Aronofsky, \n    Darren Aronofsky\n\nDistributor\n:   Artisan Entertainment\n\nProduction Co\n:   Industry Entertainment, \n    Protozoa Pictures, \n    Requiem for a Dream LLC, \n    Thousand Words, \n    Truth and Soul Pictures, \n    Artisan Entertainment, \n    Sibling Productions, \n    Bandera Entertainment\n\nRating\n:   R\n\nGenre\n:   Drama, \n    Mystery & Thriller\n\nOriginal Language\n:   English\n\nRelease Date (Theaters)\n:   Oct 27, 2000, Wide\n\nRelease Date (Streaming)\n:   Dec 6, 2015\n\nBox Office (Gross USA)\n:   $3.6M\n\nRuntime\n:   1h 41m\n\nSound Mix\n:   Dolby SR, \n    Dolby Digital, \n    Surround\n\nAspect Ratio\n:   Flat (1.85:1)\n\n Most Popular at Home Now"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": "\n\nThe page content I fetched doesn't seem to show all the user reviews, especially the ones posted before August 18, 2025, by a paramedic. Let me try to access the user reviews section more specifically or search for reviews with the term \"paramedic\".\n\n",
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/user_reviews\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-8d53bc9fe77bea22",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": "\n\nThe page content I fetched doesn't seem to show all the user reviews, especially the ones posted before August 18, 2025, by a paramedic. Let me try to access the user reviews section more specifically or search for reviews with the term \"paramedic\".\n\n",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-8d53bc9fe77bea22",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/user_reviews\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-8d53bc9fe77bea22",
+      "content": "{\"detail\":\"Failed to call tool 'fetch_fetch': Failed to fetch https://www.rottentomatoes.com/m/requiem_for_a_dream/user_reviews - status code 404\"}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-b493262ef79627e5",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-b493262ef79627e5",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-b493262ef79627e5",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews:\n[Skip to Main Content](#main-page-content)\n\n\n[![Rotten Tomatoes](/assets/pizza-pie/images/rtlogo.9b892cff3fd.png)](/)\n\n\n\n\n\n\n\n\n\n\n* [About Rotten Tomatoes®](/about)\n* [Critics](/critics)\n* Wants to See\n  Reviews\n  Profile\n  Account\n  Log Out\n\n[Movies](/browse/movies_in_theaters/sort:popular)\n\n\n\n[Movies in theaters](/browse/movies_in_theaters/sort:popular)\n\n* [Opening This Week](/browse/movies_in_theaters/sort:newest)\n* [Top Box Office](/browse/movies_in_theaters/sort:top_box_office)\n* [Coming Soon to Theaters](/browse/movies_coming_soon/)\n* [Certified Fresh Movies](/browse/movies_in_theaters/critics:certified_fresh~sort:popular)\n\n\n[Movies at Home](/browse/movies_at_home)\n\n* [Fandango at Home](/browse/movies_at_home/affiliates:fandango-at-home)\n* [Netflix](/browse/movies_at_home/affiliates:netflix)\n* [Apple TV](/browse/movies_at_home/affiliates:apple-tv-plus)\n* [Prime Video](/browse/movies_at_home/affiliates:prime-video)\n* [Most Popular Streaming movies](/browse/movies_at_home/sort:popular)\n* [Certified Fresh movies](/browse/movies_at_home/critics:certified_fresh)\n* [Browse all](/browse/movies_at_home)\n\n\nMore\n\n* [What to WatchNew](https://editorial.rottentomatoes.com/rt-hub/what-to-watch)\n\n\nCertified fresh picks\n\n* [95%\n\n  Project Hail Mary\n  Link to Project Hail Mary](/m/project_hail_mary)\n* [75%\n\n  Ready or Not 2: Here I Come\n  Link to Ready or Not 2: Here I Come](/m/ready_or_not_2_here_i_come)\n* [91%\n\n  Kontinental '25\n  Link to Kontinental '25](/m/kontinental_25)\n\n[Tv shows](/browse/tv_series_browse/sort:popular)\n\n\n\nNew TV Tonight\n\n* [95%\n\n  Daredevil: Born Again: Season 2](/tv/daredevil_born_again/s02)\n* [83%\n\n  Something Very Bad Is Going to Happen: Season 1](/tv/something_very_bad_is_going_to_happen/s01)\n* [96%\n\n  The Comeback: Season 3](/tv/the_comeback/s03)\n* [95%\n\n  BAIT: Season 1](/tv/bait/s01)\n* [92%\n\n  For All Mankind: Season 5](/tv/for_all_mankind/s05)\n* [91%\n\n  Saturday Night Live UK: Season 1](/tv/saturday_night_live_uk/s01)\n* [100%\n\n  Jo Nesbo's Detective Hole: Season 1](/tv/jo_nesbos_detective_hole/s01)\n* [--\n\n  The Faithful: Season 1](/tv/the_faithful_women_of_the_bible/s01)\n* [--\n\n  Heartbreak High: Season 3](/tv/heartbreak_high_2022/s03)\n\n[View All](/browse/tv_series_browse/sort:newest)\n\n\nMost Popular TV on RT\n\n* [95%\n\n  Daredevil: Born Again: Season 2](/tv/daredevil_born_again/s02)\n* [60%\n\n  The Madison: Season 1](/tv/the_madison/s01)\n* [100%\n\n  Invincible: Season 4](/tv/invincible/s04)\n* [100%\n\n  Deadloch: Season 2](/tv/deadloch/s02)\n* [95%\n\n  BAIT: Season 1](/tv/bait/s01)\n* [100%\n\n  One Piece: Season 2](/tv/one_piece_2023/s02)\n* [90%\n\n  Paradise: Season 2](/tv/paradise_2025/s02)\n* [42%\n\n  Imperfect Women: Season 1](/tv/imperfect_women/s01)\n* [59%\n\n  Scarpetta: Season 1](/tv/scarpetta/s01)\n\n[View All](/browse/tv_series_browse/sort:popular?)\n\n\nMore\n\n* [What to WatchNew](https://editorial.rottentomatoes.com/rt-hub/what-to-watch/)\n* [Best TV Shows](/browse/tv_series_browse/sort:popular)\n* [Most Popular TV](/browse/tv_series_browse/sort:popular)\n* [Fandango at Home](/browse/tv_series_browse/affiliates:fandango-at-home)\n* [Paramount+](/browse/tv_series_browse/affiliates:paramount-plus)\n* [Netflix](/browse/tv_series_browse/affiliates:netflix)\n* [Prime Video](/browse/tv_series_browse/affiliates:prime-video)\n* [Apple TV](/browse/tv_series_browse/affiliates:apple-tv-plus)\n\n\nCertified fresh pick\n\n* [83%\n\n  Something Very Bad Is Going to Happen: Season 1\n  Link to Something Very Bad Is Going to Happen: Season 1](/tv/something_very_bad_is_going_to_happen/s01)\n\n[RT App](https://editorial.rottentomatoes.com/article/app/)\n\n[News](https://editorial.rottentomatoes.com/)\n\n\n\nColumns\n\n* [All-Time Lists](https://editorial.rottentomatoes.com/all-time-lists/)\n* [Binge Guide](https://editorial.rottentomatoes.com/binge-guide/)\n* [Comics on TV](https://editorial.rottentomatoes.com/comics-on-tv/)\n* [Countdown](https://editorial.rottentomatoes.com/countdown/)\n* [Five Favorite Films](https://editorial.rottentomatoes.com/five-favorite-films/)\n* [Video Interviews](https://editorial.rottentomatoes.com/video-interviews/)\n* [Weekend Box Office](https://editorial.rottentomatoes.com/weekend-box-office/)\n* [Weekly Ketchup](https://editorial.rottentomatoes.com/weekly-ketchup/)\n* [What to Watch](https://editorial.rottentomatoes.com/what-to-watch/)\n\n\nGuides\n\n* [Best New Documentaries Movies of 2026\n\n  Link to Best New Documentaries Movies of 2026](https://editorial.rottentomatoes.com/guide/best-new-documentary-movies-2026/)\n* [All Zack Snyder Movies Ranked by Tomatometer\n\n  Link to All Zack Snyder Movies Ranked by Tomatometer](https://editorial.rottentomatoes.com/guide/zack-snyder-movies-ranked-by-tomatometer/)\n\n[View All](https://editorial.rottentomatoes.com/countdown/)\n\n\nHubs\n\n* [Awards Tour\n\n  Link to Awards Tour](https://editorial.rottentomatoes.com/rt-hub/awards-tour/)\n* [What to Watch: In Theaters and On Streaming\n\n  Link to What to Watch: In Theaters and On Streaming](https://editorial.rottentomatoes.com/rt-hub/what-to-\n\n<error>Content truncated. Call the fetch tool with a start_index of 5000 to get more content.</error>"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"start_index\": 5000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-bbf0be4974e7d612",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-bbf0be4974e7d612",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"start_index\": 5000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-bbf0be4974e7d612",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews:\nwatch/)\n\n[View All](https://editorial.rottentomatoes.com/rt-hubs/)\n\n\nRT News\n\n* [Poll: Vote for Your Most Anticipated TV or Streaming Shows of April\n\n  Link to Poll: Vote for Your Most Anticipated TV or Streaming Shows of April](https://editorial.rottentomatoes.com/article/most-anticipated-tv-of-april-2026/)\n* [Poll: Vote for Your Most Anticipated Movies of April\n\n  Link to Poll: Vote for Your Most Anticipated Movies of April](https://editorial.rottentomatoes.com/article/most-anticipated-movies-of-april-2026/)\n\n[View All](https://editorial.rottentomatoes.com/news/)\n\n[Showtimes](https://www.fandango.com/movies-in-theaters?a=13036)\n\n\n* Trending on RT\n* [Seen on the Screen](https://editorial.rottentomatoes.com/article/seen-on-screen-podcast-a-celebration-of-universal-stories/)\n* [TV Premiere Dates](https://editorial.rottentomatoes.com/article/tv-premiere-dates-2026/)\n* [Most Anticipated Movies](https://editorial.rottentomatoes.com/article/the-most-anticipated-movies-of-2026/)\n* [The Rotten Tomatoes App](https://editorial.rottentomatoes.com/article/app/)\n\nThis is a verified review from a moviegoer that bought a ticket and wrote a review through Fandango."
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"start_index\": 10000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-ba4a5cbeb588b820",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-ba4a5cbeb588b820",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"start_index\": 10000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-ba4a5cbeb588b820",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews:\n<error>No more content available.</error>"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-b024b86f2c325424",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-b024b86f2c325424",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-b024b86f2c325424",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest:\n[Skip to Main Content](#main-page-content)\n\n\n[![Rotten Tomatoes](/assets/pizza-pie/images/rtlogo.9b892cff3fd.png)](/)\n\n\n\n\n\n\n\n\n\n\n* [About Rotten Tomatoes®](/about)\n* [Critics](/critics)\n* Wants to See\n  Reviews\n  Profile\n  Account\n  Log Out\n\n[Movies](/browse/movies_in_theaters/sort:popular)\n\n\n\n[Movies in theaters](/browse/movies_in_theaters/sort:popular)\n\n* [Opening This Week](/browse/movies_in_theaters/sort:newest)\n* [Top Box Office](/browse/movies_in_theaters/sort:top_box_office)\n* [Coming Soon to Theaters](/browse/movies_coming_soon/)\n* [Certified Fresh Movies](/browse/movies_in_theaters/critics:certified_fresh~sort:popular)\n\n\n[Movies at Home](/browse/movies_at_home)\n\n* [Fandango at Home](/browse/movies_at_home/affiliates:fandango-at-home)\n* [Netflix](/browse/movies_at_home/affiliates:netflix)\n* [Apple TV](/browse/movies_at_home/affiliates:apple-tv-plus)\n* [Prime Video](/browse/movies_at_home/affiliates:prime-video)\n* [Most Popular Streaming movies](/browse/movies_at_home/sort:popular)\n* [Certified Fresh movies](/browse/movies_at_home/critics:certified_fresh)\n* [Browse all](/browse/movies_at_home)\n\n\nMore\n\n* [What to WatchNew](https://editorial.rottentomatoes.com/rt-hub/what-to-watch)\n\n\nCertified fresh picks\n\n* [95%\n\n  Project Hail Mary\n  Link to Project Hail Mary](/m/project_hail_mary)\n* [75%\n\n  Ready or Not 2: Here I Come\n  Link to Ready or Not 2: Here I Come](/m/ready_or_not_2_here_i_come)\n* [91%\n\n  Kontinental '25\n  Link to Kontinental '25](/m/kontinental_25)\n\n[Tv shows](/browse/tv_series_browse/sort:popular)\n\n\n\nNew TV Tonight\n\n* [95%\n\n  Daredevil: Born Again: Season 2](/tv/daredevil_born_again/s02)\n* [83%\n\n  Something Very Bad Is Going to Happen: Season 1](/tv/something_very_bad_is_going_to_happen/s01)\n* [96%\n\n  The Comeback: Season 3](/tv/the_comeback/s03)\n* [95%\n\n  BAIT: Season 1](/tv/bait/s01)\n* [92%\n\n  For All Mankind: Season 5](/tv/for_all_mankind/s05)\n* [91%\n\n  Saturday Night Live UK: Season 1](/tv/saturday_night_live_uk/s01)\n* [100%\n\n  Jo Nesbo's Detective Hole: Season 1](/tv/jo_nesbos_detective_hole/s01)\n* [--\n\n  The Faithful: Season 1](/tv/the_faithful_women_of_the_bible/s01)\n* [--\n\n  Heartbreak High: Season 3](/tv/heartbreak_high_2022/s03)\n\n[View All](/browse/tv_series_browse/sort:newest)\n\n\nMost Popular TV on RT\n\n* [95%\n\n  Daredevil: Born Again: Season 2](/tv/daredevil_born_again/s02)\n* [60%\n\n  The Madison: Season 1](/tv/the_madison/s01)\n* [100%\n\n  Invincible: Season 4](/tv/invincible/s04)\n* [100%\n\n  Deadloch: Season 2](/tv/deadloch/s02)\n* [95%\n\n  BAIT: Season 1](/tv/bait/s01)\n* [100%\n\n  One Piece: Season 2](/tv/one_piece_2023/s02)\n* [90%\n\n  Paradise: Season 2](/tv/paradise_2025/s02)\n* [42%\n\n  Imperfect Women: Season 1](/tv/imperfect_women/s01)\n* [59%\n\n  Scarpetta: Season 1](/tv/scarpetta/s01)\n\n[View All](/browse/tv_series_browse/sort:popular?)\n\n\nMore\n\n* [What to WatchNew](https://editorial.rottentomatoes.com/rt-hub/what-to-watch/)\n* [Best TV Shows](/browse/tv_series_browse/sort:popular)\n* [Most Popular TV](/browse/tv_series_browse/sort:popular)\n* [Fandango at Home](/browse/tv_series_browse/affiliates:fandango-at-home)\n* [Paramount+](/browse/tv_series_browse/affiliates:paramount-plus)\n* [Netflix](/browse/tv_series_browse/affiliates:netflix)\n* [Prime Video](/browse/tv_series_browse/affiliates:prime-video)\n* [Apple TV](/browse/tv_series_browse/affiliates:apple-tv-plus)\n\n\nCertified fresh pick\n\n* [83%\n\n  Something Very Bad Is Going to Happen: Season 1\n  Link to Something Very Bad Is Going to Happen: Season 1](/tv/something_very_bad_is_going_to_happen/s01)\n\n[RT App](https://editorial.rottentomatoes.com/article/app/)\n\n[News](https://editorial.rottentomatoes.com/)\n\n\n\nColumns\n\n* [All-Time Lists](https://editorial.rottentomatoes.com/all-time-lists/)\n* [Binge Guide](https://editorial.rottentomatoes.com/binge-guide/)\n* [Comics on TV](https://editorial.rottentomatoes.com/comics-on-tv/)\n* [Countdown](https://editorial.rottentomatoes.com/countdown/)\n* [Five Favorite Films](https://editorial.rottentomatoes.com/five-favorite-films/)\n* [Video Interviews](https://editorial.rottentomatoes.com/video-interviews/)\n* [Weekend Box Office](https://editorial.rottentomatoes.com/weekend-box-office/)\n* [Weekly Ketchup](https://editorial.rottentomatoes.com/weekly-ketchup/)\n* [What to Watch](https://editorial.rottentomatoes.com/what-to-watch/)\n\n\nGuides\n\n* [Best New Documentaries Movies of 2026\n\n  Link to Best New Documentaries Movies of 2026](https://editorial.rottentomatoes.com/guide/best-new-documentary-movies-2026/)\n* [All Zack Snyder Movies Ranked by Tomatometer\n\n  Link to All Zack Snyder Movies Ranked by Tomatometer](https://editorial.rottentomatoes.com/guide/zack-snyder-movies-ranked-by-tomatometer/)\n\n[View All](https://editorial.rottentomatoes.com/countdown/)\n\n\nHubs\n\n* [Awards Tour\n\n  Link to Awards Tour](https://editorial.rottentomatoes.com/rt-hub/awards-tour/)\n* [What to Watch: In Theaters and On Streaming\n\n  Link to What to Watch: In Theaters and On Streaming](https://editorial.rottentomatoes.com/rt-hub/what-to-\n\n<error>Content truncated. Call the fetch tool with a start_index of 5000 to get more content.</error>"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"max_length\": 20000, \"start_index\": 0, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-82b78436565d37e3",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-82b78436565d37e3",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"max_length\": 20000, \"start_index\": 0, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-82b78436565d37e3",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest:\n[Skip to Main Content](#main-page-content)\n\n\n[![Rotten Tomatoes](/assets/pizza-pie/images/rtlogo.9b892cff3fd.png)](/)\n\n\n\n\n\n\n\n\n\n\n* [About Rotten Tomatoes®](/about)\n* [Critics](/critics)\n* Wants to See\n  Reviews\n  Profile\n  Account\n  Log Out\n\n[Movies](/browse/movies_in_theaters/sort:popular)\n\n\n\n[Movies in theaters](/browse/movies_in_theaters/sort:popular)\n\n* [Opening This Week](/browse/movies_in_theaters/sort:newest)\n* [Top Box Office](/browse/movies_in_theaters/sort:top_box_office)\n* [Coming Soon to Theaters](/browse/movies_coming_soon/)\n* [Certified Fresh Movies](/browse/movies_in_theaters/critics:certified_fresh~sort:popular)\n\n\n[Movies at Home](/browse/movies_at_home)\n\n* [Fandango at Home](/browse/movies_at_home/affiliates:fandango-at-home)\n* [Netflix](/browse/movies_at_home/affiliates:netflix)\n* [Apple TV](/browse/movies_at_home/affiliates:apple-tv-plus)\n* [Prime Video](/browse/movies_at_home/affiliates:prime-video)\n* [Most Popular Streaming movies](/browse/movies_at_home/sort:popular)\n* [Certified Fresh movies](/browse/movies_at_home/critics:certified_fresh)\n* [Browse all](/browse/movies_at_home)\n\n\nMore\n\n* [What to WatchNew](https://editorial.rottentomatoes.com/rt-hub/what-to-watch)\n\n\nCertified fresh picks\n\n* [95%\n\n  Project Hail Mary\n  Link to Project Hail Mary](/m/project_hail_mary)\n* [75%\n\n  Ready or Not 2: Here I Come\n  Link to Ready or Not 2: Here I Come](/m/ready_or_not_2_here_i_come)\n* [91%\n\n  Kontinental '25\n  Link to Kontinental '25](/m/kontinental_25)\n\n[Tv shows](/browse/tv_series_browse/sort:popular)\n\n\n\nNew TV Tonight\n\n* [95%\n\n  Daredevil: Born Again: Season 2](/tv/daredevil_born_again/s02)\n* [83%\n\n  Something Very Bad Is Going to Happen: Season 1](/tv/something_very_bad_is_going_to_happen/s01)\n* [96%\n\n  The Comeback: Season 3](/tv/the_comeback/s03)\n* [95%\n\n  BAIT: Season 1](/tv/bait/s01)\n* [92%\n\n  For All Mankind: Season 5](/tv/for_all_mankind/s05)\n* [91%\n\n  Saturday Night Live UK: Season 1](/tv/saturday_night_live_uk/s01)\n* [100%\n\n  Jo Nesbo's Detective Hole: Season 1](/tv/jo_nesbos_detective_hole/s01)\n* [--\n\n  The Faithful: Season 1](/tv/the_faithful_women_of_the_bible/s01)\n* [--\n\n  Heartbreak High: Season 3](/tv/heartbreak_high_2022/s03)\n\n[View All](/browse/tv_series_browse/sort:newest)\n\n\nMost Popular TV on RT\n\n* [95%\n\n  Daredevil: Born Again: Season 2](/tv/daredevil_born_again/s02)\n* [60%\n\n  The Madison: Season 1](/tv/the_madison/s01)\n* [100%\n\n  Invincible: Season 4](/tv/invincible/s04)\n* [100%\n\n  Deadloch: Season 2](/tv/deadloch/s02)\n* [95%\n\n  BAIT: Season 1](/tv/bait/s01)\n* [100%\n\n  One Piece: Season 2](/tv/one_piece_2023/s02)\n* [90%\n\n  Paradise: Season 2](/tv/paradise_2025/s02)\n* [42%\n\n  Imperfect Women: Season 1](/tv/imperfect_women/s01)\n* [59%\n\n  Scarpetta: Season 1](/tv/scarpetta/s01)\n\n[View All](/browse/tv_series_browse/sort:popular?)\n\n\nMore\n\n* [What to WatchNew](https://editorial.rottentomatoes.com/rt-hub/what-to-watch/)\n* [Best TV Shows](/browse/tv_series_browse/sort:popular)\n* [Most Popular TV](/browse/tv_series_browse/sort:popular)\n* [Fandango at Home](/browse/tv_series_browse/affiliates:fandango-at-home)\n* [Paramount+](/browse/tv_series_browse/affiliates:paramount-plus)\n* [Netflix](/browse/tv_series_browse/affiliates:netflix)\n* [Prime Video](/browse/tv_series_browse/affiliates:prime-video)\n* [Apple TV](/browse/tv_series_browse/affiliates:apple-tv-plus)\n\n\nCertified fresh pick\n\n* [83%\n\n  Something Very Bad Is Going to Happen: Season 1\n  Link to Something Very Bad Is Going to Happen: Season 1](/tv/something_very_bad_is_going_to_happen/s01)\n\n[RT App](https://editorial.rottentomatoes.com/article/app/)\n\n[News](https://editorial.rottentomatoes.com/)\n\n\n\nColumns\n\n* [All-Time Lists](https://editorial.rottentomatoes.com/all-time-lists/)\n* [Binge Guide](https://editorial.rottentomatoes.com/binge-guide/)\n* [Comics on TV](https://editorial.rottentomatoes.com/comics-on-tv/)\n* [Countdown](https://editorial.rottentomatoes.com/countdown/)\n* [Five Favorite Films](https://editorial.rottentomatoes.com/five-favorite-films/)\n* [Video Interviews](https://editorial.rottentomatoes.com/video-interviews/)\n* [Weekend Box Office](https://editorial.rottentomatoes.com/weekend-box-office/)\n* [Weekly Ketchup](https://editorial.rottentomatoes.com/weekly-ketchup/)\n* [What to Watch](https://editorial.rottentomatoes.com/what-to-watch/)\n\n\nGuides\n\n* [Best New Documentaries Movies of 2026\n\n  Link to Best New Documentaries Movies of 2026](https://editorial.rottentomatoes.com/guide/best-new-documentary-movies-2026/)\n* [All Zack Snyder Movies Ranked by Tomatometer\n\n  Link to All Zack Snyder Movies Ranked by Tomatometer](https://editorial.rottentomatoes.com/guide/zack-snyder-movies-ranked-by-tomatometer/)\n\n[View All](https://editorial.rottentomatoes.com/countdown/)\n\n\nHubs\n\n* [Awards Tour\n\n  Link to Awards Tour](https://editorial.rottentomatoes.com/rt-hub/awards-tour/)\n* [What to Watch: In Theaters and On Streaming\n\n  Link to What to Watch: In Theaters and On Streaming](https://editorial.rottentomatoes.com/rt-hub/what-to-watch/)\n\n[View All](https://editorial.rottentomatoes.com/rt-hubs/)\n\n\nRT News\n\n* [Poll: Vote for Your Most Anticipated TV or Streaming Shows of April\n\n  Link to Poll: Vote for Your Most Anticipated TV or Streaming Shows of April](https://editorial.rottentomatoes.com/article/most-anticipated-tv-of-april-2026/)\n* [Poll: Vote for Your Most Anticipated Movies of April\n\n  Link to Poll: Vote for Your Most Anticipated Movies of April](https://editorial.rottentomatoes.com/article/most-anticipated-movies-of-april-2026/)\n\n[View All](https://editorial.rottentomatoes.com/news/)\n\n[Showtimes](https://www.fandango.com/movies-in-theaters?a=13036)\n\n\n* Trending on RT\n* [Seen on the Screen](https://editorial.rottentomatoes.com/article/seen-on-screen-podcast-a-celebration-of-universal-stories/)\n* [TV Premiere Dates](https://editorial.rottentomatoes.com/article/tv-premiere-dates-2026/)\n* [Most Anticipated Movies](https://editorial.rottentomatoes.com/article/the-most-anticipated-movies-of-2026/)\n* [The Rotten Tomatoes App](https://editorial.rottentomatoes.com/article/app/)\n\nThis is a verified review from a moviegoer that bought a ticket and wrote a review through Fandango."
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"max_length\": 20000, \"start_index\": 10000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-b9f07283d271151a",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-b9f07283d271151a",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"max_length\": 20000, \"start_index\": 10000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-b9f07283d271151a",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest:\n<error>No more content available.</error>"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"max_length\": 20000, \"start_index\": 0, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-a849ac4cec6e4c8e",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-a849ac4cec6e4c8e",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"max_length\": 20000, \"start_index\": 0, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a849ac4cec6e4c8e",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest:\n[Skip to Main Content](#main-page-content)\n\n\n[![Rotten Tomatoes](/assets/pizza-pie/images/rtlogo.9b892cff3fd.png)](/)\n\n\n\n\n\n\n\n\n\n\n* [About Rotten Tomatoes®](/about)\n* [Critics](/critics)\n* Wants to See\n  Reviews\n  Profile\n  Account\n  Log Out\n\n[Movies](/browse/movies_in_theaters/sort:popular)\n\n\n\n[Movies in theaters](/browse/movies_in_theaters/sort:popular)\n\n* [Opening This Week](/browse/movies_in_theaters/sort:newest)\n* [Top Box Office](/browse/movies_in_theaters/sort:top_box_office)\n* [Coming Soon to Theaters](/browse/movies_coming_soon/)\n* [Certified Fresh Movies](/browse/movies_in_theaters/critics:certified_fresh~sort:popular)\n\n\n[Movies at Home](/browse/movies_at_home)\n\n* [Fandango at Home](/browse/movies_at_home/affiliates:fandango-at-home)\n* [Netflix](/browse/movies_at_home/affiliates:netflix)\n* [Apple TV](/browse/movies_at_home/affiliates:apple-tv-plus)\n* [Prime Video](/browse/movies_at_home/affiliates:prime-video)\n* [Most Popular Streaming movies](/browse/movies_at_home/sort:popular)\n* [Certified Fresh movies](/browse/movies_at_home/critics:certified_fresh)\n* [Browse all](/browse/movies_at_home)\n\n\nMore\n\n* [What to WatchNew](https://editorial.rottentomatoes.com/rt-hub/what-to-watch)\n\n\nCertified fresh picks\n\n* [95%\n\n  Project Hail Mary\n  Link to Project Hail Mary](/m/project_hail_mary)\n* [75%\n\n  Ready or Not 2: Here I Come\n  Link to Ready or Not 2: Here I Come](/m/ready_or_not_2_here_i_come)\n* [91%\n\n  Kontinental '25\n  Link to Kontinental '25](/m/kontinental_25)\n\n[Tv shows](/browse/tv_series_browse/sort:popular)\n\n\n\nNew TV Tonight\n\n* [95%\n\n  Daredevil: Born Again: Season 2](/tv/daredevil_born_again/s02)\n* [83%\n\n  Something Very Bad Is Going to Happen: Season 1](/tv/something_very_bad_is_going_to_happen/s01)\n* [96%\n\n  The Comeback: Season 3](/tv/the_comeback/s03)\n* [95%\n\n  BAIT: Season 1](/tv/bait/s01)\n* [92%\n\n  For All Mankind: Season 5](/tv/for_all_mankind/s05)\n* [91%\n\n  Saturday Night Live UK: Season 1](/tv/saturday_night_live_uk/s01)\n* [100%\n\n  Jo Nesbo's Detective Hole: Season 1](/tv/jo_nesbos_detective_hole/s01)\n* [--\n\n  The Faithful: Season 1](/tv/the_faithful_women_of_the_bible/s01)\n* [--\n\n  Heartbreak High: Season 3](/tv/heartbreak_high_2022/s03)\n\n[View All](/browse/tv_series_browse/sort:newest)\n\n\nMost Popular TV on RT\n\n* [95%\n\n  Daredevil: Born Again: Season 2](/tv/daredevil_born_again/s02)\n* [60%\n\n  The Madison: Season 1](/tv/the_madison/s01)\n* [100%\n\n  Invincible: Season 4](/tv/invincible/s04)\n* [100%\n\n  Deadloch: Season 2](/tv/deadloch/s02)\n* [95%\n\n  BAIT: Season 1](/tv/bait/s01)\n* [100%\n\n  One Piece: Season 2](/tv/one_piece_2023/s02)\n* [90%\n\n  Paradise: Season 2](/tv/paradise_2025/s02)\n* [42%\n\n  Imperfect Women: Season 1](/tv/imperfect_women/s01)\n* [59%\n\n  Scarpetta: Season 1](/tv/scarpetta/s01)\n\n[View All](/browse/tv_series_browse/sort:popular?)\n\n\nMore\n\n* [What to WatchNew](https://editorial.rottentomatoes.com/rt-hub/what-to-watch/)\n* [Best TV Shows](/browse/tv_series_browse/sort:popular)\n* [Most Popular TV](/browse/tv_series_browse/sort:popular)\n* [Fandango at Home](/browse/tv_series_browse/affiliates:fandango-at-home)\n* [Paramount+](/browse/tv_series_browse/affiliates:paramount-plus)\n* [Netflix](/browse/tv_series_browse/affiliates:netflix)\n* [Prime Video](/browse/tv_series_browse/affiliates:prime-video)\n* [Apple TV](/browse/tv_series_browse/affiliates:apple-tv-plus)\n\n\nCertified fresh pick\n\n* [83%\n\n  Something Very Bad Is Going to Happen: Season 1\n  Link to Something Very Bad Is Going to Happen: Season 1](/tv/something_very_bad_is_going_to_happen/s01)\n\n[RT App](https://editorial.rottentomatoes.com/article/app/)\n\n[News](https://editorial.rottentomatoes.com/)\n\n\n\nColumns\n\n* [All-Time Lists](https://editorial.rottentomatoes.com/all-time-lists/)\n* [Binge Guide](https://editorial.rottentomatoes.com/binge-guide/)\n* [Comics on TV](https://editorial.rottentomatoes.com/comics-on-tv/)\n* [Countdown](https://editorial.rottentomatoes.com/countdown/)\n* [Five Favorite Films](https://editorial.rottentomatoes.com/five-favorite-films/)\n* [Video Interviews](https://editorial.rottentomatoes.com/video-interviews/)\n* [Weekend Box Office](https://editorial.rottentomatoes.com/weekend-box-office/)\n* [Weekly Ketchup](https://editorial.rottentomatoes.com/weekly-ketchup/)\n* [What to Watch](https://editorial.rottentomatoes.com/what-to-watch/)\n\n\nGuides\n\n* [Best New Documentaries Movies of 2026\n\n  Link to Best New Documentaries Movies of 2026](https://editorial.rottentomatoes.com/guide/best-new-documentary-movies-2026/)\n* [All Zack Snyder Movies Ranked by Tomatometer\n\n  Link to All Zack Snyder Movies Ranked by Tomatometer](https://editorial.rottentomatoes.com/guide/zack-snyder-movies-ranked-by-tomatometer/)\n\n[View All](https://editorial.rottentomatoes.com/countdown/)\n\n\nHubs\n\n* [Awards Tour\n\n  Link to Awards Tour](https://editorial.rottentomatoes.com/rt-hub/awards-tour/)\n* [What to Watch: In Theaters and On Streaming\n\n  Link to What to Watch: In Theaters and On Streaming](https://editorial.rottentomatoes.com/rt-hub/what-to-watch/)\n\n[View All](https://editorial.rottentomatoes.com/rt-hubs/)\n\n\nRT News\n\n* [Poll: Vote for Your Most Anticipated TV or Streaming Shows of April\n\n  Link to Poll: Vote for Your Most Anticipated TV or Streaming Shows of April](https://editorial.rottentomatoes.com/article/most-anticipated-tv-of-april-2026/)\n* [Poll: Vote for Your Most Anticipated Movies of April\n\n  Link to Poll: Vote for Your Most Anticipated Movies of April](https://editorial.rottentomatoes.com/article/most-anticipated-movies-of-april-2026/)\n\n[View All](https://editorial.rottentomatoes.com/news/)\n\n[Showtimes](https://www.fandango.com/movies-in-theaters?a=13036)\n\n\n* Trending on RT\n* [Seen on the Screen](https://editorial.rottentomatoes.com/article/seen-on-screen-podcast-a-celebration-of-universal-stories/)\n* [TV Premiere Dates](https://editorial.rottentomatoes.com/article/tv-premiere-dates-2026/)\n* [Most Anticipated Movies](https://editorial.rottentomatoes.com/article/the-most-anticipated-movies-of-2026/)\n* [The Rotten Tomatoes App](https://editorial.rottentomatoes.com/article/app/)\n\nThis is a verified review from a moviegoer that bought a ticket and wrote a review through Fandango."
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"max_length\": 30000, \"start_index\": 5000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-8595a009b228987a",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-8595a009b228987a",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"max_length\": 30000, \"start_index\": 5000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-8595a009b228987a",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest:\nwatch/)\n\n[View All](https://editorial.rottentomatoes.com/rt-hubs/)\n\n\nRT News\n\n* [Poll: Vote for Your Most Anticipated TV or Streaming Shows of April\n\n  Link to Poll: Vote for Your Most Anticipated TV or Streaming Shows of April](https://editorial.rottentomatoes.com/article/most-anticipated-tv-of-april-2026/)\n* [Poll: Vote for Your Most Anticipated Movies of April\n\n  Link to Poll: Vote for Your Most Anticipated Movies of April](https://editorial.rottentomatoes.com/article/most-anticipated-movies-of-april-2026/)\n\n[View All](https://editorial.rottentomatoes.com/news/)\n\n[Showtimes](https://www.fandango.com/movies-in-theaters?a=13036)\n\n\n* Trending on RT\n* [Seen on the Screen](https://editorial.rottentomatoes.com/article/seen-on-screen-podcast-a-celebration-of-universal-stories/)\n* [TV Premiere Dates](https://editorial.rottentomatoes.com/article/tv-premiere-dates-2026/)\n* [Most Anticipated Movies](https://editorial.rottentomatoes.com/article/the-most-anticipated-movies-of-2026/)\n* [The Rotten Tomatoes App](https://editorial.rottentomatoes.com/article/app/)\n\nThis is a verified review from a moviegoer that bought a ticket and wrote a review through Fandango."
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"max_length\": 50000, \"start_index\": 0, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-9330891507b03e49",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-9330891507b03e49",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"max_length\": 50000, \"start_index\": 0, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-9330891507b03e49",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest:\n[Skip to Main Content](#main-page-content)\n\n\n[![Rotten Tomatoes](/assets/pizza-pie/images/rtlogo.9b892cff3fd.png)](/)\n\n\n\n\n\n\n\n\n\n\n* [About Rotten Tomatoes®](/about)\n* [Critics](/critics)\n* Wants to See\n  Reviews\n  Profile\n  Account\n  Log Out\n\n[Movies](/browse/movies_in_theaters/sort:popular)\n\n\n\n[Movies in theaters](/browse/movies_in_theaters/sort:popular)\n\n* [Opening This Week](/browse/movies_in_theaters/sort:newest)\n* [Top Box Office](/browse/movies_in_theaters/sort:top_box_office)\n* [Coming Soon to Theaters](/browse/movies_coming_soon/)\n* [Certified Fresh Movies](/browse/movies_in_theaters/critics:certified_fresh~sort:popular)\n\n\n[Movies at Home](/browse/movies_at_home)\n\n* [Fandango at Home](/browse/movies_at_home/affiliates:fandango-at-home)\n* [Netflix](/browse/movies_at_home/affiliates:netflix)\n* [Apple TV](/browse/movies_at_home/affiliates:apple-tv-plus)\n* [Prime Video](/browse/movies_at_home/affiliates:prime-video)\n* [Most Popular Streaming movies](/browse/movies_at_home/sort:popular)\n* [Certified Fresh movies](/browse/movies_at_home/critics:certified_fresh)\n* [Browse all](/browse/movies_at_home)\n\n\nMore\n\n* [What to WatchNew](https://editorial.rottentomatoes.com/rt-hub/what-to-watch)\n\n\nCertified fresh picks\n\n* [95%\n\n  Project Hail Mary\n  Link to Project Hail Mary](/m/project_hail_mary)\n* [75%\n\n  Ready or Not 2: Here I Come\n  Link to Ready or Not 2: Here I Come](/m/ready_or_not_2_here_i_come)\n* [91%\n\n  Kontinental '25\n  Link to Kontinental '25](/m/kontinental_25)\n\n[Tv shows](/browse/tv_series_browse/sort:popular)\n\n\n\nNew TV Tonight\n\n* [95%\n\n  Daredevil: Born Again: Season 2](/tv/daredevil_born_again/s02)\n* [83%\n\n  Something Very Bad Is Going to Happen: Season 1](/tv/something_very_bad_is_going_to_happen/s01)\n* [96%\n\n  The Comeback: Season 3](/tv/the_comeback/s03)\n* [95%\n\n  BAIT: Season 1](/tv/bait/s01)\n* [92%\n\n  For All Mankind: Season 5](/tv/for_all_mankind/s05)\n* [91%\n\n  Saturday Night Live UK: Season 1](/tv/saturday_night_live_uk/s01)\n* [100%\n\n  Jo Nesbo's Detective Hole: Season 1](/tv/jo_nesbos_detective_hole/s01)\n* [--\n\n  The Faithful: Season 1](/tv/the_faithful_women_of_the_bible/s01)\n* [--\n\n  Heartbreak High: Season 3](/tv/heartbreak_high_2022/s03)\n\n[View All](/browse/tv_series_browse/sort:newest)\n\n\nMost Popular TV on RT\n\n* [95%\n\n  Daredevil: Born Again: Season 2](/tv/daredevil_born_again/s02)\n* [60%\n\n  The Madison: Season 1](/tv/the_madison/s01)\n* [100%\n\n  Invincible: Season 4](/tv/invincible/s04)\n* [100%\n\n  Deadloch: Season 2](/tv/deadloch/s02)\n* [95%\n\n  BAIT: Season 1](/tv/bait/s01)\n* [100%\n\n  One Piece: Season 2](/tv/one_piece_2023/s02)\n* [90%\n\n  Paradise: Season 2](/tv/paradise_2025/s02)\n* [42%\n\n  Imperfect Women: Season 1](/tv/imperfect_women/s01)\n* [59%\n\n  Scarpetta: Season 1](/tv/scarpetta/s01)\n\n[View All](/browse/tv_series_browse/sort:popular?)\n\n\nMore\n\n* [What to WatchNew](https://editorial.rottentomatoes.com/rt-hub/what-to-watch/)\n* [Best TV Shows](/browse/tv_series_browse/sort:popular)\n* [Most Popular TV](/browse/tv_series_browse/sort:popular)\n* [Fandango at Home](/browse/tv_series_browse/affiliates:fandango-at-home)\n* [Paramount+](/browse/tv_series_browse/affiliates:paramount-plus)\n* [Netflix](/browse/tv_series_browse/affiliates:netflix)\n* [Prime Video](/browse/tv_series_browse/affiliates:prime-video)\n* [Apple TV](/browse/tv_series_browse/affiliates:apple-tv-plus)\n\n\nCertified fresh pick\n\n* [83%\n\n  Something Very Bad Is Going to Happen: Season 1\n  Link to Something Very Bad Is Going to Happen: Season 1](/tv/something_very_bad_is_going_to_happen/s01)\n\n[RT App](https://editorial.rottentomatoes.com/article/app/)\n\n[News](https://editorial.rottentomatoes.com/)\n\n\n\nColumns\n\n* [All-Time Lists](https://editorial.rottentomatoes.com/all-time-lists/)\n* [Binge Guide](https://editorial.rottentomatoes.com/binge-guide/)\n* [Comics on TV](https://editorial.rottentomatoes.com/comics-on-tv/)\n* [Countdown](https://editorial.rottentomatoes.com/countdown/)\n* [Five Favorite Films](https://editorial.rottentomatoes.com/five-favorite-films/)\n* [Video Interviews](https://editorial.rottentomatoes.com/video-interviews/)\n* [Weekend Box Office](https://editorial.rottentomatoes.com/weekend-box-office/)\n* [Weekly Ketchup](https://editorial.rottentomatoes.com/weekly-ketchup/)\n* [What to Watch](https://editorial.rottentomatoes.com/what-to-watch/)\n\n\nGuides\n\n* [Best New Documentaries Movies of 2026\n\n  Link to Best New Documentaries Movies of 2026](https://editorial.rottentomatoes.com/guide/best-new-documentary-movies-2026/)\n* [All Zack Snyder Movies Ranked by Tomatometer\n\n  Link to All Zack Snyder Movies Ranked by Tomatometer](https://editorial.rottentomatoes.com/guide/zack-snyder-movies-ranked-by-tomatometer/)\n\n[View All](https://editorial.rottentomatoes.com/countdown/)\n\n\nHubs\n\n* [Awards Tour\n\n  Link to Awards Tour](https://editorial.rottentomatoes.com/rt-hub/awards-tour/)\n* [What to Watch: In Theaters and On Streaming\n\n  Link to What to Watch: In Theaters and On Streaming](https://editorial.rottentomatoes.com/rt-hub/what-to-watch/)\n\n[View All](https://editorial.rottentomatoes.com/rt-hubs/)\n\n\nRT News\n\n* [Poll: Vote for Your Most Anticipated TV or Streaming Shows of April\n\n  Link to Poll: Vote for Your Most Anticipated TV or Streaming Shows of April](https://editorial.rottentomatoes.com/article/most-anticipated-tv-of-april-2026/)\n* [Poll: Vote for Your Most Anticipated Movies of April\n\n  Link to Poll: Vote for Your Most Anticipated Movies of April](https://editorial.rottentomatoes.com/article/most-anticipated-movies-of-april-2026/)\n\n[View All](https://editorial.rottentomatoes.com/news/)\n\n[Showtimes](https://www.fandango.com/movies-in-theaters?a=13036)\n\n\n* Trending on RT\n* [Seen on the Screen](https://editorial.rottentomatoes.com/article/seen-on-screen-podcast-a-celebration-of-universal-stories/)\n* [TV Premiere Dates](https://editorial.rottentomatoes.com/article/tv-premiere-dates-2026/)\n* [Most Anticipated Movies](https://editorial.rottentomatoes.com/article/the-most-anticipated-movies-of-2026/)\n* [The Rotten Tomatoes App](https://editorial.rottentomatoes.com/article/app/)\n\nThis is a verified review from a moviegoer that bought a ticket and wrote a review through Fandango."
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"max_length\": 50000, \"start_index\": 10000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest\"}",
+              "name": "fetch_fetch"
+            },
+            "id": "chatcmpl-tool-b84f5481194c62f3",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-b84f5481194c62f3",
+          "type": "function",
+          "function": {
+            "name": "fetch_fetch",
+            "arguments": "{\"max_length\": 50000, \"start_index\": 10000, \"url\": \"https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-b84f5481194c62f3",
+      "content": "Contents of https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest:\n<error>No more content available.</error>"
+    }
+  ],
+  "trajectory": [
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "url": "http://editorial.rottentomatoes.com/guide/best-movies-2000"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "start_index": 5000,
+        "url": "http://editorial.rottentomatoes.com/guide/best-movies-2000"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "cli-mcp-server_run_command",
+      "parameters": {
+        "command": "ls -la /data"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "cli-mcp-server_run_command",
+      "parameters": {
+        "command": "ls /data"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "cli-mcp-server_run_command",
+      "parameters": {
+        "command": "cat /data/Top Movies.csv"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "cli-mcp-server_run_command",
+      "parameters": {
+        "command": "cat \"/data/Top Movies.csv\""
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "start_index": 10000,
+        "url": "http://editorial.rottentomatoes.com/guide/best-movies-2000"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "start_index": 5000,
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream/user_reviews"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "start_index": 5000,
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "start_index": 10000,
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "max_length": 20000,
+        "start_index": 0,
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "max_length": 20000,
+        "start_index": 10000,
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=oldest"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "max_length": 20000,
+        "start_index": 0,
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "max_length": 30000,
+        "start_index": 5000,
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "max_length": 50000,
+        "start_index": 0,
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "fetch_fetch",
+      "parameters": {
+        "max_length": 50000,
+        "start_index": 10000,
+        "url": "https://www.rottentomatoes.com/m/requiem_for_a_dream/reviews?sort=newest"
+      },
+      "response": null,
+      "error": null
+    }
+  ],
+  "errors": [
+    {
+      "scope": 17,
+      "description": "The agent did not find a proper way to get the target review."
+    },
+    {
+      "scope": 19,
+      "description": "The agent did not find a proper way to get the target review."
+    },
+    {
+      "scope": 21,
+      "description": "The agent did not find a proper way to get the target review."
+    },
+    {
+      "scope": 23,
+      "description": "The agent did not find a proper way to get the target review."
+    },
+    {
+      "scope": 25,
+      "description": "The agent did not find a proper way to get the target review."
+    },
+    {
+      "scope": 27,
+      "description": "The agent did not find a proper way to get the target review."
+    },
+    {
+      "scope": 29,
+      "description": "The agent did not find a proper way to get the target review."
+    },
+    {
+      "scope": 31,
+      "description": "The agent did not find a proper way to get the target review."
+    },
+    {
+      "scope": 33,
+      "description": "The agent did not find a proper way to get the target review."
+    },
+    {
+      "scope": 35,
+      "description": "The agent did not find a proper way to get the target review."
+    },
+    {
+      "scope": 37,
+      "description": "The agent did not find a proper way to get the target review."
+    },
+    {
+      "scope": 39,
+      "description": "The agent did not find a proper way to get the target review."
+    }
+  ],
+  "trajectory_time": 66.59671759605408,
+  "num_retry": 1,
+  "coverage_score": 0.0,
+  "fully_covered_claims": 0,
+  "partially_covered_claims": 0,
+  "total_claims": 2,
+  "coverage_details_json": {
+    "per_claim": [
+      {
+        "claim": "",
+        "score": 0.0,
+        "covered": false,
+        "reason": "The claim asserts a specific fact about the intersection of a Rotten Tomatoes list, a genre (drama), and local data, identifying 'Requiem for a Dream' as the only match. The model response fails to address this assertion entirely. Instead of confirming or denying the claim, the response provides an error message regarding a specific URL for movie reviews. It does not mention the 'best-movies-2000' list, the genre constraint, or the 'local data' comparison. While the movie title is present, the core informational content of the claim is missing."
+      },
+      {
+        "claim": "",
+        "score": 0.0,
+        "covered": false,
+        "reason": "The model response fails to address the claim entirely. The claim requires confirmation of a specific reviewer (Jay C.), their profession (paramedic), and their action (leaving a review for Requiem for a Dream). The model response only displays a URL and an error message ('<error>No more content available.</error>'), indicating a failure to retrieve the necessary information. No details regarding Jay C., the paramedic profession, or the review content are present in the response."
+      }
+    ],
+    "coverage_score": 0.0,
+    "total_claims": 2,
+    "fully_covered_claims": 0,
+    "partially_covered_claims": 0,
+    "explanation": "Evaluation complete",
+    "confidence": 0.5
+  },
+  "evaluation_confidence": 0.5
+}

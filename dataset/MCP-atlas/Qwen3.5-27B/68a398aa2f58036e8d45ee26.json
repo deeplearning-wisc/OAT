@@ -1,0 +1,844 @@
+{
+  "TASK": "68a398aa2f58036e8d45ee26",
+  "PROMPT": "I've been reading about the seqwish alg in a repo written in c++ and I'm curious about how many merge requests it had during the year of the publication of the article that is cited in the repo, what's the abstract of the paper and in which other articles did the authors collaborated in that year with the same editorial?",
+  "TRAJECTORY": [
+    {
+      "content": "First, I'll look for the seqwish algorithm in github",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"query\": \"seqwish\"\n}",
+            "name": "github_search_repositories"
+          },
+          "id": "0bb1ab08-3253-4aae-b5e6-12c314a61c4d",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "### Found 5 repositories:\n\n1. **ekg/seqwish** - 150 stars - `C++`\n   alignment to variation graph inducer\n   _Updated: 2025-07-12_\n\n2. **pangenome/seqwish-paper** - 3 stars - `TeX`\n   Unbiased pangenome graphs\n\n3. **AnanyaNairGit/SeqwishParallelised**\n   undefined\n   _Updated: 2024-12-25_\n\n4. **AnanyaNairGit/SeqwishNew** - `Python`\n   undefined\n   _Updated: 2024-12-25_\n\n5. **jmonlong/docker-seqwish** - `Dockerfile`\n   Container for seqwish",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "0bb1ab08-3253-4aae-b5e6-12c314a61c4d"
+    },
+    {
+      "content": "Great, the repository is ekg/seqwish, I'll fetch more details in the repo",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"owner\": \"ekg\",\n  \"repo\": \"seqwish\"\n}",
+            "name": "github_get_repository"
+          },
+          "id": "35e81110-417e-4bf8-9dfe-734358e991d0",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "# ekg/seqwish\n\n> alignment to variation graph inducer\n\n**Language:** C++ | **Stars:** 150 | **Forks:** 19 | **License:** MIT\n\n## README\n\n# seqwish\n\n[![build and test](https://github.com/ekg/seqwish/actions/workflows/build_and_test_on_push.yml/badge.svg)](https://github.com/ekg/seqwish/actions/workflows/build_and_test_on_push.yml)\n[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/seqwish/README.html)\n\n*These <b>seq</b>uences <b>wish</b> they were squished into a graph.*\n\n## a variation graph inducer\n\n`seqwish` implements a lossless conversion from pairwise alignments between sequences to a variation graph encoding the sequences and their alignments.\nAs input we typically take all-versus-all alignments, but the exact structure of the alignment set may be defined in an application specific way.\nThis algorithm uses a series of disk-backed sorts and passes over the alignment and sequence inputs to allow the graph to be constructed from very large inputs that are commonly encountered when working with large numbers of noisy input sequences. \nMemory usage during construction and traversal is limited by the use of sorted disk-backed arrays and succinct rank/select dictionaries to record a queryable version of the graph.\n\n## Citation:\nErik Garrison, Andrea Guarracino, **Unbiased pangenome graphs**, Bioinformatics, Volume 39, Issue 1, January 2023, btac743, https://doi.org/10.1093/bioinformatics/btac743\n\n## squish graph induction algorithm\n\nAs input we have *Q*, which is a concatenation of the sequences from which we will build the graph.\nWe build an compressed suffix array (CSA) mapping sequence names to offsets in *Q*, and also the inverse using a rank/select dictionary on a bitvector marking the starts of sequences in *Q*.\nThis allows us to map between positions in the sequences of *Q*, which is the format in which alignment algorithms typically express alignments, and positions in *Q* itself, which is the coordinate space we will use as a basis for the generation of our graph.\nTo relate the sequences in *Q* to each other we apply a function *map* to generate alignments *A*.\nAlthough these alignments tend to be represented using oriented interval pairs in *Q*, for simplicity and robustness to graph complexity, we describe *A* as a vector of pairs of bidirectional positions (sequence offsets and strands) *b* in *Q* , such that *A* = [(*b<sub>q</sub>*, *b<sub>r</sub>*), ... ].\nWe sort *A* by the first member (*b<sub>q</sub>*) of each pair, ensuring that the entries in *A* are ordered according to their order in *Q*.\n\nTo query the induced graph we build a rank/select dictionary allowing efficient traversal of *A*, based on a bit vector *A<sub>bv</sub>* of the same length as *A* such that we record a 1 at those positions which correspond to the first instance of a given *b<sub>q</sub>* and record a 0 in *A<sub>bv</sub>* otherwise. \nWe record which *b<sub>q</sub>* we have processed in the bitvector *Q<sub>seen</sub>* which is of the same length as *Q*.\nThis allows us to avoid a quadratic penalty in the order of the size of the transitive closures in *Q* given by the *map* function.\n\nNow we inductively derive the graph implied by the alignments.\nFor each base *b<sub>q</sub>* in *Q*, we find its transitive closure *c<sub>q</sub>* := [*b<sub>q</sub>*, *b<sub>r<sub>1</sub></sub>*, ... ] via the *map* operation by traversing the aligned base pairs recorded in *A*.\nWe write the character of the base *b<sub>q</sub>* to a vector *S*, then for each *b<sub>c</sub>* in *c<sub>q</sub>* we record a pair [*s<sub>i</sub>, b<sub>c</sub>*] into *N* and its reverse, [*b<sub>c</sub>*, *s<sub>i</sub>*] into *P*.\nWe mark *Q<sub>seen</sub>* for each base in each emitted cluster, and we do not consider marked bases in subsequent transitive closures.\nBy sorting *N* and *P* by their first entries, we can build rank/select dictionaries on them akin to that we built on *A* that allow random access by graph base (as given in *S*) or input base (as given in *Q*).\n\nTo fully induce the variation graph we need to establish the links between bases in *S* that would be required for us to find any sequence in the input as a walk through the graph.\nWe do so by rewriting *Q* (in both the forward and reverse orientation) in terms of pairs of bases in *S*, then sorting the resulting pairs by their first element, which yields *L* = [(*b<sub>a</sub>*, *b<sub>b</sub>*), ... ].\nThese pairs record the links and their frequencies, which we can emit or filter (such as by frequency) as needed given particular applications.\nIn typical use we take the graph to be given by the unique elements of *L*.\n\nOur data model encodes the graph using single-base nodes, but often downstream use requires identifying nodes and thus we benefit from compressing the unitigs of the graph into single nodes, which reduces memory used by identifiers in analysis.\nWe can compress the node space of the graph by traversing *S*, and for each base querying the inbound links.\nMaintaining a bitvector *S<sub>id</sub>* of length equal to *S* we mark each base at which we see any link other than one from or to the previous base on the forward or reverse strand, or at bases where we have no incoming links.\nBy building a rank/select dictionary on *S<sub>id</sub>* we can assign a smaller set of node ids to the sequence space of the graph.\n\nGiven the id space encoded by *S<sub>id</sub>* we can materialize the graph in a variety of interchange formats, or provide id-based interfaces to the indexed squish graph.\nTo generate graphs in [.vg](https://github.com/vgteam/vg/blob/master/src/vg.proto) or [GFAv1 format](https://github.com/GFA-spec/GFA-spec/blob/master/GFA1.md), we want to decompose the graph into its nodes (*S*), edges (*L*) and paths (*P*).\nThe nodes are given by *S* and *S<sub>id</sub>*, and similarly we project *L* and *P* through *S<sub>id</sub>* to obtain a compressed variation graph.\n\n## using our graph\n\nAt present we rest on existing tools, such as [vg](https://github.com/vgteam/vg), [GCSA2](https://github.com/jltsiren/gcsa2), [GBWT](https://github.com/jltsiren/gbwt), and other GFAv1-compatible tools to support downstream uses for the graph.\nWe observe that it will be trivial to use this data model as the basis for various graph traversal and modification algorithms.\nImplementation of these features will follow.\nWe plan to link into the [handle graph model](https://github.com/vgteam/vg/blob/master/src/handle.hpp) developed in the vg project, which should allow the application of any algorithms defined using that interface on the backing graph developed here.\nUsers familiar with concepts in assembly graphs will notice many similarities between the graph induction algorithm and typical steps in assembly algorithms, and we intend to explore these as well using this platform.\n\n## building\n\n### dependencies\n\nYou'll need basic C++ build tools, `cmake`, and `zlib`.\nOn `Ubuntu` (and probably `Debian`) systems, these can be installed with:\n\n```\nsudo apt install build-essential cmake zlib1g-dev libjemalloc-dev\n```\n\nOn `Arch Linux`, the `jemalloc` dependency can be installed with:\n\n```\nsudo pacman -S jemalloc     # arch linux\n```\n\n### build process\n\n`seqwish` uses `cmake` to build itself and its dependencies.\n\n```\ngit clone --recursive https://github.com/ekg/seqwish.git\ncd seqwish\ncmake -H. -Bbuild && cmake --build build -- -j 3\n```\n\nTo clean up simply remove `build/` and `bin/`:\n\n```\nrm -rf build bin\n```\n\n\nA static build can be obtained by setting a flag in the cmake build setup.\n\n```\ncmake -DBUILD_STATIC=1 -H. -Bbuild && cmake --build build -- -j 3\n```\n\nYou'll need to set this flag to 0 or remove and rebuild your build directory if you want to unset this behavior.\nStatic builds are unlikely to be supported on OSX, and require appropriate static libraries on linux.\n\n#### clang\n\nIf you want to use `clang`, be sure to install the correct version of `OpenMP`.\nFor example, if you have `clang version 14`, you have to install `libomp-14-dev`:\n\n```\nsudo apt -y install libomp-14-dev\n```\n\nTo build `seqwish` with `clang`, execute:\n\n```\ncmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ && cmake --build build -- -j 3\n```\n\n#### Notes for distribution and ARM64 systems\n\nIf you need machine-specific optimizations, use `-DEXTRA_FLAGS` to specify your architecture.\n\nFor example, on Linux ARM64 systems, do:\n\n```shell\ncmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Generic -DEXTRA_FLAGS='-march=armv8-a' && cmake --build build -- -j 3\n```\n\nFor Docker image distribution, `-march=haswell` works decently:\n\n```shell\ncmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Generic -DEXTRA_FLAGS='-march=haswell' && cmake --build build -- -j 3\n```\n\n\n### Docker\n\nAlternatively, you may build a Docker image that contains `seqwish`.\n```\ndocker build -t seqwish .\n```\n\n### Bioconda\n\n`seqwish` recipes for Bioconda are available at https://bioconda.github.io/recipes/seqwish/README.html.\nTo install the latest version using `Conda` execute:\n\n``` bash\nconda install -c bioconda seqwish\n```\n\n### Guix\n\n#### installing via the guix-genomics git repository\n\nFirst, clone the guix-genomics repository:\n\n``` bash\ngit clone https://github.com/ekg/guix-genomics\n```\n\nAnd install the `seqwish` package to your default GUIX environment:\n\n``` bash\nGUIX_PACKAGE_PATH=. guix package -i seqwish\n```\n\nNow `seqwish` is available as a global binary installation.\n\n#### installing via the guix-genomics channel\n\nAdd the following to your ~/.config/guix/channels.scm:\n\n``` scm\n  (cons*\n(channel\n  (name 'guix-genomics)\n  (url \"https://github.com/ekg/guix-genomics.git\")\n  (branch \"master\"))\n%default-channels)\n```\n\nFirst, pull all the packages, then install `seqwish` to your default GUIX environment:\n\n``` bash\nguix pull\nguix package -i seqwish\n```\n\nIf you want to build an environment only consisting of the `seqwish` binary, you can do:\n\n``` bash\nguix environment --ad-hoc seqwish\n```\n\nFor more details about how to handle Guix channels, go to https://git.genenetwork.org/guix-bioinformatics/guix-bioinformatics.git.\n\n\n## usage\n\n`seqwish` supports PAF format output of several sequence aligners, like [wfmash](https://github.com/ekg/wfmash) and [minimap2](https://github.com/lh3/minimap2).\nIt requires the CIGAR string of the alignment to be provided in the `cg:z:` optional field. It uses large temporary files during the construction. \nBy default, these are prefixed with the output GFA file name, but this can be changed with the `-b[base], --base=[base]` command line argument. The input sequences can be in FASTA or FASTQ format, either in plain text or gzipped.\nIt writes [GFA1](https://github.com/GFA-spec/GFA-spec/blob/master/GFA1.md#the-gfa-format-specification) on its standard output.\n\n#### wfmash\n\n#### single PAF file\n\n```\nwfmash x.fa x.fa -X > x.paf\nseqwish -s x.fa -p x.paf -g x.gfa\n```\n\n#### multiple PAF file\n\n```\nwfmash c.fa a.fa > a.paf\nwfmash c.fa b.fa > b.paf\ncat a.fa b.fa c.fa > abc.fa\nseqwish -s abc.fa -p a.paf,b.paf -g abc.gfa\n```\n\n#### minimap2\n\n[minimap2](https://github.com/lh3/minimap2) does not emit the CIGAR string in PAF output by default. To do this, specify the `-c` flag:\n\n```\nminimap2 x.fa x.fa -c -X > x.paf\nseqwish -s x.fa -p x.paf -g x.gfa\n```\n\n## TODO\n\n- [x] describe algorithm\n- [x] implement rank/select dictionary class based on disk-backed radix sort of a binary array\n- [x] implement squish graph induction algorithm\n- [ ] explore extensions via graph rewriting, and the handle graph concept\n- [ ] explore assembly problems via graph filtering and cleaning operations\n\n\n## Repository Structure\n\n### Directories\n- **.github/**\n- **data/**\n- **deps/**\n- **scripts/**\n- **src/**\n- **test/**\n\n### Files\n- .gitignore (0.0 KB)\n- .gitmodules (1.0 KB)\n- CMakeLists.txt (10.6 KB)\n- default.nix (0.2 KB)\n- Dockerfile (0.9 KB)\n- LICENSE (1.1 KB)\n- README.md (11.3 KB)\n- seqwish.nix (0.9 KB)\n\n## Links\n\n- **GitHub:** https://github.com/ekg/seqwish\n- **Clone:** `git clone https://github.com/ekg/seqwish.git`\n",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "35e81110-417e-4bf8-9dfe-734358e991d0"
+    },
+    {
+      "content": "The article cited in the repo is Erik Garrison, Andrea Guarracino, **Unbiased pangenome graphs**, Bioinformatics, Volume 39, Issue 1, January 2023, btac743, https://doi.org/10.1093/bioinformatics/btac743. Now, I'll look at the pull requests made in 2023",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"owner\": \"ekg\",\n  \"repo\": \"seqwish\",\n  \"state\": \"all\"\n}",
+            "name": "github_list_pull_requests"
+          },
+          "id": "20b56a0c-71eb-4c6a-93a4-32ef291d60f8",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "# Pull Requests for ekg/seqwish\n\nShowing 10 pull request(s) - Page 1\n*Note: More results may be available. Use 'page' parameter to see next page.*\n\n## #128: added checks for apple sillicon\n\n- **State**: closed\n- **Author**: hlakshmidevi10\n- **Created**: 6/30/2025\n- **Updated**: 7/30/2025\n- **Branch**: macos-fixes → master\n- **URL**: https://github.com/ekg/seqwish/pull/128\n\n## #127: update GitHub Actions workflow to use ubuntu-latest\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 2/12/2025\n- **Updated**: 2/12/2025\n- **Branch**: AndreaGuarracino-patch-1 → master\n- **URL**: https://github.com/ekg/seqwish/pull/127\n\n## #125: Set number of threads for ips4o::parallel::sort\n\n- **State**: closed\n- **Author**: nsmlzl\n- **Created**: 10/10/2024\n- **Updated**: 10/10/2024\n- **Branch**: pr_correct_thread_cnt → master\n- **URL**: https://github.com/ekg/seqwish/pull/125\n\n## #119: Do not use -latomic on macOS\n\n- **State**: open\n- **Author**: kojix2\n- **Created**: 11/15/2023\n- **Updated**: 11/16/2023\n- **Branch**: kojix2-mac2 → master\n- **URL**: https://github.com/ekg/seqwish/pull/119\n\n## #118: Remove uses of get_current_dir_name\n\n- **State**: open\n- **Author**: kojix2\n- **Created**: 11/15/2023\n- **Updated**: 11/15/2023\n- **Branch**: kojix2-mac1 → master\n- **URL**: https://github.com/ekg/seqwish/pull/118\n\n## #115: Build a static and shared library and link to the static one by default.\n\n- **State**: open\n- **Author**: Millak\n- **Created**: 9/26/2023\n- **Updated**: 9/26/2023\n- **Branch**: build-libraries → master\n- **URL**: https://github.com/ekg/seqwish/pull/115\n\n## #113: make newer `gcc` happy\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 6/13/2023\n- **Updated**: 6/13/2023\n- **Branch**: newer_gcc_happy → master\n- **URL**: https://github.com/ekg/seqwish/pull/113\n\n## #110: Fix versioning\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 3/6/2023\n- **Updated**: 3/6/2023\n- **Branch**: fix-versioning → master\n- **URL**: https://github.com/ekg/seqwish/pull/110\n\n## #107: always emit long version format\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 11/10/2022\n- **Updated**: 11/10/2022\n- **Branch**: long_versioning → master\n- **URL**: https://github.com/ekg/seqwish/pull/107\n\n## #106: Issue #104 - Use -march=native as default\n\n- **State**: closed\n- **Author**: martin-g\n- **Created**: 11/2/2022\n- **Updated**: 11/2/2022\n- **Branch**: overwriteable-compilation-flags → master\n- **URL**: https://github.com/ekg/seqwish/pull/106\n\n",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "20b56a0c-71eb-4c6a-93a4-32ef291d60f8"
+    },
+    {
+      "content": "There were 5 pull requests in 2023. Now, I will search the paper to obtain the abstract",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"title\": \"Unbiased pangenome graphs\",\n  \"author\": \"guarracino, garrison\"\n}",
+            "name": "pubmed_search_pubmed_advanced"
+          },
+          "id": "85a21044-4ac9-4bc3-991f-cbfc6b2862e8",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "{\n  \"PMID\": \"36448683\",\n  \"Title\": \"Unbiased pangenome graphs.\",\n  \"Authors\": \"Garrison, Guarracino\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences. A set of pairwise alignments implies a variation graph, but there are no scalable methods to generate such a graph from these alignments. Existing related approaches depend on a single reference, a specific ordering of genomes or a de Bruijn model based on a fixed k-mer length. A scalable, self-contained method to build pangenome graphs without such limitations would be a key step in pangenome construction and manipulation pipelines.\"\n}",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "85a21044-4ac9-4bc3-991f-cbfc6b2862e8"
+    },
+    {
+      "content": "Great, the abstract is _\"Pangenome variation graphs model the mutual alignment of collections of DNA sequences. A set of pairwise alignments implies a variation graph, but there are no scalable methods to generate such a graph from these alignments. Existing related approaches depend on a single reference, a specific ordering of genomes or a de Bruijn model based on a fixed k-mer length. A scalable, self-contained method to build pangenome graphs without such limitations would be a key step in pangenome construction and manipulation pipelines.\"_ At last but not least, I will search how many times the authors collaborated during the same year",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n\"author\": \"guarracino, garrison\",\n\"start_date\": \"2023-01-01\",\n\"end_date\": \"2024-01-01\",\n\"journal\": \"Bioinformatics (Oxford, England)\"\n}",
+            "name": "pubmed_search_pubmed_advanced"
+          },
+          "id": "d90735ed-7995-4928-843a-fa181cb2193b",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "{\n  \"PMID\": \"36749013\",\n  \"Title\": \"Optimal gap-affine alignment in O(s) space.\",\n  \"Authors\": \"Marco-Sola, Eizenga, Guarracino, Paten, Garrison, Moreto\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"Pairwise sequence alignment remains a fundamental problem in computational biology and bioinformatics. Recent advances in genomics and sequencing technologies demand faster and scalable algorithms that can cope with the ever-increasing sequence lengths. Classical pairwise alignment algorithms based on dynamic programming are strongly limited by quadratic requirements in time and memory. The recently proposed wavefront alignment algorithm (WFA) introduced an efficient algorithm to perform exact gap-affine alignment in O(ns) time, where s is the optimal score and n is the sequence length. Notwithstanding these bounds, WFA's O(s2) memory requirements become computationally impractical for genome-scale alignments, leading to a need for further improvement.\"\n}",
+          "type": "text"
+        },
+        {
+          "text": "{\n  \"PMID\": \"36448683\",\n  \"Title\": \"Unbiased pangenome graphs.\",\n  \"Authors\": \"Garrison, Guarracino\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences. A set of pairwise alignments implies a variation graph, but there are no scalable methods to generate such a graph from these alignments. Existing related approaches depend on a single reference, a specific ordering of genomes or a de Bruijn model based on a fixed k-mer length. A scalable, self-contained method to build pangenome graphs without such limitations would be a key step in pangenome construction and manipulation pipelines.\"\n}",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "d90735ed-7995-4928-843a-fa181cb2193b"
+    }
+  ],
+  "GTFA_CLAIMS": [
+    "The article cited in the repository ekg/seqwish is _Erik Garrison, Andrea Guarracino, Unbiased pangenome graphs, Bioinformatics, Volume 39, Issue 1, January 2023, btac743, https://doi.org/10.1093/bioinformatics/btac743.",
+    "The abstract of Unbiased pangenome graphs is \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences. A set of pairwise alignments implies a variation graph, but there are no scalable methods to generate such a graph from these alignments. Existing related approaches depend on a single reference, a specific ordering of genomes or a de Bruijn model based on a fixed k-mer length. A scalable, self-contained method to build pangenome graphs without such limitations would be a key step in pangenome construction and manipulation pipelines.\"",
+    "The authors of Unbiased pangenome graphs, Garrison and Guarracino collaborated another time with the journal Bioinformatics (Oxford, England) in 2023, in the article Optimal gap-affine alignment in O(s) space.",
+    "During 2023, the year Unbiased pangenome graphs was published, the repository ekg/seqwish had 5 pull requests."
+  ],
+  "ENABLED_TOOLS": [
+    "pubmed_search_pubmed_key_words",
+    "pubmed_get_pubmed_article_metadata",
+    "github_search_repositories",
+    "github_get_repository",
+    "github_list_commits",
+    "github_get_commit",
+    "github_list_pull_requests",
+    "whois_whois_domain",
+    "whois_whois_tld",
+    "memory_read_graph",
+    "memory_search_nodes",
+    "github_get_pull_request_comments",
+    "github_get_pull_request_status",
+    "wikipedia_search_wikipedia",
+    "wikipedia_get_summary",
+    "wikipedia_get_links",
+    "wikipedia_get_sections",
+    "pubmed_search_pubmed_advanced"
+  ],
+  "script_model_response": "Based on the repository `pangenome/seqwish` and the cited paper **\"Unbiased pangenome graphs\"** by **Erik Garrison** and **Andrea Guarracino**, published in **Bioinformatics** in **2023** (specifically Volume 39, Issue 1, January 2023), here are the answers to your questions:\n\n### 1. Number of Merge Requests (Pull Requests) in 2023\nThe repository `pangenome/seqwish` had **7** pull requests created and/or closed during the year 2023.\n*   **#119**: Created Nov 15, 2023 (Open)\n*   **#118**: Created Nov 15, 2023 (Open)\n*   **#115**: Created Sep 26, 2023 (Open)\n*   **#113**: Created Jun 13, 2023 (Closed)\n*   **#110**: Created Mar 6, 2023 (Closed)\n*   **#107**: Created Nov 10, 2022 (Closed in 2022, but listed in the 2023 context? No, created 2022. Wait, let me re-check the dates).\n    *   **#119**: 2023\n    *   **#118**: 2023\n    *   **#115**: 2023\n    *   **#113**: 2023\n    *   **#110**: 2023\n    *   **#107**: 2022\n    *   **#106**: 2022\n    *   **#105**: 2022\n    *   **#104**: 2022\n    *   **#102**: 2022\n    *   **#99**: 2022\n    *   **#96**: 2022\n    *   **#94**: 2022\n    *   **#93**: 2022\n    *   **#89**: 2021\n    *   **#88**: 2021\n    *   **#87**: 2021\n    *   **#85**: 2021\n    *   **#84**: 2021\n    *   **#83**: 2021\n    *   **#82**: 2021\n    *   **#80**: 2021\n    *   **#79**: 2021\n    *   **#78**: 2021\n    *   **#77**: 2021\n    *   **#76**: 2021\n    *   **#75**: 2021\n    *   **#74**: 2021\n    *   **#73**: 2021\n    *   **#72**: 2021\n    *   **#71**: 2021\n    *   **#64**: 2020\n    *   **#63**: 2020\n    *   **#59**: 2020\n    *   **#58**: 2020\n    *   **#54**: 2020\n    *   **#50**: 2020\n    *   **#49**: 2020\n    *   **#48**: 2020\n    *   **#47**: 2020\n    *   **#45**: 2020\n    *   **#44**: 2020\n    *   **#43**: 2020\n    *   **#42**: 2020\n    *   **#41**: 2020\n    *   **#40**: 2020\n    *   **#39**: 2020\n    *   **#37**: 2020\n    *   **#33**: 2020\n    *   **#32**: 2020\n    *   **#31**: 2019\n    *   **#29**: 2019\n    *   **#27**: 2019\n    *   **#26**: 2019\n    *   **#25**: 2019\n    *   **#23**: 2019\n    *   **#21**: 2019\n    *   **#15**: 2019\n    *   **#2**: 2018\n\n    Let's re-verify the 2023 PRs:\n    1.  **#119** (Created 2023-11-15)\n    2.  **#118** (Created 2023-11-15)\n    3.  **#115** (Created 2023-09-26)\n    4.  **#113** (Created 2023-06-13)\n    5.  **#110** (Created 2023-03-06)\n    \n    There are **5** pull requests created in 2023.\n\n### 2. Abstract of the Paper\nThe paper cited is:\n*   **Title:** Unbiased pangenome graphs\n*   **Authors:** Erik Garrison, Andrea Guarracino\n*   **Journal:** Bioinformatics, Volume 39, Issue 1, January 2023\n*   **PMID:** 36448683\n*   **Abstract:** \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences. A set of pairwise alignments implies a variation graph, but there are no scalable methods to generate such a graph from these alignments. Existing related approaches depend on a single reference, a specific ordering of genomes or a de Bruijn model based on a fixed k-mer length. A scalable, self-contained method to build pangenome graphs without such limitations would be a key step in pangenome construction and manipulation pipelines.\"\n\n### 3. Other Articles by the Authors in the Same Journal (Bioinformatics) in 2023\nIn 2023, Erik Garrison and Andrea Guarracino co-authored (or were involved in) at least one other article in *Bioinformatics*:\n\n*   **Title:** Optimal gap-affine alignment in O(s) space.\n*   **Authors:** Marco-Sola, Eizenga, **Guarracino**, Paten, **Garrison**, Moreto\n*   **Journal:** Bioinformatics (Oxford, England)\n*   **Publication Date:** 2023\n*   **PMID:** 36749013\n*   **Abstract:** \"Pairwise sequence alignment remains a fundamental problem in computational biology and bioinformatics. Recent advances in genomics and sequencing technologies demand faster and scalable algorithms that can cope with the ever-increasing sequence lengths. Classical pairwise alignment algorithms based on dynamic programming are strongly limited by quadratic requirements in time and memory. The recently proposed wavefront alignment algorithm (WFA) introduced an efficient algorithm to perform exact gap-affine alignment in O(ns) time, where s is the optimal score and n is the sequence length. Notwithstanding these bounds, WFA's O(s2) memory requirements become computationally impractical for genome-scale alignments, leading to a need for further improvement.\"\n\nAdditionally, Erik Garrison was a co-author on:\n*   **Title:** Minmers are a generalization of minimizers that enable unbiased local Jaccard estimation.\n*   **Authors:** Kille, **Garrison**, Treangen, Phillippy\n*   **Journal:** Bioinformatics (Oxford, England)\n*   **Publication Date:** 2023\n*   **PMID:** 37603771\n\nHowever, the question asks for articles where **the authors** (Garrison and Guarracino) collaborated. The paper \"Optimal gap-affine alignment in O(s) space\" includes both **Garrison** and **Guarracino** as co-authors.\n\n**Summary:**\n*   **Merge Requests in 2023:** 5\n*   **Abstract:** \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences...\" (as quoted above).\n*   **Other Collaborative Articles in Bioinformatics (2023):** \"Optimal gap-affine alignment in O(s) space\" (co-authored by both Garrison and Guarracino).",
+  "raw_conversation_history": [
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"seqwish language:c++\", \"per_page\": 10}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-8c8de02def68d0c2",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The user is asking about a specific repository that contains the seqwish algorithm written in C++. They want to know:\n1. How many merge requests it had during the year of publication of the article cited in the repo\n2. What's the abstract of the paper\n3. In which other articles did the authors collaborate in that year with the same editorial\n\nFirst, I need to find the repository that contains the seqwish algorithm in C++. Let me search for it on GitHub.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-8c8de02def68d0c2",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"seqwish language:c++\", \"per_page\": 10}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-8c8de02def68d0c2",
+      "content": "No repositories found"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"seqwish\", \"per_page\": 10}",
+              "name": "github_search_repositories"
+            },
+            "id": "chatcmpl-tool-a7172600079ac12c",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The user is asking about a seqwish algorithm repository written in C++. Let me try a different search query to find the repository.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-a7172600079ac12c",
+          "type": "function",
+          "function": {
+            "name": "github_search_repositories",
+            "arguments": "{\"query\": \"seqwish\", \"per_page\": 10}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a7172600079ac12c",
+      "content": "### Found 5 repositories:\n\n1. **pangenome/seqwish** - 158 stars - `C++`\n   alignment to variation graph inducer\n   _Updated: 2026-03-18_\n\n2. **pangenome/seqwish-paper** - 3 stars - `TeX`\n   Unbiased pangenome graphs\n\n3. **AnanyaNairGit/SeqwishNew** - `Python`\n   undefined\n\n4. **AnanyaNairGit/SeqwishParallelised**\n   undefined\n\n5. **jmonlong/docker-seqwish** - `Dockerfile`\n   Container for seqwish"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"owner\": \"pangenome\", \"repo\": \"seqwish\"}",
+              "name": "github_get_repository"
+            },
+            "id": "chatcmpl-tool-987b45e992e578a8",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-987b45e992e578a8",
+          "type": "function",
+          "function": {
+            "name": "github_get_repository",
+            "arguments": "{\"owner\": \"pangenome\", \"repo\": \"seqwish\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-987b45e992e578a8",
+      "content": "# pangenome/seqwish\n\n> alignment to variation graph inducer\n\n**Language:** C++ | **Stars:** 158 | **Forks:** 21 | **License:** MIT\n\n## README\n\n# seqwish\n\n[![build and test](https://github.com/ekg/seqwish/actions/workflows/build_and_test_on_push.yml/badge.svg)](https://github.com/ekg/seqwish/actions/workflows/build_and_test_on_push.yml)\n[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/seqwish/README.html)\n\n*These <b>seq</b>uences <b>wish</b> they were squished into a graph.*\n\n## a variation graph inducer\n\n`seqwish` implements a lossless conversion from pairwise alignments between sequences to a variation graph encoding the sequences and their alignments.\nAs input we typically take all-versus-all alignments, but the exact structure of the alignment set may be defined in an application specific way.\nThis algorithm uses a series of disk-backed sorts and passes over the alignment and sequence inputs to allow the graph to be constructed from very large inputs that are commonly encountered when working with large numbers of noisy input sequences. \nMemory usage during construction and traversal is limited by the use of sorted disk-backed arrays and succinct rank/select dictionaries to record a queryable version of the graph.\n\n## Citation:\nErik Garrison, Andrea Guarracino, **Unbiased pangenome graphs**, Bioinformatics, Volume 39, Issue 1, January 2023, btac743, https://doi.org/10.1093/bioinformatics/btac743\n\n## squish graph induction algorithm\n\nAs input we have *Q*, which is a concatenation of the sequences from which we will build the graph.\nWe build an compressed suffix array (CSA) mapping sequence names to offsets in *Q*, and also the inverse using a rank/select dictionary on a bitvector marking the starts of sequences in *Q*.\nThis allows us to map between positions in the sequences of *Q*, which is the format in which alignment algorithms typically express alignments, and positions in *Q* itself, which is the coordinate space we will use as a basis for the generation of our graph.\nTo relate the sequences in *Q* to each other we apply a function *map* to generate alignments *A*.\nAlthough these alignments tend to be represented using oriented interval pairs in *Q*, for simplicity and robustness to graph complexity, we describe *A* as a vector of pairs of bidirectional positions (sequence offsets and strands) *b* in *Q* , such that *A* = [(*b<sub>q</sub>*, *b<sub>r</sub>*), ... ].\nWe sort *A* by the first member (*b<sub>q</sub>*) of each pair, ensuring that the entries in *A* are ordered according to their order in *Q*.\n\nTo query the induced graph we build a rank/select dictionary allowing efficient traversal of *A*, based on a bit vector *A<sub>bv</sub>* of the same length as *A* such that we record a 1 at those positions which correspond to the first instance of a given *b<sub>q</sub>* and record a 0 in *A<sub>bv</sub>* otherwise. \nWe record which *b<sub>q</sub>* we have processed in the bitvector *Q<sub>seen</sub>* which is of the same length as *Q*.\nThis allows us to avoid a quadratic penalty in the order of the size of the transitive closures in *Q* given by the *map* function.\n\nNow we inductively derive the graph implied by the alignments.\nFor each base *b<sub>q</sub>* in *Q*, we find its transitive closure *c<sub>q</sub>* := [*b<sub>q</sub>*, *b<sub>r<sub>1</sub></sub>*, ... ] via the *map* operation by traversing the aligned base pairs recorded in *A*.\nWe write the character of the base *b<sub>q</sub>* to a vector *S*, then for each *b<sub>c</sub>* in *c<sub>q</sub>* we record a pair [*s<sub>i</sub>, b<sub>c</sub>*] into *N* and its reverse, [*b<sub>c</sub>*, *s<sub>i</sub>*] into *P*.\nWe mark *Q<sub>seen</sub>* for each base in each emitted cluster, and we do not consider marked bases in subsequent transitive closures.\nBy sorting *N* and *P* by their first entries, we can build rank/select dictionaries on them akin to that we built on *A* that allow random access by graph base (as given in *S*) or input base (as given in *Q*).\n\nTo fully induce the variation graph we need to establish the links between bases in *S* that would be required for us to find any sequence in the input as a walk through the graph.\nWe do so by rewriting *Q* (in both the forward and reverse orientation) in terms of pairs of bases in *S*, then sorting the resulting pairs by their first element, which yields *L* = [(*b<sub>a</sub>*, *b<sub>b</sub>*), ... ].\nThese pairs record the links and their frequencies, which we can emit or filter (such as by frequency) as needed given particular applications.\nIn typical use we take the graph to be given by the unique elements of *L*.\n\nOur data model encodes the graph using single-base nodes, but often downstream use requires identifying nodes and thus we benefit from compressing the unitigs of the graph into single nodes, which reduces memory used by identifiers in analysis.\nWe can compress the node space of the graph by traversing *S*, and for each base querying the inbound links.\nMaintaining a bitvector *S<sub>id</sub>* of length equal to *S* we mark each base at which we see any link other than one from or to the previous base on the forward or reverse strand, or at bases where we have no incoming links.\nBy building a rank/select dictionary on *S<sub>id</sub>* we can assign a smaller set of node ids to the sequence space of the graph.\n\nGiven the id space encoded by *S<sub>id</sub>* we can materialize the graph in a variety of interchange formats, or provide id-based interfaces to the indexed squish graph.\nTo generate graphs in [.vg](https://github.com/vgteam/vg/blob/master/src/vg.proto) or [GFAv1 format](https://github.com/GFA-spec/GFA-spec/blob/master/GFA1.md), we want to decompose the graph into its nodes (*S*), edges (*L*) and paths (*P*).\nThe nodes are given by *S* and *S<sub>id</sub>*, and similarly we project *L* and *P* through *S<sub>id</sub>* to obtain a compressed variation graph.\n\n## using our graph\n\nAt present we rest on existing tools, such as [vg](https://github.com/vgteam/vg), [GCSA2](https://github.com/jltsiren/gcsa2), [GBWT](https://github.com/jltsiren/gbwt), and other GFAv1-compatible tools to support downstream uses for the graph.\nWe observe that it will be trivial to use this data model as the basis for various graph traversal and modification algorithms.\nImplementation of these features will follow.\nWe plan to link into the [handle graph model](https://github.com/vgteam/vg/blob/master/src/handle.hpp) developed in the vg project, which should allow the application of any algorithms defined using that interface on the backing graph developed here.\nUsers familiar with concepts in assembly graphs will notice many similarities between the graph induction algorithm and typical steps in assembly algorithms, and we intend to explore these as well using this platform.\n\n## building\n\n### dependencies\n\nYou'll need basic C++ build tools, `cmake`, and `zlib`.\nOn `Ubuntu` (and probably `Debian`) systems, these can be installed with:\n\n```\nsudo apt install build-essential cmake zlib1g-dev libjemalloc-dev\n```\n\nOn `Arch Linux`, the `jemalloc` dependency can be installed with:\n\n```\nsudo pacman -S jemalloc     # arch linux\n```\n\n### build process\n\n`seqwish` uses `cmake` to build itself and its dependencies.\n\n```\ngit clone --recursive https://github.com/ekg/seqwish.git\ncd seqwish\ncmake -H. -Bbuild && cmake --build build -- -j 3\n```\n\nTo clean up simply remove `build/` and `bin/`:\n\n```\nrm -rf build bin\n```\n\n\nA static build can be obtained by setting a flag in the cmake build setup.\n\n```\ncmake -DBUILD_STATIC=1 -H. -Bbuild && cmake --build build -- -j 3\n```\n\nYou'll need to set this flag to 0 or remove and rebuild your build directory if you want to unset this behavior.\nStatic builds are unlikely to be supported on OSX, and require appropriate static libraries on linux.\n\n#### clang\n\nIf you want to use `clang`, be sure to install the correct version of `OpenMP`.\nFor example, if you have `clang version 14`, you have to install `libomp-14-dev`:\n\n```\nsudo apt -y install libomp-14-dev\n```\n\nTo build `seqwish` with `clang`, execute:\n\n```\ncmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ && cmake --build build -- -j 3\n```\n\n#### Notes for distribution and ARM64 systems\n\nIf you need machine-specific optimizations, use `-DEXTRA_FLAGS` to specify your architecture.\n\nFor example, on Linux ARM64 systems, do:\n\n```shell\ncmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Generic -DEXTRA_FLAGS='-march=armv8-a' && cmake --build build -- -j 3\n```\n\nFor Docker image distribution, `-march=haswell` works decently:\n\n```shell\ncmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Generic -DEXTRA_FLAGS='-march=haswell' && cmake --build build -- -j 3\n```\n\n\n### Docker\n\nAlternatively, you may build a Docker image that contains `seqwish`.\n```\ndocker build -t seqwish .\n```\n\n### Bioconda\n\n`seqwish` recipes for Bioconda are available at https://bioconda.github.io/recipes/seqwish/README.html.\nTo install the latest version using `Conda` execute:\n\n``` bash\nconda install -c bioconda seqwish\n```\n\n### Guix\n\n#### installing via the guix-genomics git repository\n\nFirst, clone the guix-genomics repository:\n\n``` bash\ngit clone https://github.com/ekg/guix-genomics\n```\n\nAnd install the `seqwish` package to your default GUIX environment:\n\n``` bash\nGUIX_PACKAGE_PATH=. guix package -i seqwish\n```\n\nNow `seqwish` is available as a global binary installation.\n\n#### installing via the guix-genomics channel\n\nAdd the following to your ~/.config/guix/channels.scm:\n\n``` scm\n  (cons*\n(channel\n  (name 'guix-genomics)\n  (url \"https://github.com/ekg/guix-genomics.git\")\n  (branch \"master\"))\n%default-channels)\n```\n\nFirst, pull all the packages, then install `seqwish` to your default GUIX environment:\n\n``` bash\nguix pull\nguix package -i seqwish\n```\n\nIf you want to build an environment only consisting of the `seqwish` binary, you can do:\n\n``` bash\nguix environment --ad-hoc seqwish\n```\n\nFor more details about how to handle Guix channels, go to https://git.genenetwork.org/guix-bioinformatics/guix-bioinformatics.git.\n\n\n## usage\n\n`seqwish` supports PAF format output of several sequence aligners, like [wfmash](https://github.com/ekg/wfmash) and [minimap2](https://github.com/lh3/minimap2).\nIt requires the CIGAR string of the alignment to be provided in the `cg:z:` optional field. It uses large temporary files during the construction. \nBy default, these are prefixed with the output GFA file name, but this can be changed with the `-b[base], --base=[base]` command line argument. The input sequences can be in FASTA or FASTQ format, either in plain text or gzipped.\nIt writes [GFA1](https://github.com/GFA-spec/GFA-spec/blob/master/GFA1.md#the-gfa-format-specification) on its standard output.\n\n#### wfmash\n\n#### single PAF file\n\n```\nwfmash x.fa x.fa -X > x.paf\nseqwish -s x.fa -p x.paf -g x.gfa\n```\n\n#### multiple PAF file\n\n```\nwfmash c.fa a.fa > a.paf\nwfmash c.fa b.fa > b.paf\ncat a.fa b.fa c.fa > abc.fa\nseqwish -s abc.fa -p a.paf,b.paf -g abc.gfa\n```\n\n#### minimap2\n\n[minimap2](https://github.com/lh3/minimap2) does not emit the CIGAR string in PAF output by default. To do this, specify the `-c` flag:\n\n```\nminimap2 x.fa x.fa -c -X > x.paf\nseqwish -s x.fa -p x.paf -g x.gfa\n```\n\n## TODO\n\n- [x] describe algorithm\n- [x] implement rank/select dictionary class based on disk-backed radix sort of a binary array\n- [x] implement squish graph induction algorithm\n- [ ] explore extensions via graph rewriting, and the handle graph concept\n- [ ] explore assembly problems via graph filtering and cleaning operations\n\n\n## Repository Structure\n\n### Directories\n- **.github/**\n- **data/**\n- **deps/**\n- **scripts/**\n- **src/**\n- **test/**\n\n### Files\n- .gitignore (0.0 KB)\n- .gitmodules (1.0 KB)\n- CMakeLists.txt (12.0 KB)\n- default.nix (0.2 KB)\n- Dockerfile (0.5 KB)\n- LICENSE (1.1 KB)\n- README.md (11.3 KB)\n- seqwish.nix (0.9 KB)\n\n## Links\n\n- **GitHub:** https://github.com/pangenome/seqwish\n- **Clone:** `git clone https://github.com/pangenome/seqwish.git`\n"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"owner\": \"pangenome\", \"repo\": \"seqwish\", \"state\": \"all\", \"per_page\": 100}",
+              "name": "github_list_pull_requests"
+            },
+            "id": "chatcmpl-tool-b9a45eb8eb2ae705",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-b9a45eb8eb2ae705",
+          "type": "function",
+          "function": {
+            "name": "github_list_pull_requests",
+            "arguments": "{\"owner\": \"pangenome\", \"repo\": \"seqwish\", \"state\": \"all\", \"per_page\": 100}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-b9a45eb8eb2ae705",
+      "content": "# Pull Requests for pangenome/seqwish\n\nShowing 70 pull request(s) - Page 1\n\n## #137: Revert label propagation: restore DisjointSetsAsm for correctness\n\n- **State**: open\n- **Author**: ekg\n- **Created**: 3/27/2026\n- **Updated**: 3/27/2026\n- **Branch**: revert-label-prop → rust-2\n- **URL**: https://github.com/pangenome/seqwish/pull/137\n\n## #136: Active-set block skipping for label propagation rounds 2+\n\n- **State**: open\n- **Author**: ekg\n- **Created**: 3/26/2026\n- **Updated**: 3/26/2026\n- **Branch**: label-prop-block-skip → rust-2\n- **URL**: https://github.com/pangenome/seqwish/pull/136\n\n## #135: Two-phase spanning tree transclosure: 37% faster, 33% less memory\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 3/23/2026\n- **Updated**: 3/25/2026\n- **Branch**: transclosure-optimize → rust-2\n- **URL**: https://github.com/pangenome/seqwish/pull/135\n\n## #134: fix: use truly atomic fetch_or in AtomicBitVec\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 3/6/2026\n- **Updated**: 3/6/2026\n- **Branch**: fix-last-node-length → rust-2\n- **URL**: https://github.com/pangenome/seqwish/pull/134\n\n## #133: fix: correct last node length in GFA output\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 3/6/2026\n- **Updated**: 3/6/2026\n- **Branch**: fix-last-node-length → rust-2\n- **URL**: https://github.com/pangenome/seqwish/pull/133\n\n## #132: fix: prevent silent overlap dropping in transclosure\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 2/28/2026\n- **Updated**: 2/28/2026\n- **Branch**: fix-transclosure-overlap-drop → rust-2\n- **URL**: https://github.com/pangenome/seqwish/pull/132\n\n## #131: Rust implementation of seqwish\n\n- **State**: open\n- **Author**: ekg\n- **Created**: 12/2/2025\n- **Updated**: 3/25/2026\n- **Branch**: rust-2 → master\n- **URL**: https://github.com/pangenome/seqwish/pull/131\n\n## #129: Fix mac build\n\n- **State**: closed\n- **Author**: adamnovak\n- **Created**: 10/8/2025\n- **Updated**: 10/9/2025\n- **Branch**: mac-build → master\n- **URL**: https://github.com/pangenome/seqwish/pull/129\n\n## #128: added checks for apple sillicon\n\n- **State**: closed\n- **Author**: hlakshmidevi10\n- **Created**: 6/30/2025\n- **Updated**: 7/30/2025\n- **Branch**: macos-fixes → master\n- **URL**: https://github.com/pangenome/seqwish/pull/128\n\n## #127: update GitHub Actions workflow to use ubuntu-latest\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 2/12/2025\n- **Updated**: 2/12/2025\n- **Branch**: AndreaGuarracino-patch-1 → master\n- **URL**: https://github.com/pangenome/seqwish/pull/127\n\n## #125: Set number of threads for ips4o::parallel::sort\n\n- **State**: closed\n- **Author**: nsmlzl\n- **Created**: 10/10/2024\n- **Updated**: 10/10/2024\n- **Branch**: pr_correct_thread_cnt → master\n- **URL**: https://github.com/pangenome/seqwish/pull/125\n\n## #119: Do not use -latomic on macOS\n\n- **State**: open\n- **Author**: kojix2\n- **Created**: 11/15/2023\n- **Updated**: 11/16/2023\n- **Branch**: kojix2-mac2 → master\n- **URL**: https://github.com/pangenome/seqwish/pull/119\n\n## #118: Remove uses of get_current_dir_name\n\n- **State**: open\n- **Author**: kojix2\n- **Created**: 11/15/2023\n- **Updated**: 11/15/2023\n- **Branch**: kojix2-mac1 → master\n- **URL**: https://github.com/pangenome/seqwish/pull/118\n\n## #115: Build a static and shared library and link to the static one by default.\n\n- **State**: open\n- **Author**: Millak\n- **Created**: 9/26/2023\n- **Updated**: 9/26/2023\n- **Branch**: build-libraries → master\n- **URL**: https://github.com/pangenome/seqwish/pull/115\n\n## #113: make newer `gcc` happy\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 6/13/2023\n- **Updated**: 6/13/2023\n- **Branch**: newer_gcc_happy → master\n- **URL**: https://github.com/pangenome/seqwish/pull/113\n\n## #110: Fix versioning\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 3/6/2023\n- **Updated**: 3/6/2023\n- **Branch**: fix-versioning → master\n- **URL**: https://github.com/pangenome/seqwish/pull/110\n\n## #107: always emit long version format\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 11/10/2022\n- **Updated**: 11/10/2022\n- **Branch**: long_versioning → master\n- **URL**: https://github.com/pangenome/seqwish/pull/107\n\n## #106: Issue #104 - Use -march=native as default\n\n- **State**: closed\n- **Author**: martin-g\n- **Created**: 11/2/2022\n- **Updated**: 11/2/2022\n- **Branch**: overwriteable-compilation-flags → master\n- **URL**: https://github.com/pangenome/seqwish/pull/106\n\n## #105: add how to build with `clang` in the README\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 10/17/2022\n- **Updated**: 10/17/2022\n- **Branch**: clang_in_the_readme → master\n- **URL**: https://github.com/pangenome/seqwish/pull/105\n\n## #104: Still generic on aarch64\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 10/15/2022\n- **Updated**: 11/2/2022\n- **Branch**: still_generic → master\n- **URL**: https://github.com/pangenome/seqwish/pull/104\n\n## #102: fix compilation with new compilers\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 9/6/2022\n- **Updated**: 9/6/2022\n- **Branch**: fix_compilation → master\n- **URL**: https://github.com/pangenome/seqwish/pull/102\n\n## #99: Fix the build for Linux ARM64\n\n- **State**: closed\n- **Author**: julien-faye\n- **Created**: 8/9/2022\n- **Updated**: 10/5/2022\n- **Branch**: linux-arm64 → master\n- **URL**: https://github.com/pangenome/seqwish/pull/99\n\n## #96: Temporary directory management\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 5/10/2022\n- **Updated**: 5/10/2022\n- **Branch**: temp_dir → master\n- **URL**: https://github.com/pangenome/seqwish/pull/96\n\n## #94: sparsify matches\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/2/2022\n- **Updated**: 4/3/2022\n- **Branch**: sparsify-matches → master\n- **URL**: https://github.com/pangenome/seqwish/pull/94\n\n## #93: `cmake` tweaks and `atomic_queue` update for future portability\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 4/1/2022\n- **Updated**: 4/1/2022\n- **Branch**: cmake_tweaks → master\n- **URL**: https://github.com/pangenome/seqwish/pull/93\n\n## #89: `seqwish` can display its current version\n\n- **State**: closed\n- **Author**: subwaystation\n- **Created**: 12/2/2021\n- **Updated**: 12/8/2021\n- **Branch**: version → master\n- **URL**: https://github.com/pangenome/seqwish/pull/89\n\n## #88: Parallelize the mapping of collection of bases from the full sequence set into a dense range\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 11/15/2021\n- **Updated**: 12/8/2021\n- **Branch**: speedwish → master\n- **URL**: https://github.com/pangenome/seqwish/pull/88\n\n## #87: no more jemalloc\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 9/27/2021\n- **Updated**: 9/27/2021\n- **Branch**: no-jemalloc → master\n- **URL**: https://github.com/pangenome/seqwish/pull/87\n\n## #85: Switch from Travis to github workflows for building and testing\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 8/2/2021\n- **Updated**: 8/2/2021\n- **Branch**: github_action → master\n- **URL**: https://github.com/pangenome/seqwish/pull/85\n\n## #84: added jemalloc in the README\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 7/29/2021\n- **Updated**: 7/29/2021\n- **Branch**: jemalloc_doc → master\n- **URL**: https://github.com/pangenome/seqwish/pull/84\n\n## #83: Handy parameters\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 7/28/2021\n- **Updated**: 7/29/2021\n- **Branch**: handy_params → master\n- **URL**: https://github.com/pangenome/seqwish/pull/83\n\n## #82: add BIOCONDA and GUIX installation info in the README\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 7/26/2021\n- **Updated**: 7/26/2021\n- **Branch**: bioconda_guix → master\n- **URL**: https://github.com/pangenome/seqwish/pull/82\n\n## #80: don't close through Ns\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 7/2/2021\n- **Updated**: 7/2/2021\n- **Branch**: no-transclose-Ns → master\n- **URL**: https://github.com/pangenome/seqwish/pull/80\n\n## #79: less trusting the correctness of the inputs\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 6/16/2021\n- **Updated**: 9/2/2021\n- **Branch**: ingenuish → master\n- **URL**: https://github.com/pangenome/seqwish/pull/79\n\n## #78: use jemalloc\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/25/2021\n- **Updated**: 4/25/2021\n- **Branch**: jemalloc → master\n- **URL**: https://github.com/pangenome/seqwish/pull/78\n\n## #77: distrust cigar mismatch characters\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 3/27/2021\n- **Updated**: 3/30/2021\n- **Branch**: cigar-ignorance → master\n- **URL**: https://github.com/pangenome/seqwish/pull/77\n\n## #76: Manage empty sequences in the fasta and removed mmmap_allocator dependency\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 2/20/2021\n- **Updated**: 2/20/2021\n- **Branch**: manage_empty_sequences_in_the_fasta → master\n- **URL**: https://github.com/pangenome/seqwish/pull/76\n\n## #75: remove an unused dep\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 2/11/2021\n- **Updated**: 3/12/2021\n- **Branch**: drop-mmap-allocator → master\n- **URL**: https://github.com/pangenome/seqwish/pull/75\n\n## #74: fix segmentation fault with empty PAF files\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 1/20/2021\n- **Updated**: 1/21/2021\n- **Branch**: fix_heap_buffer_overflow → master\n- **URL**: https://github.com/pangenome/seqwish/pull/74\n\n## #73: added very safe test\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 1/10/2021\n- **Updated**: 1/12/2021\n- **Branch**: safe_github_action → master\n- **URL**: https://github.com/pangenome/seqwish/pull/73\n\n## #72: update memory mapping to use madvise as before\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 1/8/2021\n- **Updated**: 1/8/2021\n- **Branch**: madvise-mio → master\n- **URL**: https://github.com/pangenome/seqwish/pull/72\n\n## #71: Sanitize memory management and mmmulti\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 1/6/2021\n- **Updated**: 1/6/2021\n- **Branch**: sanitize → master\n- **URL**: https://github.com/pangenome/seqwish/pull/71\n\n## #64: raised a warning when PAF files have no CIGAR strings #61\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 9/17/2020\n- **Updated**: 9/17/2020\n- **Branch**: warning_with_alignmentswithoutcigars → master\n- **URL**: https://github.com/pangenome/seqwish/pull/64\n\n## #63: resolve #55 by always upper-casing the input sequence\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 9/11/2020\n- **Updated**: 9/11/2020\n- **Branch**: force-uppercase → master\n- **URL**: https://github.com/pangenome/seqwish/pull/63\n\n## #59: checked duplicate ids in FASTA or FASTQ efficiently\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 7/28/2020\n- **Updated**: 8/4/2020\n- **Branch**: check_duplicated_ids_in_fasta → master\n- **URL**: https://github.com/pangenome/seqwish/pull/59\n\n## #58: Raised an error when two sequences with the same name are input (FASTA or FASTQ)\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 7/28/2020\n- **Updated**: 7/28/2020\n- **Branch**: check_duplicated_ids_in_fasta → master\n- **URL**: https://github.com/pangenome/seqwish/pull/58\n\n## #54: little fix in the building guide, issue #51\n\n- **State**: closed\n- **Author**: AndreaGuarracino\n- **Created**: 6/18/2020\n- **Updated**: 6/18/2020\n- **Branch**: patch-1 → master\n- **URL**: https://github.com/pangenome/seqwish/pull/54\n\n## #50: more minor improvements to runtime\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/29/2020\n- **Updated**: 12/8/2021\n- **Branch**: perfy-tweaky → master\n- **Status**: Draft\n- **URL**: https://github.com/pangenome/seqwish/pull/50\n\n## #49: when indexing the node/path iitrees, close the writers to stop the writer thread\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/29/2020\n- **Updated**: 4/29/2020\n- **Branch**: close-mmmulti-writers → master\n- **URL**: https://github.com/pangenome/seqwish/pull/49\n\n## #48: write GFA in parallel\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/25/2020\n- **Updated**: 4/28/2020\n- **Branch**: gfa-in-parallel → master\n- **URL**: https://github.com/pangenome/seqwish/pull/48\n\n## #47: tweaks to improve the parallelism of transclosure\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/24/2020\n- **Updated**: 4/24/2020\n- **Branch**: improve-parallelism → master\n- **URL**: https://github.com/pangenome/seqwish/pull/47\n\n## #45: Improving runtime\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/24/2020\n- **Updated**: 4/24/2020\n- **Branch**: better-bitvectors → master\n- **URL**: https://github.com/pangenome/seqwish/pull/45\n\n## #44: Faster collection\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/23/2020\n- **Updated**: 4/23/2020\n- **Branch**: faster-collection → master\n- **URL**: https://github.com/pangenome/seqwish/pull/44\n\n## #43: Multithreads\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/22/2020\n- **Updated**: 4/22/2020\n- **Branch**: multithreads → master\n- **URL**: https://github.com/pangenome/seqwish/pull/43\n\n## #42: implement min-repeat-distance filter\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/20/2020\n- **Updated**: 4/20/2020\n- **Branch**: repeat-dist → master\n- **URL**: https://github.com/pangenome/seqwish/pull/42\n\n## #41: output repeat-max elided bases to improve runtime\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/17/2020\n- **Updated**: 4/17/2020\n- **Branch**: fast-repeat-max → master\n- **URL**: https://github.com/pangenome/seqwish/pull/41\n\n## #40: reënable --repeat-max to prevent self-looping graph structures\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/16/2020\n- **Updated**: 4/17/2020\n- **Branch**: repeat-max → master\n- **URL**: https://github.com/pangenome/seqwish/pull/40\n\n## #39: Make range extension really respect orientation when considering sequence starts and ends\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/10/2020\n- **Updated**: 4/10/2020\n- **Branch**: denastify → master\n- **URL**: https://github.com/pangenome/seqwish/pull/39\n\n## #37: bidirectional check for sequence termination during range extension\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 4/3/2020\n- **Updated**: 4/3/2020\n- **Branch**: nasty-bug-crush → master\n- **URL**: https://github.com/pangenome/seqwish/pull/37\n\n## #33: remove some debugging statements from the transclosure\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 1/14/2020\n- **Updated**: 1/14/2020\n- **Branch**: quiet-transclosure → master\n- **URL**: https://github.com/pangenome/seqwish/pull/33\n\n## #32: use submodules for source tree to avoid compile-time downloads\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 1/14/2020\n- **Updated**: 1/14/2020\n- **Branch**: submodules → master\n- **URL**: https://github.com/pangenome/seqwish/pull/32\n\n## #31: Union-find in parallel\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 12/12/2019\n- **Updated**: 1/14/2020\n- **Branch**: unionfind → master\n- **URL**: https://github.com/pangenome/seqwish/pull/31\n\n## #29: remove bsort\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 11/18/2019\n- **Updated**: 11/18/2019\n- **Branch**: no-bsort → master\n- **URL**: https://github.com/pangenome/seqwish/pull/29\n\n## #27: Some mmiitree\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 11/1/2019\n- **Updated**: 11/1/2019\n- **Branch**: some-mmiitree → master\n- **URL**: https://github.com/pangenome/seqwish/pull/27\n\n## #26: automatically use the GFA output file as the work basename\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 10/31/2019\n- **Updated**: 10/31/2019\n- **Branch**: auto-work-basename → master\n- **URL**: https://github.com/pangenome/seqwish/pull/26\n\n## #25: iitii everywhere\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 10/29/2019\n- **Updated**: 10/29/2019\n- **Branch**: iitii → master\n- **URL**: https://github.com/pangenome/seqwish/pull/25\n\n## #23: Iitreeitall: implement seqwish using only implicit interval trees\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 9/28/2019\n- **Updated**: 9/29/2019\n- **Branch**: iitreeitall → master\n- **URL**: https://github.com/pangenome/seqwish/pull/23\n\n## #21: resolve path corruption and always validate paths\n\n- **State**: closed\n- **Author**: ekg\n- **Created**: 8/27/2019\n- **Updated**: 8/27/2019\n- **Branch**: path-bug → master\n- **URL**: https://github.com/pangenome/seqwish/pull/21\n\n## #15: Added Dockerfile\n\n- **State**: closed\n- **Author**: alancleary\n- **Created**: 4/25/2019\n- **Updated**: 4/29/2019\n- **Branch**: master → master\n- **URL**: https://github.com/pangenome/seqwish/pull/15\n\n## #2: Fix order of CMake statements\n\n- **State**: closed\n- **Author**: apregier\n- **Created**: 10/17/2018\n- **Updated**: 10/18/2018\n- **Branch**: cmakeFix → master\n- **URL**: https://github.com/pangenome/seqwish/pull/2\n\n"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"term\": \"Unbiased pangenome graphs\", \"num_results\": 10}",
+              "name": "pubmed_search_pubmed_advanced"
+            },
+            "id": "chatcmpl-tool-9c591535e0e16670",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-9c591535e0e16670",
+          "type": "function",
+          "function": {
+            "name": "pubmed_search_pubmed_advanced",
+            "arguments": "{\"term\": \"Unbiased pangenome graphs\", \"num_results\": 10}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-9c591535e0e16670",
+      "content": "{\n  \"PMID\": \"41833753\",\n  \"Title\": \"Global metabolic coherence as a derived property of microbial communities: A discrete hodge framework.\",\n  \"Authors\": \"Centeno-Mejía\",\n  \"Journal\": \"Journal of theoretical biology\",\n  \"Publication Date\": \"2026\",\n  \"Abstract\": \"Metabolic interactions in microbial communities are commonly inferred from local, context-dependent experiments, yet are often interpreted through models that implicitly assume global consistency. Whether locally compatible interaction patterns necessarily admit a single global metabolic realization remains largely unexamined. Here, we formulate global metabolic coherence as a structural, testable hypothesis rather than a modeling axiom. We introduce a mathematical framework in which microbial interactions are represented as sections of a cellular sheaf defined over a simplicial complex encoding community structure and experimental contexts. Within this setting, global coherence is equivalent to the vanishing of the first sheaf cohomology group, while non-vanishing classes correspond to irreducible context dependence, i.e., interaction patterns that are locally consistent but globally non-integrable. Our framework extends the combinatorial Hodge approach by replacing scalar edge variables with sections of a cellular sheaf over a simplicial complex encoding community contexts. In this formulation, classical HodgeRank is recovered as the special case of a constant sheaf restricted to the 1-skeleton of the comparison graph. To quantify these obstructions, we equip the associated cochain complex with a precision-weighted inner product and derive a discrete Hodge decomposition. The resulting harmonic component yields a unique, gauge-invariant representative of each obstruction and admits both variational and statistical interpretations. In particular, the harmonic projection coincides with the best linear unbiased estimator under a generalized least squares model, enabling an exact finite-sample test for global coherence under Gaussian noise. Application to a community genome-scale metabolic model of halophilic microorganisms reveals statistically significant higher-order obstructions concentrated on glycerol-dihydroxyacetone cross-feeding motifs that are not detectable using pairwise interaction analyses. These results establish global metabolic coherence as a measurable and falsifiable property of microbial communities, independent of specific mechanistic assumptions.\"\n}\n\n{\n  \"PMID\": \"41538351\",\n  \"Title\": \"Hippocampal Memory-Like Separation-Completion Collaborative Network for Unbiased Scene Graph Generation.\",\n  \"Authors\": \"Zhang, An, Hao, Oliver Wu\",\n  \"Journal\": \"IEEE transactions on image processing : a publication of the IEEE Signal Processing Society\",\n  \"Publication Date\": \"2026\",\n  \"Abstract\": \"Scene Graph Generation (SGG) is a challenging cross-modal task, which aims to identify entities and relationships in a scene simultaneously. Due to the highly skewed long-tailed distribution, the generated scene graphs are dominated by relation categories of head samples. Current works address this problem by designing re-balancing strategies at the data level or refining relation representations at the feature level. Different from them, we attribute this impact to catastrophic interference, that is, the subsequent learning of dominant relations tends to overwrite the earlier learning of rare relations. To address it at the modeling level, a Hippocampal Memory-Like Separation-Completion Collaborative Network (HMSC2) is proposed here, which imitates the hippocampal encoding and retrieval process. Inspired by the pattern separation of dentate gyrus during memory encoding, a Gradient Separation Classifier and a Prototype Separation Learning module are proposed to relieve the catastrophic interference of tail categories by modeling the separated classifier and prototypes. In addition, inspired by the pattern completion of area CA3 of the hippocampus during memory retrieval, a Prototype Completion Module is designed to supplement the incomplete information of prototypes by introducing relation representations as cues. Finally, the completed prototype and relation representations are connected within a hypersphere space by a Contrastive Connected Module. Experimental results on the Visual Genome and GQA datasets show our HMSC2 achieves state-of-the-art performance on the unbiased SGG task, effectively relieving the long-tailed problem. The source codes are released on GitHub: https://github.com/Nora-Zhang98/HMSC2.\"\n}\n\n{\n  \"PMID\": \"39250757\",\n  \"Title\": \"Sub-sampling graph neural networks for genomic prediction of quantitative phenotypes.\",\n  \"Authors\": \"Kihlman, Launonen, Sillanpää, Waldmann\",\n  \"Journal\": \"G3 (Bethesda, Md.)\",\n  \"Publication Date\": \"2024\",\n  \"Abstract\": \"In genomics, use of deep learning (DL) is rapidly growing and DL has successfully demonstrated its ability to uncover complex relationships in large biological and biomedical data sets. With the development of high-throughput sequencing techniques, genomic markers can now be allocated to large sections of a genome. By analyzing allele sharing between individuals, one may calculate realized genomic relationships from single-nucleotide polymorphisms (SNPs) data rather than relying on known pedigree relationships under polygenic model. The traditional approaches in genome-wide prediction (GWP) of quantitative phenotypes utilize genomic relationships in fixed global covariance modeling, possibly with some nonlinear kernel mapping (for example Gaussian processes). On the other hand, the DL approaches proposed so far for GWP fail to take into account the non-Euclidean graph structure of relationships between individuals over several generations. In this paper, we propose one global convolutional neural network (GCN) and one local sub-sampling architecture (GCN-RS) that are specifically designed to perform regression analysis based on genomic relationship information. A GCN is tailored to non-Euclidean spaces and consists of several layers of graph convolutions. The GCN-RS architecture is designed to further improve the GCN's performance by sub-sampling the graph to reduce the dimensionality of the input data. Through these graph convolutional layers, the GCN maps input genomic markers to their quantitative phenotype values. The graphs are constructed using an iterative nearest neighbor approach. Comparisons show that the GCN-RS outperforms the popular Genomic Best Linear Unbiased Predictor method on one simulated and three real datasets from wheat, mice and pig with a predictive improvement of 4.4% to 49.4% in terms of test mean squared error. This indicates that GCN-RS is a promising tool for genomic predictions in plants and animals. Furthermore, GCN-RS is computationally efficient, making it a viable option for large-scale applications.\"\n}\n\n{\n  \"PMID\": \"39191873\",\n  \"Title\": \"A graph theoretical approach to experimental prioritization in genome-scale investigations.\",\n  \"Authors\": \"Grady, Peterson, Murray, Baker, Langston, Chesler\",\n  \"Journal\": \"Mammalian genome : official journal of the International Mammalian Genome Society\",\n  \"Publication Date\": \"2024\",\n  \"Abstract\": \"The goal of systems biology is to gain a network level understanding of how gene interactions influence biological states, and ultimately inform upon human disease. Given the scale and scope of systems biology studies, resource constraints often limit researchers when validating genome-wide phenomena and potentially lead to an incomplete understanding of the underlying mechanisms. Further, prioritization strategies are often biased towards known entities (e.g. previously studied genes/proteins with commercially available reagents), and other technical issues that limit experimental breadth. Here, heterogeneous biological information is modeled as an association graph to which a high-performance minimum dominating set solver is applied to maximize coverage across the graph, and thus increase the breadth of experimentation. First, we tested our model on retrieval of existing gene functional annotations and demonstrated that minimum dominating set returns more diverse terms when compared to other computational methods. Next, we utilized our heterogenous network and minimum dominating set solver to assist in the process of identifying understudied genes to be interrogated by the International Mouse Phenotyping Consortium. Using an unbiased algorithmic strategy, poorly studied genes are prioritized from the remaining thousands of genes yet to be characterized. This method is tunable and extensible with the potential to incorporate additional user-defined prioritizing information. The minimum dominating set approach can be applied to any biological network in order to identify a tractable subset of features to test experimentally or to assist in prioritizing candidate genes associated with human disease.\"\n}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"term\": \"Unbiased pangenome graphs Bioinformatics\", \"num_results\": 5}",
+              "name": "pubmed_search_pubmed_advanced"
+            },
+            "id": "chatcmpl-tool-8371c88f5ca0c6c2",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-8371c88f5ca0c6c2",
+          "type": "function",
+          "function": {
+            "name": "pubmed_search_pubmed_advanced",
+            "arguments": "{\"term\": \"Unbiased pangenome graphs Bioinformatics\", \"num_results\": 5}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-8371c88f5ca0c6c2",
+      "content": "{\n  \"PMID\": \"41115209\",\n  \"Title\": \"PangenomeX: a graph convolutional network-based pangenome framework for unbiased population-scale genomic variation analysis.\",\n  \"Authors\": \"Xue, Wang, Wang, Yuan, Wang, Zeng, Jin, Zhu, Wang\",\n  \"Journal\": \"Briefings in bioinformatics\",\n  \"Publication Date\": \"2025\",\n  \"Abstract\": \"In population-scale genomic variation studies based on shallow whole genome sequencing, pangenomes have become an effective tool for identifying population-specific single-nucleotide polymorphisms and indels. Extending these advantages to copy number variation (CNV), however, remains challenging due to two unresolved issues. First, current pangenome frameworks exhibit pronounced population-representation bias arising from uneven sampling across populations. As the number of samples increases, the pangenome tends to capture variations primarily from majority populations while suppressing signals from minority populations. Second, in population-scale genomic variation analyses, common but benign population-specific copy number polymorphisms (CNPs) frequently obscure pathogenic CNVs. Existing pangenome frameworks lack dedicated mechanisms for representing CNPs and CNVs, limiting their ability to distinguish pathogenic CNVs from benign, population-specific CNPs. In this study, we present PangenomeX, a graph-convolutional pangenome framework tailored for low-coverage, population-scale CNV analysis. To address CNP representation, we embed known CNPs as prior knowledge into the pangenome graph and construct a CNV relationship network guided by a phylogenetic tree. A graph convolutional network (GCN) then learns the interactions between CNV and CNP nodes. To mitigate population-representation bias, the GCN aggregates information from only one- and two-hop neighborhoods, preserving local population context while preventing majority group signals from dominating. Evaluation on simulated cohorts and 561 real samples shows that PangenomeX distinguishes pathogenic CNVs from common population CNPs markedly better than existing methods. Overall, PangenomeX offers a methodological blueprint for large-cohort variant screening and provides a practical path for bringing graph-based genomics into clinical practice.\"\n}\n\n{\n  \"PMID\": \"40666937\",\n  \"Title\": \"Inference of multi-enhancer interactions in T lymphocytes using Hi-Cociety.\",\n  \"Authors\": \"Yoon, Vahedi\",\n  \"Journal\": \"bioRxiv : the preprint server for biology\",\n  \"Publication Date\": \"2025\",\n  \"Abstract\": \"Three-dimensional (3D) enhancer communities are key regulators of gene expression, shaping cell fate decisions and contributing to disease pathogenesis. Assays such as H3K27ac HiChIP have been used to map enhancer-enhancer interactions and define enhancer communities; however, their reliance on antibody-based enrichment restricts scalability and cross-cell-type applicability. In contrast, Hi-C provides an unbiased, genomewide view of chromatin architecture but lacks direct annotation of regulatory elements, limiting its utility for enhancer-focused analyses. To bridge this gap, we introduce Hi-Cociety-a graph-based computational framework and accompanying R package that infers 3D enhancer communities directly from Hi-C data, without relying on histone modification or chromatin accessibility measurements. Hi-Cociety constructs a network of significant interactions and applies clustering algorithms to define chromatin interaction modules. Applying Hi-Cociety to Hi-C measurements in T lymphocytes, we identified highly connected modules enriched for active transcription, chromatin accessibility, and histone acetylation. Notably, modules identified in T cells pinpoint critical genes central to T cell biology. Hi-Cociety also detects cell-type-specific differences in chromatin organization, highlighting dynamic regulatory rewiring across T cell states. Our findings underscore the importance of network properties- connectivity, transitivity, and centrality-in shaping gene regulation through 3D genome organization. Hi-Cociety provides a scalable and versatile tool for mapping enhancer communities at scale, advancing our understanding of immune cell identity and the regulatory logic encoded in 3D chromatin structure.\"\n}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"term\": \"Unbiased pangenome graphs Garrison Guarracino\", \"num_results\": 10}",
+              "name": "pubmed_search_pubmed_advanced"
+            },
+            "id": "chatcmpl-tool-a4c2845ce03763b3",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-a4c2845ce03763b3",
+          "type": "function",
+          "function": {
+            "name": "pubmed_search_pubmed_advanced",
+            "arguments": "{\"term\": \"Unbiased pangenome graphs Garrison Guarracino\", \"num_results\": 10}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a4c2845ce03763b3",
+      "content": "{\n  \"PMID\": \"39400346\",\n  \"Title\": \"Cluster-efficient pangenome graph construction with nf-core/pangenome.\",\n  \"Authors\": \"Heumos, Heuer, Hanssen, Heumos, Guarracino, Heringer, Ehmele, Prins, Garrison, Nahnsen\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2024\",\n  \"Abstract\": \"Pangenome graphs offer a comprehensive way of capturing genomic variability across multiple genomes. However, current construction methods often introduce biases, excluding complex sequences or relying on references. The PanGenome Graph Builder (PGGB) addresses these issues. To date, though, there is no state-of-the-art pipeline allowing for easy deployment, efficient and dynamic use of available resources, and scalable usage at the same time.\"\n}\n\n{\n  \"PMID\": \"38111050\",\n  \"Title\": \"A super-pangenome of the North American wild grape species.\",\n  \"Authors\": \"Cochetel, Minio, Guarracino, Garcia, Figueroa-Balderas, Massonnet, Kasuga, Londo, Garrison, Gaut, Cantu\",\n  \"Journal\": \"Genome biology\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"Capturing the genetic diversity of wild relatives is crucial for improving crops because wild species are valuable sources of agronomic traits that are essential to enhance the sustainability and adaptability of domesticated cultivars. Genetic diversity across a genus can be captured in super-pangenomes, which provide a framework for interpreting genomic variations.\"\n}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"pmid\": \"36426838\"}",
+              "name": "pubmed_get_pubmed_article_metadata"
+            },
+            "id": "chatcmpl-tool-af2dba1607a42ed5",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-af2dba1607a42ed5",
+          "type": "function",
+          "function": {
+            "name": "pubmed_get_pubmed_article_metadata",
+            "arguments": "{\"pmid\": \"36426838\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-af2dba1607a42ed5",
+      "content": "{\n  \"PMID\": \"36426838\",\n  \"Title\": \"Antisense oligonucleotide induced pseudoexon skipping and restoration of functional protein for Fukuyama muscular dystrophy caused by a deep-intronic variant.\",\n  \"Authors\": \"Enkhjargal, Sugahara, Khaledian, Nagasaka, Inagaki, Kurahashi, Koshimizu, Toda, Taniguchi-Ikeda\",\n  \"Journal\": \"Human molecular genetics\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"Fukuyama congenital muscular dystrophy (FCMD) is an autosomal recessive disorder caused by fukutin (FKTN) gene mutations. FCMD is the second most common form of childhood muscular dystrophy in Japan, and the most patients possess a homozygous retrotransposal SINE-VNTR-Alu insertion in the 3'-untranslated region of FKTN. A deep-intronic variant (DIV) was previously identified as the second most prevalent loss-of-function mutation in Japanese patients with FCMD. The DIV creates a new splicing donor site in intron 5 that causes aberrant splicing and the formation of a 64-base pair pseudoexon in the mature mRNA, resulting in a truncated nonfunctional protein. Patients with FCMD carrying the DIV present a more severe symptoms, and currently, there is no radical therapy available for this disorder. In the present study, we describe in vitro evaluation of antisense oligonucleotide mediated skipping of pseudoexon inclusion and restoration of functional FKTN protein. A total of 16 19-26-mer antisense oligonucleotide sequences were designed with a 2'-O-methyl backbone and were screened in patient-derived fibroblasts, lymphoblast cells and minigene splice assays. One antisense oligonucleotide targeting the exonic splice enhancer region significantly induced pseudoexon skipping and increased the expression of normal mRNA. It also rescued FKTN protein production in lymphoblast cells and restored functional O-mannosyl glycosylation of alpha-dystroglycan in patient-derived myotubes. Based on our results, antisense oligonucleotide-based splicing correction should be investigated further as a potential treatment for patients with FCMD carrying the DIV. One Sentence Summary Antisense oligonucleotide treatment restored normal FKTN protein production and functional O-mannosyl glycosylation of alpha-dystroglycan via pseudoexon skipping in patient-derived cells carrying the compound heterozygous deep-intronic variant of Fukuyama muscular dystrophy.\"\n}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"term\": \"Unbiased pangenome graphs\", \"journal\": \"Bioinformatics\", \"num_results\": 10}",
+              "name": "pubmed_search_pubmed_advanced"
+            },
+            "id": "chatcmpl-tool-87923038fdd090fd",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-87923038fdd090fd",
+          "type": "function",
+          "function": {
+            "name": "pubmed_search_pubmed_advanced",
+            "arguments": "{\"term\": \"Unbiased pangenome graphs\", \"journal\": \"Bioinformatics\", \"num_results\": 10}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-87923038fdd090fd",
+      "content": "{\n  \"PMID\": \"41115209\",\n  \"Title\": \"PangenomeX: a graph convolutional network-based pangenome framework for unbiased population-scale genomic variation analysis.\",\n  \"Authors\": \"Xue, Wang, Wang, Yuan, Wang, Zeng, Jin, Zhu, Wang\",\n  \"Journal\": \"Briefings in bioinformatics\",\n  \"Publication Date\": \"2025\",\n  \"Abstract\": \"In population-scale genomic variation studies based on shallow whole genome sequencing, pangenomes have become an effective tool for identifying population-specific single-nucleotide polymorphisms and indels. Extending these advantages to copy number variation (CNV), however, remains challenging due to two unresolved issues. First, current pangenome frameworks exhibit pronounced population-representation bias arising from uneven sampling across populations. As the number of samples increases, the pangenome tends to capture variations primarily from majority populations while suppressing signals from minority populations. Second, in population-scale genomic variation analyses, common but benign population-specific copy number polymorphisms (CNPs) frequently obscure pathogenic CNVs. Existing pangenome frameworks lack dedicated mechanisms for representing CNPs and CNVs, limiting their ability to distinguish pathogenic CNVs from benign, population-specific CNPs. In this study, we present PangenomeX, a graph-convolutional pangenome framework tailored for low-coverage, population-scale CNV analysis. To address CNP representation, we embed known CNPs as prior knowledge into the pangenome graph and construct a CNV relationship network guided by a phylogenetic tree. A graph convolutional network (GCN) then learns the interactions between CNV and CNP nodes. To mitigate population-representation bias, the GCN aggregates information from only one- and two-hop neighborhoods, preserving local population context while preventing majority group signals from dominating. Evaluation on simulated cohorts and 561 real samples shows that PangenomeX distinguishes pathogenic CNVs from common population CNPs markedly better than existing methods. Overall, PangenomeX offers a methodological blueprint for large-cohort variant screening and provides a practical path for bringing graph-based genomics into clinical practice.\"\n}\n\n{\n  \"PMID\": \"39400346\",\n  \"Title\": \"Cluster-efficient pangenome graph construction with nf-core/pangenome.\",\n  \"Authors\": \"Heumos, Heuer, Hanssen, Heumos, Guarracino, Heringer, Ehmele, Prins, Garrison, Nahnsen\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2024\",\n  \"Abstract\": \"Pangenome graphs offer a comprehensive way of capturing genomic variability across multiple genomes. However, current construction methods often introduce biases, excluding complex sequences or relying on references. The PanGenome Graph Builder (PGGB) addresses these issues. To date, though, there is no state-of-the-art pipeline allowing for easy deployment, efficient and dynamic use of available resources, and scalable usage at the same time.\"\n}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"term\": \"Unbiased pangenome graphs\", \"journal\": \"Bioinformatics\", \"start_date\": \"2022-01-01\", \"end_date\": \"2022-12-31\", \"num_results\": 20}",
+              "name": "pubmed_search_pubmed_advanced"
+            },
+            "id": "chatcmpl-tool-85c1cb0100ef48d2",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-85c1cb0100ef48d2",
+          "type": "function",
+          "function": {
+            "name": "pubmed_search_pubmed_advanced",
+            "arguments": "{\"term\": \"Unbiased pangenome graphs\", \"journal\": \"Bioinformatics\", \"start_date\": \"2022-01-01\", \"end_date\": \"2022-12-31\", \"num_results\": 20}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-85c1cb0100ef48d2",
+      "content": ""
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"term\": \"Unbiased pangenome graphs\", \"journal\": \"Bioinformatics\", \"start_date\": \"2023-01-01\", \"end_date\": \"2023-12-31\", \"num_results\": 20}",
+              "name": "pubmed_search_pubmed_advanced"
+            },
+            "id": "chatcmpl-tool-ac7d096376ae36aa",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-ac7d096376ae36aa",
+          "type": "function",
+          "function": {
+            "name": "pubmed_search_pubmed_advanced",
+            "arguments": "{\"term\": \"Unbiased pangenome graphs\", \"journal\": \"Bioinformatics\", \"start_date\": \"2023-01-01\", \"end_date\": \"2023-12-31\", \"num_results\": 20}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-ac7d096376ae36aa",
+      "content": "{\n  \"PMID\": \"36688699\",\n  \"Title\": \"Accurately modeling biased random walks on weighted networks using node2vec.\",\n  \"Authors\": \"Liu, Hirn, Krishnan\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"Accurately representing biological networks in a low-dimensional space, also known as network embedding, is a critical step in network-based machine learning and is carried out widely using node2vec, an unsupervised method based on biased random walks. However, while many networks, including functional gene interaction networks, are dense, weighted graphs, node2vec is fundamentally limited in its ability to use edge weights during the biased random walk generation process, thus under-using all the information in the network.\"\n}\n\n{\n  \"PMID\": \"36448683\",\n  \"Title\": \"Unbiased pangenome graphs.\",\n  \"Authors\": \"Garrison, Guarracino\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences. A set of pairwise alignments implies a variation graph, but there are no scalable methods to generate such a graph from these alignments. Existing related approaches depend on a single reference, a specific ordering of genomes or a de Bruijn model based on a fixed k-mer length. A scalable, self-contained method to build pangenome graphs without such limitations would be a key step in pangenome construction and manipulation pipelines.\"\n}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"pmid\": \"36448683\"}",
+              "name": "pubmed_get_pubmed_article_metadata"
+            },
+            "id": "chatcmpl-tool-91d18f2ab4f06ac6",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-91d18f2ab4f06ac6",
+          "type": "function",
+          "function": {
+            "name": "pubmed_get_pubmed_article_metadata",
+            "arguments": "{\"pmid\": \"36448683\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-91d18f2ab4f06ac6",
+      "content": "{\n  \"PMID\": \"36448683\",\n  \"Title\": \"Unbiased pangenome graphs.\",\n  \"Authors\": \"Garrison, Guarracino\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences. A set of pairwise alignments implies a variation graph, but there are no scalable methods to generate such a graph from these alignments. Existing related approaches depend on a single reference, a specific ordering of genomes or a de Bruijn model based on a fixed k-mer length. A scalable, self-contained method to build pangenome graphs without such limitations would be a key step in pangenome construction and manipulation pipelines.\"\n}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"author\": \"Garrison\", \"journal\": \"Bioinformatics\", \"start_date\": \"2023-01-01\", \"end_date\": \"2023-12-31\", \"num_results\": 50}",
+              "name": "pubmed_search_pubmed_advanced"
+            },
+            "id": "chatcmpl-tool-b6412f80eb063459",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-b6412f80eb063459",
+          "type": "function",
+          "function": {
+            "name": "pubmed_search_pubmed_advanced",
+            "arguments": "{\"author\": \"Garrison\", \"journal\": \"Bioinformatics\", \"start_date\": \"2023-01-01\", \"end_date\": \"2023-12-31\", \"num_results\": 50}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-b6412f80eb063459",
+      "content": "{\n  \"PMID\": \"37603771\",\n  \"Title\": \"Minmers are a generalization of minimizers that enable unbiased local Jaccard estimation.\",\n  \"Authors\": \"Kille, Garrison, Treangen, Phillippy\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"The Jaccard similarity on k-mer sets has shown to be a convenient proxy for sequence identity. By avoiding expensive base-level alignments and comparing reduced sequence representations, tools such as MashMap can scale to massive numbers of pairwise comparisons while still providing useful similarity estimates. However, due to their reliance on minimizer winnowing, previous versions of MashMap were shown to be biased and inconsistent estimators of Jaccard similarity. This directly impacts downstream tools that rely on the accuracy of these estimates.\"\n}\n\n{\n  \"PMID\": \"36749013\",\n  \"Title\": \"Optimal gap-affine alignment in O(s) space.\",\n  \"Authors\": \"Marco-Sola, Eizenga, Guarracino, Paten, Garrison, Moreto\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"Pairwise sequence alignment remains a fundamental problem in computational biology and bioinformatics. Recent advances in genomics and sequencing technologies demand faster and scalable algorithms that can cope with the ever-increasing sequence lengths. Classical pairwise alignment algorithms based on dynamic programming are strongly limited by quadratic requirements in time and memory. The recently proposed wavefront alignment algorithm (WFA) introduced an efficient algorithm to perform exact gap-affine alignment in O(ns) time, where s is the optimal score and n is the sequence length. Notwithstanding these bounds, WFA's O(s2) memory requirements become computationally impractical for genome-scale alignments, leading to a need for further improvement.\"\n}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"author\": \"Guarracino\", \"journal\": \"Bioinformatics\", \"start_date\": \"2023-01-01\", \"end_date\": \"2023-12-31\", \"num_results\": 50}",
+              "name": "pubmed_search_pubmed_advanced"
+            },
+            "id": "chatcmpl-tool-92c341d1703a3a19",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-92c341d1703a3a19",
+          "type": "function",
+          "function": {
+            "name": "pubmed_search_pubmed_advanced",
+            "arguments": "{\"author\": \"Guarracino\", \"journal\": \"Bioinformatics\", \"start_date\": \"2023-01-01\", \"end_date\": \"2023-12-31\", \"num_results\": 50}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-92c341d1703a3a19",
+      "content": "{\n  \"PMID\": \"36749013\",\n  \"Title\": \"Optimal gap-affine alignment in O(s) space.\",\n  \"Authors\": \"Marco-Sola, Eizenga, Guarracino, Paten, Garrison, Moreto\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"Pairwise sequence alignment remains a fundamental problem in computational biology and bioinformatics. Recent advances in genomics and sequencing technologies demand faster and scalable algorithms that can cope with the ever-increasing sequence lengths. Classical pairwise alignment algorithms based on dynamic programming are strongly limited by quadratic requirements in time and memory. The recently proposed wavefront alignment algorithm (WFA) introduced an efficient algorithm to perform exact gap-affine alignment in O(ns) time, where s is the optimal score and n is the sequence length. Notwithstanding these bounds, WFA's O(s2) memory requirements become computationally impractical for genome-scale alignments, leading to a need for further improvement.\"\n}\n\n{\n  \"PMID\": \"36448683\",\n  \"Title\": \"Unbiased pangenome graphs.\",\n  \"Authors\": \"Garrison, Guarracino\",\n  \"Journal\": \"Bioinformatics (Oxford, England)\",\n  \"Publication Date\": \"2023\",\n  \"Abstract\": \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences. A set of pairwise alignments implies a variation graph, but there are no scalable methods to generate such a graph from these alignments. Existing related approaches depend on a single reference, a specific ordering of genomes or a de Bruijn model based on a fixed k-mer length. A scalable, self-contained method to build pangenome graphs without such limitations would be a key step in pangenome construction and manipulation pipelines.\"\n}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": "\n\nBased on the repository `pangenome/seqwish` and the cited paper **\"Unbiased pangenome graphs\"** by **Erik Garrison** and **Andrea Guarracino**, published in **Bioinformatics** in **2023** (specifically Volume 39, Issue 1, January 2023), here are the answers to your questions:\n\n### 1. Number of Merge Requests (Pull Requests) in 2023\nThe repository `pangenome/seqwish` had **7** pull requests created and/or closed during the year 2023.\n*   **#119**: Created Nov 15, 2023 (Open)\n*   **#118**: Created Nov 15, 2023 (Open)\n*   **#115**: Created Sep 26, 2023 (Open)\n*   **#113**: Created Jun 13, 2023 (Closed)\n*   **#110**: Created Mar 6, 2023 (Closed)\n*   **#107**: Created Nov 10, 2022 (Closed in 2022, but listed in the 2023 context? No, created 2022. Wait, let me re-check the dates).\n    *   **#119**: 2023\n    *   **#118**: 2023\n    *   **#115**: 2023\n    *   **#113**: 2023\n    *   **#110**: 2023\n    *   **#107**: 2022\n    *   **#106**: 2022\n    *   **#105**: 2022\n    *   **#104**: 2022\n    *   **#102**: 2022\n    *   **#99**: 2022\n    *   **#96**: 2022\n    *   **#94**: 2022\n    *   **#93**: 2022\n    *   **#89**: 2021\n    *   **#88**: 2021\n    *   **#87**: 2021\n    *   **#85**: 2021\n    *   **#84**: 2021\n    *   **#83**: 2021\n    *   **#82**: 2021\n    *   **#80**: 2021\n    *   **#79**: 2021\n    *   **#78**: 2021\n    *   **#77**: 2021\n    *   **#76**: 2021\n    *   **#75**: 2021\n    *   **#74**: 2021\n    *   **#73**: 2021\n    *   **#72**: 2021\n    *   **#71**: 2021\n    *   **#64**: 2020\n    *   **#63**: 2020\n    *   **#59**: 2020\n    *   **#58**: 2020\n    *   **#54**: 2020\n    *   **#50**: 2020\n    *   **#49**: 2020\n    *   **#48**: 2020\n    *   **#47**: 2020\n    *   **#45**: 2020\n    *   **#44**: 2020\n    *   **#43**: 2020\n    *   **#42**: 2020\n    *   **#41**: 2020\n    *   **#40**: 2020\n    *   **#39**: 2020\n    *   **#37**: 2020\n    *   **#33**: 2020\n    *   **#32**: 2020\n    *   **#31**: 2019\n    *   **#29**: 2019\n    *   **#27**: 2019\n    *   **#26**: 2019\n    *   **#25**: 2019\n    *   **#23**: 2019\n    *   **#21**: 2019\n    *   **#15**: 2019\n    *   **#2**: 2018\n\n    Let's re-verify the 2023 PRs:\n    1.  **#119** (Created 2023-11-15)\n    2.  **#118** (Created 2023-11-15)\n    3.  **#115** (Created 2023-09-26)\n    4.  **#113** (Created 2023-06-13)\n    5.  **#110** (Created 2023-03-06)\n    \n    There are **5** pull requests created in 2023.\n\n### 2. Abstract of the Paper\nThe paper cited is:\n*   **Title:** Unbiased pangenome graphs\n*   **Authors:** Erik Garrison, Andrea Guarracino\n*   **Journal:** Bioinformatics, Volume 39, Issue 1, January 2023\n*   **PMID:** 36448683\n*   **Abstract:** \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences. A set of pairwise alignments implies a variation graph, but there are no scalable methods to generate such a graph from these alignments. Existing related approaches depend on a single reference, a specific ordering of genomes or a de Bruijn model based on a fixed k-mer length. A scalable, self-contained method to build pangenome graphs without such limitations would be a key step in pangenome construction and manipulation pipelines.\"\n\n### 3. Other Articles by the Authors in the Same Journal (Bioinformatics) in 2023\nIn 2023, Erik Garrison and Andrea Guarracino co-authored (or were involved in) at least one other article in *Bioinformatics*:\n\n*   **Title:** Optimal gap-affine alignment in O(s) space.\n*   **Authors:** Marco-Sola, Eizenga, **Guarracino**, Paten, **Garrison**, Moreto\n*   **Journal:** Bioinformatics (Oxford, England)\n*   **Publication Date:** 2023\n*   **PMID:** 36749013\n*   **Abstract:** \"Pairwise sequence alignment remains a fundamental problem in computational biology and bioinformatics. Recent advances in genomics and sequencing technologies demand faster and scalable algorithms that can cope with the ever-increasing sequence lengths. Classical pairwise alignment algorithms based on dynamic programming are strongly limited by quadratic requirements in time and memory. The recently proposed wavefront alignment algorithm (WFA) introduced an efficient algorithm to perform exact gap-affine alignment in O(ns) time, where s is the optimal score and n is the sequence length. Notwithstanding these bounds, WFA's O(s2) memory requirements become computationally impractical for genome-scale alignments, leading to a need for further improvement.\"\n\nAdditionally, Erik Garrison was a co-author on:\n*   **Title:** Minmers are a generalization of minimizers that enable unbiased local Jaccard estimation.\n*   **Authors:** Kille, **Garrison**, Treangen, Phillippy\n*   **Journal:** Bioinformatics (Oxford, England)\n*   **Publication Date:** 2023\n*   **PMID:** 37603771\n\nHowever, the question asks for articles where **the authors** (Garrison and Guarracino) collaborated. The paper \"Optimal gap-affine alignment in O(s) space\" includes both **Garrison** and **Guarracino** as co-authors.\n\n**Summary:**\n*   **Merge Requests in 2023:** 5\n*   **Abstract:** \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences...\" (as quoted above).\n*   **Other Collaborative Articles in Bioinformatics (2023):** \"Optimal gap-affine alignment in O(s) space\" (co-authored by both Garrison and Guarracino).",
+        "role": "assistant",
+        "tool_calls": null,
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": "\n\nBased on the repository `pangenome/seqwish` and the cited paper **\"Unbiased pangenome graphs\"** by **Erik Garrison** and **Andrea Guarracino**, published in **Bioinformatics** in **2023** (specifically Volume 39, Issue 1, January 2023), here are the answers to your questions:\n\n### 1. Number of Merge Requests (Pull Requests) in 2023\nThe repository `pangenome/seqwish` had **7** pull requests created and/or closed during the year 2023.\n*   **#119**: Created Nov 15, 2023 (Open)\n*   **#118**: Created Nov 15, 2023 (Open)\n*   **#115**: Created Sep 26, 2023 (Open)\n*   **#113**: Created Jun 13, 2023 (Closed)\n*   **#110**: Created Mar 6, 2023 (Closed)\n*   **#107**: Created Nov 10, 2022 (Closed in 2022, but listed in the 2023 context? No, created 2022. Wait, let me re-check the dates).\n    *   **#119**: 2023\n    *   **#118**: 2023\n    *   **#115**: 2023\n    *   **#113**: 2023\n    *   **#110**: 2023\n    *   **#107**: 2022\n    *   **#106**: 2022\n    *   **#105**: 2022\n    *   **#104**: 2022\n    *   **#102**: 2022\n    *   **#99**: 2022\n    *   **#96**: 2022\n    *   **#94**: 2022\n    *   **#93**: 2022\n    *   **#89**: 2021\n    *   **#88**: 2021\n    *   **#87**: 2021\n    *   **#85**: 2021\n    *   **#84**: 2021\n    *   **#83**: 2021\n    *   **#82**: 2021\n    *   **#80**: 2021\n    *   **#79**: 2021\n    *   **#78**: 2021\n    *   **#77**: 2021\n    *   **#76**: 2021\n    *   **#75**: 2021\n    *   **#74**: 2021\n    *   **#73**: 2021\n    *   **#72**: 2021\n    *   **#71**: 2021\n    *   **#64**: 2020\n    *   **#63**: 2020\n    *   **#59**: 2020\n    *   **#58**: 2020\n    *   **#54**: 2020\n    *   **#50**: 2020\n    *   **#49**: 2020\n    *   **#48**: 2020\n    *   **#47**: 2020\n    *   **#45**: 2020\n    *   **#44**: 2020\n    *   **#43**: 2020\n    *   **#42**: 2020\n    *   **#41**: 2020\n    *   **#40**: 2020\n    *   **#39**: 2020\n    *   **#37**: 2020\n    *   **#33**: 2020\n    *   **#32**: 2020\n    *   **#31**: 2019\n    *   **#29**: 2019\n    *   **#27**: 2019\n    *   **#26**: 2019\n    *   **#25**: 2019\n    *   **#23**: 2019\n    *   **#21**: 2019\n    *   **#15**: 2019\n    *   **#2**: 2018\n\n    Let's re-verify the 2023 PRs:\n    1.  **#119** (Created 2023-11-15)\n    2.  **#118** (Created 2023-11-15)\n    3.  **#115** (Created 2023-09-26)\n    4.  **#113** (Created 2023-06-13)\n    5.  **#110** (Created 2023-03-06)\n    \n    There are **5** pull requests created in 2023.\n\n### 2. Abstract of the Paper\nThe paper cited is:\n*   **Title:** Unbiased pangenome graphs\n*   **Authors:** Erik Garrison, Andrea Guarracino\n*   **Journal:** Bioinformatics, Volume 39, Issue 1, January 2023\n*   **PMID:** 36448683\n*   **Abstract:** \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences. A set of pairwise alignments implies a variation graph, but there are no scalable methods to generate such a graph from these alignments. Existing related approaches depend on a single reference, a specific ordering of genomes or a de Bruijn model based on a fixed k-mer length. A scalable, self-contained method to build pangenome graphs without such limitations would be a key step in pangenome construction and manipulation pipelines.\"\n\n### 3. Other Articles by the Authors in the Same Journal (Bioinformatics) in 2023\nIn 2023, Erik Garrison and Andrea Guarracino co-authored (or were involved in) at least one other article in *Bioinformatics*:\n\n*   **Title:** Optimal gap-affine alignment in O(s) space.\n*   **Authors:** Marco-Sola, Eizenga, **Guarracino**, Paten, **Garrison**, Moreto\n*   **Journal:** Bioinformatics (Oxford, England)\n*   **Publication Date:** 2023\n*   **PMID:** 36749013\n*   **Abstract:** \"Pairwise sequence alignment remains a fundamental problem in computational biology and bioinformatics. Recent advances in genomics and sequencing technologies demand faster and scalable algorithms that can cope with the ever-increasing sequence lengths. Classical pairwise alignment algorithms based on dynamic programming are strongly limited by quadratic requirements in time and memory. The recently proposed wavefront alignment algorithm (WFA) introduced an efficient algorithm to perform exact gap-affine alignment in O(ns) time, where s is the optimal score and n is the sequence length. Notwithstanding these bounds, WFA's O(s2) memory requirements become computationally impractical for genome-scale alignments, leading to a need for further improvement.\"\n\nAdditionally, Erik Garrison was a co-author on:\n*   **Title:** Minmers are a generalization of minimizers that enable unbiased local Jaccard estimation.\n*   **Authors:** Kille, **Garrison**, Treangen, Phillippy\n*   **Journal:** Bioinformatics (Oxford, England)\n*   **Publication Date:** 2023\n*   **PMID:** 37603771\n\nHowever, the question asks for articles where **the authors** (Garrison and Guarracino) collaborated. The paper \"Optimal gap-affine alignment in O(s) space\" includes both **Garrison** and **Guarracino** as co-authors.\n\n**Summary:**\n*   **Merge Requests in 2023:** 5\n*   **Abstract:** \"Pangenome variation graphs model the mutual alignment of collections of DNA sequences...\" (as quoted above).\n*   **Other Collaborative Articles in Bioinformatics (2023):** \"Optimal gap-affine alignment in O(s) space\" (co-authored by both Garrison and Guarracino).",
+      "tool_calls": null
+    }
+  ],
+  "trajectory": [
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "seqwish language:c++",
+        "per_page": 10
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_search_repositories",
+      "parameters": {
+        "query": "seqwish",
+        "per_page": 10
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_get_repository",
+      "parameters": {
+        "owner": "pangenome",
+        "repo": "seqwish"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "github_list_pull_requests",
+      "parameters": {
+        "owner": "pangenome",
+        "repo": "seqwish",
+        "state": "all",
+        "per_page": 100
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "pubmed_search_pubmed_advanced",
+      "parameters": {
+        "term": "Unbiased pangenome graphs",
+        "num_results": 10
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "pubmed_search_pubmed_advanced",
+      "parameters": {
+        "term": "Unbiased pangenome graphs Bioinformatics",
+        "num_results": 5
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "pubmed_search_pubmed_advanced",
+      "parameters": {
+        "term": "Unbiased pangenome graphs Garrison Guarracino",
+        "num_results": 10
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "pubmed_get_pubmed_article_metadata",
+      "parameters": {
+        "pmid": "36426838"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "pubmed_search_pubmed_advanced",
+      "parameters": {
+        "term": "Unbiased pangenome graphs",
+        "journal": "Bioinformatics",
+        "num_results": 10
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "pubmed_search_pubmed_advanced",
+      "parameters": {
+        "term": "Unbiased pangenome graphs",
+        "journal": "Bioinformatics",
+        "start_date": "2022-01-01",
+        "end_date": "2022-12-31",
+        "num_results": 20
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "pubmed_search_pubmed_advanced",
+      "parameters": {
+        "term": "Unbiased pangenome graphs",
+        "journal": "Bioinformatics",
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "num_results": 20
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "pubmed_get_pubmed_article_metadata",
+      "parameters": {
+        "pmid": "36448683"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "pubmed_search_pubmed_advanced",
+      "parameters": {
+        "author": "Garrison",
+        "journal": "Bioinformatics",
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "num_results": 50
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "pubmed_search_pubmed_advanced",
+      "parameters": {
+        "author": "Guarracino",
+        "journal": "Bioinformatics",
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "num_results": 50
+      },
+      "response": null,
+      "error": null
+    }
+  ],
+  "errors": [],
+  "trajectory_time": 61.799078941345215,
+  "num_retry": 1,
+  "coverage_score": 0.875,
+  "fully_covered_claims": 3,
+  "partially_covered_claims": 1,
+  "total_claims": 4,
+  "coverage_details_json": {
+    "per_claim": [
+      {
+        "claim": "",
+        "score": 0.5,
+        "covered": "partial",
+        "reason": "The model response correctly identifies the core bibliographic details of the claim, including the authors (Erik Garrison, Andrea Guarracino), title (Unbiased pangenome graphs), journal (Bioinformatics), volume (39), issue (1), and date (January 2023). However, it fails to address all key details specified in the claim. Specifically, the response omits the Article ID ('btac743') and the DOI URL ('https://doi.org/10.1093/bioinformatics/btac743'), providing a PMID instead. Additionally, the response references the repository as 'pangenome/seqwish' rather than the 'ekg/seqwish' specified in the claim. While the primary identity of the paper is confirmed, the omission of specific identifiers and the discrepancy in the repository name prevent the claim from being completely and accurately addressed."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly includes the abstract of the paper 'Unbiased pangenome graphs' in Section 2. The text provided in the response matches the claim text exactly, word-for-word, covering all four sentences of the abstract. There are no missing key details or discrepancies in the content. Minor punctuation differences (e.g., ending period) do not affect the accuracy of the information conveyed."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response completely addresses the claim. It explicitly identifies the paper 'Optimal gap-affine alignment in O(s) space' as a 2023 publication in 'Bioinformatics (Oxford, England)' co-authored by both 'Garrison' and 'Guarracino'. All key components of the claim (authors, journal, year, article title) are present and match the claim's details accurately. The response goes further to provide additional context (PMID, abstract, other papers), but the core claim is fully substantiated within Section 3 of the response."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response successfully addresses the core numerical claim and contextual details. The claim asserts that the repository had 5 pull requests in 2023, the year the paper 'Unbiased pangenome graphs' was published. The model explicitly confirms the publication year (2023), the paper title, and the pull request count (5). Although the model refers to the repository as 'pangenome/seqwish' instead of the claimed 'ekg/seqwish', this is likely a minor entity resolution variance (organization vs. user handle) for the same project, given the correct association with the paper and authors (Erik Garrison). The critical numerical value (5) matches exactly, and the context (2023, paper title) is accurately conveyed, satisfying the primary information requirements of the claim."
+      }
+    ],
+    "coverage_score": 0.875,
+    "total_claims": 4,
+    "fully_covered_claims": 3,
+    "partially_covered_claims": 1,
+    "explanation": "Evaluation complete",
+    "confidence": 0.5
+  },
+  "evaluation_confidence": 0.5
+}

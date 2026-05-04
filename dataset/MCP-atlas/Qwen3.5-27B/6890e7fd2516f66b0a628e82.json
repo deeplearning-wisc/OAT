@@ -1,0 +1,647 @@
+{
+  "TASK": "6890e7fd2516f66b0a628e82",
+  "PROMPT": "Where was the coronation of the king in the country where 2012 olympic games for the king of that country in the year the author of pride and prejudice original book die?",
+  "TRAJECTORY": [
+    {
+      "content": "I need to know the host country of the 2012 Olympic Games. For this, I will use wikipedia_search_wikipedia.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"query\": \"2012 Summer Olympics\"\n}",
+            "name": "wikipedia_search_wikipedia"
+          },
+          "id": "3f7d7c1e-0750-4560-bbe4-8df932ef1f0c",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "{\"query\":\"2012 Summer Olympics\",\"results\":[{\"title\":\"2012 Summer Olympics\",\"snippet\":\"The <span class=\\\"searchmatch\\\">2012</span> <span class=\\\"searchmatch\\\">Summer</span> <span class=\\\"searchmatch\\\">Olympics</span>, officially the Games of the XXX Olympiad and also known as London <span class=\\\"searchmatch\\\">2012</span>, were an international multi-sport event held from 27 July\",\"pageid\":2176142,\"wordcount\":11943,\"timestamp\":\"2025-07-20T17:30:35Z\"},{\"title\":\"2012 Summer Olympics opening ceremony\",\"snippet\":\"The opening ceremony of the <span class=\\\"searchmatch\\\">2012</span> <span class=\\\"searchmatch\\\">Summer</span> <span class=\\\"searchmatch\\\">Olympics</span> took place on the evening of Friday 27 July <span class=\\\"searchmatch\\\">2012</span> in the <span class=\\\"searchmatch\\\">Olympic</span> Stadium, London, during which the Games\",\"pageid\":35937111,\"wordcount\":14902,\"timestamp\":\"2025-07-21T04:04:45Z\"},{\"title\":\"Tennis at the 2012 Summer Olympics – Men's singles\",\"snippet\":\"6–2, 6–1, 6–4 to win the gold medal in men&#039;s singles tennis at the <span class=\\\"searchmatch\\\">2012</span> <span class=\\\"searchmatch\\\">Summer</span> <span class=\\\"searchmatch\\\">Olympics</span>. The final was a rematch of the Wimbledon final played at the same\",\"pageid\":36355061,\"wordcount\":1200,\"timestamp\":\"2025-03-22T03:10:50Z\"},{\"title\":\"Swimming at the 2012 Summer Olympics\",\"snippet\":\"The swimming competitions at the <span class=\\\"searchmatch\\\">2012</span> <span class=\\\"searchmatch\\\">Summer</span> <span class=\\\"searchmatch\\\">Olympics</span> in London took place from 28 July to 4 August at the Aquatics Centre. The open-water competition\",\"pageid\":30095349,\"wordcount\":2154,\"timestamp\":\"2025-03-18T15:37:38Z\"},{\"title\":\"Cycling at the 2012 Summer Olympics\",\"snippet\":\"2012 Summer <span class=\\\"searchmatch\\\">Olympics</span>. London2012.com. at the UK Government Web Archive (archived 28 February 2013) Cycling - Road at the <span class=\\\"searchmatch\\\">2012</span> <span class=\\\"searchmatch\\\">Summer</span> <span class=\\\"searchmatch\\\">Olympics</span>. London2012\",\"pageid\":22290072,\"wordcount\":1019,\"timestamp\":\"2025-07-06T18:10:19Z\"},{\"title\":\"Basketball at the 2012 Summer Olympics – Men's tournament\",\"snippet\":\"The men&#039;s basketball tournament at the <span class=\\\"searchmatch\\\">2012</span> <span class=\\\"searchmatch\\\">Summer</span> <span class=\\\"searchmatch\\\">Olympics</span> in London, began on 29 July and ended on 12 August, when the United States defeated Spain 107–100\",\"pageid\":31816529,\"wordcount\":495,\"timestamp\":\"2025-07-08T12:30:55Z\"},{\"title\":\"Weightlifting at the 2012 Summer Olympics\",\"snippet\":\"Weightlifting competitions at the <span class=\\\"searchmatch\\\">2012</span> <span class=\\\"searchmatch\\\">Summer</span> <span class=\\\"searchmatch\\\">Olympics</span> in London were held from 28 July to 7 August in the ExCeL venue. Fifteen gold medals were awarded\",\"pageid\":31944084,\"wordcount\":829,\"timestamp\":\"2025-05-02T18:56:03Z\"},{\"title\":\"India at the 2012 Summer Olympics\",\"snippet\":\"India competed at the <span class=\\\"searchmatch\\\">2012</span> <span class=\\\"searchmatch\\\">Summer</span> <span class=\\\"searchmatch\\\">Olympics</span> in London, from 27 July to 12 August <span class=\\\"searchmatch\\\">2012</span>. A total of 83 athletes, 60 men and 23 women, competed in 13 sports\",\"pageid\":28964743,\"wordcount\":1741,\"timestamp\":\"2025-07-12T17:56:15Z\"},{\"title\":\"Athletics at the 2012 Summer Olympics\",\"snippet\":\"24 April 2013) Athletics at the <span class=\\\"searchmatch\\\">2012</span> <span class=\\\"searchmatch\\\">Summer</span> <span class=\\\"searchmatch\\\">Olympics</span> at SR/<span class=\\\"searchmatch\\\">Olympics</span> (archived) IAAF <span class=\\\"searchmatch\\\">Olympics</span> webpage BBC Sport <span class=\\\"searchmatch\\\">Olympic</span> athletics website 51°32′19″N 0°00′59″W﻿\",\"pageid\":31560106,\"wordcount\":2831,\"timestamp\":\"2025-07-14T12:59:49Z\"},{\"title\":\"Brazil at the 2012 Summer Olympics\",\"snippet\":\"competed at the <span class=\\\"searchmatch\\\">2012</span> <span class=\\\"searchmatch\\\">Summer</span> <span class=\\\"searchmatch\\\">Olympics</span> in London, from 27 July to 12 August <span class=\\\"searchmatch\\\">2012</span>. This was the nation&#039;s twenty-first appearance at the <span class=\\\"searchmatch\\\">Summer</span> <span class=\\\"searchmatch\\\">Olympics</span>, having missed\",\"pageid\":31223094,\"wordcount\":3484,\"timestamp\":\"2025-03-27T12:28:58Z\"}]}",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "3f7d7c1e-0750-4560-bbe4-8df932ef1f0c"
+    },
+    {
+      "content": "I will use open-library_get_book_by_title to know the author of Pride and Prejudice.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"title\": \"Pride and Prejudice\"\n}",
+            "name": "open-library_get_book_by_title"
+          },
+          "id": "b454b725-5cfd-476f-8e26-ec1d5026f83b",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "[\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1813,\n    \"open_library_work_key\": \"/works/OL66554W\",\n    \"edition_count\": 4036,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14348537-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice and Zombies\",\n    \"authors\": [\n      \"Seth Grahame-Smith\",\n      \"Jane Austen\",\n      \"Katherine Kellgren\"\n    ],\n    \"first_publish_year\": 2009,\n    \"open_library_work_key\": \"/works/OL15093171W\",\n    \"edition_count\": 19,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/6260257-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Donald Gray\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1966,\n    \"open_library_work_key\": \"/works/OL27269313W\",\n    \"edition_count\": 8,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13148521-M.jpg\"\n  },\n  {\n    \"title\": \"Novels (Emma / Mansfield Park / Northanger Abbey / Persuasion / Pride and Prejudice / Sense and Sensibility)\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1818,\n    \"open_library_work_key\": \"/works/OL66512W\",\n    \"edition_count\": 75,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9276728-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Fern Siegel\"\n    ],\n    \"first_publish_year\": 1997,\n    \"open_library_work_key\": \"/works/OL5738118W\",\n    \"edition_count\": 4,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12604709-M.jpg\"\n  },\n  {\n    \"title\": \"Novels (Pride and Prejudice / Sense and Sensibility)\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1949,\n    \"open_library_work_key\": \"/works/OL66597W\",\n    \"edition_count\": 28,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12728748-M.jpg\"\n  },\n  {\n    \"title\": \"Novels (Emma / Lady Susan / Mansfield Park / Northanger Abbey / Persuasion / Pride and Prejudice / Sense and Sensibility)\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1966,\n    \"open_library_work_key\": \"/works/OL66542W\",\n    \"edition_count\": 31,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9277892-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Stacy King\"\n    ],\n    \"first_publish_year\": 2014,\n    \"open_library_work_key\": \"/works/OL21259954W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/11061327-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Dario Marianelli\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8786477W\",\n    \"edition_count\": 19,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/766715-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1984,\n    \"open_library_work_key\": \"/works/OL17737918W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8094315-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice \",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1914,\n    \"open_library_work_key\": \"/works/OL43071965W\",\n    \"edition_count\": 9\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1934,\n    \"open_library_work_key\": \"/works/OL41272313W\",\n    \"edition_count\": 16,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14895847-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1846,\n    \"open_library_work_key\": \"/works/OL42949163W\",\n    \"edition_count\": 19\n  },\n  {\n    \"title\": \"Jane Austen's Pride and Prejudice Sketch Book\",\n    \"authors\": [\n      \"Pride and Prejudice sketchbook\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL41572187W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice, A Play\",\n    \"authors\": [\n      \"Mrs. Steele MacKaye\",\n      \"STEELE MACKAYE\",\n      \"Mary Keith Medbery MacKaye\",\n      \"Mrs. Steele Mackaye\",\n      \"Steele Mackaye\",\n      \"Mary Keith Medbery Mackaye\"\n    ],\n    \"first_publish_year\": 1906,\n    \"open_library_work_key\": \"/works/OL235881W\",\n    \"edition_count\": 15,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9277753-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Evelyn Atwood\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1980,\n    \"open_library_work_key\": \"/works/OL14948838W\",\n    \"edition_count\": 4,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/381637-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice and Pittsburgh\",\n    \"authors\": [\n      \"Rachael Lippincott\"\n    ],\n    \"first_publish_year\": 2023,\n    \"open_library_work_key\": \"/works/OL35749735W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14414408-M.jpg\"\n  },\n  {\n    \"title\": \"PRIDE and PREJUDICE\",\n    \"authors\": [\n      \"Domenico MORANO\"\n    ],\n    \"first_publish_year\": 2020,\n    \"open_library_work_key\": \"/works/OL30637617W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Helen Jerome\"\n    ],\n    \"first_publish_year\": 1935,\n    \"open_library_work_key\": \"/works/OL7429877W\",\n    \"edition_count\": 10,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/7009848-M.jpg\"\n  },\n  {\n    \"title\": \"pride and prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1813,\n    \"open_library_work_key\": \"/works/OL43044538W\",\n    \"edition_count\": 4\n  },\n  {\n    \"title\": \"Pride and Prejudice (Annotated)\",\n    \"authors\": [\n      \"C. Janton\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL29438148W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Janice Greene\"\n    ],\n    \"first_publish_year\": 2002,\n    \"open_library_work_key\": \"/works/OL8210981W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14417856-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Guichard Publishing Guichard Publishing Company\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2021,\n    \"open_library_work_key\": \"/works/OL27167888W\",\n    \"edition_count\": 5\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL41836646W\",\n    \"edition_count\": 6\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1894,\n    \"open_library_work_key\": \"/works/OL42468899W\",\n    \"edition_count\": 9\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Wheatley Bernstein\"\n    ],\n    \"first_publish_year\": 2007,\n    \"open_library_work_key\": \"/works/OL28763691W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14348544-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Heather Neill\"\n    ],\n    \"first_publish_year\": 1980,\n    \"open_library_work_key\": \"/works/OL9294387W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Pauline Phelps\"\n    ],\n    \"first_publish_year\": 1941,\n    \"open_library_work_key\": \"/works/OL1518638W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\",\n      \"Joy Bennet\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL40698101W\",\n    \"edition_count\": 5\n  },\n  {\n    \"title\": \"CliffsNotes Austen's Pride and Prejudice\",\n    \"authors\": [\n      \"Marie Kalil\"\n    ],\n    \"first_publish_year\": 2000,\n    \"open_library_work_key\": \"/works/OL7796770W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/523015-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Mitzi Szereto\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL27077242W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Clare West\"\n    ],\n    \"first_publish_year\": 1995,\n    \"open_library_work_key\": \"/works/OL14982258W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/1123339-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Christopher Baker\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL20221783W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8874324-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Goode\"\n    ],\n    \"first_publish_year\": 1984,\n    \"open_library_work_key\": \"/works/OL33807701W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2614012-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [1/2]\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1844,\n    \"open_library_work_key\": \"/works/OL27025377W\",\n    \"edition_count\": 12,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12603142-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Archie Oliver\"\n    ],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL27310084W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10379992-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL40636251W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Susanna Davidson\",\n      \"Simona Bursi\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL21031213W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13105822-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\",\n      \"Kaitlyn Harley\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL40522696W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jeanne Foster\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2014,\n    \"open_library_work_key\": \"/works/OL41323595W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2015,\n    \"open_library_work_key\": \"/works/OL41178268W\",\n    \"edition_count\": 6\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Joan Macintosh\"\n    ],\n    \"first_publish_year\": 2008,\n    \"open_library_work_key\": \"/works/OL34305137W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13148569-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Andrea Shell\"\n    ],\n    \"first_publish_year\": 2003,\n    \"open_library_work_key\": \"/works/OL17914635W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9277929-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"James Alley\"\n    ],\n    \"first_publish_year\": 2019,\n    \"open_library_work_key\": \"/works/OL29768234W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Eric Peterson\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL29057522W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"J. M. Evans\"\n    ],\n    \"first_publish_year\": 1970,\n    \"open_library_work_key\": \"/works/OL10551516W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Coles Publishing Company.\"\n    ],\n    \"first_publish_year\": 1968,\n    \"open_library_work_key\": \"/works/OL6934220W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"William J. Fitzpatrick\"\n    ],\n    \"first_publish_year\": 1964,\n    \"open_library_work_key\": \"/works/OL43311796W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice (unabridged)\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2019,\n    \"open_library_work_key\": \"/works/OL38263466W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Jane Austen's Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\",\n      \"Claudia L. Johnson\",\n      \"Susan Wolfson\"\n    ],\n    \"first_publish_year\": 2002,\n    \"open_library_work_key\": \"/works/OL66524W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12648559-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Laura Wood\",\n      \"Helen Crawford-White\"\n    ],\n    \"first_publish_year\": 2022,\n    \"open_library_work_key\": \"/works/OL26763190W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Mitzi Szereto\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL16167083W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12945566-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL40183317W\",\n    \"edition_count\": 4\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Hilary Burningham\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL27381439W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12648704-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Rani Sircar\"\n    ],\n    \"first_publish_year\": 1992,\n    \"open_library_work_key\": \"/works/OL38050800W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14617938-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Kathryn Knight\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL17919187W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12775507-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Gill Tavner\"\n    ],\n    \"first_publish_year\": 2008,\n    \"open_library_work_key\": \"/works/OL34305441W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13056540-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"John Kennett\"\n    ],\n    \"first_publish_year\": 1993,\n    \"open_library_work_key\": \"/works/OL17563771W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/7829115-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Ian Edington\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL16193286W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8093716-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Raja Kori\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2020,\n    \"open_library_work_key\": \"/works/OL21997538W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2024,\n    \"open_library_work_key\": \"/works/OL42406824W\",\n    \"edition_count\": 5\n  },\n  {\n    \"title\": \"Pride and Prejudice and Secrets\",\n    \"authors\": [\n      \"Bella Breen\",\n      \"Jersey Devil Editing\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL21600378W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10385855-M.jpg\"\n  },\n  {\n    \"title\": \"Jane Austen's pride and prejudice\",\n    \"authors\": [\n      \"William Blanchard\",\n      \"William Blanchard\"\n    ],\n    \"first_publish_year\": 1996,\n    \"open_library_work_key\": \"/works/OL2521775W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/673495-M.jpg\"\n  },\n  {\n    \"title\": \"Readings on Pride and prejudice\",\n    \"authors\": [\n      \"Clarice Swisher\"\n    ],\n    \"first_publish_year\": 1999,\n    \"open_library_work_key\": \"/works/OL17657413W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/1900011-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"SparkNotes\"\n    ],\n    \"first_publish_year\": 2014,\n    \"open_library_work_key\": \"/works/OL28616624W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14509031-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Steele Mackaye\",\n      \"510 Plays\"\n    ],\n    \"first_publish_year\": 2015,\n    \"open_library_work_key\": \"/works/OL41242616W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen Camden\"\n    ],\n    \"first_publish_year\": 2015,\n    \"open_library_work_key\": \"/works/OL38252174W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1833,\n    \"open_library_work_key\": \"/works/OL42305786W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Mary Keith Mackaye\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL41532963W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL41576463W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jeanne Desautel Foster\"\n    ],\n    \"first_publish_year\": 2010,\n    \"open_library_work_key\": \"/works/OL39800484W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"SparkNotes\"\n    ],\n    \"first_publish_year\": 2007,\n    \"open_library_work_key\": \"/works/OL24293317W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10798353-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Fiona Gregory\"\n    ],\n    \"first_publish_year\": 2009,\n    \"open_library_work_key\": \"/works/OL24690158W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/11399294-M.jpg\"\n  },\n  {\n    \"title\": \"Pride And Prejudice Ii\",\n    \"authors\": [\n      \"Victoria Park\"\n    ],\n    \"first_publish_year\": 2012,\n    \"open_library_work_key\": \"/works/OL24688901W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/11397280-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL41105140W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Gianna Thomas\"\n    ],\n    \"first_publish_year\": 2014,\n    \"open_library_work_key\": \"/works/OL40593056W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Jon Jory\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL3380496W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Annabella Bloom\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL15521093W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10342643-M.jpg\"\n  },\n  {\n    \"title\": \"PRIDE and PREJUDICE by Jane Austen\",\n    \"authors\": [\n      \"Jane Jane\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL41675083W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice and Poison\",\n    \"authors\": [\n      \"Bella Breen\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL27678785W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Jane Austen's Pride and prejudice\",\n    \"authors\": [\n      \"David Reuben Turner\"\n    ],\n    \"first_publish_year\": 1969,\n    \"open_library_work_key\": \"/works/OL6094660W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Jane Austen's Pride and prejudice\",\n    \"authors\": [\n      \"Harold Bloom\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL19167041W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/4739419-M.jpg\"\n  },\n  {\n    \"title\": \"Jane Austen's Pride and prejudice\",\n    \"authors\": [\n      \"Jan Fields\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL15932992W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8218493-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice, Jane Austen\",\n    \"authors\": [\n      \"John Mahoney\"\n    ],\n    \"first_publish_year\": 2000,\n    \"open_library_work_key\": \"/works/OL8010859W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2990494-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2012,\n    \"open_library_work_key\": \"/works/OL40067218W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Abigail Reynolds\",\n      \"Mary Simonsen\",\n      \"Susan Mason-Milks\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL25867038W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL41617635W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"JAPANESE PRIDE AND PREJUDICE\",\n    \"authors\": [\n      \"NOBUKO ALBERY\"\n    ],\n    \"first_publish_year\": 2002,\n    \"open_library_work_key\": \"/works/OL13608754W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/4847976-M.jpg\"\n  },\n  {\n    \"title\": \"Railway pride and prejudice\",\n    \"authors\": [\n      \"Peacock, Thomas B.\"\n    ],\n    \"first_publish_year\": 1946,\n    \"open_library_work_key\": \"/works/OL7187486W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\",\n      \"Robert P. Irvine\"\n    ],\n    \"first_publish_year\": 2020,\n    \"open_library_work_key\": \"/works/OL39130339W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Pauline Francis\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL25702849W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Tony Buzan\"\n    ],\n    \"first_publish_year\": 1999,\n    \"open_library_work_key\": \"/works/OL14924392W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/517330-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL40281280W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL41678480W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austin\",\n      \"Ruth Finnegan\"\n    ],\n    \"first_publish_year\": 2013,\n    \"open_library_work_key\": \"/works/OL39829166W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Tina Müller\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2020,\n    \"open_library_work_key\": \"/works/OL27488268W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL41752989W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2015,\n    \"open_library_work_key\": \"/works/OL40590661W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"James S. Scott\"\n    ],\n    \"first_publish_year\": 1999,\n    \"open_library_work_key\": \"/works/OL8960030W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL41077105W\",\n    \"edition_count\": 1\n  }\n]",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "b454b725-5cfd-476f-8e26-ec1d5026f83b"
+    },
+    {
+      "content": "I will search the year when Jane Austen died with open-library_get_authors_by_name.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"name\": \"Jane Austen\"\n}",
+            "name": "open-library_get_authors_by_name"
+          },
+          "id": "1dc0f56a-5441-49d0-acee-7add822b6dd2",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "[\n  {\n    \"key\": \"OL21594A\",\n    \"name\": \"Jane Austen\",\n    \"alternate_names\": [\n      \"Austen Jane\",\n      \"Austen\",\n      \"Austen, Jane, 1775-1817.\",\n      \"J. Austen\",\n      \"Austen, Jane, 1775-1817\",\n      \"(ying) Ao, si ding (Austen, Jane\",\n      \"Jane Austen ( JIAN AO SI TING )\",\n      \"JANE AUSTEN\",\n      \"Austen I.\",\n      \"Jane AUSTEN\",\n      \"jane Austen\",\n      \"Jane Austen's\",\n      \"Jane Jane Austen\",\n      \"jane austen\",\n      \"Austen J\",\n      \"Ao si ting\",\n      \"J Austen\",\n      \"Mme. Jane Austen\",\n      \"Au,Jane Austen\",\n      \"Aositing\",\n      \"Jane Jane AUSTEN\",\n      \"Jane Austen Jane Austen\",\n      \"jane jane austen\",\n      \"AUSTEN,JANE\",\n      \"Jane 1775-1817 Austen\",\n      \"Jane JANE AUSTEN\",\n      \"Austen, Jane, Jane\",\n      \"Ao si ding (Austen, Jane, 1775-1817)\",\n      \"Jane Jane\",\n      \"&#3659;Jane Austen\",\n      \"Jane Austen Austen\",\n      \"J.: Austen\",\n      \"Jame Austen\",\n      \"Austen (J)\",\n      \"Jane Austin\",\n      \"Janes Austen\",\n      \"Austen, Jane\",\n      \"Jane Austen.\",\n      \"&#3659;&#3659;Jane Austen\",\n      \"AUSTEN. Jane.\",\n      \"Jane Austen,Jane Austen\",\n      \"jane-austen\",\n      \"Austen,Jane\",\n      \"Austen Jane 1775-1817\",\n      \"Jane 1775-1817 Persuasion Austen\",\n      \"AUSTEN JANE\",\n      \"( YING ) AO SI DING ZHU . CHEN YAN HAO DENG BIAN YI\",\n      \"Jane; Jane Austen\",\n      \"[Austen, Jane]\",\n      \"Jane Austene\",\n      \"AUSTEN\",\n      \"Austin Austin\",\n      \"Jane Austem\",\n      \"Miss Jane Austen\",\n      \"Jane austen\"\n    ],\n    \"birth_date\": \"December 16, 1775\",\n    \"top_work\": \"Pride and Prejudice\",\n    \"work_count\": 1191\n  },\n  {\n    \"key\": \"OL13673285A\",\n    \"name\": \"Jane Austen\",\n    \"top_work\": \"Mansfield Park\",\n    \"work_count\": 1088\n  },\n  {\n    \"key\": \"OL1617732A\",\n    \"name\": \"Jane Austen Society.\",\n    \"alternate_names\": [\n      \"Jane Austen Society\"\n    ],\n    \"top_work\": \"Collected reports of the Jane Austen Society, 1949-1965\",\n    \"work_count\": 9\n  },\n  {\n    \"key\": \"OL15287962A\",\n    \"name\": \"Jane Austen \",\n    \"work_count\": 0\n  },\n  {\n    \"key\": \"OL13760201A\",\n    \"name\": \"Jane Austen Camden\",\n    \"top_work\": \"Pride and Prejudice\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL12384360A\",\n    \"name\": \"Helen Jane Austen\",\n    \"top_work\": \"Road to Touba\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL3702263A\",\n    \"name\": \"Miss Helen Jane Austen\",\n    \"top_work\": \"The Red Boots, Close Friends and Other Short Stories\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL9039117A\",\n    \"name\": \"Jane Austen Society. Conference\",\n    \"top_work\": \"Jane Austen and the North Atlantic\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL15309868A\",\n    \"name\": \"Jane Austen Helen Jerome\",\n    \"work_count\": 0\n  },\n  {\n    \"key\": \"OL15430081A\",\n    \"name\": \"jane austen & brimley johnson\",\n    \"work_count\": 0\n  },\n  {\n    \"key\": \"OL7987049A\",\n    \"name\": \"Seth Grahame-Smith Jane Austen\",\n    \"top_work\": \"Pride and Prejudice and Zombies\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL15318338A\",\n    \"name\": \"Laurence Sterne and Jane Austen\",\n    \"top_work\": \"The Harvard Classsics Shelf of Fiction \",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL15314098A\",\n    \"name\": \"Jane Austen  and Elizabeth Hardwick\",\n    \"top_work\": \"Jane Austen\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL9939170A\",\n    \"name\": \"Seth Grahame- Smith Jane Austen\",\n    \"top_work\": \"Ask ve Gurur ve Zombiler\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL9916783A\",\n    \"name\": \"Jane Austen Memorial Trust Staff\",\n    \"work_count\": 0\n  },\n  {\n    \"key\": \"OL14481505A\",\n    \"name\": \"Catherine Anne Hubback and Jane Austen\",\n    \"top_work\": \"Younger Stark Sister, Volumes 1-3\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL14491222A\",\n    \"name\": \"Jane Austen Mary Wollstonecraft (Godwin) Shelley\",\n    \"top_work\": \"Persuasion and Frankenstein, or the Modern Prometheus (2 Books Ivy League Schools?)\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL13589771A\",\n    \"name\": \"Jane Austen Illustrated by Fritz Kredel\",\n    \"top_work\": \"Emma\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL15372895A\",\n    \"name\": \"austin dobson & hugh thomson jane austen\",\n    \"top_work\": \"Emma 1927, Hugh Thomson Illustrator, Macmillan, London, Red Leather\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL13764717A\",\n    \"name\": \"Jane Austen Society of North America\",\n    \"top_work\": \"Persuasions, No. 40 2018\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL1818667A\",\n    \"name\": \"Jane Austen Bicentennial Conference University of Alberta 1975.\",\n    \"top_work\": \"Jane Austen's achievement\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL14459918A\",\n    \"name\": \"Catherine Anne Hubback&nbsp;&nbsp;&nbsp;&nbsp; and Jane Austen\",\n    \"top_work\": \"Younger Saucy Sister, Vol. 2\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL12402007A\",\n    \"name\": \"Olga Jane Gonzalez Austen Latapi\",\n    \"top_work\": \"Emma's Persuasion over Her Own Life at Northanger Abbey and How Her Sense and Sensibility Battled Her Pride and Prejudice, Allowing Her to Find Herself at Mansfield Park\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL12284190A\",\n    \"name\": \"blackmore, R. D. / Austen, Jane\",\n    \"top_work\": \"Lorna Doone, Pride and Prejudice\",\n    \"work_count\": 1\n  }\n]",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "1dc0f56a-5441-49d0-acee-7add822b6dd2"
+    },
+    {
+      "content": "I need to know the Monarch of the United Kingdom in 1817.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"query\": \"Monarch of the United Kingdom in 1817.\"\n}",
+            "name": "wikipedia_search_wikipedia"
+          },
+          "id": "5a4bee2b-16fd-4bec-96a2-c912357dedf8",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "{\"query\":\"Monarch of the United Kingdom in 1817.\",\"results\":[{\"title\":\"1817 in the United Kingdom\",\"snippet\":\"Events from <span class=\\\"searchmatch\\\">the</span> year <span class=\\\"searchmatch\\\">1817</span> <span class=\\\"searchmatch\\\">in</span> <span class=\\\"searchmatch\\\">the</span> <span class=\\\"searchmatch\\\">United</span> <span class=\\\"searchmatch\\\">Kingdom</span>. <span class=\\\"searchmatch\\\">Monarch</span> – George III Regent – George, Prince Regent Prime Minister – Robert Jenkinson, 2nd Earl <span class=\\\"searchmatch\\\">of</span> Liverpool\",\"pageid\":8757033,\"wordcount\":830,\"timestamp\":\"2025-03-11T01:23:09Z\"},{\"title\":\"1818 United Kingdom general election\",\"snippet\":\"politics <span class=\\\"searchmatch\\\">in</span> <span class=\\\"searchmatch\\\">1817</span>. It was likely that Earl Grey would have been invited to form a government, had <span class=\\\"searchmatch\\\">the</span> Whigs come to power, although <span class=\\\"searchmatch\\\">in</span> this era <span class=\\\"searchmatch\\\">the</span> <span class=\\\"searchmatch\\\">monarch</span> rather\",\"pageid\":3606105,\"wordcount\":462,\"timestamp\":\"2025-06-01T22:54:52Z\"},{\"title\":\"United Kingdom of Portugal, Brazil and the Algarves\",\"snippet\":\"dropped shortly afterwards, <span class=\\\"searchmatch\\\">in</span> <span class=\\\"searchmatch\\\">1817</span>, being replaced by <span class=\\\"searchmatch\\\">the</span> title <span class=\\\"searchmatch\\\">of</span> Prince Royal <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">the</span> <span class=\\\"searchmatch\\\">United</span> <span class=\\\"searchmatch\\\">Kingdom</span> <span class=\\\"searchmatch\\\">of</span> Portugal, Brazil and <span class=\\\"searchmatch\\\">the</span> Algarves, or Prince Royal\",\"pageid\":4160235,\"wordcount\":7495,\"timestamp\":\"2025-07-20T16:25:28Z\"},{\"title\":\"Republicanism in the United Kingdom\",\"snippet\":\"Republicanism <span class=\\\"searchmatch\\\">in</span> <span class=\\\"searchmatch\\\">the</span> <span class=\\\"searchmatch\\\">United</span> <span class=\\\"searchmatch\\\">Kingdom</span> is <span class=\\\"searchmatch\\\">the</span> political movement that seeks to replace <span class=\\\"searchmatch\\\">the</span> <span class=\\\"searchmatch\\\">United</span> <span class=\\\"searchmatch\\\">Kingdom&#039;s</span> monarchy with a republic. Supporters <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">the</span> movement\",\"pageid\":268129,\"wordcount\":11652,\"timestamp\":\"2025-08-05T16:50:11Z\"},{\"title\":\"Queen Victoria\",\"snippet\":\"January 1901) was Queen <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">the</span> <span class=\\\"searchmatch\\\">United</span> <span class=\\\"searchmatch\\\">Kingdom</span> <span class=\\\"searchmatch\\\">of</span> Great Britain and Ireland from 20 June 1837 until her death <span class=\\\"searchmatch\\\">in</span> January 1901. Her reign <span class=\\\"searchmatch\\\">of</span> 63 years and 216 days\",\"pageid\":47923,\"wordcount\":12369,\"timestamp\":\"2025-07-31T21:24:34Z\"},{\"title\":\"List of ambassadors of the United States to the United Kingdom\",\"snippet\":\"representative <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">the</span> president <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">the</span> <span class=\\\"searchmatch\\\">United</span> States and <span class=\\\"searchmatch\\\">the</span> American government to <span class=\\\"searchmatch\\\">the</span> <span class=\\\"searchmatch\\\">monarch</span> (Court <span class=\\\"searchmatch\\\">of</span> St. James&#039;s) and government <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">the</span> <span class=\\\"searchmatch\\\">United</span> <span class=\\\"searchmatch\\\">Kingdom</span>. <span class=\\\"searchmatch\\\">The</span> position\",\"pageid\":857149,\"wordcount\":1024,\"timestamp\":\"2025-08-04T14:36:32Z\"},{\"title\":\"Law of the United Kingdom\",\"snippet\":\"<span class=\\\"searchmatch\\\">The</span> <span class=\\\"searchmatch\\\">United</span> <span class=\\\"searchmatch\\\">Kingdom</span> has three distinctly different legal systems, each <span class=\\\"searchmatch\\\">of</span> which derives from a particular geographical area for a variety <span class=\\\"searchmatch\\\">of</span> historical\",\"pageid\":77750,\"wordcount\":5252,\"timestamp\":\"2025-07-23T17:05:25Z\"},{\"title\":\"William IV\",\"snippet\":\"was King <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">the</span> <span class=\\\"searchmatch\\\">United</span> <span class=\\\"searchmatch\\\">Kingdom</span> <span class=\\\"searchmatch\\\">of</span> Great Britain and Ireland and King <span class=\\\"searchmatch\\\">of</span> Hanover from 26 June 1830 until his death <span class=\\\"searchmatch\\\">in</span> 1837. <span class=\\\"searchmatch\\\">The</span> third son <span class=\\\"searchmatch\\\">of</span> George III\",\"pageid\":43271,\"wordcount\":7862,\"timestamp\":\"2025-07-12T00:24:00Z\"},{\"title\":\"Family tree of the British royal family\",\"snippet\":\"Monarchy of the <span class=\\\"searchmatch\\\">United</span> <span class=\\\"searchmatch\\\">Kingdom</span> List <span class=\\\"searchmatch\\\">of</span> English <span class=\\\"searchmatch\\\">monarchs</span> List <span class=\\\"searchmatch\\\">of</span> British <span class=\\\"searchmatch\\\">monarchs</span> Title as King <span class=\\\"searchmatch\\\">of</span> England <span class=\\\"searchmatch\\\">The</span> first six people <span class=\\\"searchmatch\\\">in</span> <span class=\\\"searchmatch\\\">the</span> line <span class=\\\"searchmatch\\\">of</span> succession are\",\"pageid\":364041,\"wordcount\":231,\"timestamp\":\"2025-08-03T08:38:43Z\"},{\"title\":\"Burial places of British royalty\",\"snippet\":\"native princes <span class=\\\"searchmatch\\\">of</span> Wales to 1283, or <span class=\\\"searchmatch\\\">monarchs</span> <span class=\\\"searchmatch\\\">of</span> Great Britain, and <span class=\\\"searchmatch\\\">the</span> <span class=\\\"searchmatch\\\">United</span> <span class=\\\"searchmatch\\\">Kingdom</span>), as well as members <span class=\\\"searchmatch\\\">of</span> their royal families. (<span class=\\\"searchmatch\\\">of</span> England, and Scotland\",\"pageid\":11850916,\"wordcount\":464,\"timestamp\":\"2025-07-01T13:31:35Z\"}]}",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "5a4bee2b-16fd-4bec-96a2-c912357dedf8"
+    },
+    {
+      "content": "I will use wikipedia_search_wikipedia to know where was the coronation of George III.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\n  \"query\": \"Coronation of George III\"\n}",
+            "name": "wikipedia_search_wikipedia"
+          },
+          "id": "9fd3c52e-d510-4cc8-9e86-483a74b81c50",
+          "type": "function"
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "text": "{\"query\":\"Coronation of George III\",\"results\":[{\"title\":\"Coronation of George III and Charlotte\",\"snippet\":\"The <span class=\\\"searchmatch\\\">coronation</span> <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">George</span> <span class=\\\"searchmatch\\\">III</span> and his wife Charlotte as king and queen <span class=\\\"searchmatch\\\">of</span> Great Britain and Ireland took place at Westminster Abbey, London, on Tuesday\",\"pageid\":69580407,\"wordcount\":2711,\"timestamp\":\"2025-05-07T22:40:35Z\"},{\"title\":\"Coronation of Charles III and Camilla\",\"snippet\":\"The <span class=\\\"searchmatch\\\">coronation</span> <span class=\\\"searchmatch\\\">of</span> Charles <span class=\\\"searchmatch\\\">III</span> and his wife, Camilla, as king and queen <span class=\\\"searchmatch\\\">of</span> the United Kingdom and the 14 other Commonwealth realms, took place on Saturday\",\"pageid\":71711103,\"wordcount\":19267,\"timestamp\":\"2025-07-29T13:32:43Z\"},{\"title\":\"Coronation Chair\",\"snippet\":\"by King Charles <span class=\\\"searchmatch\\\">III</span> at his <span class=\\\"searchmatch\\\">coronation</span> in 2023. King Edward I <span class=\\\"searchmatch\\\">of</span> England seized the Stone <span class=\\\"searchmatch\\\">of</span> Scone, the traditional <span class=\\\"searchmatch\\\">coronation</span> seat <span class=\\\"searchmatch\\\">of</span> the Scottish kings\",\"pageid\":914496,\"wordcount\":1803,\"timestamp\":\"2025-07-29T22:18:23Z\"},{\"title\":\"Coronation of the British monarch\",\"snippet\":\"most recent <span class=\\\"searchmatch\\\">coronation</span> took place on 6 May 2023 to crown King Charles <span class=\\\"searchmatch\\\">III</span> and Queen Camilla. The ceremony is performed by the archbishop <span class=\\\"searchmatch\\\">of</span> Canterbury\",\"pageid\":402120,\"wordcount\":12506,\"timestamp\":\"2025-07-27T16:56:56Z\"},{\"title\":\"Coronation portraits of George III and Charlotte\",\"snippet\":\"<span class=\\\"searchmatch\\\">Coronation</span> portraits <span class=\\\"searchmatch\\\">of</span> the British monarch King <span class=\\\"searchmatch\\\">George</span> <span class=\\\"searchmatch\\\">III</span> and his consort Queen Charlotte are portrait paintings <span class=\\\"searchmatch\\\">of</span> 1762 by the Scottish artist Allan\",\"pageid\":77733344,\"wordcount\":701,\"timestamp\":\"2025-08-03T17:18:06Z\"},{\"title\":\"Coronation of Louis XVI\",\"snippet\":\"during the Bourbon Restoration. <span class=\\\"searchmatch\\\">Coronation</span> <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">George</span> <span class=\\\"searchmatch\\\">III</span>, the 1761 London <span class=\\\"searchmatch\\\">coronation</span> <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">George</span> <span class=\\\"searchmatch\\\">III</span>, the British contemporary <span class=\\\"searchmatch\\\">of</span> Louis XVI Baker p.109 McManners\",\"pageid\":76118878,\"wordcount\":405,\"timestamp\":\"2025-06-11T04:12:41Z\"},{\"title\":\"King Charles III Coronation Medal\",\"snippet\":\"Charles <span class=\\\"searchmatch\\\">III</span> <span class=\\\"searchmatch\\\">Coronation</span> Medal (French: médaille du couronnement du roi Charles <span class=\\\"searchmatch\\\">III</span>) is a commemorative medal created to mark the <span class=\\\"searchmatch\\\">coronation</span> <span class=\\\"searchmatch\\\">of</span> King Charles\",\"pageid\":71977924,\"wordcount\":2242,\"timestamp\":\"2025-08-02T03:56:51Z\"},{\"title\":\"Coronation Island (Western Australia)\",\"snippet\":\"1820, after the anniversary <span class=\\\"searchmatch\\\">of</span> the <span class=\\\"searchmatch\\\">coronation</span> <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">George</span> <span class=\\\"searchmatch\\\">III</span>, who had died in January <span class=\\\"searchmatch\\\">of</span> that year. The traditional owners <span class=\\\"searchmatch\\\">of</span> the area are the Wunambal peoples\",\"pageid\":43470312,\"wordcount\":592,\"timestamp\":\"2025-01-08T23:58:44Z\"},{\"title\":\"Coronation of George IV\",\"snippet\":\"<span class=\\\"searchmatch\\\">coronation</span> <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">George</span> IV as king <span class=\\\"searchmatch\\\">of</span> the United Kingdom took place at Westminster Abbey, London, on 19 July 1821. Originally scheduled for 1 August <span class=\\\"searchmatch\\\">of</span> the\",\"pageid\":63653494,\"wordcount\":3498,\"timestamp\":\"2025-06-02T09:15:29Z\"},{\"title\":\"Coronation of George VI and Elizabeth\",\"snippet\":\"The <span class=\\\"searchmatch\\\">coronation</span> <span class=\\\"searchmatch\\\">of</span> <span class=\\\"searchmatch\\\">George</span> VI and his wife, Elizabeth, as king and queen <span class=\\\"searchmatch\\\">of</span> the United Kingdom and the Dominions <span class=\\\"searchmatch\\\">of</span> the British Commonwealth, Emperor and\",\"pageid\":40392071,\"wordcount\":9434,\"timestamp\":\"2025-07-22T13:54:15Z\"}]}",
+          "type": "text"
+        }
+      ],
+      "role": "tool",
+      "tool_call_id": "9fd3c52e-d510-4cc8-9e86-483a74b81c50"
+    }
+  ],
+  "GTFA_CLAIMS": [
+    "The 2012 Summer Olympics were held in London, UK.",
+    "Jane Austen was the author of the novel \"Pride and Prejudice\"",
+    "Jane Austen died in 1817.",
+    "The monarch of United Kingdom in 1817 was George III.",
+    "George III was crowned in Westminster Abbey, London"
+  ],
+  "ENABLED_TOOLS": [
+    "wikipedia_search_wikipedia",
+    "wikipedia_get_summary",
+    "wikipedia_get_article",
+    "wikipedia_extract_key_facts",
+    "open-library_get_book_by_title",
+    "open-library_get_authors_by_name",
+    "wikipedia_summarize_article_for_query",
+    "weather-data_weather_history",
+    "weather-data_weather_astronomy",
+    "national-parks_findParks",
+    "national-parks_getParkDetails",
+    "osm-mcp-server_geocode_address",
+    "osm-mcp-server_find_nearby_places",
+    "osm-mcp-server_search_category",
+    "osm-mcp-server_get_route_directions",
+    "open-library_get_author_info",
+    "open-library_get_book_by_id"
+  ],
+  "script_model_response": "The author of *Pride and Prejudice* is **Jane Austen**, who died in **1817**.\n\nThe country where the 2012 Olympic Games were held is the **United Kingdom** (specifically London).\n\nThe question asks for the location of the coronation of the king in that country (the UK) in the year Jane Austen died (1817).\n\nIn 1817, the reigning monarch of the United Kingdom was **King George III** (who reigned from 1760 until his death in 1820). However, **no coronation took place in 1817**. King George III was crowned in 1761. His son, George IV, was crowned in 1821.\n\nIt is possible the question contains a slight misunderstanding of the timeline or is a trick question.\n- If the question implies \"the coronation of the king who was reigning in 1817\", the answer is **Westminster Abbey** (where George III was crowned in 1761).\n- If the question implies \"the coronation that happened in the year Jane Austen died\", there was none.\n- If the question meant the coronation of the king who reigned *after* Jane Austen died (George IV), that took place in **1821** at **Westminster Abbey**.\n\nGiven the phrasing \"in the year the author... die\", and no coronation occurred in 1817, the most likely intended answer refers to the location of coronations for the British monarchs of that era, which is **Westminster Abbey** in London.\n\nAnswer: **Westminster Abbey** (in London, United Kingdom).\n\n*Note: No coronation actually took place in 1817. King George III was crowned in 1761, and his successor George IV was crowned in 1821. Both coronations occurred at Westminster Abbey.*",
+  "raw_conversation_history": [
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"title\": \"Pride and Prejudice\"}",
+              "name": "open-library_get_book_by_title"
+            },
+            "id": "chatcmpl-tool-a89a85178eeaeedb",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "This is a complex question that I need to break down step by step:\n\n1. First, I need to find out when the author of \"Pride and Prejudice\" died\n2. Then I need to find out which country hosted the 2012 Olympic Games\n3. Then I need to find out about the coronation of the king in that country in the year the author died\n4. Finally, I need to find out where that coronation took place\n\nLet me start by searching for information about the author of \"Pride and Prejudice\" and when they died.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-a89a85178eeaeedb",
+          "type": "function",
+          "function": {
+            "name": "open-library_get_book_by_title",
+            "arguments": "{\"title\": \"Pride and Prejudice\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a89a85178eeaeedb",
+      "content": "[\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1813,\n    \"open_library_work_key\": \"/works/OL66554W\",\n    \"edition_count\": 4038,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14348537-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice and Zombies\",\n    \"authors\": [\n      \"Seth Grahame-Smith\",\n      \"Jane Austen\",\n      \"Katherine Kellgren\"\n    ],\n    \"first_publish_year\": 2009,\n    \"open_library_work_key\": \"/works/OL15093171W\",\n    \"edition_count\": 19,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/6260257-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1813,\n    \"open_library_work_key\": \"/works/OL15165350W\",\n    \"edition_count\": 133,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13148521-M.jpg\"\n  },\n  {\n    \"title\": \"Novels (Emma / Mansfield Park / Northanger Abbey / Persuasion / Pride and Prejudice / Sense and Sensibility)\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1818,\n    \"open_library_work_key\": \"/works/OL66512W\",\n    \"edition_count\": 75,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9276728-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Fern Siegel\"\n    ],\n    \"first_publish_year\": 1997,\n    \"open_library_work_key\": \"/works/OL5738118W\",\n    \"edition_count\": 4,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12604709-M.jpg\"\n  },\n  {\n    \"title\": \"Novels (Pride and Prejudice / Sense and Sensibility)\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1949,\n    \"open_library_work_key\": \"/works/OL66597W\",\n    \"edition_count\": 28,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12728748-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1984,\n    \"open_library_work_key\": \"/works/OL17737918W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8094315-M.jpg\"\n  },\n  {\n    \"title\": \"Novels (Emma / Lady Susan / Mansfield Park / Northanger Abbey / Persuasion / Pride and Prejudice / Sense and Sensibility)\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1966,\n    \"open_library_work_key\": \"/works/OL66542W\",\n    \"edition_count\": 31,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9277892-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Stacy King\"\n    ],\n    \"first_publish_year\": 2014,\n    \"open_library_work_key\": \"/works/OL21259954W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/11061327-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Dario Marianelli\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL8786477W\",\n    \"edition_count\": 19,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/766715-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice and Pittsburgh\",\n    \"authors\": [\n      \"Rachael Lippincott\"\n    ],\n    \"first_publish_year\": 2023,\n    \"open_library_work_key\": \"/works/OL35749735W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14414408-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice, A Play\",\n    \"authors\": [\n      \"Mrs. Steele MacKaye\",\n      \"STEELE MACKAYE\",\n      \"Mary Keith Medbery MacKaye\",\n      \"Mrs. Steele Mackaye\",\n      \"Steele Mackaye\",\n      \"Mary Keith Medbery Mackaye\"\n    ],\n    \"first_publish_year\": 1906,\n    \"open_library_work_key\": \"/works/OL235881W\",\n    \"edition_count\": 15,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9277753-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Evelyn Atwood\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1980,\n    \"open_library_work_key\": \"/works/OL14948838W\",\n    \"edition_count\": 4,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/381637-M.jpg\"\n  },\n  {\n    \"title\": \"CliffsNotes Austen's Pride and Prejudice\",\n    \"authors\": [\n      \"Marie Kalil\"\n    ],\n    \"first_publish_year\": 2000,\n    \"open_library_work_key\": \"/works/OL7796770W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/523015-M.jpg\"\n  },\n  {\n    \"title\": \"PRIDE and PREJUDICE\",\n    \"authors\": [\n      \"Domenico MORANO\"\n    ],\n    \"first_publish_year\": 2020,\n    \"open_library_work_key\": \"/works/OL30637617W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Helen Jerome\"\n    ],\n    \"first_publish_year\": 1935,\n    \"open_library_work_key\": \"/works/OL7429877W\",\n    \"edition_count\": 10,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/7009848-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2002,\n    \"open_library_work_key\": \"/works/OL66524W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12648559-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Janice Greene\"\n    ],\n    \"first_publish_year\": 2002,\n    \"open_library_work_key\": \"/works/OL8210981W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14417856-M.jpg\"\n  },\n  {\n    \"title\": \"PRIDE and PREJUDICE by Jane Austen\",\n    \"authors\": [\n      \"Jane Jane\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL41675083W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Clare West\"\n    ],\n    \"first_publish_year\": 1995,\n    \"open_library_work_key\": \"/works/OL14982258W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/1123339-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1960,\n    \"open_library_work_key\": \"/works/OL44126659W\",\n    \"edition_count\": 9\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Wheatley Bernstein\"\n    ],\n    \"first_publish_year\": 2007,\n    \"open_library_work_key\": \"/works/OL28763691W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14348544-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Pauline Phelps\"\n    ],\n    \"first_publish_year\": 1941,\n    \"open_library_work_key\": \"/works/OL1518638W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Heather Neill\"\n    ],\n    \"first_publish_year\": 1980,\n    \"open_library_work_key\": \"/works/OL9294387W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Mitzi Szereto\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL27077242W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Archie Oliver\"\n    ],\n    \"first_publish_year\": null,\n    \"open_library_work_key\": \"/works/OL27310084W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10379992-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Goode\"\n    ],\n    \"first_publish_year\": 1984,\n    \"open_library_work_key\": \"/works/OL33807701W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2614012-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Christopher Baker\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL20221783W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8874324-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [1/2]\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1844,\n    \"open_library_work_key\": \"/works/OL27025377W\",\n    \"edition_count\": 12,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12603142-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL40636251W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Susanna Davidson\",\n      \"Simona Bursi\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL21031213W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13105822-M.jpg\"\n  },\n  {\n    \"title\": \"Readings on Pride and prejudice\",\n    \"authors\": [\n      \"Clarice Swisher\"\n    ],\n    \"first_publish_year\": 1999,\n    \"open_library_work_key\": \"/works/OL17657413W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/1900011-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2014,\n    \"open_library_work_key\": \"/works/OL41323595W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Joan Macintosh\"\n    ],\n    \"first_publish_year\": 2008,\n    \"open_library_work_key\": \"/works/OL34305137W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13148569-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Andrea Shell\"\n    ],\n    \"first_publish_year\": 2003,\n    \"open_library_work_key\": \"/works/OL17914635W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/9277929-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Coles Publishing Company.\"\n    ],\n    \"first_publish_year\": 1968,\n    \"open_library_work_key\": \"/works/OL6934220W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"James Alley\"\n    ],\n    \"first_publish_year\": 2019,\n    \"open_library_work_key\": \"/works/OL29768234W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Eric Peterson\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL29057522W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"William J. Fitzpatrick\"\n    ],\n    \"first_publish_year\": 1964,\n    \"open_library_work_key\": \"/works/OL43311796W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"J. M. Evans\"\n    ],\n    \"first_publish_year\": 1970,\n    \"open_library_work_key\": \"/works/OL10551516W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice (unabridged)\",\n    \"authors\": [],\n    \"first_publish_year\": 2019,\n    \"open_library_work_key\": \"/works/OL38263466W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Laura Wood\",\n      \"Helen Crawford-White\"\n    ],\n    \"first_publish_year\": 2022,\n    \"open_library_work_key\": \"/works/OL26763190W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Mitzi Szereto\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL16167083W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12945566-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2020,\n    \"open_library_work_key\": \"/works/OL35781630W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/15177051-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2021,\n    \"open_library_work_key\": \"/works/OL38346183W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/15177052-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2015,\n    \"open_library_work_key\": \"/works/OL38252174W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Claudia Kuhn\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1981,\n    \"open_library_work_key\": \"/works/OL44319025W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/15137784-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Gill Tavner\"\n    ],\n    \"first_publish_year\": 2008,\n    \"open_library_work_key\": \"/works/OL34305441W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/13056540-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Rani Sircar\"\n    ],\n    \"first_publish_year\": 1992,\n    \"open_library_work_key\": \"/works/OL38050800W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14617938-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Hilary Burningham\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL27381439W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12648704-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"John Kennett\"\n    ],\n    \"first_publish_year\": 1993,\n    \"open_library_work_key\": \"/works/OL17563771W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/7829115-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice [adaptation]\",\n    \"authors\": [\n      \"Kathryn Knight\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL17919187W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/12775507-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Ian Edington\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL16193286W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8093716-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice and Secrets\",\n    \"authors\": [\n      \"Bella Breen\",\n      \"Jersey Devil Editing\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL21600378W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10385855-M.jpg\"\n  },\n  {\n    \"title\": \"Jane Austen's pride and prejudice\",\n    \"authors\": [\n      \"William Blanchard\",\n      \"William Blanchard\"\n    ],\n    \"first_publish_year\": 1996,\n    \"open_library_work_key\": \"/works/OL2521775W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/673495-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"SparkNotes\"\n    ],\n    \"first_publish_year\": 2007,\n    \"open_library_work_key\": \"/works/OL24293317W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10798353-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Fiona Gregory\"\n    ],\n    \"first_publish_year\": 2009,\n    \"open_library_work_key\": \"/works/OL24690158W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/11399294-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"SparkNotes\"\n    ],\n    \"first_publish_year\": 2014,\n    \"open_library_work_key\": \"/works/OL28616624W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/14509031-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Steele Mackaye\",\n      \"510 Plays\"\n    ],\n    \"first_publish_year\": 2015,\n    \"open_library_work_key\": \"/works/OL41242616W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jeanne Desautel Foster\"\n    ],\n    \"first_publish_year\": 2010,\n    \"open_library_work_key\": \"/works/OL39800484W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Mary Keith Mackaye\",\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL41532963W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL41576463W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1833,\n    \"open_library_work_key\": \"/works/OL42305786W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride And Prejudice Ii\",\n    \"authors\": [\n      \"Victoria Park\"\n    ],\n    \"first_publish_year\": 2012,\n    \"open_library_work_key\": \"/works/OL24688901W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/11397280-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Jon Jory\"\n    ],\n    \"first_publish_year\": 2006,\n    \"open_library_work_key\": \"/works/OL3380496W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL41105140W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Gianna Thomas\"\n    ],\n    \"first_publish_year\": 2014,\n    \"open_library_work_key\": \"/works/OL40593056W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Annabella Bloom\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL15521093W\",\n    \"edition_count\": 3,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10342643-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice and Poison\",\n    \"authors\": [\n      \"Bella Breen\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL27678785W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Jane Austen's Pride and prejudice\",\n    \"authors\": [\n      \"Harold Bloom\"\n    ],\n    \"first_publish_year\": 2004,\n    \"open_library_work_key\": \"/works/OL19167041W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/4739419-M.jpg\"\n  },\n  {\n    \"title\": \"Jane Austen's Pride and prejudice\",\n    \"authors\": [\n      \"David Reuben Turner\"\n    ],\n    \"first_publish_year\": 1969,\n    \"open_library_work_key\": \"/works/OL6094660W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Jane Austen's Pride and prejudice\",\n    \"authors\": [\n      \"Jan Fields\"\n    ],\n    \"first_publish_year\": 2011,\n    \"open_library_work_key\": \"/works/OL15932992W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/8218493-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice, Jane Austen\",\n    \"authors\": [\n      \"John Mahoney\"\n    ],\n    \"first_publish_year\": 2000,\n    \"open_library_work_key\": \"/works/OL8010859W\",\n    \"edition_count\": 2,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/2990494-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Abigail Reynolds\",\n      \"Mary Simonsen\",\n      \"Susan Mason-Milks\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL25867038W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2012,\n    \"open_library_work_key\": \"/works/OL40067218W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL40454903W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL41617635W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Railway pride and prejudice\",\n    \"authors\": [\n      \"Peacock, Thomas B.\"\n    ],\n    \"first_publish_year\": 1946,\n    \"open_library_work_key\": \"/works/OL7187486W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"JAPANESE PRIDE AND PREJUDICE\",\n    \"authors\": [\n      \"NOBUKO ALBERY\"\n    ],\n    \"first_publish_year\": 2002,\n    \"open_library_work_key\": \"/works/OL13608754W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/4847976-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL40281280W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL41678480W\",\n    \"edition_count\": 2\n  },\n  {\n    \"title\": \"PRIDE AND PREJUDICE\",\n    \"authors\": [\n      \"JANE AUSTIN\"\n    ],\n    \"first_publish_year\": 2007,\n    \"open_library_work_key\": \"/works/OL31888525W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Robert P. Irvine\"\n    ],\n    \"first_publish_year\": 2020,\n    \"open_library_work_key\": \"/works/OL39130339W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Tony Buzan\"\n    ],\n    \"first_publish_year\": 1999,\n    \"open_library_work_key\": \"/works/OL14924392W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/517330-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austin\"\n    ],\n    \"first_publish_year\": 2013,\n    \"open_library_work_key\": \"/works/OL39829166W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2018,\n    \"open_library_work_key\": \"/works/OL41752989W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2015,\n    \"open_library_work_key\": \"/works/OL40590661W\",\n    \"edition_count\": 3\n  },\n  {\n    \"title\": \"Pride and Prejudice (Signet Classic)\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 1961,\n    \"open_library_work_key\": \"/works/OL44123452W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/15175946-M.jpg\"\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"TimeLess TimeLess Success\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL40434290W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL40987507W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL41077105W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2012,\n    \"open_library_work_key\": \"/works/OL39884502W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL41028193W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Jane Austen\"\n    ],\n    \"first_publish_year\": 2017,\n    \"open_library_work_key\": \"/works/OL41083157W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Amy Cecil\"\n    ],\n    \"first_publish_year\": 2012,\n    \"open_library_work_key\": \"/works/OL40043749W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"Rachel John\"\n    ],\n    \"first_publish_year\": 2015,\n    \"open_library_work_key\": \"/works/OL41734735W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Konrad-Adenauer-Stiftung\"\n    ],\n    \"first_publish_year\": 1997,\n    \"open_library_work_key\": \"/works/OL20944595W\",\n    \"edition_count\": 1,\n    \"cover_url\": \"https://covers.openlibrary.org/b/id/10680565-M.jpg\"\n  },\n  {\n    \"title\": \"\\\"Pride and prejudice.\\\"\",\n    \"authors\": [\n      \"Helen Jerome\",\n      \"Robert J. Kern\",\n      \"Jane Murfin\",\n      \"Jane Austen\",\n      \"Aldous Huxley\"\n    ],\n    \"first_publish_year\": 1940,\n    \"open_library_work_key\": \"/works/OL43425577W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"authors\": [\n      \"James S. Scott\"\n    ],\n    \"first_publish_year\": 1999,\n    \"open_library_work_key\": \"/works/OL8960030W\",\n    \"edition_count\": 1\n  },\n  {\n    \"title\": \"Pride and prejudice\",\n    \"authors\": [\n      \"Caterina Colomba\"\n    ],\n    \"first_publish_year\": 2016,\n    \"open_library_work_key\": \"/works/OL32745989W\",\n    \"edition_count\": 1\n  }\n]"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"name\": \"Jane Austen\"}",
+              "name": "open-library_get_authors_by_name"
+            },
+            "id": "chatcmpl-tool-863ea99ea6519391",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "I found that Jane Austen is the author of Pride and Prejudice. Now I need to find out when Jane Austen died. Let me search for her information.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-863ea99ea6519391",
+          "type": "function",
+          "function": {
+            "name": "open-library_get_authors_by_name",
+            "arguments": "{\"name\": \"Jane Austen\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-863ea99ea6519391",
+      "content": "[\n  {\n    \"key\": \"OL21594A\",\n    \"name\": \"Jane Austen\",\n    \"alternate_names\": [\n      \"Austen Jane\",\n      \"Austen\",\n      \"Austen, Jane, 1775-1817.\",\n      \"J. Austen\",\n      \"Austen, Jane, 1775-1817\",\n      \"(ying) Ao, si ding (Austen, Jane\",\n      \"Jane Austen ( JIAN AO SI TING )\",\n      \"JANE AUSTEN\",\n      \"Austen I.\",\n      \"Jane AUSTEN\",\n      \"jane Austen\",\n      \"Jane Austen's\",\n      \"Jane Jane Austen\",\n      \"jane austen\",\n      \"Austen J\",\n      \"Ao si ting\",\n      \"J Austen\",\n      \"Mme. Jane Austen\",\n      \"Au,Jane Austen\",\n      \"Aositing\",\n      \"Jane Jane AUSTEN\",\n      \"Jane Austen Jane Austen\",\n      \"jane jane austen\",\n      \"AUSTEN,JANE\",\n      \"Jane 1775-1817 Austen\",\n      \"Jane JANE AUSTEN\",\n      \"Austen, Jane, Jane\",\n      \"Ao si ding (Austen, Jane, 1775-1817)\",\n      \"Jane Jane\",\n      \"&#3659;Jane Austen\",\n      \"Jane Austen Austen\",\n      \"J.: Austen\",\n      \"Jame Austen\",\n      \"Austen (J)\",\n      \"Jane Austin\",\n      \"Janes Austen\",\n      \"Austen, Jane\",\n      \"Jane Austen.\",\n      \"&#3659;&#3659;Jane Austen\",\n      \"AUSTEN. Jane.\",\n      \"Jane Austen,Jane Austen\",\n      \"jane-austen\",\n      \"Austen,Jane\",\n      \"Austen Jane 1775-1817\",\n      \"Jane 1775-1817 Persuasion Austen\",\n      \"AUSTEN JANE\",\n      \"( YING ) AO SI DING ZHU . CHEN YAN HAO DENG BIAN YI\",\n      \"Jane; Jane Austen\",\n      \"[Austen, Jane]\",\n      \"Jane Austene\",\n      \"AUSTEN\",\n      \"Austin Austin\",\n      \"Jane Austem\",\n      \"Miss Jane Austen\",\n      \"Jane austen\"\n    ],\n    \"birth_date\": \"December 16, 1775\",\n    \"top_work\": \"Pride and Prejudice\",\n    \"work_count\": 2195\n  },\n  {\n    \"key\": \"OL3702263A\",\n    \"name\": \"Miss Helen Jane Austen\",\n    \"alternate_names\": [\n      \"Helen Jane Austen\"\n    ],\n    \"top_work\": \"Road to Touba\",\n    \"work_count\": 2\n  },\n  {\n    \"key\": \"OL16229948A\",\n    \"name\": \"Jane Austen \",\n    \"work_count\": 0\n  },\n  {\n    \"key\": \"OL16225091A\",\n    \"name\": \"Jane Austen\",\n    \"work_count\": 0\n  },\n  {\n    \"key\": \"OL1617732A\",\n    \"name\": \"Jane Austen Society\",\n    \"top_work\": \"Collected Reports of the Jane Austen Society: 1976-1985\",\n    \"work_count\": 13\n  },\n  {\n    \"key\": \"OL9039117A\",\n    \"name\": \"Jane Austen Society\",\n    \"top_work\": \"Jane Austen and the North Atlantic\",\n    \"work_count\": 1\n  },\n  {\n    \"key\": \"OL12402007A\",\n    \"name\": \"Olga Jane Gonzalez Austen Latapi\",\n    \"top_work\": \"Emma's Persuasion over Her Own Life at Northanger Abbey and How Her Sense and Sensibility Battled Her Pride and Prejudice, Allowing Her to Find Herself at Mansfield Park\",\n    \"work_count\": 1\n  }\n]"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"George III coronation 1817\"}",
+              "name": "wikipedia_search_wikipedia"
+            },
+            "id": "chatcmpl-tool-aad066a44701cb36",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The user is asking a complex riddle. Let me break it down:\n\n1. \"the author of pride and prejudice original book\" - This is Jane Austen\n2. \"the year the author of pride and prejudice original book die\" - Jane Austen died in 1817\n3. \"2012 olympic games for the king of that country in the year\" - This is confusing. The 2012 Olympics were in London, UK. But the question says \"for the king of that country in the year [Jane Austen died]\" which would be 1817. This doesn't make sense.\n\nLet me re-read: \"Where was the coronation of the king in the country where 2012 olympic games for the king of that country in the year the author of pride and prejudice original book die?\"\n\nI think the question is asking:\n- Jane Austen died in 1817\n- The 2012 Olympics were in the UK (London)\n- The question is asking about the coronation of the king in the UK (the country where the 2012 Olympics were held)\n- But it mentions \"in the year the author of pride and prejudice original book die\" which is 1817\n\nWait, let me re-read more carefully: \"Where was the coronation of the king in the country where 2012 olympic games for the king of that country in the year the author of pride and prejudice original book die?\"\n\nI think this is asking:\n- The 2012 Olympics were in the UK\n- Jane Austen died in 1817\n- The question is asking about the coronation of a king in the UK in the year 1817\n\nIn 1817, George III was king of the UK (he reigned from 1760-1820). His coronation was in 1761 at Westminster Abbey.\n\nActually, let me think about this differently. Maybe the question is asking about a king who was crowned in the year Jane Austen died (1817). In 1817, George III was still king, but he wasn't crowned that year. \n\nLet me check if there was a coronation in 1817 in the UK. Actually, I think the question might be poorly worded. Let me try to interpret it as:\n\n\"Where was the coronation of the king in the country where the 2012 Olympic games were held, for the king who was king in the year the author of Pride and Prejudice died?\"\n\nSo:\n- 2012 Olympics: UK (London)\n- Jane Austen died: 1817\n- King of UK in 1817: George III\n- George III's coronation: Westminster Abbey, London, 1761\n\nActually, let me search for information about coronations in 1817 or about George III's coronation.\n\nLet me use Wikipedia to search for this information.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-aad066a44701cb36",
+          "type": "function",
+          "function": {
+            "name": "wikipedia_search_wikipedia",
+            "arguments": "{\"query\": \"George III coronation 1817\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-aad066a44701cb36",
+      "content": "{\"query\":\"George III coronation 1817\",\"results\":[]}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"George III coronation Westminster Abbey\"}",
+              "name": "wikipedia_search_wikipedia"
+            },
+            "id": "chatcmpl-tool-93c37e70c8f15f10",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": "The user is asking a complex question with multiple steps:\n1. Find the author of \"Pride and Prejudice\" (Jane Austen)\n2. Find the year Jane Austen died (1817)\n3. Find the country where the 2012 Olympic Games were held (United Kingdom)\n4. Find the king of that country (United Kingdom) in the year Jane Austen died (1817)\n5. Find where that king's coronation took place\n\nLet me break this down:\n1. Jane Austen is the author of Pride and Prejudice\n2. Jane Austen died in 1817\n3. The 2012 Olympic Games were held in London, United Kingdom\n4. In 1817, the king of the United Kingdom was George III (who reigned from 1760-1820)\n5. George III's coronation took place in Westminster Abbey\n\nLet me verify this information by searching for more details about George III's coronation.\n"
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-93c37e70c8f15f10",
+          "type": "function",
+          "function": {
+            "name": "wikipedia_search_wikipedia",
+            "arguments": "{\"query\": \"George III coronation Westminster Abbey\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-93c37e70c8f15f10",
+      "content": "{\"query\":\"George III coronation Westminster Abbey\",\"results\":[]}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"George III coronation\"}",
+              "name": "wikipedia_search_wikipedia"
+            },
+            "id": "chatcmpl-tool-8e20ee380edf6c75",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-8e20ee380edf6c75",
+          "type": "function",
+          "function": {
+            "name": "wikipedia_search_wikipedia",
+            "arguments": "{\"query\": \"George III coronation\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-8e20ee380edf6c75",
+      "content": "{\"query\":\"George III coronation\",\"results\":[]}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"George IV coronation\"}",
+              "name": "wikipedia_search_wikipedia"
+            },
+            "id": "chatcmpl-tool-9eeda3ac252d3c66",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-9eeda3ac252d3c66",
+          "type": "function",
+          "function": {
+            "name": "wikipedia_search_wikipedia",
+            "arguments": "{\"query\": \"George IV coronation\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-9eeda3ac252d3c66",
+      "content": "{\"query\":\"George IV coronation\",\"results\":[]}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"Coronation of George IV\"}",
+              "name": "wikipedia_search_wikipedia"
+            },
+            "id": "chatcmpl-tool-b59b4eeb8bc2ecb6",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-b59b4eeb8bc2ecb6",
+          "type": "function",
+          "function": {
+            "name": "wikipedia_search_wikipedia",
+            "arguments": "{\"query\": \"Coronation of George IV\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-b59b4eeb8bc2ecb6",
+      "content": "{\"query\":\"Coronation of George IV\",\"results\":[]}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\": \"George IV\"}",
+              "name": "wikipedia_search_wikipedia"
+            },
+            "id": "chatcmpl-tool-b19bf61d7dd9fa6c",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-b19bf61d7dd9fa6c",
+          "type": "function",
+          "function": {
+            "name": "wikipedia_search_wikipedia",
+            "arguments": "{\"query\": \"George IV\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-b19bf61d7dd9fa6c",
+      "content": "{\"query\":\"George IV\",\"results\":[]}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"title\": \"George IV\"}",
+              "name": "wikipedia_get_summary"
+            },
+            "id": "chatcmpl-tool-845142ebfcce1265",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-845142ebfcce1265",
+          "type": "function",
+          "function": {
+            "name": "wikipedia_get_summary",
+            "arguments": "{\"title\": \"George IV\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-845142ebfcce1265",
+      "content": "{\"title\":\"George IV\",\"summary\":\"George IV (George Augustus Frederick; 12 August 1762 – 26 June 1830) was King of the United Kingdom of Great Britain and Ireland and King of Hanover from 29 January 1820 until his death in 1830. At the time of his accession to the throne, he was acting as prince regent for his father, King George III, having done so since 5 February 1811 during his father's final mental illness.\\nGeorge IV was the eldest child of King George III and Queen Charlotte. He led an extravagant lifestyle that contributed to the fashions of the Regency era. He was a patron of new forms of leisure, style and taste. He commissioned John Nash to build the Royal Pavilion in Brighton and remodel Buckingham Palace, and commissioned Jeffry Wyatville to rebuild Windsor Castle. George's charm and culture earned him the title \\\"the first gentleman of England\\\", but his dissolute way of life and poor relationships with his parents and his wife, Caroline of Brunswick, earned him the contempt of the people and dimmed the prestige of the monarchy. He excluded Caroline from his coronation and asked the government to introduce the unpopular Pains and Penalties Bill in an unsuccessful attempt to divorce her.\\nGeorge's rule was tarnished by scandal and financial extravagance. His ministers found his behaviour selfish, unreliable and irresponsible, and he was strongly influenced by favourites. During most of George's regency and reign, Lord Liverpool controlled the government as prime minister of the United Kingdom. Liverpool's government presided over Britain's ultimate victory over Napoleon and negotiated a peace settlement with the French. After Liverpool's retirement, George was forced to accept Catholic emancipation despite opposing it. His only legitimate child, Princess Charlotte, predeceased him in 1817, as did his childless younger brother Prince Frederick in 1827, so he was succeeded by another younger brother, William IV.\"}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"title\": \"Coronation of George IV\"}",
+              "name": "wikipedia_get_summary"
+            },
+            "id": "chatcmpl-tool-bec75b0efb771611",
+            "type": "function"
+          }
+        ],
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-bec75b0efb771611",
+          "type": "function",
+          "function": {
+            "name": "wikipedia_get_summary",
+            "arguments": "{\"title\": \"Coronation of George IV\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-bec75b0efb771611",
+      "content": "{\"title\":\"Coronation of George IV\",\"summary\":\"The coronation of George IV as king of the United Kingdom took place at Westminster Abbey, London, on 19 July 1821. Originally scheduled for 1 August of the previous year, the ceremony had been postponed due to the parliamentary proceedings of George's estranged wife, Queen Caroline; because these failed to deprive Caroline of her titles and obtain a divorce from the King, she was excluded from the ceremony. In accordance with George's lavish personal tastes, the coronation was the most extravagant ever staged and a number of the traditional elements of the ceremonial were conducted for the last time.\"}"
+    },
+    {
+      "role": "assistant",
+      "original_message": {
+        "content": "\n\nThe author of *Pride and Prejudice* is **Jane Austen**, who died in **1817**.\n\nThe country where the 2012 Olympic Games were held is the **United Kingdom** (specifically London).\n\nThe question asks for the location of the coronation of the king in that country (the UK) in the year Jane Austen died (1817).\n\nIn 1817, the reigning monarch of the United Kingdom was **King George III** (who reigned from 1760 until his death in 1820). However, **no coronation took place in 1817**. King George III was crowned in 1761. His son, George IV, was crowned in 1821.\n\nIt is possible the question contains a slight misunderstanding of the timeline or is a trick question.\n- If the question implies \"the coronation of the king who was reigning in 1817\", the answer is **Westminster Abbey** (where George III was crowned in 1761).\n- If the question implies \"the coronation that happened in the year Jane Austen died\", there was none.\n- If the question meant the coronation of the king who reigned *after* Jane Austen died (George IV), that took place in **1821** at **Westminster Abbey**.\n\nGiven the phrasing \"in the year the author... die\", and no coronation occurred in 1817, the most likely intended answer refers to the location of coronations for the British monarchs of that era, which is **Westminster Abbey** in London.\n\nAnswer: **Westminster Abbey** (in London, United Kingdom).\n\n*Note: No coronation actually took place in 1817. King George III was crowned in 1761, and his successor George IV was crowned in 1821. Both coronations occurred at Westminster Abbey.*",
+        "role": "assistant",
+        "tool_calls": null,
+        "function_call": null,
+        "reasoning_content": ""
+      },
+      "content": "\n\nThe author of *Pride and Prejudice* is **Jane Austen**, who died in **1817**.\n\nThe country where the 2012 Olympic Games were held is the **United Kingdom** (specifically London).\n\nThe question asks for the location of the coronation of the king in that country (the UK) in the year Jane Austen died (1817).\n\nIn 1817, the reigning monarch of the United Kingdom was **King George III** (who reigned from 1760 until his death in 1820). However, **no coronation took place in 1817**. King George III was crowned in 1761. His son, George IV, was crowned in 1821.\n\nIt is possible the question contains a slight misunderstanding of the timeline or is a trick question.\n- If the question implies \"the coronation of the king who was reigning in 1817\", the answer is **Westminster Abbey** (where George III was crowned in 1761).\n- If the question implies \"the coronation that happened in the year Jane Austen died\", there was none.\n- If the question meant the coronation of the king who reigned *after* Jane Austen died (George IV), that took place in **1821** at **Westminster Abbey**.\n\nGiven the phrasing \"in the year the author... die\", and no coronation occurred in 1817, the most likely intended answer refers to the location of coronations for the British monarchs of that era, which is **Westminster Abbey** in London.\n\nAnswer: **Westminster Abbey** (in London, United Kingdom).\n\n*Note: No coronation actually took place in 1817. King George III was crowned in 1761, and his successor George IV was crowned in 1821. Both coronations occurred at Westminster Abbey.*",
+      "tool_calls": null
+    }
+  ],
+  "trajectory": [
+    {
+      "tool_name": "open-library_get_book_by_title",
+      "parameters": {
+        "title": "Pride and Prejudice"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "open-library_get_authors_by_name",
+      "parameters": {
+        "name": "Jane Austen"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "wikipedia_search_wikipedia",
+      "parameters": {
+        "query": "George III coronation 1817"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "wikipedia_search_wikipedia",
+      "parameters": {
+        "query": "George III coronation Westminster Abbey"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "wikipedia_search_wikipedia",
+      "parameters": {
+        "query": "George III coronation"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "wikipedia_search_wikipedia",
+      "parameters": {
+        "query": "George IV coronation"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "wikipedia_search_wikipedia",
+      "parameters": {
+        "query": "Coronation of George IV"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "wikipedia_search_wikipedia",
+      "parameters": {
+        "query": "George IV"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "wikipedia_get_summary",
+      "parameters": {
+        "title": "George IV"
+      },
+      "response": null,
+      "error": null
+    },
+    {
+      "tool_name": "wikipedia_get_summary",
+      "parameters": {
+        "title": "Coronation of George IV"
+      },
+      "response": null,
+      "error": null
+    }
+  ],
+  "errors": [],
+  "trajectory_time": 33.94159126281738,
+  "num_retry": 1,
+  "coverage_score": 1.0,
+  "fully_covered_claims": 5,
+  "partially_covered_claims": 0,
+  "total_claims": 5,
+  "coverage_details_json": {
+    "per_claim": [
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly confirms the claim in the second paragraph: 'The country where the 2012 Olympic Games were held is the United Kingdom (specifically London).' This statement covers all key components of the claim: the year (2012), the event (Olympic Games/Olympics), and the location (London, UK). Although the response is part of a larger reasoning chain regarding Jane Austen and coronations, the specific factual claim provided is accurately stated and addressed within the text."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly confirms the claim in its very first sentence: 'The author of *Pride and Prejudice* is **Jane Austen**'. This directly addresses all key components of the claim (Jane Austen, author, Pride and Prejudice) with 100% accuracy. Although the response continues to answer a more complex multi-hop question regarding the Olympics and coronations, the specific claim provided is fully and accurately substantiated within the text."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly confirms the claim in the very first sentence: 'The author of *Pride and Prejudice* is **Jane Austen**, who died in **1817**.' This matches the claim's subject (Jane Austen), event (died), and numerical value (1817) exactly. The additional context provided in the response regarding the Olympics and coronations does not contradict or obscure the accuracy of the claim."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly confirms the claim within its reasoning. It states: 'In 1817, the reigning monarch of the United Kingdom was King George III'. This sentence contains all key components of the claim: the entity (Monarch of United Kingdom), the specific year (1817), and the specific name (George III). The information is presented accurately and directly addresses the factual assertion made in the claim."
+      },
+      {
+        "claim": "",
+        "score": 1.0,
+        "covered": true,
+        "reason": "The model response explicitly confirms all key components of the claim. It states that 'King George III was crowned in 1761' and clarifies that this coronation took place at 'Westminster Abbey' in 'London'. The response affirms the factual accuracy of the claim while providing additional context regarding the specific year of the coronation (1761) versus the year mentioned in the model's reasoning context (1817). All critical entities (George III, Crowned, Westminster Abbey, London) are present and accurately linked."
+      }
+    ],
+    "coverage_score": 1.0,
+    "total_claims": 5,
+    "fully_covered_claims": 5,
+    "partially_covered_claims": 0,
+    "explanation": "Evaluation complete",
+    "confidence": 0.5
+  },
+  "evaluation_confidence": 0.5
+}
